@@ -5,44 +5,44 @@
 
 \begin{document}
 \pagestyle{empty}
-\include{chapters/titlepage/titlepage}				      	 	% Titelseite und Eidesstattliche Erkl�rung einf\"ugen
- 
-             
+\include{chapters/titlepage/titlepage}				      	 	% Titelseite und Eidesstattliche Erklärung einfügen
+
+
 %\include{chapters/danksagung/danksagung}						% Danksagung einfuegen
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 \pagestyle{plain}
-\tableofcontents 												%Inhaltsverzeichnis einf\"ugen
+\tableofcontents 												%Inhaltsverzeichnis einfügen
 \cleardoublepage
 
 \listoftables
-\protect \addcontentsline{toc}{chapter}{Tabellenverzeichnis}	%Tabellenbverzeichnis einf\"ugen
+\protect \addcontentsline{toc}{chapter}{Tabellenverzeichnis}	%Tabellenverzeichnis einfügen
 \cleardoublepage
 
 \listoffigures
-\protect \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}	%Abbildungsverzeichnis einf\"ugen
+\protect \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}	%Abbildungsverzeichnis einfügen
 \cleardoublepage
 
-\addcontentsline{toc}{chapter}{Nomenklatur} 					%Nomenklatur einf\"ugen
+\addcontentsline{toc}{chapter}{Nomenklatur} 					%Nomenklatur einfügen
 \include{chapters/nomenclature/nomenclature}
 
 \pagenumbering{arabic}											%arabische Zahlen zur Numerierung
-\setcounter{page}{1} 											%Start mit Seite 1			 
+\setcounter{page}{1} 											%Start mit Seite 1
 
-\include{chapters/chapter_1/chapter_1}							%Fuege hier die einzelnen Kapitel ein
-\include{chapters/chapter_2/chapter_2}
-\include{chapters/chapter_3/chapter_3}
-\include{chapters/chapter_4/chapter_4}
-\include{chapters/chapter_5/chapter_5}
+\input{chapters/chapter_1/chapter_1}							%Fuege hier die einzelnen Kapitel ein
+\input{chapters/chapter_2/chapter_2}
+\input{chapters/chapter_3/chapter_3}
+\input{chapters/chapter_4/chapter_4}
+\input{chapters/chapter_5/chapter_5}
 
-\bibliography{chapters/bib/litbank1}  			                % Verweis auf Literaturdatenbank *.bib* - muss im gleichen Ordner sein!
+\bibliography{chapters/bib/litbank1}  			                % Verweis auf Literaturdatenbank *.bib*
 
-      
+
 \nocite{*} 														%Alle Dokumente anzeigen
-\bibliographystyle{natdin}  
+\bibliographystyle{natdin}
 \setlength{\bibsep}{3mm}                 						% Abstaende im Literaturverzeichnis
-\addcontentsline{toc}{chapter}{Literaturverzeichnis} 
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 
 \end{document}
