@@ -1,11 +1,11 @@
 \documentclass[a4paper,english,oneside,openany,12pt]{book}	%Dokumentenklasse festlegen, A4, einseitig ...
 
-\include{chapters/declare/declare}
+\input{chapters/declare/declare}
 
 
 \begin{document}
 \pagestyle{empty}
-\include{chapters/titlepage/titlepage}				      	 	% Titelseite und Eidesstattliche Erkl�rung einf\"ugen
+\input{chapters/titlepage/titlepage}				      	 	% Titelseite und Eidesstattliche Erkl\"rung einf\"ugen
  
              
 %\include{chapters/danksagung/danksagung}						% Danksagung einfuegen
@@ -26,7 +26,7 @@
 \cleardoublepage
 
 \addcontentsline{toc}{chapter}{Nomenklatur} 					%Nomenklatur einf\"ugen
-\include{chapters/nomenclature/nomenclature}
+\input{chapters/nomenclature/nomenclature}
 
 \pagenumbering{arabic}											%arabische Zahlen zur Numerierung
 \setcounter{page}{1} 											%Start mit Seite 1			 
