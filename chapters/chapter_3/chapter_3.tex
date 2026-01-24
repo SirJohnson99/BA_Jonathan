@@ -5,6 +5,7 @@
 
 Die Entwicklung eines DML-Lautsprechersystems erfordert zunächst eine grundsätzliche Entscheidung bezüglich der Systemarchitektur. Im Rahmen dieser Arbeit werden drei fundamentale Systemkonfigurationen hinsichtlich ihrer technischen Eignung, akustischen Performance und Praktikabilität evaluiert: das Fullrange-System ohne Frequenzweiche, das 2-Wege-System mit Subwoofer-Integration sowie das 3-Wege-System mit separater Bass-, Mitten- und Höhenwiedergabe.
 Fullrange-System ohne Frequenzweiche
+
 Das Fullrange-Konzept stellt die einfachste Implementierung eines DML-Lautsprechers dar, bei welcher das Panel den gesamten hörbaren Frequenzbereich ohne Frequenzweiche abdeckt. [Bai & Huang 2001] dokumentieren in ihrer grundlegenden Arbeit zur Entwicklung von Panel-Lautsprechersystemen, dass die untere Grenzfrequenz eines DML-Panels maßgeblich durch dessen Abmessungen determiniert wird. Für ein Panel mit den Dimensionen 60 cm × 45 cm ergibt sich aus ihren experimentellen Daten eine untere Grenzfrequenz im Bereich von 95-100 Hz [Bai & Huang 2001, S. 2755]. Diese Limitation resultiert aus der Wellenlängenabhängigkeit der Biegewellen: Zur effizienten Abstrahlung tiefer Frequenzen ist eine minimale Panel-Diagonale erforderlich, welche in einem proportionalen Verhältnis zur Wellenlänge steht.
 Der fundamentale Vorteil eines Fullrange-Systems liegt in der Vermeidung jeglicher Frequenzweichen, wodurch phasenbedingte Kohärenzverluste sowie Interferenzeffekte eliminiert werden [Harris & Hawksford 2000]. Dies ist insbesondere für den kritischen Vokalbereich zwischen 500 Hz und 4 kHz von Bedeutung, in welchem die menschliche Sprachverständlichkeit primär determiniert wird [Fastl & Zwicker 2007, S. 187]. Ein Fullrange-System gewährleistet somit die kohärenteste Schallabstrahlung über das gesamte Spektrum.
 Die primäre Limitation dieses Konzepts besteht jedoch in der unzureichenden Bass-Extension. [Bai & Huang 2001, S. 2758] quantifizieren den Wirkungsgrad von DML-Panels mit lediglich 0,039\%, verglichen mit 0,089\% für konventionelle Lautsprecher – eine Reduktion um den Faktor 2,3. In Kombination mit der limitierten unteren Grenzfrequenz resultiert dies in einer insuffizienten Wiedergabe von bassintensiven Musikgenres. [Engineering Radio Blog 2021] berichtet von einem experimentellen Fullrange-DML mit einer 4'×2' Platte (122 cm × 61 cm), welches trotz der substantiell größeren Abmessungen eine untere Grenzfrequenz von 174 Hz aufwies – deutlich oberhalb der für HiFi-Anwendungen erforderlichen 80 Hz gemäß DIN 45500 Klasse 2.
@@ -26,13 +27,22 @@ Für die vorliegende Arbeit wird ein Fullrange-Prototyp implementiert, wobei gle
 Die gewonnenen Erkenntnisse zur optimalen Exciter-Position sind unmittelbar auf 2-Wege-Systeme übertragbar, da die modale Struktur des Panels unabhängig von der Frequenzweichen-Konfiguration ist [Harris & Hawksford 2000, S. 156]. Eine Subwoofer-Integration könnte in einer Folgearbeit mit minimalem Aufwand durch Hinzufügen eines Crossover-Netzwerks bei 80-90 Hz realisiert werden, wobei die optimierte Panel-Konfiguration dieser Arbeit direkt übernommen werden kann.
 Zusammenfassend demonstriert die systematische Konzeptentwicklung unter Berücksichtigung wissenschaftlicher Literatur sowie industrieller Best Practices, dass 2-Wege-Systeme für HiFi-Anwendungen die optimale Architektur darstellen, während Fullrange-Systeme für spezifische Anwendungsszenarien (Nahfeld, Lehre) sowie als Entwicklungsplattform geeignet sind. 3-Wege-Systeme sind aufgrund der Vokalbereich-Crossover-Problematik für DML-Implementierungen nicht zu empfehlen.
 
-\subsection{Lösungskonzepte für Systemarchitektur}
+\subsection{Lösungskonzepte für die Systemarchitektur}
+
+
+
 
 
 \subsection{Vergleichstabelle und Bewertung}
 
 
+
+
+
 \subsection{Konzeptentscheidung für diese Arbeit}
+
+
+
 
 
 \section{Simulation in COMSOL Multiphysics}
