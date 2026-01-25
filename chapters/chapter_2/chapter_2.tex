@@ -3,30 +3,25 @@
 
 \section{DML-Technologie}
 
+Ein DML - Distributed Mode Loudspeaker ist ein Flachlautsprecher welcher Schall über Schwingungsmodi, welche über einen Speziellen Körperschallwandler erzeugt und auf die flache Oberfläche übertragen werden. Diese Schwingungen werden von der Gesamtoberfläche abgestrahlt und erzeugen somit höhrbaren schall. Damit Stellen DML oder Flachlautsprecher eine fundermentale Alternative zu konventionellen Kolbenstrhaler-Technologie dar. Denn im gegensatz zu Klassischen Lautsprechern wo die Lautsprechermembran angeregt kolbenartige Bewegungen ausführt, basiert die DML Technologie auf die Gezielte anregung von Biegewellen in einer Platte.
 
-\subsection{Funktionsprinzip und Abstrahlcharakteristik}
 
 \subsection{Material-Parameter und deren Einfluss}
 
+Hier kommt eine Tabelle hin
 
 \section{Exciter-Position und deren Einfluss}
 
-
-\subsection{Multi-Exciter-Konfiguration}
+Multi-Exciter-Konfiguration
 
 
 \section{Messtechnik}
 
-
-\subsection{Frequenzgang-Messung und Interpretation}
-
-
-\subsection{Bewertung nach DIN 45500}
-
+Messmikrofon, Labview 
 
 \section{VDI-2221: Systematische Produktentwicklung}
 
-Die VDI-Richtlinie 2221 "Entwicklung technischer Produkte und Systeme" stellt den deutschen Standard für systematische Produktentwicklung dar \footcite{VDI2221}. Die Richtlinie wurde vom VDI Verein Deutscher Ingenieure herausgegeben und gilt branchenübergreifend für alle Arten technischer Produkte und Systeme. Die Kernprinzipien der VDI-2221 sind systematisches Vorgehen, iteratives Arbeiten, eine frühe Fehlervermeidung und interdisziplinäre Anwendbarkeit. Die Hauptphasen der Produktentwicklung gliedern sich in sieben zentrale Phasen \footcite[S.~11--15]{VDI2221}:
+Die VDI-Richtlinie 2221 Entwicklung technischer Produkte und Systeme stellt den deutschen Standard für systematische Produktentwicklung dar \footcite{VDI2221}. Die Richtlinie wurde vom VDI - Verein Deutscher Ingenieure herausgegeben und gilt branchenübergreifend für alle Arten technischer Produkte und Systeme. Die Kernprinzipien der VDI-2221 sind systematisches Vorgehen, iteratives Arbeiten, eine frühe Fehlervermeidung und interdisziplinäre Anwendbarkeit. Die Hauptphasen der Produktentwicklung gliedern sich in sieben zentrale Phasen \footcite[S.~11--15]{VDI2221}:
 \begin{enumerate}
     \item Klären der Aufgabenstellung
     \item Ermitteln von Funktionen
@@ -36,12 +31,14 @@ Die VDI-Richtlinie 2221 "Entwicklung technischer Produkte und Systeme" stellt de
     \item Gestalten des Gesamtprodukts
     \item Ausarbeiten der Dokumentation
 \end{enumerate}
-Ein zentrales Prinzip ist das iterative Arbeiten: Die Phasen werden nicht starr sequentiell durchlaufen, sondern durch zyklisches Pendeln zwischen Zielen, Anforderungen und Ergebnissen kontinuierlich optimiert \footcite[S.~10]{VDI2221}. Dies ermöglicht frühe Fehlervermeidung und flexible Anpassung an neue Erkenntnisse \footcite[S.~129--131]{Pahl2013}.
-Für diese Arbeit strukturiert die VDI-2221 den Entwicklungsprozess des DML-Lautsprechers: Anforderungsdefinition (Kap. 3.1), Konzeptentwicklung (Kap. 3.2), Simulation und Optimierung (Kap. 3.3-3.5), sowie Prototypenbau und Dokumentation (Kap. 4.1). Die Kombination mit dem PDCA-Zyklus (Kap. 2.5) gewährleistet kontinuierliche Verbesserung innerhalb der Phasen \footcite[S.~135]{Pahl2013}.
+Ein zentrales Prinzip ist das iterative Arbeiten: Die Phasen werden nicht starr sequentiell durchlaufen, sondern durch zyklisches Pendeln zwischen Zielen, Anforderungen und Ergebnissen kontinuierlich optimiert \footcite[S.~10]{VDI2221}. Dies ermöglicht frühe Fehlervermeidung und flexible Anpassung an neue Erkenntnisse \footcite{VDI2221}.
+Für diese Arbeit strukturiert die VDI-2221 den Entwicklungsprozess des Flach-Lautsprechers. Die Kombination mit dem PDCA-Zyklus welcher im folgenden Kapitel erläutert wird, gewährleistet kontinuierliche Verbesserung innerhalb der Phasen \footcite[S.~135]{Pahl2013}.
+
+
 
 \section{PDCA-Zyklus (Plan-Do-Check-Act)}
 
-Die PDCA-Methode ist ein etabliertes Vorgehensmodell zur systematischen Steuerung und kontinuierlichen Verbesserung von Prozessen. Der Begriff PDCA steht für die vier aufeinanderfolgenden Phasen Plan, Do, Check und Act, die gemeinsam einen geschlossenen Regelkreis bilden. Ziel dieses Modells ist es, Prozesse nicht einmalig zu optimieren, sondern sie durch wiederholte Anwendung des Zyklus schrittweise weiterzuentwickeln und dauerhaft zu stabilisieren. Die PDCA-Methode wird insbesondere im Qualitätsmanagement, im Projektmanagement sowie in technischen Entwicklungsprozessen eingesetzt und dient dort als strukturierte Grundlage für methodisches Arbeiten \footcite{Durst2018}.
+Der PDCA-Zyklus ist ein etabliertes Vorgehensmodell zur systematischen Steuerung und kontinuierlichen Verbesserung von Prozessen. Der Begriff PDCA steht für die vier aufeinanderfolgenden Phasen Plan, Do, Check und Act, die gemeinsam einen geschlossenen Regelkreis bilden. Ziel dieses Modells ist es, Prozesse nicht einmalig zu optimieren, sondern sie durch wiederholte Anwendung des Zyklus schrittweise weiterzuentwickeln und dauerhaft zu stabilisieren. Die PDCA-Methode wird insbesondere im Qualitätsmanagement, im Projektmanagement sowie in technischen Entwicklungsprozessen eingesetzt und dient dort als strukturierte Grundlage für methodisches Arbeiten \footcite{Durst2018}.
 
 \begin{figure}[htbp]
     \centering
@@ -50,7 +47,8 @@ Die PDCA-Methode ist ein etabliertes Vorgehensmodell zur systematischen Steuerun
     \label{fig:pdca}
 \end{figure}
 
-In der Plan-Phase erfolgt zunächst eine Analyse des bestehenden Ist-Zustands des betrachteten Prozesses. Auf Basis dieser Analyse werden Schwachstellen, Abweichungen oder Verbesserungspotenziale identifiziert. Anschließend werden konkrete Ziele definiert, die innerhalb eines festgelegten Zeitraums erreicht werden sollen. Darauf aufbauend werden Maßnahmen geplant, mit denen diese Ziele umgesetzt werden können. Eine präzise Zieldefinition sowie eine realistische Planung sind in dieser Phase von zentraler Bedeutung, da sie die Grundlage für alle nachfolgenden Schritte darstellen und maßgeblich über den Erfolg des gesamten Zyklus entscheiden \footcite{Durst2018}.
+In Abbildung 2.1 ist der PDCA Zyklus Bildlich dargestellt, hierbei sind die vier Phasen klar zu erkennen welche im folgenden Detailiert beschrieben werden. 
+Beginnend mit der Plan-Phase, erfolgt zunächst eine Analyse des bestehenden Ist-Zustands des betrachteten Prozesses. Auf Basis dieser Analyse werden Schwachstellen, Abweichungen oder Verbesserungspotenziale identifiziert. Anschließend werden konkrete Ziele definiert, die innerhalb eines festgelegten Zeitraums erreicht werden sollen. Darauf aufbauend werden Maßnahmen geplant, mit denen diese Ziele umgesetzt werden können. Eine präzise Zieldefinition sowie eine realistische Planung sind in dieser Phase von zentraler Bedeutung, da sie die Grundlage für alle nachfolgenden Schritte darstellen und maßgeblich über den Erfolg des gesamten Zyklus entscheiden \footcite{Durst2018}.
 
 Die Do-Phase umfasst die praktische Umsetzung der in der Plan-Phase definierten Maßnahmen. Dabei werden die geplanten Prozessänderungen oder Verbesserungen realisiert, häufig zunächst in einem begrenzten Umfang oder als Pilotanwendung. Ziel dieser Phase ist es, praktische Erfahrungen zu sammeln und erste Ergebnisse zu erzeugen, ohne den gesamten Prozess sofort vollständig umzustellen. Parallel zur Umsetzung werden relevante Daten erhoben, die später zur Bewertung der Maßnahmen herangezogen werden können \footcite{Durst2018}.
 
