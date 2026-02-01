@@ -36,7 +36,9 @@
 %\usepackage{colortbl}
 %\usepackage{makeidx}          					% Package zur Indexerstellung
 %\usepackage{multicol}         					% zur Indexerstellung in zwei Spalten
-\usepackage[backend=biber, style=ieee]{biblatex}   % IEEE-Stil [1], [2], ...
+\usepackage[backend=biber, style=numeric, citestyle=numeric-comp]{biblatex}   % Numerischer Stil [1], [2], ...
+% Eckige Klammern für Zitierungen erzwingen
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
 \setlength{\bibitemsep}{1\baselineskip}   % Freie Zeile zwischen Quellen
 \usepackage{wasysym}
 \usepackage{pdfpages}						%Einf\"ugen von externen PDF-Dokumenten
