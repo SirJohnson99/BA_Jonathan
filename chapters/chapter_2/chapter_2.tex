@@ -80,8 +80,46 @@ Das angeregte Material eines DML-Lautsprechers und dessen Materialeigenschaften 
 und somit auf das akustische Verhalten. Dabei sind vor allem die Dichte $\rho$, das Elastizitätsmodul $E$ und die Poissonzahl $\nu$ von großer
 Bedeutung. 
 
-Hier kommt eine Tabelle mit verschiedenen Materialien und Materialeigenschaften hin, welche sich gut oder schlecht eignen für den Bau eines DML
-Lautsprechers, darunter auch das Kappa-Sandwichmaterial. Begründe, warum sich Materialien gut oder schlecht eignen. 
+\begin{table}[htbp]
+\centering
+\caption{Materialvergleich für DML-Panele}
+\label{tab:materialvergleich}
+\small
+\begin{tabular}{|l|l|c|c|c|p{5.5cm}|}
+\hline
+\textbf{Material} & \textbf{Struktur} & \textbf{m''} & \textbf{Dämpfung} & \textbf{DML-} & \textbf{Begründung} \\
+ & & \textbf{[g/m²]} & & \textbf{Eignung} & \\
+\hline
+CFK / Nomex-Honeycomb & Sandwich: CFK-Häute + Nomex-Kern & 35--80 & Mittel & $\checkmark\checkmark$ & Höchste B/m''-Klasse; sehr niedrige Masse; ideal für professionelle DML (z.\,B. Tectonic DML500). Isotroper Honeycomb-Kern. \\
+\hline
+Balsa / CFK-Sandwich & Sandwich: CFK-Häute + Balsa-Kern & 80--150 & Mittel-- Niedrig & $\checkmark\checkmark$ & Sehr hohe spezifische Biegesteifigkeit; Balsa-Endkorn isotroper als Holzplatte; gut für Niederfrequenz-DML. \\
+\hline
+Balsa (Endkorn) & Monolithisch (Endkorn-Laminat) & 100--180 & Niedrig-- Mittel & $\checkmark$ & Niedrige Dichte, gute Strahlungseffizienz; Hilfswerkstoffe nötig; fragil bei Belastung senkrecht zur Faser. \\
+\hline
+XPS (Polystyrene 20\,mm) & Monolithisch & 160--200 & Mittel & $\checkmark$ & Populäres DIY-Material; gute Dämpfung; niedrige Biegesteifigkeit eignet sich für Höchsten-Frequenzbereiche. \\
+\hline
+KAPA\textsuperscript{\textregistered}line 15\,mm\textsuperscript{*} & Sandwich: PU-Schaum + Karton-Häute & 1037 & Mittel & $\circ$ & Flächenmasse 1037\,g/m² deutlich zu hoch; Biegefestigkeit 1,55\,N/mm² (EN 310); Karton-Deckschichten nicht strukturell; als Prototyp-Plattform möglich. \\
+\hline
+Sperrholz (Birke, 4\,mm) & Monolithisch (Leimholz) & 1200--1600 & Niedrig & $\circ$ & Bekanntes Material; anisotrope Lagen; reasonable Biegesteifigkeit; Masse zu hoch für effiziente DML-Abstrahlung. \\
+\hline
+HPL (Laminat) & Monolithisch & 1200--1500 & Niedrig-- Mittel & $\circ$ & Vater et al. (2020) TU Dresden: HPL als DML-Membran untersucht; Abstimmung via Dämpfungsschicht erforderlich. \\
+\hline
+MDF (16\,mm) & Monolithisch & 900--1100 & Sehr Niedrig & $\times$ & Hohe Masse, sehr niedrige Dämpfung; starke Resonanzen; keine strukturelle Anisotropie $\rightarrow$ ungeeignet. \\
+\hline
+Gipskartonplatte & Monolithisch & 8000--12000 & Sehr Niedrig & $\times$ & Sehr hohe Masse; Sprödbruchgefahr; praktisch keine Biegewellenabstrahlung möglich. \\
+\hline
+Aluminiumplatte (1\,mm) & Monolithisch & 2700 & Sehr Niedrig & $\times$ & Isotrope, hohe Steifigkeit; aber Masse zu groß und Dämpfung praktisch Null $\rightarrow$ starke Resonanzspitzen. \\
+\hline
+\end{tabular}
+
+\vspace{0.3cm}
+\footnotesize
+\textbf{Legende:} $\checkmark\checkmark$ sehr geeignet \quad $\checkmark$ geeignet \quad $\circ$ bedingt geeignet \quad $\times$ nicht geeignet \\
+\textsuperscript{*} KAPA\textsuperscript{\textregistered}line 15\,mm (Datenblatt 3A Composites, 06/2021)
+
+\vspace{0.2cm}
+\textbf{Quellen:} Möser (2015); Vater, Zenker et al. (2020); 3A Composites GmbH -- Technisches Datenblatt KAPA\textsuperscript{\textregistered}line, Version 06/2021; Wiedemann (2006).
+\end{table} 
 
 
 
