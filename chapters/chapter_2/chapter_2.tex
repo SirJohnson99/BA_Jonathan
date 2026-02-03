@@ -1,25 +1,121 @@
 \chapter{Grundlagen}
 
-Zum Verständnis dieser Arbeit ist ein grundlegendes Verständnis der Physik und der Akustik vorauszusetzen. Weiteres Fachwissen sowie die zum Verstehen dieser Arbeit notwendigen Grundlagen werden in den folgenden Kapiteln 2.1 bis 2.5 erläutert....  
+Das vorliegende Kapietel legt die wissenschaftlichen Grundlagen dar, auf denen die in dieser Arbeit eingesetzten Konzepte beruhen. Zum Verstehen dieser Arbeit ist ein grundlegendes Verständnis von Physik und  Akustik vorauszusetzen. Weiteres Fachwissen sowie die zum Verstehen dieser Arbeit notwendigen Grundlagen werden in diesem Kapitel erläutert. 
+
 
 \section{DML-Technologie}
 
-Ein Distributed Mode Loudspeaker ist ein Flachlautsprecher, welcher Schall über Schwingungsmodi, welche über einen speziellen Körperschallwandler erzeugt und auf die flache Oberfläche übertragen werden. Diese Schwingungen werden von der Gesamtoberfläche abgestrahlt und erzeugen somit hörbaren Schall. Damit stellen DML oder Flachlautsprecher eine fundamentale Alternative zur konventionellen Kolbenstrahler-Technologie dar. Denn im Gegensatz zu klassischen Lautsprechern, wo die Lautsprechermembran angeregt kolbenartige Bewegungen ausführt, basiert die DML-Technologie auf die gezielte Anregung von Biegewellen in einer Platte.
 
+Bei einem DML - Distributed Mode Loudspeaker handelt es sich um Flach oder Panel-Lautsprecher, dieser ist eine Bauform des Biegewellenwanderls bei der eine Ebene Platte oder Panel mittels Elektrodynamischen Körperschallwandlers, auch Exciter genannt zu Biegeschwingungen angeregt wird. Im gegensatz zu zum Konventionellen Kolbenlautsprecher, dessen Membran in einem Frequenzbereich näherungsweise starr als Ganzes bewegt, wird bei einem DML gezielt die such auf dem Panel ausbreitenden Biegewellen zur Schallabsrtahlung.[Möser,2015 S.] 
+Diese Schwingungen werden von der Gesamtoberfläche abgestrahlt und erzeugen somit hörbaren Schall. Damit stellen DML oder Flachlautsprecher eine fundamentale Alternative zur konventionellen Kolbenstrahler-Technologie dar. Denn im Gegensatz zu klassischen Lautsprechern, wo die Lautsprechermembran angeregt kolbenartige Bewegungen ausführt, basiert die DML-Technologie auf die gezielte Anregung von Biegewellen in einer Platte.
+
+Bei einer DML-Platte breiten sich die vom Exciter erzeugten Störungen konzentrisch vom Anregungspunkt aus wie auf einer
+Wasseroberfläche aus. Die Biegewellengeschwindigkeit cB ist dabei nicht konstant, sondern frequenzabhängig – Biegewellen
+sind dispersiv [Möser, 2015]. Dies bedeutet, dass höhere Frequenzen sich schneller auf der Platte ausbreiten als niedrige.
+Im Gegensatz zu Longitudinalwellen in Gasen, die eine konstante Ausbreitungsgeschwindigkeit besitzen, erzeugt diese
+Dispersion auf der DML-Platte eine frequenzabhängige Interferenz verschiedener Moden, die wiederum das charakteristische
+Abstrahlmuster des DML bestimmt.
+
+Ein zentrales Merkmal des DML ist die sogenannte Koinzidenzfrequenz fc. Bei dieser Frequenz stimmt die
+Biegewellengeschwindigkeit auf der Platte mit der Schallgeschwindigkeit in der umgebenden Luft überein. Unterhalb von fc
+strahlt die Platte diffus und omnidirektional ab; die Schallabstrahlung erfolgt nicht aus einer kohärenten Wellenfläche,
+sondern durch die Überlagerung zahlreicher, zum Teil gegenphasiger Flächenelemente [Cremer & Heckl, 1996]. Oberhalb der
+Koinzidenzfrequenz hingegen wird die Abstrahlung deutlich effizienter, da die Biegewellen auf der Platte phasenkoherent mit
+der umgebenden Luftschallwelle koppeln können. Diese beiden Betriebsbereiche prägen das Gesamtverhalten des DML.
+
+
+
+Der Vorteil des DML liegt vor allem in sein breites, räumlich gleichmäßiges Schallfeld, das durch die diffuse Abstrahlung
+in einem weiten Frequenzbereich ergibt sich. Dies macht diese Lautsprecherbauform besonders attraktiv für Anwendungen, bei
+denen eine homogene Beschallung eines Raumes ohne starke Schallbündelung gefordert ist [Beer, 1999]. Gleichzeitig sind der
+verhältnismäßig niedrige Wirkungsgrad im Tieffrequenzbereich sowie die irregulären Resonanzspitzen im Frequenzgang typische
+Nachteile, die bei der Systemkonzeption berücksichtigt werden müssen.
 
 
 \subsection{Material-Parameter und deren Einfluss}
 
-Hier kommt eine Tabelle hin ... 
+Die akustisch relevanten Eigenschaften einer DML-Platte werden maßgeblich von zwei Parametern bestimmt: der
+Biegesteifigkeit B und der Flächenmasse m″. Diese beiden Größen stehen in direkter Beziehung zu den Eigenfrequenzen der
+Platte. Für eine rechteckige Platte mit den Seitenlängen a und b ergibt sich die Eigenfrequenz des (m, n)-ten Modes nach 
+der Kirchhoff-Plattentheorie zu:
+
+f(m, n)  =  (π / 2) · √(B / m″) · [ (m/a)² + (n/b)² ]     (1)
+
+Gleichung (1) zeigt, dass eine höhere Biegesteifigkeit B zu höheren Eigenfrequenzen führt, während eine größere
+Flächenmasse m″ diese herabsetzt [Cremer & Heckl, 1996]. Für eine optimale DML-Leistung ist ein gezieltes Verhältnis
+zwischen beiden Größen anzustreben: Eine zu hohe Biegesteifigkeit verschiebt die Eigenfrequenzen nach oben und verhindert
+eine wirksame Anregung im Tieffrequenzbereich; eine zu geringe Steifigkeit hingegen führt zu einer hohen modalen Dichte bei
+niedrigen Frequenzen, die zu einer langen Ausschwingzeit beiträgt.
+
+Zur Erhöhung der Biegesteifigkeit bei gleichzeitig geringer Masse werden in der Praxis Sandwichkonstruktionen eingesetzt.
+Der Aufbau besteht aus zwei dünnen, biegesteifen Deckschichten, die durch einen leichten Stützkern auf Abstand gehalten
+werden. Die Deckschichten tragen dabei den weit überwiegenden Anteil der Biegebelastung, während der Kern vor allem die
+Schubsteifigkeit liefert und die Deckschichten gegen Beulen stützt. Die effektive Biegesteifigkeit einer solchen
+Konstruktion lässt sich näherungsweise durch
+
+B ≈ E_s · t_s · (d / 2)²     (2)
+
+abschätzen, wobei E_s der Elastizitätsmodul, t_s die Dicke der Deckschicht und d der Abstand zwischen den beiden
+Deckschichten bezeichnen [Wiedemann, 2006]. Der quadratische Zusammenhang mit dem Deckschichtenabstand d deutet darauf hin,
+dass bereits eine verhältnismäßig geringe Erhöhung der Kerndicke eine erhebliche Steigerung der Biegesteifigkeit erzeugt.
+Diese Eigenschaft macht Sandwich-Konstruktionen mit Wabenkern – etwa aus Nomex oder Polypropylen – zu einer bewährten Wahl
+für DML-Paneele [Stamm & Witte, 1974]. Im Vergleich zu monolithischen Platten bieten solche Aufbaute bei gleicher
+Biegesteifigkeit eine deutlich reduzierte Flächenmasse, was sich direkt auf die modale Dichte und somit auf den
+Frequenzgang auswirkt.
+
+Neben Steifigkeit und Masse spielt auch die innere Dämpfung des Panelmaterials eine bedeutende Rolle. Eine zu geringe
+Dämpfung führt zu starken, langanhaltenden Resonanzspitzen im Frequenzgang, was den Klang deutlich verfärbt. Eine zu hohe
+Dämpfung hingegen reduziert die Schallabstrahlungseffizienz und kann bei niedrigen Frequenzen zu einer Verschleierung der
+Modulationsstruktur führen [Möser & Kropp, 2010]. Ein optimales Dämpfungsniveau liegt im Bereich, bei dem
+Resonanzamplituden kontrolliert bleiben, ohne die Gesamtabstrahlung wesentlich zu beeinträchtigen. Bei der Auswahl des
+Panelmaterials muss daher stets das Gleichgewicht zwischen Steifigkeit, Masse und Dämpfung sorgfältig abgestimmt werden.
+
+
+
+Dass Angeregbte Material eines DML Lautsprechers und dessen Materialeigenschaften haben einen großen einfluss die
+Resultierende Schallabstrahlung und somit auf das Akustische verhalten. Dabei sind vorallem die Dichte  \(\rho \) das
+Elastizitäs module E und die Possionzahl \(\nu \) von großer bedeutung. 
+
+
+Hier kommt eine Tabelle mit verschiedenen Materialien und Materialeigenschaften hin, welche sich gut oder schlecht eignen
+für den Bau eines DML lautsprechers, darunter auch Das Kappa Sandwichmaterial. Begrüne warum sich materialien gut oder
+schlecht eignen.  
 
 \section{Exciter-Position und deren Einfluss}
 
+Die Position des Körperschall erregers spielt eine entscheidene rolle, da durch seine Position abhängig zur Panel-Geometrie
+die Moden des Panels Angeregt werden. Dabei wird auf eine möglichst hohe zahl von angeregetn Moden abgeziehlt. 
+
 Multi-Exciter-Konfiguration mehr Exciter = Mehr SPL 
+
+Die Position des Exciters auf der DML-Platte hat einen entscheidenden Einfluss darauf, welche Schwingungsmoden angeregt
+werden und wie effizienter diese zur Schallabstrahlung beitragen. Jeder Mode einer endlichen Platte besitzt eine
+charakteristische Eigenform mit zugehörigen Knotenpunkten – Stellen, an denen die Schwingungsamplitude verschwindet. Wird
+der Exciter genau an einem solchen Knotenpunkt eines bestimmten Modes platziert, wird dieser Mode nicht angeregt [Zenker et
+al., 2019]. Die Folge ist ein lückenhaafter Frequenzgang mit deutlichen Fehlstellen bei den zugehörigen Eigenfrequenzen.
+Eine symmetrische Platzierung des Exciters in der Panelmitte ist aus physikalischer Sicht unvorteilhaft. An der Mitte eines
+rechteckigen Panels fallen die Knotenpunkte zahlreicher ungerade indizierter Moden zusammen; eine Anregung in diesem
+Bereich regt systematisch nur die geraden Moden an, was zu einem deutlich ungleichmäßigen Frequenzgang führt [Cremer &
+Heckl, 1996]. Aus diesem Grund wird in der Literatur eine asymmetrische Platzierung empfohlen, bei der der Exciter im
+Bereich von etwa einem Drittel bis zwei Fünftel der jeweiligen Paneldimension angebracht wird.
+Zenker et al. führten an der Technischen Universität Dresden eine systematische Untersuchung der Exciter-Positionierung
+durch, bei der 25 unterschiedliche Positionen auf einem rechteckigen DML-Panel vermessen und simuliert wurden [Zenker et
+al., 2019]. Die Optimierung erfolgte auf Grundlage der abgestrahlten Schallleistung, berechnet mittels eines elektro
+mechanisch-akustischen Simulationsmodells. Die Ergebnisse bestätigten, dass die optimale Exciter-Position stark vom
+Panelformat, den Materialeigenschaften und dem gewünschten Frequenzbereich abhängt – eine universell gültige Position, die
+für alle Geometrien gleichzeitig optimal wäre, existiert also nicht.
+Bei der Planung eines DML-Systems ist daher eine FEM-basierte Modalanalyse unerlässlich. Durch die Berechnung der
+Eigenfrequenzen und Eigenformen der jeweiligen Panelgeometrie kann der Ort des maximalen Modeneingangs – also der
+Antiknoten möglichst viele Moden gleichzeitig – gezielt bestimmt werden [Beer et al., 2017]. Die anschließende Simulation 
+in COMSOL Multiphysics, wie sie in Kapitel 3.2 dieser Arbeit beschrieben wird, ermöglicht es, die Exciter-Position
+quantitativ zu bewerten und für die konkrete Systemkonfiguration zu optimieren.
 
 
 \section{Messtechnik}
 
 Messmikrofon, Labview ...
+
+
 
 %\section{VDI-2221: Systematische Produktentwicklung}
 
