@@ -69,12 +69,15 @@ Diese Eigenschaft macht Sandwich-Konstruktionen mit Wabenkern zu einer bewährte
 Vergleich zu monolithischen Platten bieten solche Aufbauten bei gleicher Biegesteifigkeit eine deutlich geringere
 Flächenmasse, was sich direkt auf die modale Dichte und somit auf den Frequenzgang auswirkt.
 
-Neben der Steifigkeit und Masse spielt auch die innere Dämpfung des Panelmaterials eine bedeutende Rolle. Eine zu geringe
+Neben der Steifigkeit und Masse  spielt auch die innere Dämpfung des Panelmaterials eine wichtige Rolle. Eine zu geringe
 Dämpfung führt zu starken, langanhaltenden Resonanzspitzen im Frequenzgang, was den Klang deutlich verfärbt. Eine zu hohe
-Dämpfung hingegen reduziert die Schallabstrahlungseffizienz und kann bei niedrigen Frequenzen zu einer Verschleierung der
-Modulationsstruktur führen \cite{Moeser2010}. Ein optimales Dämpfungsniveau liegt im Bereich, bei dem
-Resonanzamplituden kontrolliert bleiben, ohne die Gesamtabstrahlung wesentlich zu beeinträchtigen. Bei der Auswahl des
-Panelmaterials muss daher stets das Gleichgewicht zwischen Steifigkeit, Masse und Dämpfung abgestimmt werden.
+Dämpfung hingegen reduziert die Schallabstrahlungseffizienz und kann bei niedrigen Frequenzen zu einer Verscheleierung der Modulationsstruktur
+führen \cite{Moeser2010}. Ein optimales Dämpfungsniveau liegt im Bereich, bei dem Resonanzamplituden kontrolliert bleiben, ohne die Abstrahlung
+wesentlich zu beeinträchtigen. Bei der Auswahl des Panelmaterials muss daher stets das Gleichgewicht zwischen Steifigkeit, Masse und Dämpfung
+abgestimmt werden. Dabei ist zu beachten das ein niedriges Verhältnis B/$m''$ die Modendichte erhöht und die erste eigenfrequenz
+absenkt.\cite{Moeser2010} Gleichzeit muss eines Ausreichende innere dämpfung gegeben sein um Resonanzspitzen zu unterdrücken. 
+
+Die Tabelle 2.1 Materialvergleich für DML-Panele, vergleicht verschiedene Panel Materialien anhand ihrer Flächenmasse $m''$ und ihrer inneren Dämpfung, dabei wird die inerre Dämofung in die Kategorien Sehr Niedrig, Niedrig und Mittel unterteilt.  
 
 \begin{table}[htbp]
 \centering
@@ -111,31 +114,64 @@ Aluminium (1\,mm) & Monolithisch & 2700 & Sehr niedrig & $\times$ & Masse zu gro
 \textbf{Quellen:} Möser (2015); Vater, Zenker et al. (2020); 3A Composites GmbH; \cite{Wiedemann2006}.
 \end{table}
 
+In der ersten Spalte der Tabelle werden die jeweiligen Materialnamen aufgeführt, während die zweite Spalte den Strukturellen aufbau beschreibt. Darauf folgend werden in Spalte drei und vier die Flächenmasse und innere Dämpfung dargestellt. In Spalte fünf folgt eine Bewertung der Eignung der Materialien für den Einsatz  als DML Panel anhand von Symbolen welche in der Legende erläutert werden. In der sechsten Spalte wird die Eignung anhand einer kurzen Begründung ergänzt. Die Tabelle ist von oben nach unten Absteigend angeordnet und beginnt mit besonders geeigneten bis hin zu Ungeeigneten Materialen.
+
+
 
 \section{Exciter-Position und deren Einfluss}
 
-Die Position des Körperschallerregers spielt eine entscheidende Rolle, da durch seine Position abhängig zur Panel-Geometrie die Moden des Panels angeregt werden. Dabei wird auf eine möglichst hohe Zahl von angeregten Moden abgezielt. 
+Die Position des Körperschallwandlers auf dem DML-Panel hat einen entscheidenen einfluss darauf welche eingenmden im Panel angeregt werden und wie
+effizien diese zur Schallabstrahlung beiragen. Jede Mode in einem endlichen Panel besitzt charakteristische eingenformen und Knotenpunkte, an
+diesen Stellen geht die Schwingungsamplitude gegen null. Wird ein Körperschallwandler an einem solchen Knotenpunkt Platziert, kann die
+entsprechende Mode nicht wikrksam angeregt werden. Dies führt zu einer unvollsändigen Modenanregung was einen Lückkenhaften frequenzgang zur folge
+hat. Die Platzierung des Körperschallwandlers ist daher von zentraler Bedeutung, um eine gleichmäßige Modenanregung über den Frequenzbereich zu
+erhalten. 
 
-Multi-Exciter-Konfiguration mehr Exciter = Mehr SPL 
+Eine Symmetrische Anordnung des Exciters in der Panel Mitte ist aus Physikalischer sicht unvorteilhaft, da in der Mitte eines Rechteckigen Panels
+zahlreiche Knotenpunkte ungerader Indizierter Moden zusammenfallen. Somit können von diesem Exciter nicht alle Moden angeregt werden und es
+resulitert ein unausgeglichener Frequenzgang.\cite{Moeser2010} Aus diesem Grund werden sowohl von Exciter Herstellern als auch in der Fachliteratur
+eine asymetrische Positionierung des Exciters empfohlen. Meist wird eine Positionierung im bereichen von ein dritteln bis zwei fünfteln der
+jeweiligen Seienlänge des Panels angeraten. 
 
-Die Position des Exciters auf der DML-Platte hat einen entscheidenden Einfluss darauf, welche Schwingungsmoden angeregt
-werden und wie effizienter diese zur Schallabstrahlung beitragen. Jeder Mode einer endlichen Platte besitzt eine
-charakteristische Eigenform mit zugehörigen Knotenpunkten – Stellen, an denen die Schwingungsamplitude verschwindet. Wird
-der Exciter genau an einem solchen Knotenpunkt eines bestimmten Modes platziert, wird dieser Mode nicht angeregt \textbf{[Zenker et al., 2019]}. Die Folge ist ein lückenhafter Frequenzgang mit deutlichen Fehlstellen bei den zugehörigen Eigenfrequenzen.
-Eine symmetrische Platzierung des Exciters in der Panelmitte ist aus physikalischer Sicht unvorteilhaft. An der Mitte eines
-rechteckigen Panels fallen die Knotenpunkte zahlreicher ungerade indizierter Moden zusammen; eine Anregung in diesem
-Bereich regt systematisch nur die geraden Moden an, was zu einem deutlich ungleichmäßigen Frequenzgang führt \textbf{[Cremer &
-Heckl, 1996]}. Aus diesem Grund wird in der Literatur eine asymmetrische Platzierung empfohlen, bei der der Exciter im
-Bereich von etwa einem Drittel bis zwei Fünftel der jeweiligen Paneldimension angebracht wird.
-Zenker et al.2019 führten an der Technischen Universität Dresden eine systematische Untersuchung der Exciter-Positionierung
-durch, bei der 25 unterschiedliche Positionen auf einem rechteckigen DML-Panel vermessen und simuliert wurden \textbf{[Zenker et al., 2019]}. Die Optimierung erfolgte auf Grundlage der abgestrahlten Schallleistung, berechnet mittels eines elektromechanisch-akustischen Simulationsmodells. Die Ergebnisse bestätigten, dass die optimale Exciter-Position stark vom
-Panelformat, den Materialeigenschaften und dem gewünschten Frequenzbereich abhängt – eine universell gültige Position, die
-für alle Geometrien gleichzeitig optimal wäre, existiert also nicht.
-Bei der Planung eines DML-Systems ist daher eine FEM-basierte Modalanalyse unerlässlich. Durch die Berechnung der
-Eigenfrequenzen und Eigenformen der jeweiligen Panelgeometrie kann der Ort des maximalen Modeneingangs – also der
-Antiknoten möglichst viele Moden gleichzeitig – gezielt bestimmt werden \textbf{[Beer et al., 2017]}. Die anschließende Simulation 
-in COMSOL Multiphysics, wie sie in Kapitel 3.2 dieser Arbeit beschrieben wird, ermöglicht es, die Exciter-Position
-quantitativ zu bewerten und für die konkrete Systemkonfiguration zu optimieren.
+Eine systematische Untersuchung an der Technischen Universität Dresden analysierte die Positionierung von Excitern auf einem Rechtechigen DML-Panel
+anhand von fünfunzwanzig unterschiedlichen Anregungspunkten mittels Numerischer Simulation. Die dabei erzielten Ergebnisse zeigen, dass die
+Optimale Anreger-Position maßgeblich von der Panelgeometrie und dessen Maße, den Materialeigenschaften sowie dem gewünschten Frequenzberech abhängt.
+Die analyse erfolgte auf Basis der in der Simulation berechneten abgestrahlten Schallleistung. Eine universell optimale Exciter-Position, welche
+von der Panel Geometrie und dessen Materialeigenschaften unabhängig ist, konnte im Rahmen der untersuchung ausgeschlossen werden. 
+
+Bei der Planung eines DML-Lautsprechersystems ist eine FEM Basierte Simulation der Panele unerlässlich. Durch die Berechnung der Eigenfrequenzen und Eigenformen abhängig von der Panelgeometrie kann die Ideale Exciter-Position, also der Punkt an den möglichst viele Moden angeregt werden bestimmt werden. 
+
+
+BILD
+
+BILD
+
+
+
+
+
+%Die Position des Körperschallerregers spielt eine entscheidende Rolle, da durch seine Position abhängig zur Panel-Geometrie die Moden des Panels
+%angeregt werden. Dabei wird auf eine möglichst hohe Zahl von angeregten Moden abgezielt. 
+
+%Multi-Exciter-Konfiguration mehr Exciter = Mehr SPL 
+
+%Die Position des Exciters auf der DML-Platte hat einen entscheidenden Einfluss darauf, welche Schwingungsmoden angeregt
+%werden und wie effizienter diese zur Schallabstrahlung beitragen. Jeder Mode einer endlichen Platte besitzt eine
+%5charakteristische Eigenform mit zugehörigen Knotenpunkten – Stellen, an denen die Schwingungsamplitude verschwindet. Wird
+%der Exciter genau an einem solchen Knotenpunkt eines bestimmten Modes platziert, wird dieser Mode nicht angeregt \textbf{[Zenker et al., 2019]}. %Die Folge ist ein lückenhafter Frequenzgang mit deutlichen Fehlstellen bei den zugehörigen Eigenfrequenzen.
+%Eine symmetrische Platzierung des Exciters in der Panelmitte ist aus physikalischer Sicht unvorteilhaft. An der Mitte eines
+%rechteckigen Panels fallen die Knotenpunkte zahlreicher ungerade indizierter Moden zusammen; eine Anregung in diesem
+%%Heckl, 1996]}. Aus diesem Grund wird in der Literatur eine asymmetrische Platzierung empfohlen, bei der der Exciter im
+%Bereich von etwa einem Drittel bis zwei Fünftel der jeweiligen Paneldimension angebracht wird.
+%Zenker et al.2019 führten an der Technischen Universität Dresden eine systematische Untersuchung der Exciter-Positionierung
+%durch, bei der 25 unterschiedliche Positionen auf einem rechteckigen DML-Panel vermessen und simuliert wurden \textbf{[Zenker et al., 2019]}. Die Optimierung erfolgte auf Grundlage der abgestrahlten Schallleistung, berechnet mittels eines elektromechanisch-akustischen Simulationsmodells. Die Ergebnisse bestätigten, dass die optimale Exciter-Position stark vom
+%Panelformat, den Materialeigenschaften und dem gewünschten Frequenzbereich abhängt – eine universell gültige Position, die
+%für alle Geometrien gleichzeitig optimal wäre, existiert also nicht.
+%Bei der Planung eines DML-Systems ist daher eine FEM-basierte Modalanalyse unerlässlich. Durch die Berechnung der
+%Eigenfrequenzen und Eigenformen der jeweiligen Panelgeometrie kann der Ort des maximalen Modeneingangs – also der
+%Antiknoten möglichst viele Moden gleichzeitig – gezielt bestimmt werden \textbf{[Beer et al., 2017]}. Die anschließende Simulation 
+%in COMSOL Multiphysics, wie sie in Kapitel 3.2 dieser Arbeit beschrieben wird, ermöglicht es, die Exciter-Position
+%5quantitativ zu bewerten und für die konkrete Systemkonfiguration zu optimieren.
 
 
 \section{Messtechnik}
