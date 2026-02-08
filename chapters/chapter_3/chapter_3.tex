@@ -130,14 +130,12 @@ Der Körperschallwandler wird in der Simulation in vereinfachter Form durch ein 
 
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/Comsol_Modellaufbau.png}
-	\caption{COMSOL-Modellaufbau des DML-Simulationsmodells}
+	\caption[COMSOL-Modellaufbau des DML-Simulationsmodells]{COMSOL-Modellaufbau des DML-Simulationsmodells. Die innere Kugel stellt die luftgefüllte Simulationsdomäne dar, in deren Zentrum sich das rechteckige DML-Panel mit dem kreisförmigen Exciter Patch befindet. Die äußere Kugelschicht bildet die PML-Schicht, welche als absorbierende Randbedingung fungiert. Der kleine Punkt oberhalb des Panels markiert den Messpunkt in einem Meter Abstand.}
 	\label{fig:comsol_modellaufbau}
 \end{figure}
-
-Abbildung \ref{fig:comsol_modellaufbau} zeigt den resultierenden Modellaufbau in COMSOL. Die innere Kugel stellt die luftgefüllte Simulationsdomäne dar, in deren Zentrum sich das rechteckige DML-Panel mit dem kreisförmigen Exciter Patch befindet. Die äußere Kugelschicht bildet die PML-Schicht, welche als absorbierende Randbedingung fungiert. Der kleine Punkt oberhalb des Panels markiert den Messpunkt in einem Meter Abstand.
 
 Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Freifeldraum-Labor der Ostfalia an, da die in der Simulation berechneten Ergebnisse im Anschluss mittels Versuchsaufbau evaluiert werden sollen. Dabei wird das Panel freihängend im Raum und als homogenisierter Körper angenommen. Die Seitenlängen der Platte werden parametrisiert, da diese in Abhängigkeit zur Exciter-Position stehen und durch die Parametrisierung ein effizientes Arbeiten gegeben ist. Die Parametrisierung ermöglicht eine schnelle Anpassung der Simulationsumgebung an neue Bedingungen, ohne sämtliche Abstände neu zu definieren. 
 
