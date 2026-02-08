@@ -24,12 +24,15 @@ Firma 3A Composites (Handelsname KAPA) verwendet. Dabei handelt es sich um Platt
 Polyurethanschaum und Deckschichten aus hochwertigem Zellstoffkarton. Die entsprechenden Materialdaten sind den Datenblättern in Anhang C und D zu entnehmen. Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete
 Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine
 vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten
-Frequenzbereich von 20--20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem
+Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem
 Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden.
 Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang
 bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute
 Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität
-dar. Zudem befinden sich die KAPA-Sandwichplatten in einem preislich angenehmen Bereich (Anhang E) 
+dar.
+
+
+
 
  
 
@@ -120,6 +123,14 @@ Für die Strukturanalyse sind die Dichte $\rho$ [kg/m³], der Elastizitätsmodul
 Für Sandwichmaterialien wie die in diesem Fall verwendeten KAPA-Platten können entweder homogenisierte effektive Materialeigenschaften verwendet werden, oder die mehrschichtige Struktur wird explizit mit entsprechenden Kontaktbedingungen zwischen den Schichten modelliert [COMSOL Blog - ASI, 2024]. Die Dämpfung kann als strukturelle Dämpfung über einen Verlustfaktor $\eta$ oder als Rayleigh-Dämpfung über die Parameter $\alpha$ und $\beta$ berücksichtigt werden, wobei in den meisten Fällen die Auswirkungen der Dämpfung auf die Eigenfrequenzen gering sind und diese primär die Amplitude der Resonanzpeaks beeinflusst [COMSOL Blog - Dämpfung, 2024].
 
 \subsection{COMSOL-Modell-Aufbau}
+
+Der Simulationsaufbu in COMSOL Multiphysics erfolgt inerhalb der Acousitcs Domain. Das Simulationsmodell ist so ausgelegt ,dass es den Freifeldaufbau des Akustiklabors möglihcs realitätsnah nachbildet. Diese Ähnlichkeit dient dazu, die Ergebnisse der Simulation mit dem folgenden Versuchsaufbau im Freifeldraum im laufe dieser Arbeit direkt vergleichen zu können. 
+Zu Beginn des Simulationsaufbaus werden die Modellparameter definiert, welche die Geometrischen Abmessungen des Systems festlegen. Diesse Größen werden parametriesiert, sodass sie in den nachfolgenden Einstellungen wiederverwendet und bei befarf einfach angepasst werden können. Dadurch ist es möglich das Modell schnell und effizient Variabel anzupassen. Zu den wesentlichen Parametern zählen die Seitenlängen des DML-Panels sowie die Position des Exciter Patches auf der Paneloberfläche. Nachdem die Parameter festgelegtwurden, wird inerhalb der Geometrieumgebung von COMSOL eine kugelförmige Domäne definiert, deren Mittelpunkt im Koordinatenursprung liegt. Zusätzlich wird mit der Quader Funktion ein Panel erstellt und so positioniert, dass sich dessen Mittelpunkt im Ursprung des Koordinatensystems befindet. Dies wird durch die parametrische Definition der Geometrie sichergestellt. Die Wahl des Koordinatenursprungs in der Panelmitte hat den Hintergrund, dass sich ein Messpunkt zur Erfassung des Schalldruckpegels in einem Abstand von einem Meter in positiver Y-Richtung vom Ursprung befindet. Dadurch kann der Schalldruckpegel in einer definierten Messposition ausgewertet werden.Der Durchmesser der Kugel beträgt 1,5 m, wodurch sichergestellt wird, dass sich sowohl das Panel als auch der Messpunkt vollständig innerhalb des Simulationsraums befinden.Gleichzeitig wird ein ausreichender Abstand zwischen Messpunkt und Rand des Simulationsraums gewährleistet, um unerwünschte Reflexionen zu minimieren. Diese Kugel stellt den luftgefüllten Simulationsraum dar, da sich Schall nur in einem Medium ausbreiten kann. Um den Luftgefüllten Simulationsraum herum befindet sich eine weitere Kugeldomäne welche einen Durchmesser von 1.9 meter hat. Diese zweite Kugelförmige schicht ist als Perfectly Matched Layer - PML definiert. Eine PML stellt eine ideal absorbierende Randbedingung dar, welche darauftreffende schallwellen nahezu vollständig absorbiert und somit die bedingungen eines Reflexionsarmen Freifeldes nachbildet. 
+Der Körperschallwandler wird in der Simulation in vereinfachter form duch ein Exciter Patch auf der Paneloberfläche medelliert. Dabei handelt es sich um eine zweidimensionale Kreisförmige Fläche, din in der Ebene des Panel liegt. Dieser Patch wird mit einer Normalgeschwindigkeit welche senkrecht zur Paneloberfläche wirkt angeregt. Die vorgegebene Normalgeschwindigkeit simuliert die Masse, krafto sowie die Mechanische Kopplung des Exciters durch eine Harmonische Geschwindigkeit. 
+
+
+
+
 
 
 Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Freifeldraum-Labor der Ostfalia an, da die in der Simulation berechneten Ergebnisse im Anschluss mittels Versuchsaufbau evaluiert werden sollen. Dabei wird das Panel freihängend im Raum und als homogenisierter Körper angenommen. Die Seitenlängen der Platte werden parametrisiert, da diese in Abhängigkeit zur Exciter-Position stehen und durch die Parametrisierung ein effizientes Arbeiten gegeben ist. Die Parametrisierung ermöglicht eine schnelle Anpassung der Simulationsumgebung an neue Bedingungen, ohne sämtliche Abstände neu zu definieren. 
