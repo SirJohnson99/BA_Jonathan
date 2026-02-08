@@ -11,32 +11,51 @@ ihrer technischen Eignung, akustischen Leistungsfähigkeit und praktischen Umset
 
 Zum Anregen der Panele werden Körperschallwandler der Firma Dayton Audio verwendet, Typ DAEX32EP-4, 
 %welcher eineNennleistung von 40 W bei einer Impedanz von 4 $\Omega$ aufweist.
-Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse, der Marke Dayton Audio \cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
+Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse.\cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
 Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Dayton Audio Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. 
 Ausgangsleistung von 480 W für Lautsprecher mit einer Impedanz von 4 $\Omega$ bis 16 $\Omega$ bereitstellt. Die zugehörigen
 technischen Kenndaten sind dem Datenblatt in Anhang B zu entnehmen. 
+Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro betrieben werden. Dieser vereint mehrere Funktionen in einem Gerät. Mit dem WVQ-600 Pro kann das Eingangsignal verstärkkt werden. Außerwdem verfügt der Vorverstärkker über einen integrierten grafischen 2 × 10-Band-Equalizer, mit dem das Audiosignal in zehn Frequenzbändern pro Kanal um jeweils ±10 dB angepasst werden kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. (Quelle) 
+
 Die Signalübertragung zwischen der Stereoanlage und den Körperschallwandlern erfolgt über handelsübliches Lautsprecherkabel
 mit einem Leiterquerschnitt von 1,5 mm². 
 
 Als Panelmaterial werden die in Tabelle 2.1.1 aufgeführten Sandwichplatten der
-Firma 3A Composites (Handelsname KAPA) verwendet. Dabei handelt es sich um Platten in Sandwichbauweise mit einem Kern aus
-Polyurethanschaum und Deckschichten aus hochwertigem Zellstoffkarton. Die entsprechenden Materialdaten sind den Datenblättern in Anhang C und D zu entnehmen. Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete
-Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine
-vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten
-Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem
-Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden.
-Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang
-bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute
-Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität
-dar.
+Firma 3A Composites (Handelsname KAPA) verwendet. Dabei handelt es sich um Platten in Sandwichbauweise mit einem Kern aus Polyurethanschaum und Deckschichten aus hochwertigem Zellstoffkarton. Die entsprechenden Materialdaten sind den Datenblättern in Anhang C und D zu entnehmen. 
+
+Mithilfe der FEM Simulationssoftware COMSOL Multiphsyics wird der Definierte Versuchasaufbau welcher im Folgekkapitel erläutert wird modelliert und simuliert. Ziel der Simulation ist es den Zeit und Ressourcenaufwand für expreimetelle Untersuchengen zu Reduzieren und gleichzeitig eine ggeeignete Exciter-Position sowie eine Passende Panelgröße für die Vorgegebenen materialen zu identifizieren. Anschließend werden die Simulations ergebnisse im Freifeldraum des Akustiklabors im Realen nachgebildet und untersucht. 
+Der Versuchsaufbau wird dabei im Folgenden Kaptiel eindeutig Definiert sodass eine direkte Vergleichbarkeit zwischen Simulation und expreimenteller Messung gewährleistet ist.
+
+
+\section {Definition des Versuchsaufbaus} 
+
+Der Versuchsaufbau ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird. (QUELLE) 
+
+Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
+
+Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangssignal angeregt. Zur Vergleichbarkeit mit der Normmessung wird die elektrische Anregungsleistung auf einen festgelegten Referenzwert eingestellt. In der Simulation erfolgt die Anregung über eine vorgegebene Normalgeschwindigkeit des Exciters, welche einer definierten elektrischen Leistung entspricht.
+
+Der Versuchsaufbau befindet sich in einem reflexionsarmen Freifeldraum, um störende Reflexionen von Wänden, Boden und Decke zu minimieren. Dadurch wird sichergestellt, dass überwiegend der direkt abgestrahlte Schall des Panels erfasst wird.
+
+In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorbierenden Randbedingungen beziehungsweise einer Perfectly Matched Layer- PML nachgebildet. Dadurch können Freifeldbedingungen angenähert und die Simulationsergebnisse mit den realen Messungen verglichen werden.
+
+Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
 
 
 
 
- 
 
-----------------------------------------------
+
+
+
+
+
+
+
+
+%Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden. Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität dar.
+
 %Die Entwicklung eines DML-Lautsprechersystems erfordert zunächst eine grundsätzliche Entscheidung bezüglich der Systemarchitektur. Im Rahmen dieser Arbeit werden drei fundamentale Systemkonfigurationen hinsichtlich ihrer technischen Eignung, akustischen Performance und Praktikabilität evaluiert: das Fullrange-System ohne Frequenzweiche, das 2-Wege-System mit Subwoofer-Integration sowie das 3-Wege-System mit separater Bass-, Mitten- und Höhenwiedergabe.
 
 %\textbf{Fullrange-System ohne Frequenzweiche}
@@ -65,7 +84,11 @@ dar.
 %Die gewonnenen Erkenntnisse zur optimalen Exciter-Position sind unmittelbar auf 2-Wege-Systeme übertragbar, da die modale Struktur des Panels unabhängig von der Frequenzweichen-Konfiguration ist \cite[S.~156]{Harris2000}. Eine Subwoofer-Integration könnte in einer Folgearbeit mit minimalem Aufwand durch Hinzufügen eines Crossover-Netzwerks bei 80-90 Hz realisiert werden, wobei die optimierte Panel-Konfiguration dieser Arbeit direkt übernommen werden kann.
 %Zusammenfassend demonstriert die systematische Konzeptentwicklung unter Berücksichtigung wissenschaftlicher Literatur sowie industrieller Best Practices, dass 2-Wege-Systeme für HiFi-Anwendungen die optimale Architektur darstellen, während Fullrange-Systeme für spezifische Anwendungsszenarien (Nahfeld, Lehre) sowie als Entwicklungsplattform geeignet sind. 3-Wege-Systeme sind aufgrund der Vokalbereich-Crossover-Problematik für DML-Implementierungen nicht zu empfehlen.
 
-\subsection{Lösungskonzepte für die Systemarchitektur}
+\section{Lösungskonzepte für die Systemarchitektur}
+
+Sinnvoll eine Verwndung von Vorverstärker und Stereoanlage, ansteuerung eines oder 2 Exciter auf der platte. 
+
+Diskusion über Frequenzweichen. 
 
 Verwendung von der Stereoanlage \glqq Stereo Power Amplifier WPA-600PRO\grqq{} mit möglicher Verbindung vom \glqq Stereo Graphic Equalizer/Pre Amplifier WVQ-600PRO\grqq{} und den \glqq Dayton Audio DAEX32EP-4 Thruster 32mm Exciter 40W 4 Ohm\grqq{}.
 2 Exciter in Reihe schalten, um eine Impedanz von 8 Ohm zu erzeugen, welche die Langlebigkeit der Exciter garantiert, während die Power der Stereoanlage komplett genutzt werden kann. 
@@ -73,20 +96,25 @@ Verwendung von der Stereoanlage \glqq Stereo Power Amplifier WPA-600PRO\grqq{} m
 
 \subsection{Vergleichstabelle und Bewertung}
 
+Vergleich verschiedener Möglichkeiten: 
+
 Vergleichstabelle der möglichen Konzepte (Fullrange, 2-Wege, 3-Wege, Multi-Exciter) mit den Bewertungskriterien: Verstärker-Kompatibilität, Komplexität, Kosten, SPL bei 1m Abstand, Bass. Dabei werden verschiedene Kriterien unterschiedlich gewichtet, um eine sinnvolle Lösung zu bekommen. 
+
+
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
 Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den Verstärker,  Höherer SPL
 
 
+
 \section{Simulation in COMSOL Multiphysics}
 
 
+
+
+
 \subsection{Theoretische Grundlagen der Simulation}
-
-
-
 
 
 Die numerische Simulation mechanischer und akustischer Systeme mittels COMSOL Multiphysics basiert auf der Finite-Elemente-Methode (FEM), welche seit Jahrzehnten Standard in der Ingenieurwissenschaft zur Lösung partieller Differentialgleichungen ist [COMSOL Multiphysics - Website, 2024]. Um Modelle von physikalischen Systemen mit Hilfe von Computern simulieren und lösen zu können, muss das Modell diskretisiert werden. Bei der Diskretisierung werden geometrische Modelle auf endlich viele und endlich kleine Elemente und einer daraus resultierenden Anzahl an räumlichen Abtastpunkten zerlegt, dabei wird die Lösung in jedem Element durch Formfunktionen approximiert [Petritsch TU Graz S. 4]. COMSOL Multiphysics bietet eine gekoppelte Multiphysik- oder Einzelphysik-Modellierungsfunktion, um auch die Möglichkeit breitgefächerter physikalischer Anwendungen zu modellieren und simulieren. Dabei sind im COMSOL Model Builder alle notwendigen Schritte zum Aufbau eines Simulationsmodells, von der Definition von Geometrien, der Erfassung von Materialeigenschaften, der Physikbeschreibung und der Durchführung und Berechnung im Modellierungs-Workflow gegeben [COMSOL Multiphysics - Website, 2024].
@@ -121,6 +149,9 @@ Für DML-Panels mit freier Aufhängung werden typischerweise spannungsfreie Rand
 Die Materialeigenschaften gehen direkt in die Systemmatrizen ein und müssen genau bekannt sein, um genaue Simulationsergebnisse zu erzielen [Baratelli 2018]. 
 Für die Strukturanalyse sind die Dichte $\rho$ [kg/m³], der Elastizitätsmodul $E$ [Pa] und die Poissonzahl $\nu$ [-] die fundamentalen Parameter [Jonuscheit TU Clausthal, S. 3].
 Für Sandwichmaterialien wie die in diesem Fall verwendeten KAPA-Platten können entweder homogenisierte effektive Materialeigenschaften verwendet werden, oder die mehrschichtige Struktur wird explizit mit entsprechenden Kontaktbedingungen zwischen den Schichten modelliert [COMSOL Blog - ASI, 2024]. Die Dämpfung kann als strukturelle Dämpfung über einen Verlustfaktor $\eta$ oder als Rayleigh-Dämpfung über die Parameter $\alpha$ und $\beta$ berücksichtigt werden, wobei in den meisten Fällen die Auswirkungen der Dämpfung auf die Eigenfrequenzen gering sind und diese primär die Amplitude der Resonanzpeaks beeinflusst [COMSOL Blog - Dämpfung, 2024].
+
+
+Noch Überarbeiten und Quellen Korrekt einfügen. 
 
 \subsection{COMSOL-Modell-Aufbau}
 
