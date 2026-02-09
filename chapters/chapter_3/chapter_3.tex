@@ -25,7 +25,7 @@ Mithilfe der FEM-Simulationssoftware COMSOL Multiphysics wird der definierte Ver
 
 \section {Definition des Versuchsaufbaus} 
 
-Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird\cite{Goerne2011}.
+Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}.
 
 Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
 
@@ -37,7 +37,12 @@ In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorb
 
 Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
 
-SKIZZE Für den Versuchsaufbau! 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/Versuchsaufbau.png}
+	\caption{Schematische Darstellung des Versuchsaufbaus}
+	\label{fig:versuchsaufbau}
+\end{figure} 
 
 
 %Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden. Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität dar.
