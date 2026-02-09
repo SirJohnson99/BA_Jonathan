@@ -82,15 +82,19 @@ In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schemat
 
 Bei der Konzeptentwicklung dieser Arbeit werden verschiedene Lösungsansätze innerhalb der vorgegebenen Randbedingungen hinsichtlich ihrer technischen Eignung, akustischen Leistungsfähigkeit und praktischen Umsetzbarkeit analysiert und bewertet. 
 
+
 Sinnvoll ist eine Verwendung von Vorverstärker und Stereoanlage, Ansteuerung eines oder 2 Exciter auf der Platte.
 
-Diskussion über Frequenzweichen. 
 
-Verwendung von der Stereoanlage \glqq Stereo Power Amplifier WPA-600PRO\grqq{} mit möglicher Verbindung vom \glqq Stereo Graphic Equalizer/Pre Amplifier WVQ-600PRO\grqq{} und den \glqq Dayton Audio DAEX32EP-4 Thruster 32mm Exciter 40W 4 Ohm\grqq{}.
-2 Exciter in Reihe schalten, um eine Impedanz von 8 Ohm zu erzeugen, welche die Langlebigkeit der Exciter garantiert, während die Power der Stereoanlage komplett genutzt werden kann. 
+Diskussion über Frequenzweichen. ob es sinn macht oder nicht ?  \cite{Bai2001}
+
+
 
 
 \subsection{Vergleichstabelle und Bewertung}
+
+Bewetungstabelle in Arbeit! 
+
 
 Vergleich verschiedener Möglichkeiten: 
 
@@ -99,6 +103,7 @@ Vergleichstabelle der möglichen Konzepte (Fullrange, 2-Wege, 3-Wege, Multi-Exci
 
 
 \subsection{Konzeptentscheidung für diese Arbeit}
+
 
 Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den Verstärker,  Höherer SPL
 
@@ -121,7 +126,7 @@ Die numerische Simulation mechanischer und akustischer Systeme mittels COMSOL Mu
 
 Für die Simulation von DML-Lautsprechersystemen ist das Acoustics Module von zentraler Bedeutung, welches sowohl die Modellierung der Strukturschwingungen des Panels als auch der daraus resultierenden Schallabstrahlung ermöglicht \textbf{[COMSOL Acoustics Module, 2024]}. Dieses Interface löst die dynamischen Navier-Gleichungen im Frequenzbereich und ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 656-661]}.
 
-Die theoretische Grundlage für die Strukturanalyse bildet die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen $\boldsymbol{\sigma}$ und Dehnungen $\boldsymbol{\varepsilon}$ über das verallgemeinerte Hookesche Gesetz beschreibt \textbf{[Möser 2015, S. 15-22]}. Für isotrope Materialien vereinfacht sich dieses zu einer Beziehung, die durch den Elastizitätsmodul $E$ und die Poissonzahl $\nu$ vollständig charakterisiert ist. Die Bewegungsgleichung für elastische Festkörper lautet in ihrer allgemeinen Form:
+Die theoretische Grundlage für die Strukturanalyse bildet die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen $\boldsymbol{\sigma}$ und Dehnungen $\boldsymbol{\varepsilon}$ über das verallgemeinerte Hookesche Gesetz beschreibt \cite{Moeser2010}. Für isotrope Materialien vereinfacht sich dieses zu einer Beziehung, die durch den Elastizitätsmodul $E$ und die Poissonzahl $\nu$ vollständig charakterisiert ist. Die Bewegungsgleichung für elastische Festkörper lautet in ihrer allgemeinen Form:
 
 \begin{equation}
 \rho \frac{\partial^2 \mathbf{u}}{\partial t^2} = \nabla \cdot \boldsymbol{\sigma} + \mathbf{f}
@@ -137,7 +142,7 @@ wobei $p$ der akustische Schalldruck und $k = \omega/c$ die Wellenzahl mit der S
 
 
 
-Für die Eigenfrequenzanalyse, welche die natürlichen Schwingungsfrequenzen und -formen des DML-Panels bestimmt, wird das verallgemeinerte Eigenwertproblem gelöst, welches aus der homogenen Form der Bewegungsgleichung ohne äußere Anregung resultiert \textbf{[COMSOL Blog - Eigenmoden, 2024]}. Die Eigenfrequenzen $f_n = \omega_n/(2\pi)$ und zugehörigen Eigenmoden $\boldsymbol{\phi}_n$ charakterisieren das modale Verhalten des Systems vollständig. Für DML-Systeme ist eine hohe modale Dichte im interessierenden Frequenzbereich wünschenswert, da dies zu einer statistisch gleichmäßigeren Schallabstrahlung führt \textbf{[Bai \& Huang 2001, S. 2753-2755]}. Die modale Dichte $n(f)$, definiert als die Anzahl der Moden pro Frequenzintervall, steigt für Plattenstrukturen proportional zur Frequenz an, was DML-Systeme besonders für mittlere und höhere Frequenzen geeignet macht.
+Für die Eigenfrequenzanalyse, welche die natürlichen Schwingungsfrequenzen und -formen des DML-Panels bestimmt, wird das verallgemeinerte Eigenwertproblem gelöst, welches aus der homogenen Form der Bewegungsgleichung ohne äußere Anregung resultiert \textbf{[COMSOL Blog - Eigenmoden, 2024]}. Die Eigenfrequenzen $f_n = \omega_n/(2\pi)$ und zugehörigen Eigenmoden $\boldsymbol{\phi}_n$ charakterisieren das modale Verhalten des Systems vollständig. Für DML-Systeme ist eine hohe modale Dichte im interessierenden Frequenzbereich wünschenswert, da dies zu einer statistisch gleichmäßigeren Schallabstrahlung führt \cite{Bai2001}. Die modale Dichte $n(f)$, definiert als die Anzahl der Moden pro Frequenzintervall, steigt für Plattenstrukturen proportional zur Frequenz an, was DML-Systeme besonders für mittlere und höhere Frequenzen geeignet macht.
 
 Die numerische Diskretisierung erfolgt durch Zerlegung der Geometrie in finite Elemente, wobei von COMSOL verschiedene Elementtypen angeboten werden, darunter für dreidimensionale Probleme Tetraeder, Hexaeder, Prismen und Pyramiden. Diese unterscheiden sich in ihrer Anzahl der Knotenpunkte. \textbf{[COMSOL Structural Mechanics Module, 2024]}. Die Elementgröße muss so gewählt werden, dass pro Wellenlänge mindestens fünf bis sechs Elemente zweiter Ordnung vorhanden sind, um numerische Dispersion zu vermeiden und die Eigenmoden korrekt aufzulösen \textbf{[COMSOL Blog - Eigenmoden, 2024]}. Für akustische Probleme gilt die analoge Anforderung, dass pro akustischer Wellenlänge $\lambda = c/f$ eine ausreichende Anzahl von Elementen vorhanden sein muss \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 168-170]}. 
 Die Formfunktionen der Elemente können linear erste Ordnung, quadratisch zweite Ordnung oder kubisch höhere Ordnung sein, wobei Elemente höherer Ordnung bei gleicher Elementanzahl eine deutlich höhere Genauigkeit bieten, jedoch auch einen erhöhten Rechenaufwand erfordern \textbf{[Petritsch TU Graz, S. 22-25]}.
@@ -173,8 +178,114 @@ Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Frei
 
 
 
-
 \subsection{Durchgeführte Simulationsstudien}
+
+Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
+
+Nachdem das Simulationsmodell, wie in Abschnitt 3.4.2 beschrieben, erstellt wurde, werden den einzelnen Gebieten – Panel und umgebender Raum – die entsprechenden Materialparameter zugewiesen. Der Raum um das Panel wird mit Luft gefüllt. Das entsprechende Material ist in der Materialbibliothek von COMSOL enthalten. Dichte und Schallgeschwindigkeit sind temperaturabhängig und standardmäßig für eine Umgebungstemperatur von 20 °C definiert, was für die vorliegende Simulation einen realistischen Referenzwert darstellt.
+
+Für das Panel werden die Materialeigenschaften der Sandwichplatten KAPA Graph und KAPA Line auf Grundlage der im Anhang enthaltenen Datenblätter verwendet. Dabei werden jeweils der Elastizitätsmodul, die Dichte sowie eine Poissonzahl festgelegt. Die Poissonzahl beschreibt das Verhältnis von Querdehnung zu Längsdehnung bei Zug- oder Druckbeanspruchung.
+
+Da in den Datenblättern der verwendeten Sandwichplatten keine Poissonzahl angegeben ist, wird diese auf Grundlage vergleichbarer Sandwichmaterialien mit einem Wert von \nu=0,3 angenommen.
+
+In der Simulation wird das Panel als homogenes Materialmodell abgebildet. Dabei werden die in den Datenblättern angegebenen Materialkennwerte der jeweiligen Sandwichplatten unverändert übernommen. Eine explizite Modellierung der Sandwichstruktur mit getrennten Deckschichten und Kern erfolgt nicht.
+
+Diese Vereinfachung dient der Reduzierung der Modellkomplexität und der Rechenzeit, da im Rahmen der vorliegenden arbeit hauptsächlich der Einfluss von Panelgröße und Exciter-Position auf das akustische Verhalten untersucht wird. Für die vergleichende Konzeptbewertung ist das homogene Ersatzmodell ausreichend, auch wenn die reale Biegesteifigkeit der Sandwichstruktur damit nur näherungsweise abgebildet wird. Wesentlich für die Simulation ist zudem die korrekte Abbildung der jeweiligen Plattendicke, da die KAPA Graph Platte eine Dicke von 5 mm und die KAPA Line Platte eine Dicke von 15 mm aufweist. 
+
+Zur Anregung des DML-Panels wird der verwendete Körperschallwandler in der Simulation nicht als vollständiges elektromechanisches System modelliert, sondern durch ein vereinfachtes mechanisches Ersatzmodell beschrieben. Ziel dieser Modellierung ist es, das frequenzabhängige Verhalten des Exciters mit geringem Rechenaufwand, jedoch unter Berücksichtigung der wesentlichen physikalischen Zusammenhänge, abzubilden.
+
+Ein elektrodynamischer Körperschallwandler besteht im Wesentlichen aus einer Spule, die sich in einem Magnetfeld bewegt. Fließt ein Strom durch die Spule, wirkt auf diese gemäß dem Lorentzschen Kraftgesetz eine Kraft
+
+F=Bl⋅I
+
+wobei 
+B die magnetische Flussdichte, l die effektive Leiterlänge im Magnetfeld und I der Spulenstrom ist. Das Produkt Bl wird als Kraftfaktor bezeichnet und stellt eine zentrale Kenngröße elektrodynamischer Wandler dar.
+
+Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden\cite{Mueller2004}. Die Bewegungsgleichung lautet: 
+
+mx¨(t)+cx˙(t)+kx(t)=F(t)
+
+Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert:
+
+Zmech​(ω)=Rms​+j(ωMms​−ωKms​​)
+
+Der Betrag der mechanischen Impedanz ergibt sich zu
+
+∣Zmech​(ω)∣=Rms2​+(ωMms​−ωKms​​)2
+
+An der Resonanzfrequenz fs kompensieren sich die reaktiven Anteile von Masse und Feder, sodass die Impedanz ihr Minimum erreicht und ausschließlich durch die mechanische Dämpfung bestimmt wird.
+
+Für die Simulation ist nicht die mechanische Impedanz selbst relevant, sondern deren Kehrwert, die mechanische Admittanz
+
+Ymech​=Zmech​1​
+
+da diese direkt den Zusammenhang zwischen Kraft und Geschwindigkeit beschreibt:
+
+v=Zmech​F​=F⋅Ymech​
+
+Unter Verwendung des mechanischen Gütefaktors 
+
+Qms​=Rms​ωs​Mms​​
+
+lässt sich die normierte mechanische Admittanz als frequenzabhängige Übertragungsfunktion formulieren:
+
+H(f)=(1−(fs​f​)2)2+(fs​Qms​f​)2
+​1​
+
+Diese Funktion beschreibt das typische Verhalten eines gedämpften Systems zweiter Ordnung:
+
+In der akustischen Simulation wird der Exciter durch eine vorgegebene Normalgeschwindigkeit auf einem kreisförmigen Patch des Panels ersetzt. Die frequenzabhängige Normalgeschwindigkeit ergibt sich aus dem Produkt einer Referenzgeschwindigkeit v0 und der Übertragungsfunktion H(f): 
+
+vn​(f)=v0​⋅H(f)
+
+mit 
+
+v
+n
+	​
+
+(f)=
+(1−(
+f
+s
+	​
+
+f
+	​
+
+)
+2
+)
+2
++(
+f
+s
+	​
+
+Q
+ms
+	​
+
+f
+	​
+
+)
+2
+	​
+
+v
+0
+	​
+
+	​
+
+
+Diese Funktion stellt eine physikalisch begründete, frequenzabhängige Anregung dar und bildet das Verhalten eines realen Exciters im linearen Arbeitsbereich nach.
+
+Damit ergibt sich im Hochfrequenzbereich das für ein massebestimmtes System typische quadratische Abklingen der Geschwindigkeit.
+
+
+
 
 Hier wird erklärt, dass der Exciter ein Feder-Masse-Modell ist und die Herleitung der Funktion. 
 
