@@ -11,7 +11,7 @@ ihrer technischen Eignung, akustischen Leistungsfähigkeit und praktischen Umset
 
 Zum Anregen der Panele werden Körperschallwandler der Firma Dayton Audio verwendet, Typ DAEX32EP-4, 
 %welcher eineNennleistung von 40 W bei einer Impedanz von 4 $\Omega$ aufweist.
-Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse.\cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
+Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse \cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
 Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Dayton Audio Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. 
 Ausgangsleistung von 480 W für Lautsprecher mit einer Impedanz von 4 $\Omega$ bis 16 $\Omega$ bereitstellt. Die zugehörigen
@@ -38,7 +38,7 @@ Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangss
 
 Der Versuchsaufbau befindet sich in einem reflexionsarmen Freifeldraum, um störende Reflexionen von Wänden, Boden und Decke zu minimieren. Dadurch wird sichergestellt, dass überwiegend der direkt abgestrahlte Schall des Panels erfasst wird.
 
-In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorbierenden Randbedingungen beziehungsweise einer Perfectly Matched Layer- PML nachgebildet. Dadurch können Freifeldbedingungen angenähert und die Simulationsergebnisse mit den realen Messungen verglichen werden.
+In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorbierenden Randbedingungen beziehungsweise einer Perfectly Matched Layer (PML) nachgebildet. Dadurch können Freifeldbedingungen angenähert und die Simulationsergebnisse mit den realen Messungen verglichen werden.
 
 Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
 
@@ -151,7 +151,7 @@ Für die Strukturanalyse sind die Dichte $\rho$ [kg/m³], der Elastizitätsmodul
 Für Sandwichmaterialien wie die in diesem Fall verwendeten KAPA-Platten können entweder homogenisierte effektive Materialeigenschaften verwendet werden, oder die mehrschichtige Struktur wird explizit mit entsprechenden Kontaktbedingungen zwischen den Schichten modelliert [COMSOL Blog - ASI, 2024]. Die Dämpfung kann als strukturelle Dämpfung über einen Verlustfaktor $\eta$ oder als Rayleigh-Dämpfung über die Parameter $\alpha$ und $\beta$ berücksichtigt werden, wobei in den meisten Fällen die Auswirkungen der Dämpfung auf die Eigenfrequenzen gering sind und diese primär die Amplitude der Resonanzpeaks beeinflusst [COMSOL Blog - Dämpfung, 2024].
 
 
-Noch Überarbeiten und Quellen Korrekt einfügen. 
+Noch überarbeiten und Quellen korrekt einfügen. 
 
 \subsection{COMSOL-Modell-Aufbau}
 
@@ -190,7 +190,7 @@ Es wurde der Frequenzverlauf von drei verschiedenen definierten Exciter-Position
 
 Die 2 KAPA Platten
 
-die 3 Positionen: Mitte, ein Drittel, zwei Fünftel der Seitenlänge
+Die 3 Positionen: Mitte, ein Drittel, zwei Fünftel der Seitenlänge
 
 Plattengrößen: 
 
