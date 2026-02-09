@@ -1,6 +1,11 @@
 \chapter{Lösung der Aufgabenstellung}
 
-Um einen DML-Flachlautsprecher, welcher HiFi-Standards erfüllen soll, zu entwickeln und zu optimieren, wird zunächst eine Konzeptentwicklung erstellt, welche das Vorgehen klar schildert unter Berücksichtigung der gegebenen Komponenten, wie Panel-Material, Stereoanlage und Körperschallwandler. 
+In diesem Kapitel wird das allgemeine Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben, der HiFi-Standards nach DIN45500 \cite{DIN45500} erfüllen soll. Zu Beginn werden die vorgegebenen Rahmenbedingungen systematisch aufgelistet und erläutert. Dazu zählen insbesondere die ausgewählten Körperschallanreger sowie die vorhandene Stereoanlage. Weitere Randbedingungen ergeben sich aus dem verwendeten Panelmaterial, den Panelabmessungen sowie der eingesetzten Simulationssoftware.
+
+Im Anschluss wird der Versuchsaufbau, mit dem der DML-Flachlautsprecher vermessen werden soll, eindeutig definiert. Dieser Aufbau wird sowohl in der Simulation als auch im realen Versuchsaufbau verwendet, um die akustischen Eigenschaften des Systems unter vergleichbaren Bedingungen zu untersuchen.
+
+Darauf aufbauend werden verschiedene Konzepte hinsichtlich ihrer Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben beschrieben, diskutiert und bewertet. Auf Grundlage dieser Bewertung wird ein geeignetes Konzept ausgewählt, das in den folgenden Kapiteln zunächst mittels Simulation untersucht und anschließend im realen Versuchsaufbau experimentell vermessen wird.
+
 
 \section{Darlegung der Rahmenbedingungen}
 
@@ -20,7 +25,7 @@ Mithilfe der FEM-Simulationssoftware COMSOL Multiphysics wird der definierte Ver
 
 \section {Definition des Versuchsaufbaus} 
 
-Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird. (QUELLE) 
+Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird\cite{Goerne2011}.
 
 Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
 
