@@ -25,11 +25,11 @@ Mithilfe der FEM-Simulationssoftware COMSOL Multiphysics wird der definierte Ver
 
 \section {Definition des Versuchsaufbaus} 
 
-Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}.
+Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse des LAutsprechers in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}. Die definierte Eingangsleistung mit entspricht 1 Watt elektrischer Leistung. 
 
 Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
 
-Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangssignal angeregt. Zur Vergleichbarkeit mit der Normmessung wird die elektrische Anregungsleistung auf einen festgelegten Referenzwert eingestellt. In der Simulation erfolgt die Anregung über eine vorgegebene Normalgeschwindigkeit des Exciters, welche einer definierten elektrischen Leistung entspricht.
+Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangssignal angeregt. In der Simulation erfolgt die Anregung über eine vorgegebene Normalgeschwindigkeit des Exciters, welche einer definierten elektrischen Leistung entspricht.
 
 Der Versuchsaufbau befindet sich in einem reflexionsarmen Freifeldraum, um störende Reflexionen von Wänden, Boden und Decke zu minimieren. Dadurch wird sichergestellt, dass überwiegend der direkt abgestrahlte Schall des Panels erfasst wird.
 
@@ -37,7 +37,7 @@ In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorb
 
 Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
 
-In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei von einem Gestell mit Schnüren aufgehängt, dies ist nur beispielhaft dargestellt, da die Lagerung oder Aufhängung des DML-Panels in der Konzeptentwicklung diskutiert wird. Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der Rückseite des Panels befindet, welches zum Betrachter gedreht ist. Das Messmikrofon, welches sich auf der Lautsprecherachse im Abstand von einem Meter vor der Panelmitte befindet, ist dementsprechend auch nicht am korrekten Platz. 
+In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei an einem Gestell mittels Schnüren aufgehängt. Diese Darstellung ist beispielhaft, da die konkrete Lagerung beziehungsweise Aufhängung des Panels im Rahmen der Konzeptentwicklung noch diskutiert wird.Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der dem Verstärker zugewandten Seite des Panels befindet. Das Messmikrofon ist auf der Lautsprecherachse positioniert und befindet sich in einem Abstand von genau einem Meter mittig vor der Plattenoberfläche.
 
 \begin{figure}[H]
 	\centering
@@ -198,14 +198,14 @@ Plattengrößen:
 aufzeigen und die Graphen besprechen.
 
 \section{Test im Freifeld-Raum}
-Versuchsaufbau erklären wie ich mir den Test gedacht habe...
+
+Der Versuchsaufbau im Freifeldraum orientiert sich an dem in 3.2 Definierten Versuchsaufbau. Dabei wird das DML-Panel an einem Gestell aufgehäng und das messmirkofon einen Meter vor der Platten mitte Positioniert. Der Körpschall wandler wird an den Definierten Punkten aus der Simulation befestigt. 
+
+Um eine Schallleistungsmessung bei 1W zu haben muss der Verstärker bei einem Exciter mit 4 OHM auf 2V und bei 2 Excitern in reihe mit 8 Ohm auf 2.87 V eingestellt werden. Die Spannung wird vorab mit einem Mulitmeter gemessen bevor der Exciters angschlossen wird. 
 
 
 Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulation, was Größe und Exciter-Position angeht. Die Tests mit den verschiedenen Exciter-Positionen werden verglichen und die 3 vordefinierten Punkte durch den Versuch getestet. Die Plattengröße wird nicht im Versuchsaufbau getestet, hierbei wird sich auf die Simulation sowie eine Berechnung verlassen.  
 
-\subsection{Versuchsaufbau}
-
-Platte im Freifeldraum frei an Schnüren aufgehängt, Messmikrofon 1m von der Plattenmitte entfernt. Mit Labview wird ein weißes Rauschen über den Flachlautsprecher abgespielt. Das Signal wird vom Messmikrofon mit bekannter Kennlinie aufgezeichnet und das Frequenzverhalten graphisch dargestellt. Die verschiedenen Exciter-Positionen werden in einem Diagramm mit verschiedenen Farben dargestellt und besprochen.  
 
 \subsection{Getestete Exciter-Positionen}
 
@@ -216,7 +216,6 @@ Platte im Freifeldraum frei an Schnüren aufgehängt, Messmikrofon 1m von der Pl
     \item 2. 1/3 außermittig von den Seitenlängen 
     \item 3. Mittig 
 \end{enumerate}
-
 
 
 \subsection{Messergebnisse und Auswertung (Messunsicherheit)}
