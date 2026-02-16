@@ -14,7 +14,7 @@ Bei der Entwicklung eines DML-Flachlautsprechers sind zunächst die grundlegende
 Zum Anregen der Panele werden Körperschallwandler der Firma Dayton Audio verwendet, Typ DAEX32EP-4. 
 Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse \cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
-Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Dayton Audio Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Ausgangsleistung von 480 W für Lautsprecher mit einer Impedanz von 4 $\Omega$ bis 16 $\Omega$ bereitstellt. Die zugehörigen technischen Kenndaten sind dem Datenblatt in Anhang B zu entnehmen. 
+Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Dayton Audio Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Die zugehörigen technischen Kenndaten sind dem Datenblatt in Anhang B zu entnehmen. 
 Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro betrieben werden. Dieser vereint mehrere Funktionen in einem Gerät. Mit dem WVQ-600 Pro kann das Eingangssignal verstärkt werden. Außerdem verfügt der Vorverstärker über einen integrierten grafischen 2 × 10-Band-Equalizer, mit dem das Audiosignal in zehn Frequenzbändern pro Kanal um jeweils ±10 dB angepasst werden kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. (Quelle) 
 Die Signalübertragung zwischen der Stereoanlage und den Körperschallwandlern erfolgt über handelsübliches Lautsprecherkabel mit einem Leiterquerschnitt von 1,5 mm². 
 Als Panelmaterial werden die in Tabelle 2.1.1 aufgeführten Sandwichplatten der Firma 3A Composites (Handelsname KAPA) verwendet. Dabei handelt es sich um Platten in Sandwichbauweise mit einem Kern aus Polyurethanschaum und Deckschichten aus hochwertigem Zellstoffkarton. Die entsprechenden Materialdaten sind den Datenblättern in Anhang C und D zu entnehmen. 
@@ -22,7 +22,7 @@ Mithilfe der FEM-Simulationssoftware COMSOL Multiphysics wird der definierte Ver
 
 
 
-\section {Definition des Versuchsaufbaus} 
+\section{Definition des Versuchsaufbaus} 
 
 Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse des Lautsprechers in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}. Die definierte Eingangsleistung entspricht 1 Watt elektrischer Leistung. 
 
@@ -88,7 +88,7 @@ Die Entscheidungsfindung basiert auf einer gewichteten Nutzwertanalyse, die sowo
 Die Entwicklung eines DML-Flachlautsprechers erfordert grundlegende Entscheidungen bezüglich zweier zentraler Systemparameter:
 
 \begin{enumerate}
-    \item Frequenzweichen konfiguartion 
+    \item Frequenzweichenkonfiguration
     \item Anzahl der Exciter pro Panel
 \end{enumerate}
 
@@ -106,7 +106,7 @@ Die Implementierung eines 2-Wege-Systems erfordert jedoch zusätzliche Komponent
 
 Ein 3-Wege-System, bei dem separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt werden, wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet. Ein Artikel des Tectonic Audio Labs weisen darauf hin, dass Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich.
 
-Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der verwendung eines 3-Wege-Systems zusätzliche kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-Systetm an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft.
+Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der Verwendung eines 3-Wege-Systems zusätzliche Kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-System an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft.
 
 
 
@@ -151,7 +151,7 @@ Vergleichstabelle der möglichen Konzepte (Fullrange, 2-Wege, 3-Wege, Multi-Exci
 \subsection{Konzeptentscheidung für diese Arbeit}
 
 
-Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den Verstärker,  Höherer SPL
+Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den Verstärker, Höherer SPL
 
 
 
@@ -159,7 +159,7 @@ Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den
 
 Die Simulation in COMSOL Multiphysics 
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren und gleichzeitig eine geeignete Exciter-Position sowie eine passende Panelgröße für die vorgegebenen Materialien zu identifizieren. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors im Realen nachgebildet und untersucht. 
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren und gleichzeitig eine geeignete Exciter-Position sowie eine passende Panelgröße für die vorgegebenen Materialien zu identifizieren. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet und untersucht. 
 Der Versuchsaufbau wird dabei im folgenden Kapitel eindeutig definiert, sodass eine direkte Vergleichbarkeit zwischen Simulation und experimenteller Messung gewährleistet ist.
 
 
@@ -247,7 +247,7 @@ F = B l \cdot I
 
 wobei B die magnetische Flussdichte, l die effektive Leiterlänge im Magnetfeld und I der Spulenstrom ist. Das Produkt Bl wird als Kraftfaktor bezeichnet und stellt eine zentrale Kenngröße elektrodynamischer Wandler dar.
 
-Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden\cite{Mueller2004}. Die Bewegungsgleichung lautet: 
+Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden \cite{Mueller2004}. Die Bewegungsgleichung lautet: 
 
 \begin{equation}
 m \ddot{x}(t) + c \dot{x}(t) + k x(t) = F(t)
@@ -292,7 +292,7 @@ R_{ms}^2 +
 \end{equation}
 
 
-An der Resonanzfrequenz fs kompensieren sich die reaktiven Anteile von Masse und Feder, sodass die Impedanz ihr Minimum erreicht und ausschließlich durch die mechanische Dämpfung bestimmt wird.
+An der Resonanzfrequenz $f_s$ kompensieren sich die reaktiven Anteile von Masse und Feder, sodass die Impedanz ihr Minimum erreicht und ausschließlich durch die mechanische Dämpfung bestimmt wird.
 
 Für die Simulation ist nicht die mechanische Impedanz selbst relevant, sondern deren Kehrwert, die mechanische Admittanz
 
@@ -368,7 +368,7 @@ Dabei sind
 \end{itemize}
 
 Diese Funktion stellt eine physikalisch begründete, frequenzabhängige Anregung dar und bildet das Verhalten eines realen Exciters im linearen Arbeitsbereich näherungsweise ab. Durch diese Darstellung kann der Körperschallwandler in der Simulation durch eine frequenzabhängige Normalgeschwindigkeit ersetzt werden.
-Die für das Ersatzmodell benötigten Parameter, Resonanzfrequenz $f_s$ und der mechanische Gütefaktor 
+Die für das Ersatzmodell benötigten Parameter, insbesondere die Resonanzfrequenz $f_s$ und der mechanische Gütefaktor 
 $Q_{ms}$, werden dem Datenblatt des verwendeten Exciters Anhang A entnommen. Auf diese Weise wird sichergestellt, dass die Anregungsfunktion die charakteristischen dynamischen Eigenschaften des realen Wandlers berücksichtigt.
 
 Die Normalgeschwindigkeit, welche als Anregungsgröße dient und einer elektrischen Eingangsleistung von 1 W entsprechen soll, kann auf Grundlage der Leistungsbeziehung zwischen mechanischer Geschwindigkeit und abgestrahlter Schallleistung hergeleitet werden.
@@ -500,7 +500,7 @@ Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulati
 3 verschiedene Positionen, welche vorab bei der Simulation simuliert wurden. 
 
 \begin{enumerate}
-    \item 1. Vom Hersteller Dayton Audio (Abbildung) 5/2
+    \item 1. Vom Hersteller Dayton Audio (Abbildung) 2/5
     \item 2. 1/3 außermittig von den Seitenlängen 
     \item 3. Mittig 
 \end{enumerate}
