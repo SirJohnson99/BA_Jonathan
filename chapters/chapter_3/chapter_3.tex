@@ -298,12 +298,14 @@ In der akustischen Simulation wird der Exciter durch eine vorgegebene Normalgesc
 v_n(f) = v_0 \cdot H(f)
 \end{equation}
 
-mit
+mit 
 
 \begin{equation}
 v_n(f) =
 \frac{v_0}{\sqrt{\left(1-\left(\frac{f}{f_s}\right)^2\right)^2+\left(\frac{f}{f_s Q_{ms}}\right)^2}}
 \end{equation}
+
+\clearpage 
 
 Dabei sind
 
@@ -314,12 +316,79 @@ Dabei sind
 \end{itemize}
 
 Diese Funktion stellt eine physikalisch begründete, frequenzabhängige Anregung dar und bildet das Verhalten eines realen Exciters im linearen Arbeitsbereich näherungsweise ab. Durch diese Darstellung kann der Körperschallwandler in der Simulation durch eine frequenzabhängige Normalgeschwindigkeit ersetzt werden.
-Die für das Ersatzmodell benötigten Parameter, insbesondere die Resonanzfrequenz $f_s$ und der mechanische Gütefaktor 
+Die für das Ersatzmodell benötigten Parameter, Resonanzfrequenz $f_s$ und der mechanische Gütefaktor 
 $Q_{ms}$, werden dem Datenblatt des verwendeten Exciters Anhang A entnommen. Auf diese Weise wird sichergestellt, dass die Anregungsfunktion die charakteristischen dynamischen Eigenschaften des realen Wandlers berücksichtigt.
 
-Die Normalgeschwindigkeit, welche als Anregungsgröße dient und einer elektrischen Eingangsleistung von 1 W entsprechen soll, kann auf Grundlage der Leistungsbeziehung zwischen mechanischer Geschwindigkeit und abgestrahlter Schallleistung hergeleitet werden:
+Die Normalgeschwindigkeit, welche als Anregungsgröße dient und einer elektrischen Eingangsleistung von 1 W entsprechen soll, kann auf Grundlage der Leistungsbeziehung zwischen mechanischer Geschwindigkeit und abgestrahlter Schallleistung hergeleitet werden.
+Ausgangspunkt dafür ist die Definition der Schallintensität als zeitlich gemittelter Energiefluss durch eine Fläche. Sie ergibt sich aus dem Produkt des Schalldrucks $p$ und der Schallschnelle $v$:
 
-Herleitung Leistung -> Normalgeschwindigkeit 
+\begin{equation}
+I = \langle p \cdot v \rangle
+\end{equation}
+
+Für eine fortschreitende ebene Welle stehen Schalldruck und Schallschnelle über 
+die charakteristische Schallimpedanz des Mediums in Beziehung. Mit
+
+\begin{equation}
+Z_0 = \rho_0 c_0
+\end{equation}
+
+und
+
+\begin{equation}
+p = Z_0 \, v
+\end{equation}
+
+folgt für die Intensität:
+
+\begin{equation}
+I = \rho_0 c_0 \, v^2
+\end{equation}
+
+Die gesamte abgestrahlte Schallleistung ergibt sich durch Integration der Intensität 
+über die wirksame abstrahlende Fläche $A_\mathrm{eff}$:
+
+\begin{equation}
+P_\mathrm{ak} = I \cdot A_\mathrm{eff}
+\end{equation}
+
+Damit erhält man:
+
+\begin{equation}
+P_\mathrm{ak} = \rho_0 c_0 \, A_\mathrm{eff} \, v^2
+\end{equation}
+
+Diese Gleichung beschreibt die Beziehung zwischen abgestrahlter Schallleistung 
+und der Normalgeschwindigkeit einer schwingenden Fläche.
+
+Da jedoch nur ein Teil der elektrischen Eingangsleistung $P_\mathrm{el}$ in akustische 
+Leistung umgewandelt wird, ist der elektroakustische Wirkungsgrad $\eta$ des 
+Exciters zu berücksichtigen:
+
+\begin{equation}
+P_\mathrm{ak} = \eta \, P_\mathrm{el}
+\end{equation}
+
+Einsetzen in die Leistungsbeziehung liefert:
+
+\begin{equation}
+\eta \, P_\mathrm{el} = \rho_0 c_0 \, A_\mathrm{eff} \, v^2
+\end{equation}
+
+Aufgelöst nach der Normalgeschwindigkeit ergibt sich:
+
+\begin{equation}
+v = \sqrt{\frac{\eta \, P_\mathrm{el}}{\rho_0 c_0 \, A_\mathrm{eff}}}
+\end{equation}
+
+Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die 
+äquivalente Normalgeschwindigkeit bestimmt werden, welche als Randbedingung 
+in der Simulation verwendet wird.
+
+Es ist zu beachten, dass sowohl der Wirkungsgrad $\eta$ als auch die effektive 
+abstrahlende Fläche $A_\mathrm{eff}$ frequenzabhängig sind. In der praktischen 
+Anwendung wird daher häufig eine Kalibrierung anhand eines Referenzpegels 
+durchgeführt, um eine realitätsnahe Anregung des Panels sicherzustellen.
 
 
 %Durch diese Funktion lässt sich ein Exciter im linearen Arbeitsbreich physikalisch begrünundet und anhand einer Frequenzabhängigen Anregung als ersatz zu einem Realen Exciter darstellen. Die dafür verwendeten Parameter$f_s$ und $Q_{ms}$ werden aus demm Exciter Datenblatt Anhang A entnommen. 
