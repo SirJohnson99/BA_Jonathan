@@ -46,6 +46,7 @@ In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schemat
 \end{figure} 
 
 
+
 %Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden. Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität dar.
 
 %Die Entwicklung eines DML-Lautsprechersystems erfordert zunächst eine grundsätzliche Entscheidung bezüglich der Systemarchitektur. Im Rahmen dieser Arbeit werden drei fundamentale Systemkonfigurationen hinsichtlich ihrer technischen Eignung, akustischen Performance und Praktikabilität evaluiert: das Fullrange-System ohne Frequenzweiche, das 2-Wege-System mit Subwoofer-Integration sowie das 3-Wege-System mit separater Bass-, Mitten- und Höhenwiedergabe.
@@ -215,7 +216,9 @@ mit
 \item $x(t)$ – Auslenkung.
 \end{itemize}
 
-Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert :
+Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert
+
+\clearpage
 
 \begin{equation}
 Z_{\mathrm{mech}}(\omega) = R_{ms} + j \left( \omega M_{ms} - \frac{K_{ms}}{\omega} \right)
@@ -252,11 +255,13 @@ Y_{\mathrm{mech}} = \frac{1}{Z_{\mathrm{mech}}}
 \end{equation}
 
 
-da diese direkt den Zusammenhang zwischen Kraft und Geschwindigkeit beschreibt:
+da diese direkt den Zusammenhang zwischen Kraft und Geschwindigkeit beschreibt
 
 \begin{equation}
 v = \frac{F}{Z_{\mathrm{mech}}} = F \cdot Y_{\mathrm{mech}}
 \end{equation}
+
+\clearpage
 
 Unter Verwendung des mechanischen Gütefaktors 
 
@@ -264,7 +269,7 @@ Unter Verwendung des mechanischen Gütefaktors
 Q_{ms} = \frac{\omega_s M_{ms}}{R_{ms}}
 \end{equation}
 
-lässt sich die normierte mechanische Admittanz als frequenzabhängige Übertragungsfunktion formulieren:
+lässt sich die normierte mechanische Admittanz als frequenzabhängige Übertragungsfunktion formulieren
 
 \begin{equation}
 H(f) =
@@ -282,7 +287,7 @@ H(f) =
 }
 \end{equation}
 
-Diese Funktion beschreibt das typische Verhalten eines gedämpften Systems zweiter Ordnung:
+Diese Funktion beschreibt das typische Verhalten eines gedämpften Systems zweiter Ordnung
 
 \begin{itemize}
 \item Bei $f \ll f_s$: nahezu konstante Geschwindigkeit
@@ -292,7 +297,9 @@ Diese Funktion beschreibt das typische Verhalten eines gedämpften Systems zweit
 
 Damit ergibt sich im Hochfrequenzbereich das für ein massebestimmtes System typische quadratische Abklingen der Geschwindigkeit.
 
-In der akustischen Simulation wird der Exciter durch eine vorgegebene Normalgeschwindigkeit auf einem kreisförmigen Patch des Panels ersetzt. Die frequenzabhängige Normalgeschwindigkeit ergibt sich aus dem Produkt einer Referenzgeschwindigkeit $v_0$ und der Übertragungsfunktion $H(f)$:
+\clearpage
+
+In der akustischen Simulation wird der Exciter durch eine vorgegebene Normalgeschwindigkeit auf einem kreisförmigen Patch des Panels ersetzt. Die frequenzabhängige Normalgeschwindigkeit ergibt sich aus dem Produkt einer Referenzgeschwindigkeit $v_0$ und der Übertragungsfunktion $H(f)$
 
 \begin{equation}
 v_n(f) = v_0 \cdot H(f)
@@ -305,7 +312,6 @@ v_n(f) =
 \frac{v_0}{\sqrt{\left(1-\left(\frac{f}{f_s}\right)^2\right)^2+\left(\frac{f}{f_s Q_{ms}}\right)^2}}
 \end{equation}
 
-\clearpage 
 
 Dabei sind
 
