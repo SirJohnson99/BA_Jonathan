@@ -153,7 +153,13 @@ Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskr
 
 Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit, Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.1 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
 
+Erläuterung der Gewichtungsentscheidungen:
 
+Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
+Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
+Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
+Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
+SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
 
 
 
@@ -184,21 +190,15 @@ Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequen
 \end{tabularx}
 \end{table}
 
+\clearpage
 
 
-
-
-
-Erläuterung der Gewichtungsentscheidungen:
-
-Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
-Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
-Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
-Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
-SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
 
 
 Tabelle 3.2: Bewertungsmatrix Systemarchitekturen (Punkteskala 0-10)
+
+
+
 
 
 
