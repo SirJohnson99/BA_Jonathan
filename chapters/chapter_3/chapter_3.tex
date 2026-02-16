@@ -38,44 +38,16 @@ Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulatio
 
 In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei an einem Gestell mittels Schnüren aufgehängt. Diese Darstellung ist beispielhaft, da die konkrete Lagerung beziehungsweise Aufhängung des Panels im Rahmen der Konzeptentwicklung noch diskutiert wird. Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der dem Verstärker zugewandten Seite des Panels befindet. Das Messmikrofon ist auf der Lautsprecherachse positioniert und befindet sich in einem Abstand von genau einem Meter mittig vor der Plattenoberfläche.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Versuchsaufbau.png}
-	\caption{Schematische Darstellung des Versuchsaufbaus}
-	\label{fig:versuchsaufbau}
-\end{figure} 
+
+\textbf{Blockschaltbild und Foto vom aufbau}
 
 
-
-%Die KAPA-Sandwichplatten weisen trotz akustischer Nachteile eine insgesamt geeignete Eigenschaftskombination für die Verwendung als DML-Flachlautsprecher auf. Durch die Sandwichbauweise ergibt sich eine vergleichsweise hohe Biegesteifigkeit bei moderatem Flächengewicht, was eine hohe Modenanregung im relevanten Frequenzbereich von 20-20.000 Hz befürwortet \cite{Moeser2010}. Der Polyurethan-Schaumkern führt im Vergleich zu einem Wabenkern zu höheren inneren Dämpfungsverlusten, wodurch Resonanzen abgeschwächt und Frequenzpeaks reduziert werden. Dadurch wird der Wirkungsgrad im Tieftonbereich begrenzt, trägt gleichzeitig aber zu einem gleichmäßigeren Frequenzgang bei \cite{Wiedemann2006}\cite{Bai2001}. Zudem ermöglicht die glatte Deckschichtoberfläche des Zellstoffkartons eine gute Kopplung des Körperschallwandlers an das Panel, wodurch eine gute Anregung der Biegewellen erfolgt. Die KAPA-Sandwichplatten stellen also einen praktikablen Kompromiss zwischen akustischer Performance und mechanischer Stabilität dar.
-
-%Die Entwicklung eines DML-Lautsprechersystems erfordert zunächst eine grundsätzliche Entscheidung bezüglich der Systemarchitektur. Im Rahmen dieser Arbeit werden drei fundamentale Systemkonfigurationen hinsichtlich ihrer technischen Eignung, akustischen Performance und Praktikabilität evaluiert: das Fullrange-System ohne Frequenzweiche, das 2-Wege-System mit Subwoofer-Integration sowie das 3-Wege-System mit separater Bass-, Mitten- und Höhenwiedergabe.
-
-%\textbf{Fullrange-System ohne Frequenzweiche}
-
-%Das Fullrange-Konzept stellt die einfachste Implementierung eines DML-Lautsprechers dar, bei welcher das Panel den gesamten hörbaren Frequenzbereich ohne Frequenzweiche abdeckt. Bai und Huang \cite{Bai2001} dokumentieren in ihrer grundlegenden Arbeit zur Entwicklung von Panel-Lautsprechersystemen, dass die untere Grenzfrequenz eines DML-Panels maßgeblich durch dessen Abmessungen determiniert wird. Für ein Panel mit den Dimensionen 60 cm × 45 cm ergibt sich aus ihren experimentellen Daten eine untere Grenzfrequenz im Bereich von 95-100 Hz \cite[S.~2755]{Bai2001}. Diese Limitation resultiert aus der Wellenlängenabhängigkeit der Biegewellen: Zur effizienten Abstrahlung tiefer Frequenzen ist eine minimale Panel-Diagonale erforderlich, welche in einem proportionalen Verhältnis zur Wellenlänge steht.
-%Der fundamentale Vorteil eines Fullrange-Systems liegt in der Vermeidung jeglicher Frequenzweichen, wodurch phasenbedingte Kohärenzverluste sowie Interferenzeffekte eliminiert werden \cite{Harris2000}. Dies ist insbesondere für den kritischen Vokalbereich zwischen 500 Hz und 4 kHz von Bedeutung, in welchem die menschliche Sprachverständlichkeit primär determiniert wird \cite[S.~187]{Fastl2007}. Ein Fullrange-System gewährleistet somit die kohärenteste Schallabstrahlung über das gesamte Spektrum.
-%Die primäre Limitation dieses Konzepts besteht jedoch in der unzureichenden Bass-Extension. Bai und Huang \cite[S.~2758]{Bai2001} quantifizieren den Wirkungsgrad von DML-Panels mit lediglich 0,039\%, verglichen mit 0,089\% für konventionelle Lautsprecher – eine Reduktion um den Faktor 2,3. In Kombination mit der limitierten unteren Grenzfrequenz resultiert dies in einer insuffizienten Wiedergabe von bassintensiven Musikgenres. Engineering Radio Blog \cite{EngineeringRadio2021} berichtet von einem experimentellen Fullrange-DML mit einer 4'×2' Platte (122 cm × 61 cm), welches trotz der substantiell größeren Abmessungen eine untere Grenzfrequenz von 174 Hz aufwies – deutlich oberhalb der für HiFi-Anwendungen erforderlichen 80 Hz gemäß DIN 45500 Klasse 2.
-%\textbf{2-Wege-System mit Subwoofer-Integration}
-
-%Das 2-Wege-Konzept adressiert die Bass-Limitation durch Integration eines dedizierten Subwoofers für den Frequenzbereich unterhalb 80-100 Hz, während das DML-Panel den Mitten- und Höhenbereich abdeckt. Czesak und Kleczkowski \cite{Czesak2025} präsentieren in ihrer aktuellen Studie im Journal of the Acoustical Society of America (JASA) eine systematische Evaluierung equalisierter DML-Systeme mit Subwoofer-Integration. Ihre Konfiguration verwendet einen Crossover bei 107 Hz mit einer Filtersteilheit von 51 dB/Oktave \cite[S.~2530]{Czesak2025}. Die subjektiven Hörtests mit 24 Testpersonen demonstrierten, dass DML-Systeme mit geeigneter Equalisation und Subwoofer-Integration in Bezug auf Stage Width (Bühnenbreite) um 34\% und in Bezug auf Envelopment (räumliches Einhüllungsgefühl) um 36\% gegenüber konventionellen Lautsprechern überlegen sind \cite[S.~2536, Tabelle~III]{Czesak2025}.
-%Der kritische Vorteil des 2-Wege-Systems liegt in der Platzierung der Crossover-Frequenz deutlich unterhalb des Vokalbereichs. Tectonic Audio Labs \cite{TectonicAudioLabs2013} betonen in ihrem technischen White Paper explizit: "The key advantage of DML is that it typically cross over in the 70-80 Hz range, well below the vocal range of 500 Hz to 4 kHz. No crossover in the vocal range is a big deal for intelligibility" \cite[S.~3]{TectonicAudioLabs2013}. Diese Aussage wird durch psychoakustische Untersuchungen gestützt: Fastl und Zwicker \cite[S.~189--192]{Fastl2007} dokumentieren, dass Phasendrehungen und Kohärenzverluste durch Frequenzweichen im Vokalbereich die Sprachverständlichkeit signifikant beeinträchtigen können, quantifiziert durch eine Reduktion des Speech Transmission Index (STI) um bis zu 0,15 Punkte.
-%Die praktische Implementierung eines 2-Wege-Systems erfordert typischerweise DSP-basierte Crossover-Netzwerke, welche sowohl die Frequenzweiche als auch Panel-spezifische Equalisation ermöglichen. Pueo et al. \cite{Pueo2009} demonstrieren in ihrer Arbeit zur effizienten Equalisation von Multi-Exciter-DML-Systemen, dass durch parametrische Equalisation die Frequenzgang-Linearität von typischerweise ±8-12 dB auf ±3-4 dB reduziert werden kann \cite[S.~741, Fig.~6]{Pueo2009}. Diese Equalisation ist insbesondere für die Unterdrückung modaler Resonanzen im Frequenzbereich zwischen 200 Hz und 2 kHz essentiell.
-%\textbf{3-Wege-System: Kritische Analyse}
-
-%Das 3-Wege-Konzept sieht eine Aufteilung in separate Bass-, Mitten- und Höhentreiber vor, wobei typischerweise Crossover-Frequenzen im Bereich von 500 Hz bis 1 kHz (Bass-Mitten) sowie 4 kHz bis 5 kHz (Mitten-Höhen) verwendet werden. Während dieses Konzept theoretisch eine frequenzspezifische Optimierung jedes Teilsystems ermöglicht, impliziert es eine Crossover-Frequenz im kritischen Vokalbereich.
-%Tectonic Audio Labs \cite{TectonicAudioLabs2013} warnen explizit: "Crossover in the vocal range leads to intelligibility anomalies and phase issues that are very difficult to correct even with sophisticated DSP" \cite[S.~4]{TectonicAudioLabs2013}. Diese Warnung basiert auf umfangreichen Entwicklungserfahrungen des Unternehmens, welches als Pionier der kommerziellen DML-Technologie gilt. Signifikant ist, dass sämtliche kommerzielle DML-Produkte von Tectonic Audio Labs als 2-Wege-Systeme konzipiert sind – eine empirische Validierung der Nichteignung von 3-Wege-Architekturen für DML-Anwendungen \cite{TectonicAudioLabs2013}.
-%Die theoretische Begründung für diese Limitierung liegt in der kohärenten Schallabstrahlung des DML-Panels. Harris und Hawksford \cite[S.~155]{Harris2000} erläutern, dass der fundamentale Vorteil von DML-Systemen in der räumlich verteilten, aber phasenkohärenten Schallabstrahlung über einen breiten Frequenzbereich liegt. Eine Aufteilung des Mittenbereichs auf separate Treiber mit einer Crossover-Frequenz bei 1 kHz würde diesen Vorteil eliminieren und zu einer Fragmentierung der Schallquelle führen, welche sich negativ auf die Lokalisationsschärfe und Sprachverständlichkeit auswirkt \cite[S.~234--237]{Blauert1997}.
-%Eine Literaturrecherche in wissenschaftlichen Datenbanken (IEEE Xplore, JASA, Applied Acoustics) ergibt keine Publikationen, welche erfolgreiche 3-Wege-DML-Implementierungen für HiFi-Anwendungen dokumentieren. Dies steht im Kontrast zur umfangreichen Literatur zu 2-Wege-Systemen \cite{Czesak2025, Pueo2009, Bai2001}, was als indirekter Nachweis der praktischen Nichteignung interpretiert werden kann.
-%\textbf{Komparative Bewertung und Konzeptentscheidung}
-
-%Für die quantitative Bewertung der drei Systemarchitekturen wird eine gewichtete Nutzwertanalyse durchgeführt, deren Kriterien sich an den Anforderungen der DIN 45500 sowie den spezifischen Rahmenbedingungen dieser Arbeit orientieren. Das Kriterium "Vokalbereich-Integrität" erhält die höchste Gewichtung von 30\%, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite[S.~187]{Fastl2007}, \cite{DIN45500}.
-%Das 2-Wege-System mit Subwoofer-Integration erzielt in dieser Bewertung die höchste Gesamtpunktzahl von 8,9 von 10 möglichen Punkten. Dies resultiert primär aus der Erfüllung sämtlicher technischer Anforderungen (Bass-Extension, Vokalbereich-Integrität) bei gleichzeitig moderater Komplexität. Die wissenschaftliche Validierung durch Czesak und Kleczkowski \cite{Czesak2025} mit 24 Testpersonen sowie die industrielle Standardisierung durch Tectonic Audio Labs \cite{TectonicAudioLabs2013} unterstreichen die Eignung dieses Konzepts.
-%Das Fullrange-System erreicht 7,6 Punkte und stellt trotz der Bass-Limitation ein viables Konzept dar, insbesondere für Nahfeld-Anwendungen sowie für den Einsatz als Lehrobjekt. Bai und Huang \cite[S.~2759]{Bai2001} konkludieren: "Although the low-frequency extension is limited, the panel loudspeaker shows promise for desktop and near-field applications where bass extension below 100 Hz is not critical." Diese Einschätzung deckt sich mit den Anforderungen der vorliegenden Arbeit, bei welcher die Demonstration des DML-Prinzips und die Validierung der Exciter-Positions-Optimierung im Vordergrund stehen.
-%Das 3-Wege-System erzielt lediglich 4,5 Punkte aufgrund der fundamentalen Problematik des Vokalbereich-Crossovers sowie der fehlenden wissenschaftlichen Validierung. Tectonic Audio Labs \cite[S.~4]{TectonicAudioLabs2013} fassen zusammen: "Based on extensive development work, we strongly recommend against implementing crossovers in the 500 Hz to 4 kHz range for DML systems."
-%Für die vorliegende Arbeit wird ein Fullrange-Prototyp implementiert, wobei gleichzeitig eine fundierte Empfehlung für 2-Wege-Systeme für HiFi-Anwendungen ausgesprochen wird. Diese Entscheidung basiert auf folgenden Überlegungen: Erstens ermöglicht der Fullrange-Aufbau die fokussierte Untersuchung der Exciter-Positions-Optimierung ohne die Komplexität einer Frequenzweichen-Integration. Zweitens ist die Bauzeit von einem Arbeitstag sowie die Materialkosten von unter 100 Euro für Lehrzwecke optimal. Drittens ist der Frequenzbereich von 100 Hz bis 15 kHz ausreichend für die Demonstration der DML-Charakteristika sowie für die Evaluierung der Sprachwiedergabe, da der Grundtonbereich männlicher Stimmen typischerweise bei 100-120 Hz liegt \cite[S.~188]{Fastl2007}.
-%Die gewonnenen Erkenntnisse zur optimalen Exciter-Position sind unmittelbar auf 2-Wege-Systeme übertragbar, da die modale Struktur des Panels unabhängig von der Frequenzweichen-Konfiguration ist \cite[S.~156]{Harris2000}. Eine Subwoofer-Integration könnte in einer Folgearbeit mit minimalem Aufwand durch Hinzufügen eines Crossover-Netzwerks bei 80-90 Hz realisiert werden, wobei die optimierte Panel-Konfiguration dieser Arbeit direkt übernommen werden kann.
-%Zusammenfassend demonstriert die systematische Konzeptentwicklung unter Berücksichtigung wissenschaftlicher Literatur sowie industrieller Best Practices, dass 2-Wege-Systeme für HiFi-Anwendungen die optimale Architektur darstellen, während Fullrange-Systeme für spezifische Anwendungsszenarien (Nahfeld, Lehre) sowie als Entwicklungsplattform geeignet sind. 3-Wege-Systeme sind aufgrund der Vokalbereich-Crossover-Problematik für DML-Implementierungen nicht zu empfehlen.
+%\begin{figure}[H]
+	%\centering
+	%\includegraphics[width=0.8\textwidth]{pictures/Versuchsaufbau.png}
+	%\caption{Schematische Darstellung des Versuchsaufbaus}
+	%\label{fig:versuchsaufbau}
+%\end{figure} 
 
 \newpage
 
@@ -106,7 +78,7 @@ Die Implementierung eines 2-Wege-Systems erfordert jedoch zusätzliche Komponent
 
 Ein 3-Wege-System, bei dem separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt werden, wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet. Ein Artikel des Tectonic Audio Labs weist darauf hin, dass Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich.
 
-Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der Verwendung eines 3-Wege-Systems zusätzliche Kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-System an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft.
+Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der Verwendung eines 3-Wege-Systems zusätzliche Kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-System an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft und wird in der Nutzweranalyse nicht mit berücksichtigt.
 
 
 Ein weiterer wichtiger Aspekt der Systemarchitektur ist die Anzahl der verwendeten Exciter pro Panel, da die Anzahl der Exciter den erreichbaren Schalldruckpegel, die Modenanregung sowie die Impedanz des Gesamtsystems maßgeblich beeinflusst \cite{Bai2001}. Eine Multi-Exciter-Konfiguration kann theoretisch zu einem gleichmäßigeren Frequenzgang führen, da durch die Verwendung mehrerer Exciter auch mehrere Modenknotenpunkte und das Panel somit gleichmäßiger angeregt werden kann \cite{Bai2001}. 
@@ -115,32 +87,13 @@ Ein Single-Exciter-System bietet die einfachste Implementierung und ermöglicht 
 
 Das 2-Exciter-System mit symmetrischer Platzierung bietet verschiedene Vorteile, zum einen verdoppelt sich der theoretische Schalldruckpegel um +6 dB bei kohärenter Anregung \cite{Moeser2005}, was in der Praxis aufgrund inkohärenter Modenanregung auf +3 dB bis +5 dB reduziert wird \cite{Pueo2009}. Des Weiteren ist der Aufbau simpel, da sich dieser einfach abmessen und positionieren lässt, somit ist auch das Abstrahlverhalten des DML-Flachlautsprechers symmetrisch, was sich für die Verwendung eines Lautsprecherpaars im Stereobetrieb gut eignet \cite{Harris2000}. Das Panel wird durch die symmetrische Anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Den Vorteilen stehen jedoch ebenso viele Nachteile entgegen, so kann eine symmetrische Auslegung der Exciter zu blinden Flecken in der Anregung führen und einige Moden werden nicht angeregt und eine Schwankung im Frequenzgang kann entstehen \cite{Pueo2009}. Demnach ist die symmetrische Platzierung der Exciter auf dem Panel keine technisch geeignete Lösung, da Schwankungen im Frequenzgang nicht der DIN 45500 entsprechen \cite{DIN45500}.
 
-Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anregung verschiedener Moden besser als bei einer symmetrischen Anordnung der Exciter (QUELLE:Zenker). Diese gleichmäßigere Anregung der Moden führt zu einem statistisch glatteren Frequenzgang, was den Anforderungen der Zielsetzung entspricht. Des Weiteren bietet die serielle Schaltung von 2 Excitern die Anhebung der Gesamtimpedanz auf 8 Ohm, was für viele Verstärker optimal ist. Der verwendete Verstärker WPA 600 Pro ist gemäß Datenblatt für 4-16 Ohm geeignet. Dennoch kann die volle Leistungswiedergabe des Verstärkers bei einem 4 Ohm Exciter auf Dauer eine erhebliche thermische Belastung sowie einen Anstieg des Klirrfaktors hervorrufen \cite{Weinzierl2025}. Für einen langlebigen Langzeitbetrieb des Verstärkers und Exciters ist eine Impedanz von 8 Ohm vorzuziehen. Somit ist die asymmetrische Platzierung von 2 Excitern auf dem Panel eine technisch geeignete Lösung.
+Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anregung verschiedener Moden besser als bei einer symmetrischen Anordnung der Exciter \textbf{(QUELLE:Zenker)}. Diese gleichmäßigere Anregung der Moden führt zu einem statistisch glatteren Frequenzgang, was den Anforderungen der Zielsetzung entspricht. Des Weiteren bietet die serielle Schaltung von 2 Excitern die Anhebung der Gesamtimpedanz auf 8 Ohm, was für viele Verstärker optimal ist. Der verwendete Verstärker WPA 600 Pro ist gemäß Datenblatt für 4-16 Ohm geeignet. Dennoch kann die volle Leistungswiedergabe des Verstärkers bei einem 4 Ohm Exciter auf Dauer eine erhebliche thermische Belastung sowie einen Anstieg des Klirrfaktors hervorrufen \cite{Weinzierl2025}. Für einen langlebigen Langzeitbetrieb des Verstärkers und Exciters ist eine Impedanz von 8 Ohm vorzuziehen. Somit ist die asymmetrische Platzierung von 2 Excitern auf dem Panel eine technisch geeignete Lösung.
+
+Ein System welches drei oder mehr Exciter pro Panel verwendet wird aufgrund der hohen Komplexität nicht mit in die bewertung aufgenommen.  
 
 
 
-
-
-
-
-
-
-
-Entscheidung der Lagerung
-
-
-
-Bei der Konzeptentwicklung dieser Arbeit werden verschiedene Lösungsansätze innerhalb der vorgegebenen Randbedingungen hinsichtlich ihrer technischen Eignung, akustischen Leistungsfähigkeit und praktischen Umsetzbarkeit analysiert und bewertet. 
-
-
-Sinnvoll ist eine Verwendung von Vorverstärker und Stereoanlage, Ansteuerung eines oder 2 Exciter auf der Platte.
-
-
-Diskussion über Frequenzweichen. Ob es Sinn macht oder nicht?  \cite{Bai2001}
-
-
-
-
+\textbf{Entscheidung der Lagerung noch ergänzen}
 
 
 
@@ -156,11 +109,13 @@ Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgab
 Erläuterung der Gewichtungsentscheidungen:
 
 Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
+
 Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
+
 Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
+
 Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
 SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
-
 
 
 \begin{table}[H]
@@ -173,15 +128,15 @@ SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance
 \hline
 \textbf{Kriterium} & \textbf{Gewichtung} & \textbf{Begründung} \\
 \hline
-Vokalbereich-Integrität & 25\% & Sprachverständlichkeit primäres Qualitätskriterium für Lautsprecher; Vokalbereich (500--4000 Hz) muss ohne phasendrehende Frequenzweichen abgedeckt werden \\
+Vokalbereich-Integrität & 25\% & Sprachverständlichkeit primäres Qualitätskriterium für Lautsprecher; Vokalbereich (500--4000 Hz) muss  abgedeckt werden \\
 \hline
-Verstärker-Kompatibilität & 20\% & Langzeitbetrieb und Lebensdauer der Hardware; WPA 600 Pro optimal bei 8 $\Omega$; bei 4 $\Omega$ verdoppelte thermische Belastung \\
+Verstärker-Kompatibilität & 20\% & Langzeitbetrieb und Lebensdauer des Verstärkers WPA 600 Pro in bezug auf die Impedanz  \\
 \hline
 Technische Komplexität (niedrig = gut) & 20\% & Umsetzbarkeit im Zeitrahmen, Reproduzierbarkeit für Studierende; schrittweise Komplexitätssteigerung empfohlen \\
 \hline
-Kosten (niedrig = gut) & 15\% & Budget-Limit $<$100 € für Nachbaubarkeit durch Studierende \\
+Kosten (niedrig = gut) & 15\% & Um die Wirtschafltlichkeit mit kommerziellen Produkten zu vergleichen  \\
 \hline
-Schalldruckpegel (SPL) & 10\% & Praktische Nutzbarkeit für Nahfeld; mindestens 85 dB @ 1 m, 1 W \\
+Schalldruckpegel (SPL) & 10\% & Praktische Nutzbarkeit für Nahfeld; 85 dB @ 1 m, 1 W \\
 \hline
 Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequenz) \\
 \hline
@@ -198,12 +153,12 @@ Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequen
 
 \begin{table}[H]
 \centering
-\caption{Bewertungsmatrix Systemarchitekturen (Punkteskala 0--10)}
+\caption{Bewertungsmatrix Systemarchitekturen}
 \label{tab:bewertungsmatrix}
 \small
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|p{3.2cm}|p{0.8cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+\begin{tabular}{|p{5cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
 \textbf{Kriterium} & \textbf{Gew.} & \textbf{FR 1 Ex. (4$\Omega$)} & \textbf{FR 2 Ex. (8$\Omega$)} & \textbf{2W 1 Ex. (4$\Omega$)} & \textbf{2W 2 Ex. (8$\Omega$)} \\
 \hline
@@ -213,31 +168,40 @@ Verstärker-Kompatibilität & 20\% & 4 & 10 & 4 & 10 \\
 \hline
 Komplexität (niedrig = gut) & 20\% & 10 & 9 & 5 & 4 \\
 \hline
-Kosten (niedrig = gut) & 15\% & 10 & 9 & 4 & 3 \\
+Kosten (niedrig = gut) & 15\% & 10 & 8 & 4 & 3 \\
 \hline
 SPL @ 1 m, 1 W & 10\% & 6 & 9 & 6 & 9 \\
 \hline
 Bass-Extension & 10\% & 6 & 6 & 10 & 10 \\
 \hline
-\textbf{Gewichtete Summe} & \textbf{100\%} & \textbf{7,7} & \textbf{9,4} & \textbf{6,7} & \textbf{7,8} \\
+\textbf{Gewichtete Summe} & \textbf{100\%} & \textbf{8} & \textbf{9,4} & \textbf{6,7} & \textbf{7,8} \\
 \hline
 \end{tabular}
 \end{table}
 
-\noindent\textit{Legende: FR = Fullrange, 2W = 2-Wege, Ex. = Exciter}
+\noindent\textit{Legende: FR = Fullrange, 2W = 2-Wege-System, Ex. = Exciter}
 
+Die in der Tabelle 3.2 vergebenen Punkte sind anhand der gegebenen Kriterien unter berücksichtgung der Randbedingungen verbeen worden. Dabei wurde die Vokalbereich Integrität so bewertet das Fullrange sowie 2-Wege-Systeme mit einem Tiefen Crossover von maximal 100Hz die volle punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzewrtanalyse ausgeschlossen.
 
+Die Verstärker Kompatibilität mit dem verwendeten WPA 600PRO, wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da bei dieser Impedanz die Höchste effizienz und der Geringste Klirrfaktor aufweisen. 4 $\Omega$ konfigurationen werden aufgrund der auftretenden Tehermischen belastung im Langzeitbetrieb nur mit 4 Punkten Bewertet\cite{Weinzierl2025}.
 
+Die Technische komplexität wird so bewertet desto komplexer der aufbau ist desto weniger punkte bekommt dieser, dabei wird auf zusätzliche Komponenten wie eine Passiver Frequenzweiche oder eine DSL weiche rücksicht genommen. Dementsprechend werden die Fullrange systeme mit mehr punkten als die Frequenzweichen systeme bewertet. 
 
+Um die Wirtschaftlichkeit nicht außer acht zu lassen wird diese mit einbezogen um im späterern teil der Arbeit eine Genauere Wirtschaftliche Analyse zu betrachten. Dabei werden bei der Nutzenanalyse die Kosten für das Simulationsprogram nicht berücksichtig und sich nur auf die Kosten der Hardware komponenten bezogen. Hierbei wird die geringste anzahl der verbauten komponenten mit der Maximalpunktzahl bewertert, je mehr komponenten verbaut sind desto geringer die Punktzahl 
 
+Bei den SPL werten handelt es sich um schätzungen, da aus der Literatur hervorgeht das systeme mit meheren Excitern eine Höherer schallleistung aufweisen. Daher werden die systeme mit zwei Excitern mit einer höheren Punktzahl bewertet als systeme bei denen nur ein Exciter verbaut ist. 
 
+Die Bass-Extension mittels Subwoofer zur wiedergabe sehr niedriger Frequenzen ist bei den 2-Wege-Systemen möglich weshalb diese mit der vollen punktzahl bewertet werden. Bei Fullrange systemen ist eine Subwoofer erweiterung möglich dennoch nicht vorgseheen, weshalb die bewertung hier schlechter ausgällt. 
 
 
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
+Die Gewichtete Nutzwertanalyse ergibt das das Fullrange zwei Exciter System mit einer impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen Akusttischer Performance durch eine gute Vokalbereich wiedergabe, moderater Komplexität was eine Technische umsetzung vereinfacht.
 
-Fullrange (Keine Weichen auf einer Platte) 2 Exciter aufgrund der 8 Ohm für den Verstärker, Höherer SPL
+
+
+
 
 
 
