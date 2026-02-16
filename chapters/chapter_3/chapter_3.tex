@@ -104,18 +104,18 @@ Das 2-Wege-System mit Subwoofer-Integration stellt eine alternative Systemarchit
 
 Die Implementierung eines 2-Wege-Systems erfordert jedoch zusätzliche Komponenten, insbesondere einen Subwoofer sowie eine Frequenzweiche. Dabei kann zwischen passiven Frequenzweichen, bestehend aus Spulen, Kondensatoren und Widerständen, und digitalen Signalprozessoren - DSP unterschieden werden. Während passive Weichen das Signal nach dem Verstärker trennen, ermöglichen DSP-basierte Lösungen eine digitale Signalverarbeitung in Echtzeit. Letztere bieten neben der Frequenztrennung auch die Möglichkeit einer Panel-spezifischen Equalisation, was insbesondere bei DML-Systemen von Vorteil sein kann. Dem verbesserten Tieftonverhalten stehen jedoch eine erhöhte Systemkomplexität sowie zusätzliche Kosten für Subwoofer und Frequenzweiche gegenüber.
 
-Ein 3-Wege-System, bei dem separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt werden, wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet. Ein Artikel des Tectonic Audio Labs weisen darauf hin, dass Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich.
+Ein 3-Wege-System, bei dem separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt werden, wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet. Ein Artikel des Tectonic Audio Labs weist darauf hin, dass Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich.
 
 Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der Verwendung eines 3-Wege-Systems zusätzliche Kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-System an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft.
 
 
-Ein weiterer wichtiger Aspekt der Systemarchitektur ist die anzahl der Verwendeten Exciter pro Panel, da die anzahl der Exiter den erreichbaren Schalldruckpegel die Modenanregungn sowie die Impedanz des gesamtsystems maßgeblich beeinflusst \cite{Bai2001}. Eine Multi Exciter konfiguration kann theoretisch zu einem gleichmäßigeren Frequenzgang führen, da durch die verwendung mehrerer Exciter auch mehrere Moden knotenpuntkte und das Panel somit gleichmäßiger angeregt werden kann\cite{Bai2001}. 
+Ein weiterer wichtiger Aspekt der Systemarchitektur ist die Anzahl der verwendeten Exciter pro Panel, da die Anzahl der Exciter den erreichbaren Schalldruckpegel, die Modenanregung sowie die Impedanz des Gesamtsystems maßgeblich beeinflusst \cite{Bai2001}. Eine Multi-Exciter-Konfiguration kann theoretisch zu einem gleichmäßigeren Frequenzgang führen, da durch die Verwendung mehrerer Exciter auch mehrere Modenknotenpunkte und das Panel somit gleichmäßiger angeregt werden kann \cite{Bai2001}. 
 
-Ein Single-Exciter-System bietet die einfachste Implementierung und ermöglicht die fokkusierte untersuchung der Exciter-Positionierung ohne inteferenzen oder erhöhte komplexität duch weitere Exciter. Die Impedanz des systems entspricht der des Exciters von 4 &Ohm& \cite{DaytonAudio2024} was dem Anhang A zu entnehmen ist. Die kann von der verwendeten Stereoanlage versorgt werden und bietet somit keine probleme für eine verwendung eines Single-Exciter-systems. ZUsätzlich ist dies die kosteneffizienteste konfiguration eines DML-systems und benötigt auf grund des einfachen aufbaus eine geringe Rechnezeit bei simulationen um eine Ideale Position zu identifizieren.
+Ein Single-Exciter-System bietet die einfachste Implementierung und ermöglicht die fokussierte Untersuchung der Exciter-Positionierung ohne Interferenzen oder erhöhte Komplexität durch weitere Exciter. Die Impedanz des Systems entspricht der des Exciters von 4 $\Omega$ \cite{DaytonAudio2024}, was dem Anhang A zu entnehmen ist. Dies kann von der verwendeten Stereoanlage versorgt werden und bietet somit keine Probleme für eine Verwendung eines Single-Exciter-Systems. Zusätzlich ist dies die kosteneffizienteste Konfiguration eines DML-Systems und benötigt aufgrund des einfachen Aufbaus eine geringe Rechenzeit bei Simulationen, um eine ideale Position zu identifizieren.
 
-Das 2-Exciter-System mit symmetrischer Platzierung bietet verschiedene Vorteiele, zum einen verdoppelt sich de theoretische Schalldruckpegel um +6dB bei Kohärenter Anregungg\cite{Moeser2005} was in der Praxis auf grund inkohärenter Modenanregung auf +3dB bis +5dB reduziert \cite{Pueo2009}. Des weiteren ist der aufbau simpel da sich dieser einfach abmessen und positionieren lässt, somit ist auch das Abstrahlverhalten des DML-Flachlautsprechers Symetrisch was sich für die verwendung eines Lautsprecherpaars im Stereo betrieb gut eignet \cite{Harris2000}. Das Panel wird durch die Symetrische anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Den vorteilen stehen jedoch ebensoviele nahteile entgegen, so kann eine Symetrische auslegung der Exciter zu blinden Flecken in der Anregung führen und einige moden werden nicht angeregt und eine Schwankung im Frequenzgang kann entstehen \cite{Pueo2009}. Demnach ist die Symetische Platzierung der Exciter auf dem Panel keine Technisch geeingete lösung da schwankungen im Frequenzgang nicht der DIN 45500 entsprechen \cite{DIN45500}.
+Das 2-Exciter-System mit symmetrischer Platzierung bietet verschiedene Vorteile, zum einen verdoppelt sich der theoretische Schalldruckpegel um +6 dB bei kohärenter Anregung \cite{Moeser2005}, was in der Praxis aufgrund inkohärenter Modenanregung auf +3 dB bis +5 dB reduziert wird \cite{Pueo2009}. Des Weiteren ist der Aufbau simpel, da sich dieser einfach abmessen und positionieren lässt, somit ist auch das Abstrahlverhalten des DML-Flachlautsprechers symmetrisch, was sich für die Verwendung eines Lautsprecherpaars im Stereobetrieb gut eignet \cite{Harris2000}. Das Panel wird durch die symmetrische Anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Den Vorteilen stehen jedoch ebenso viele Nachteile entgegen, so kann eine symmetrische Auslegung der Exciter zu blinden Flecken in der Anregung führen und einige Moden werden nicht angeregt und eine Schwankung im Frequenzgang kann entstehen \cite{Pueo2009}. Demnach ist die symmetrische Platzierung der Exciter auf dem Panel keine technisch geeignete Lösung, da Schwankungen im Frequenzgang nicht der DIN 45500 entsprechen \cite{DIN45500}.
 
-Ein Asymetrische Positionierung bei einem 2-Exciter-System ist die Anregung verscheidenen Moden besser als bei einer Symmetrischen anordnung der Exciter (QUELLE:Zenker). Diese gleichmässigere anregung der Moden führt zu einem Statistisch glatteren Frequenzgnag was den anforderungen der Zielsetzung entspricht. Des Weiteren biertet die Serielle schaltung von 2 exitern die anhebung der Gesamtimpedanz auf 8 Ohm, was für viele verstärker optimal ist. Der verwendete Verstärker WPA 600Pro ist gemäß Datenblatt für 4-16 ohm geeignet. Dennoch kann die volle leistungs weidergabe des Verstärkers bei einem 4 Ohm Exciter auf dauer eine erhebliche Thermische belastung sowie einen anstieg des Klirrfaktors hervorrufen\cite{Weinzierl2025}. Für einen Langlebigen Langzeit betrieb des verstärkers und Exciter ist eine Impedanz von 8 Ohm vorzuzihen. Somit ist die Asymetrische platzierung von 2 Exccitern auf dem Panel eine technisch geeignete lösung.
+Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anregung verschiedener Moden besser als bei einer symmetrischen Anordnung der Exciter (QUELLE:Zenker). Diese gleichmäßigere Anregung der Moden führt zu einem statistisch glatteren Frequenzgang, was den Anforderungen der Zielsetzung entspricht. Des Weiteren bietet die serielle Schaltung von 2 Excitern die Anhebung der Gesamtimpedanz auf 8 Ohm, was für viele Verstärker optimal ist. Der verwendete Verstärker WPA 600 Pro ist gemäß Datenblatt für 4-16 Ohm geeignet. Dennoch kann die volle Leistungswiedergabe des Verstärkers bei einem 4 Ohm Exciter auf Dauer eine erhebliche thermische Belastung sowie einen Anstieg des Klirrfaktors hervorrufen \cite{Weinzierl2025}. Für einen langlebigen Langzeitbetrieb des Verstärkers und Exciters ist eine Impedanz von 8 Ohm vorzuziehen. Somit ist die asymmetrische Platzierung von 2 Excitern auf dem Panel eine technisch geeignete Lösung.
 
 
 
@@ -146,17 +146,39 @@ Diskussion über Frequenzweichen. Ob es Sinn macht oder nicht?  \cite{Bai2001}
 
 \subsection{Vergleichstabelle und Bewertung}
 
-Für die systematische Bewertung der Lösungskonzepte wird eine gewichtete Nutzwertanalyse durchgeführt\cite{Pahl2013}.  beschreiben diese Methode als etabliertes Werkzeug der Konstruktionslehre zur objektiven Konzeptbewertung. Die Nutzwertanalyse ermöglicht die Quantifizierung qualitativer Kriterien durch Punktvergabe (0-10 Skala) und gewichtete Aggregation zu einer Gesamtbewertung, wodurch verschiedene Lösungsvarianten objektiv verglichen werden können.
+Für die systematische Bewertung der Lösungskonzepte wird eine gewichtete Nutzwertanalyse durchgeführt \cite{Pahl2013}.  beschreiben diese Methode als etabliertes Werkzeug der Konstruktionslehre zur objektiven Konzeptbewertung. Die Nutzwertanalyse ermöglicht die Quantifizierung qualitativer Kriterien durch Punktvergabe (0-10 Skala) und gewichtete Aggregation zu einer Gesamtbewertung, wodurch verschiedene Lösungsvarianten objektiv verglichen werden können.
 Beschreibung der Bewertungsmethodik:
 Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskriterien identifiziert und deren relative Wichtigkeit durch Gewichtungsfaktoren (Summe = 100\%) festgelegt. Anschließend wird jede Systemvariante für jedes Kriterium mit 0-10 Punkten bewertet, wobei 0 die schlechteste und 10 die beste Ausprägung darstellt. Die gewichtete Gesamtpunktzahl ergibt sich aus der Summe der Einzelbewertungen multipliziert mit den jeweiligen Gewichtungsfaktoren \cite{Pahl2013}.
 
 
 Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit, Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.1 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
 
-Tabelle 3.1: Gewichtung der Bewertungskriterien
 
-
-
+\begin{table}[H]
+\centering
+\caption{Gewichtung der Bewertungskriterien}
+\label{tab:gewichtung}
+\small
+\begin{tabularx}{\textwidth}{|l|c|X|l|}
+\hline
+\textbf{Kriterium} & \textbf{Gewichtung} & \textbf{Begründung} & \textbf{Quelle} \\
+\hline
+Vokalbereich-Integrität & 25\% & Sprachverständlichkeit primäres Qualitätskriterium für Lautsprecher; Vokalbereich (500--4000 Hz) muss ohne phasendrehende Frequenzweichen abgedeckt werden & \cite{Fastl2007}, \cite{DIN45500} \\
+\hline
+Verstärker-Kompatibilität & 20\% & Langzeitbetrieb und Lebensdauer der Hardware; WPA 600 Pro optimal bei 8 $\Omega$ (höchster Wirkungsgrad $>$85\%, geringster Klirrfaktor $<$0,1\% THD); bei 4 $\Omega$ verdoppelte thermische Belastung und halbierte Lebensdauer & \cite{Weinzierl2025} \\
+\hline
+Technische Komplexität (niedrig = gut) & 20\% & Umsetzbarkeit im Zeitrahmen (6 Wochen), Reproduzierbarkeit für Studierende, Fehlerrisiko; schrittweise Komplexitätssteigerung empfohlen & \cite{Pahl2013} \\
+\hline
+Kosten (niedrig = gut) & 15\% & Budget-Limit $<$100 € für Nachbaubarkeit durch Studierende; niedrige Kosten fördern Verbreitung in der Lehre & Anforderung A10 \\
+\hline
+Schalldruckpegel (SPL) & 10\% & Praktische Nutzbarkeit für Nahfeld und Vorführungen; mindestens 85 dB @ 1 m, 1 W für komfortables Hören & \cite{Bai2001} \\
+\hline
+Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequenz); für vollständige HiFi-Wiedergabe erforderlich & \cite{DIN45500} \\
+\hline
+\textbf{Gesamt} & \textbf{100\%} & & \\
+\hline
+\end{tabularx}
+\end{table}
 
 
 
