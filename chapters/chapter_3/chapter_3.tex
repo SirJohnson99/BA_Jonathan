@@ -535,9 +535,92 @@ Vergleich der 2 KAPA Platten
 
 3 Exciter Positionen: Mitte, ein Drittel, zwei Fünftel der Seitenlänge
 
-Plattengrößen: 0.4m x 0.4m; 0.8m x 0.8m; 500mm x 809mm; 600mm x 971mm (Golden ratio) 
+Plattengrößen: 0.4m x 0.4m; 0.8m x 0.8m; 500mm x 809mm; 600mm x 971mm (Golden ratio)
 
 Ergebnisse Graphisch darstellen und Diskutieren
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[font=\sffamily]
+		\begin{semilogxaxis}[
+			width=14cm, height=9cm,
+			xlabel near ticks,
+			ylabel near ticks,
+			xlabel={Frequenz~\tikz[baseline=-0.5ex]{\draw[->, line width=0.8pt, >=latex] (0,0)--(0.10,0);}},
+			ylabel={Schalldruckpegel~\tikz[baseline=-0.5ex]{\draw[<-, line width=0.8pt, >=latex] (0.10,0)--(0,0);}},
+			xmin=50, xmax=15000,
+			ymin=40, ymax=110,
+			grid=major,
+			grid style={solid},
+			tick style={black},
+			axis line style=very thick,
+			tick style=very thick,
+			xtick={100,1000,10000},
+			xticklabels={100,1000,Hz},
+			ytick={40,50,60,70,80,90,100,110},
+			yticklabels={40,50,60,70,dB,90,100,110},
+			legend style={draw=none, at={(0.97,0.25)}, anchor=east, font=\small},
+			x tick label style={yshift=-5pt},
+		]
+		% KAPA Graph 5mm
+		\addplot[color=orange, very thick, dashed] coordinates {
+			(79.43,52.82)
+			(100,49.74)
+			(125.89,47.15)
+			(158.49,53.67)
+			(199.53,58.90)
+			(251.19,72.23)
+			(316.23,85.91)
+			(398.11,90.56)
+			(501.19,80.53)
+			(630.96,56.87)
+			(794.33,81.67)
+			(1000,80.12)
+			(1258.93,82.82)
+			(1584.89,63.86)
+			(1995.26,79.61)
+			(2511.89,85.14)
+			(3162.28,88.09)
+			(3981.07,94.88)
+			(5011.87,83.18)
+			(6309.57,72.25)
+			(7943.28,76.98)
+			(10000,76.17)
+		};
+		\addlegendentry{KAPA Graph 5 mm}
+
+		% KAPA Line 15mm
+		\addplot[color=blue, very thick] coordinates {
+			(79.43,52.98)
+			(100,49.91)
+			(125.89,47.37)
+			(158.49,53.87)
+			(199.53,58.83)
+			(251.19,76.29)
+			(316.23,90.31)
+			(398.11,94.54)
+			(501.19,84.39)
+			(630.96,62.07)
+			(794.33,100.73)
+			(1000,63.75)
+			(1258.93,85.92)
+			(1584.89,63.42)
+			(1995.26,67.35)
+			(2511.89,101.71)
+			(3162.28,84.70)
+			(3981.07,93.96)
+			(5011.87,91.50)
+			(6309.57,88.96)
+			(7943.28,77.12)
+			(10000,73.67)
+		};
+		\addlegendentry{KAPA Line 15 mm}
+
+		\end{semilogxaxis}
+	\end{tikzpicture}
+	\caption{Vergleich KAPA Panele}
+	\label{fig:vergleich_kapa}
+\end{figure}
 
 
 \clearpage
