@@ -539,7 +539,35 @@ Plattengrößen: 0.4m x 0.4m; 0.8m x 0.8m; 500mm x 809mm; 600mm x 971mm (Golden 
 
 Ergebnisse Graphisch darstellen und Diskutieren
 
-\section{Test im Freifeld-Raum}
+
+\clearpage
+
+\section{Realer Versuchsaufbau}
+
+Der versuchsaaufbau welcher in 3.2 beschrieben wurde wird nun im Freifeldraum aufgebaut und durchgeführt. Ziel des Aufbaus ist eine Objektive vermessung des Lautsprechers und erfassung akustischer kenngrößen wie des Frequenzgangs und Schalldruckpegels. Diese parameter beschreiben das üübertragungsverhalten des lautsprechers als elektromechanisch-akustischen wandler und bilden die grundlage für Entwicklung und vergleichbarkeit verscheidener Systeme. \cite{Weinzierl2025}. In der Tehorie wird ein Lautsprecher als LTI-System betrachtet, das ist ein lineare, zeitinvariantes system. Ein Solches system wird durch seine Impulsantwort h(t) charakterisiert. aus der sich mittel Fourier-Transformation die komplexeÜbertragungsfunktion H(f) berechnen lässt \cite{Goerne2011}. Der Betrag von H(f) entspricht dabei dem Amplitudenfrequenzgang. 
+
+Die zentrahle beziehung zwischen Eingangs- und Ausgangssignal lautet im Zeitbereich: 
+
+\begin{equation}
+y(t) = x(t) * h(t) \qquad \Longleftrightarrow \qquad Y(f) = X(f) \cdot H(f)
+\end{equation}
+
+
+wobei y(t) das Mikrofonsignal, x(t) das Testsignal und der Operator * die Faltung darstellt. Im Frequenzbereich vereinfacht sich die Faltung zu einer Multiplikation, darauß lässt sich durch eine einfache Division die Übertragungsfunktion herleiten. 
+
+\begin{equation}
+H(f) = \frac{Y(f)}{X(f)}
+\end{equation}
+
+
+Diese Mathematische eigenschaft bildet die grundlage des Messverfahrens mittels Parametrischem Sweep und mittels Weißem Rauschen \cite{Weinzierl2025}. Damit bei der messung ausschließlich die Akustischen eigenschaften des Lautsprechers und nicht die des Messraums wiederspiegelt wird die messung in einem Freifeldraum wei in DIN45500 vorgeschrieben durchgeführt\cite{DIN45500}. 
+Ein Freifeldraum ist eine Refelxtionsarmer raum desssen Wände, Decke und Boden die schallwellen nahezu vollständig absorbieren. Der Schalldruckpegel nimmt mit 6dB pro Entfernungsverdoppluing ab \cite{Goerne2011}. Da die messung in herkömlichen Räumen durch Reflextionen oder Stehende wellen im Raum welche vorallem unter 300Hz entstehen verfälscht werden und zu abweichungen führen können. Ist die Messung in einem Freifeldraum aufgrund der Reproduzierbarkeit und Vergleichbarkeit der Messergebnisse nur sinnvoll  (QUELLE:Dickreiter). 
+
+
+
+
+
+
 WOZU DAS GANZE ? 
 
 Der Versuchsaufbau im Freifeldraum orientiert sich an dem in 3.2 definierten Versuchsaufbau. Dabei wird das DML-Panel an einem Gestell aufgehängt und das Messmikrofon einen Meter vor der Plattenmitte positioniert. Der Körperschallwandler wird an den definierten Punkten aus der Simulation befestigt. 
