@@ -197,20 +197,13 @@ Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen is
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
-Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht.
+Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer einbingund im späteren bereich möglich um die Defizite im Tieftonbereich auszugleichen. 
 
-
-
-
-
-
+\clearpage
 
 \section{Simulation in COMSOL Multiphysics}
 
-Die Simulation in COMSOL Multiphysics 
-
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren und gleichzeitig eine geeignete Exciter-Position sowie eine passende Panelgröße für die vorgegebenen Materialien zu identifizieren. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet und untersucht. 
-Der Versuchsaufbau wird dabei im folgenden Kapitel eindeutig definiert, sodass eine direkte Vergleichbarkeit zwischen Simulation und experimenteller Messung gewährleistet ist.
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu ideale Positionen der Exciter auf dem Panel sowie eine entscheiduzng über die gegebenen Materialien und dessen Geometrischen Dimensionen zu geben. Dabei wird anhand von erfahrungsberichten Systematisch untersucht an welcher stelle die Exciter angebracht werden sollen und welches der Gegebenen Materialien die Besseren akustischen eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur umsetzung des gewählten Konzepts. Dabei Orientiert sich die Simulation anhand des in 3.2 Definierten Versuchsaufbaus. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und Diskutiert.  
 
 
 
@@ -272,7 +265,9 @@ Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Frei
 
 
 
-\subsection{Durchgeführte Simulationsstudien}
+\subsection{Vorbereitung der Simulation}
+
+\textbf{Vielleich zu Theoretische Grundlagen ?! }
 
 Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
 
@@ -322,8 +317,6 @@ Dabei sind
 \item $K_{ms}$ die Federsteifigkeit,
 \item $\omega = 2\pi f$ die Kreisfrequenz.
 \end{itemize}
-
-\clearpage
 
 Der Betrag der mechanischen Impedanz ergibt sich zu
 
@@ -458,18 +451,25 @@ Aufgelöst nach der Normalgeschwindigkeit ergibt sich:
  v_0 = \sqrt{\frac{2\eta \, P_\mathrm{el}}{\rho_0 c_0 \,S  \,\sigma\ }}
 \end{equation}
 
-Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die 
-äquivalente Normalgeschwindigkeit bestimmt werden, welche als Randbedingung 
-in der Simulation verwendet wird.
+Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die äquivalente Normalgeschwindigkeit bestimmt werden, welche als Randbedingung in der Simulation verwendet wird. Aufgrund dessen das der Abstrahlgrad er Platte Frequenzabhängig ist wird dieser hier als Ideal und somit =1 angenommen. 
 
-Es ist zu beachten, dass sowohl der Wirkungsgrad $\eta$ als auch die effektive 
-abstrahlende Fläche $S$ frequenzabhängig sind. In der praktischen 
-Anwendung wird daher häufig eine Kalibrierung anhand eines Referenzpegels 
-durchgeführt, um eine realitätsnahe Anregung des Panels sicherzustellen.
+
+Somit ergibt sich für die Normalgeschwindigkeit mit $\eta= 0,01$ folgender wert: 
+
+\begin{equation}
+    v_0 = \sqrt{\frac{2 \cdot \eta \cdot 1\;\mathrm{W}}{413{,}2 \cdot 1{,}385 \times 10^{-3}\;\mathrm{m}^2 \cdot \sigma}}
+\end{equation}
+
+$v_0 = 0,1869 m/s$
+
+Es ist zu beachten, dass sowohl der Wirkungsgrad $\eta$ als auch die effektive abstrahlende Fläche $S$ frequenzabhängig sind. In der praktischen Anwendung wird daher häufig eine Kalibrierung anhand eines Referenzpegels durchgeführt, um eine realitätsnahe Anregung des Panels sicherzustellen.
+
+\textbf{NOCH NICHT FERTIG}
+
 
 \clearpage
 
-\subsection{Simulations Aufbau }
+\subsection{Durchgeführte Simulationsstudien}
 
 Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in COMSOL dient der systematischen Bestimmung der optimalen Exciter-Position, der geeigneten Panelgröße sowie des geeigneten Panelmaterials. Die Untersuchung erfolgt schrittweise und ist in drei aufeinander aufbauende Arbeitsschritte gegliedert:
 
@@ -479,7 +479,8 @@ Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in
     \item Bestimmung der Panel Größe 
 \end{enumerate}
 
-Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm aus einer Hartschaum Sandwichplatte von KAPA verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch welcher als Exciter dient mittel Parametrischem Sweep von 70 Hz bis 12000 Hz in 50 Hz schritten angeregt. Dieser Frequenzbereich wurde aus zeit und Rechenaufwand erspaarnis gewählt. Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
+Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch welcher als Exciter dient mittel Parametrischem Sweep von 70 Hz bis 12000 Hz in 50 Hz schritten angeregt. Dieser Frequenzbereich wurde ausgewählt da dieser den Vokalbereich komplett abbildet und ein kompromuss aus Rechenzeit und Rechenleitung ist.  
+Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
 
 Die drei untersuchten Exciter Positionen werden Parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich die Panelgeometie anzupassen während die Positions verhältnisse der Exciter aich an die Größe anpassen. 
 
