@@ -276,15 +276,11 @@ Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Frei
 
 Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
 
-Nachdem das Simulationsmodell, wie in Abschnitt 3.4.2 beschrieben, erstellt wurde, werden den einzelnen Gebieten – Panel und umgebender Raum – die entsprechenden Materialparameter zugewiesen. Der Raum um das Panel wird mit Luft gefüllt. Das entsprechende Material ist in der Materialbibliothek von COMSOL enthalten. Dichte und Schallgeschwindigkeit sind temperaturabhängig und standardmäßig für eine Umgebungstemperatur von 20 °C definiert, was für die vorliegende Simulation einen realistischen Referenzwert darstellt.
+Nachdem das Simulationsmodell, wie in Abschnitt 3.4.2 beschrieben, erstellt wurde, werden den einzelnen Gebieten – Panel und umgebender Raum – die entsprechenden Materialparameter zugewiesen. Der Raum um das Panel wird mit Luft gefüllt, die dafür verwendeten Materialparamter sind in der Materialbibliothek von COMSOL enthalten. Dichte und Schallgeschwindigkeit sind temperaturabhängig und standardmäßig für eine Umgebungstemperatur von 20 °C definiert, was für die vorliegende Simulation einen realistischen Referenzwert darstellt.
 
-Für das Panel werden die Materialeigenschaften der Sandwichplatten KAPA Graph und KAPA Line auf Grundlage der im Anhang enthaltenen Datenblätter verwendet. Dabei werden jeweils der Elastizitätsmodul, die Dichte sowie eine Poissonzahl festgelegt. Die Poissonzahl beschreibt das Verhältnis von Querdehnung zu Längsdehnung bei Zug- oder Druckbeanspruchung.
+Für das Panel werden die Materialeigenschaften der Sandwichplatten KAPA Graph und KAPA Line auf Grundlage der im Anhang enthaltenen Datenblätter verwendet. Dabei werden jeweils der Elastizitätsmodul, die Dichte sowie eine Poissonzahl festgelegt. Die Poissonzahl beschreibt das Verhältnis von Querdehnung zu Längsdehnung bei Zug- oder Druckbeanspruchung. Da in den Datenblättern der verwendeten Sandwichplatten keine Poissonzahl angegeben ist, wird diese auf Grundlage vergleichbarer Sandwichmaterialien mit einem Wert von $\nu$ =0,3 angenommen. 
 
-Da in den Datenblättern der verwendeten Sandwichplatten keine Poissonzahl angegeben ist, wird diese auf Grundlage vergleichbarer Sandwichmaterialien mit einem Wert von $\nu$ =0,3 angenommen.
-
-In der Simulation wird das Panel als homogenes Materialmodell abgebildet. Dabei werden die in den Datenblättern angegebenen Materialkennwerte der jeweiligen Sandwichplatten unverändert übernommen. Eine explizite Modellierung der Sandwichstruktur mit getrennten Deckschichten und Kern erfolgt nicht.
-
-Diese Vereinfachung dient der Reduzierung der Modellkomplexität und der Rechenzeit, da im Rahmen der vorliegenden Arbeit hauptsächlich der Einfluss von Panelgröße und Exciter-Position auf das akustische Verhalten untersucht wird. Für die vergleichende Konzeptbewertung ist das homogene Ersatzmodell ausreichend, auch wenn die reale Biegesteifigkeit der Sandwichstruktur damit nur näherungsweise abgebildet wird. Wesentlich für die Simulation ist zudem die korrekte Abbildung der jeweiligen Plattendicke, da die KAPA Graph Platte eine Dicke von 5 mm und die KAPA Line Platte eine Dicke von 15 mm aufweist. 
+In der Simulation wird das Panel als homogenes Materialmodell abgebildet. Dabei werden die in den Datenblättern angegebenen Materialkennwerte der jeweiligen Sandwichplatten unverändert übernommen. Eine explizite Modellierung der Sandwichstruktur mit getrennten Deckschichten und Kern erfolgt nicht. Diese Vereinfachung dient der Reduzierung der Modellkomplexität und der Rechenzeit, da im Rahmen der vorliegenden Arbeit hauptsächlich der Einfluss von Panelgröße und Exciter-Position auf das akustische Verhalten untersucht wird. Für die vergleichende Konzeptbewertung ist das homogene Ersatzmodell ausreichend, auch wenn die reale Biegesteifigkeit der Sandwichstruktur damit nur näherungsweise abgebildet wird. Wesentlich für die Simulation ist zudem die korrekte Abbildung der jeweiligen Plattendicke, da die KAPA Graph Platte eine Dicke von 5 mm und die KAPA Line Platte eine Dicke von 15 mm aufweist. 
 
 Zur Anregung des DML-Panels wird der verwendete Körperschallwandler in der Simulation nicht als vollständiges elektromechanisches System modelliert, sondern durch ein vereinfachtes mechanisches Ersatzmodell beschrieben. Ziel dieser Modellierung ist es, das frequenzabhängige Verhalten des Exciters mit geringem Rechenaufwand, jedoch unter Berücksichtigung der wesentlichen physikalischen Zusammenhänge, abzubilden.
 
@@ -296,8 +292,8 @@ F = B l \cdot I
 \end{equation}
 
 wobei B die magnetische Flussdichte, l die effektive Leiterlänge im Magnetfeld und I der Spulenstrom ist. Das Produkt Bl wird als Kraftfaktor bezeichnet und stellt eine zentrale Kenngröße elektrodynamischer Wandler dar.
-
-Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden \cite{Mueller2004}. Die Bewegungsgleichung lautet: 
+Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden \cite{Mueller2004}. 
+Die Bewegungsgleichung lautet: 
 
 \begin{equation}
 m \ddot{x}(t) + c \dot{x}(t) + k x(t) = F(t)
@@ -314,7 +310,6 @@ mit
 
 Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert
 
-\clearpage
 
 \begin{equation}
 Z_{\mathrm{mech}}(\omega) = R_{ms} + j \left( \omega M_{ms} - \frac{K_{ms}}{\omega} \right)
@@ -327,6 +322,8 @@ Dabei sind
 \item $K_{ms}$ die Federsteifigkeit,
 \item $\omega = 2\pi f$ die Kreisfrequenz.
 \end{itemize}
+
+\clearpage
 
 Der Betrag der mechanischen Impedanz ergibt sich zu
 
@@ -357,7 +354,6 @@ da diese direkt den Zusammenhang zwischen Kraft und Geschwindigkeit beschreibt
 v = \frac{F}{Z_{\mathrm{mech}}} = F \cdot Y_{\mathrm{mech}}
 \end{equation}
 
-\clearpage
 
 Unter Verwendung des mechanischen Gütefaktors 
 
@@ -393,7 +389,7 @@ Diese Funktion beschreibt das typische Verhalten eines gedämpften Systems zweit
 
 Damit ergibt sich im Hochfrequenzbereich das für ein massebestimmtes System typische quadratische Abklingen der Geschwindigkeit.
 
-\clearpage
+
 
 In der akustischen Simulation wird der Exciter durch eine vorgegebene Normalgeschwindigkeit auf einem kreisförmigen Patch des Panels ersetzt. Die frequenzabhängige Normalgeschwindigkeit ergibt sich aus dem Produkt einer Referenzgeschwindigkeit $v_0$ und der Übertragungsfunktion $H(f)$
 
@@ -421,66 +417,45 @@ Diese Funktion stellt eine physikalisch begründete, frequenzabhängige Anregung
 Die für das Ersatzmodell benötigten Parameter, insbesondere die Resonanzfrequenz $f_s$ und der mechanische Gütefaktor 
 $Q_{ms}$, werden dem Datenblatt des verwendeten Exciters Anhang A entnommen. Auf diese Weise wird sichergestellt, dass die Anregungsfunktion die charakteristischen dynamischen Eigenschaften des realen Wandlers berücksichtigt.
 
+
 Die Normalgeschwindigkeit, welche als Anregungsgröße dient und einer elektrischen Eingangsleistung von 1 W entsprechen soll, kann auf Grundlage der Leistungsbeziehung zwischen mechanischer Geschwindigkeit und abgestrahlter Schallleistung hergeleitet werden.
-Ausgangspunkt dafür ist die Definition der Schallintensität als zeitlich gemittelter Energiefluss durch eine Fläche. Sie ergibt sich aus dem Produkt des Schalldrucks $p$ und der Schallschnelle $v$:
+Ausgangspunkt dafür ist die akustische leistung eiuner schwingenden Fläche. Die Schallintensität einer ebenen Welle gergibt sich dabei aus dem Produkt von schalldruck $p$ und der Schallschnelle $v$ \cite{Moeser2005}. Für eine Harmonische welle gilt p= $rho_0$$c_0$$v$, daraus ergibt sich der zeitlich gemittelte Intensitätswert: 
+
 
 \begin{equation}
-I = \langle p \cdot v \rangle
+    I = \frac{1}{2} \, \rho_0 \, c_0 \, v_0^2
 \end{equation}
 
-Für eine fortschreitende ebene Welle stehen Schalldruck und Schallschnelle über 
-die charakteristische Schallimpedanz des Mediums in Beziehung. Mit
+
+Die Abgestrahlte Akustische Leistung $P_{\mathrm{ak}}$ ist die Intensität welche mit der Abstrahlfläche $S$ die der kontaktfläche des Exciters entspricht multipliziert. Zusätzlich wird der Abstrahlhgrad $\sigma$ mit Multipliziert. Daraus ergibt sich:  
+
+
 
 \begin{equation}
-Z_0 = \rho_0 c_0
+    P_{\mathrm{ak}} = \frac{1}{2} \, \rho_0 \, c_0 \, S \, \sigma \, v_0^2
 \end{equation}
 
-und
-
-\begin{equation}
-p = Z_0 \, v
-\end{equation}
-
-folgt für die Intensität:
-
-\begin{equation}
-I = \rho_0 c_0 \, v^2
-\end{equation}
-
-Die gesamte abgestrahlte Schallleistung ergibt sich durch Integration der Intensität 
-über die wirksame abstrahlende Fläche $A_\mathrm{eff}$:
-
-\begin{equation}
-P_\mathrm{ak} = I \cdot A_\mathrm{eff}
-\end{equation}
-
-Damit erhält man:
-
-\begin{equation}
-P_\mathrm{ak} = \rho_0 c_0 \, A_\mathrm{eff} \, v^2
-\end{equation}
-
-Diese Gleichung beschreibt die Beziehung zwischen abgestrahlter Schallleistung 
-und der Normalgeschwindigkeit einer schwingenden Fläche.
 
 Da jedoch nur ein Teil der elektrischen Eingangsleistung $P_\mathrm{el}$ in akustische 
 Leistung umgewandelt wird, ist der elektroakustische Wirkungsgrad $\eta$ des 
-Exciters zu berücksichtigen:
+Exciters zu berücksichtigen \cite{Moeser2005}:
 
 \begin{equation}
 P_\mathrm{ak} = \eta \, P_\mathrm{el}
 \end{equation}
 
+\clearpage
+
 Einsetzen in die Leistungsbeziehung liefert:
 
 \begin{equation}
-\eta \, P_\mathrm{el} = \rho_0 c_0 \, A_\mathrm{eff} \, v^2
+\eta \, P_\mathrm{el} = \frac{1}{2} \rho_0 c_0 \, S \,\sigma v_0^2
 \end{equation}
 
 Aufgelöst nach der Normalgeschwindigkeit ergibt sich:
 
 \begin{equation}
-v = \sqrt{\frac{\eta \, P_\mathrm{el}}{\rho_0 c_0 \, A_\mathrm{eff}}}
+ v_0 = \sqrt{\frac{2\eta \, P_\mathrm{el}}{\rho_0 c_0 \,S  \,\sigma\ }}
 \end{equation}
 
 Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die 
@@ -488,49 +463,38 @@ Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die
 in der Simulation verwendet wird.
 
 Es ist zu beachten, dass sowohl der Wirkungsgrad $\eta$ als auch die effektive 
-abstrahlende Fläche $A_\mathrm{eff}$ frequenzabhängig sind. In der praktischen 
+abstrahlende Fläche $S$ frequenzabhängig sind. In der praktischen 
 Anwendung wird daher häufig eine Kalibrierung anhand eines Referenzpegels 
 durchgeführt, um eine realitätsnahe Anregung des Panels sicherzustellen.
 
+\clearpage
 
-%Durch diese Funktion lässt sich ein Exciter im linearen Arbeitsbreich physikalisch begrünundet und anhand einer Frequenzabhängigen Anregung als ersatz zu einem Realen Exciter darstellen. Die dafür verwendeten Parameter$f_s$ und $Q_{ms}$ werden aus demm Exciter Datenblatt Anhang A entnommen. 
+\subsection{Simulations Aufbau }
 
-%Die Normalgeschwindigkeit welche als anregung dient und die Leistung von 1 Watt wiedergeben soll, lässt sich wiefolgt herleiten: 
+Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in COMSOL dient der systematischen Bestimmung der optimalen Exciter-Position, der geeigneten Panelgröße sowie des geeigneten Panelmaterials. Die Untersuchung erfolgt schrittweise und ist in drei aufeinander aufbauende Arbeitsschritte gegliedert:
 
-%Die Implementierung erfolgt in COMSOL durch
+\begin{enumerate}
+    \item Bestimmung der Exciterposition 
+    \item Bestimmung des Panel Materials
+    \item Bestimmung der Panel Größe 
+\end{enumerate}
 
-%\begin{enumerate}
-%\item Definition der Parameter $f_s$, $Q_{ms}$ und $v_0$ unter \textit{Global Definitions}.
-%\item Definition der Übertragungsfunktion $H(f)$ als analytische Funktion.
-%\item Zuweisung der Normalgeschwindigkeit
-%\begin{equation}
-%v_n = v_0 \cdot H(f)
-%\end{equation}
-%als Randbedingung auf dem Exciter-Patch.
-%\end{enumerate}
+Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm aus einer Hartschaum Sandwichplatte von KAPA verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch welcher als Exciter dient mittel Parametrischem Sweep von 70 Hz bis 12000 Hz in 50 Hz schritten angeregt. Dieser Frequenzbereich wurde aus zeit und Rechenaufwand erspaarnis gewählt. Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
 
-%Durch diese Vorgehensweise wird eine physikalisch konsistente, frequenzabhängige Anregung realisiert, ohne das vollständige elektromechanische System des Exciters modellieren zu müssen. Gleichzeitig bleibt das Modell rechenzeitarm und eignet sich für parametrische Studien zur Optimierung von Panelgeometrie und Exciter-Position.
+Die drei untersuchten Exciter Positionen werden Parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich die Panelgeometie anzupassen während die Positions verhältnisse der Exciter aich an die Größe anpassen. 
 
-%Damit ergibt sich im Hochfrequenzbereich das für ein massebestimmtes System typische quadratische Abklingen der Geschwindigkeit.
+ Die erste Position entspricht jeweils der Hälfte der Panelseitenlänge in beide Richtungen und führt somit zu einer mittigen Platzierung des Exciters. Diese Konfiguration dient als Referenzposition und soll die theoretischen Überlegungen zur unzureichenden Anregung ungeradzahliger Moden in der Plattenmitte numerisch überprüfen
+ 
+Die zweite definierte Position orientiert sich an der vom Exciter-Hersteller empfohlenen Anordnung, bei der der Anreger proportional zur Panelseitenlänge asymmetrisch auf dem Panel positioniert wird. Hierzu werden die Seitenlängen gedanklich durch fünf geteilt. Der Exciter wird anschließend am Schnittpunkt der 2/5 marke beider Seitenlängen Positioniert. Die 2/5 Regel soll vermeiden das sich der Anreger in der nähe Dominater Modenknoten befindet und somit eine gleichmäßige anregung möglichst vieler Eigenmoden. In der Simulation wird diese Positon hinsichtlich auf den Resultierenden Frequenzgangs des Panels Untersucht. 
 
+Die dirtte Definierte Position entspricht einer häufig in DIY DML Aufbauten verwendeten Anordnungen. Dabei werden die Seitenlängen gedrittelt und der Exciter an dem Schnittpunkt der ein Drittel markierung befestigt. Diese Position versucht genau wie die vorherige, eine möglichst große anzhal von Eigenmoden des Panels anzuregen indem eine Symetrische anbringung des Exciters vermieden wird. 
 
+Nach der Simulation dieser Drei Exciter Positionen wird die Position welche den Linearsten Frequenzverlauf aufweißt weiter verwendet um die Hartschaum Sandwichtplatten der Marke KAPA zu vergleichen. Dabei wird bei dem selben aufbau die Materialeigenschaften der jeweiligen Sandwichplatten in die Simulation eingebaut. Die Platten geometrie bleibt wie beim vorherigen Simulations versuch unverändert, bis auf die anpassung der Platten Stärke, da die KAPA Line 15mm und die KAPA Graph 5mm stark ist. Anschließend werden die beiden Platten zuerst mit einem Exciter angeregt und Anschließend mit einem Zweiten Exciter gleichzeitig angeregt. 
 
-
-%Hier wird erklärt, dass der Exciter ein Feder-Masse-Modell ist und die Herleitung der Funktion. 
-%%Die Parameter der Luft usw. 
-%Zum Sparen von Rechenleistung wurde das Modell vereinfacht dargestellt: Monolithische Platte, kein Sandwich, Exciter als Patch mit Normalgeschwindigkeit angeregt. Frequenzverlauf nur von 70-12000 Hz 
-%Dieser Patch wird mit einer Normalgeschwindigkeit, welche senkrecht zur Paneloberfläche wirkt, angeregt. Die vorgegebene Normalgeschwindigkeit simuliert die Masse, Kraft sowie die mechanische Kopplung des Exciters durch eine harmonische Geschwindigkeit.
-
-
-%Es wurde der Frequenzverlauf von drei verschiedenen definierten Exciter-Positionen ermittelt, um anhand der Frequenzverläufe eine ideale Montageposition des Exciters zu ermitteln. Nach Auswertung der Ergebnisse wurde die Exciter-Position in den folgenden Simulationen verwendet, um den Frequenzverlauf verschiedener Plattengrößen anhand von zwei Maßstäben zu simulieren. 
-
-\subsection{Simulations Aufbau 1-5}
-
-vergleich Kapa Platten 5mm -15mm 
-
-
+\clearpage
 \subsection{Simulations-Ergebnisse}
 
+Hauptsächlich Graphen und Diskusion der ergebnisse 
 Vergleich der 2 KAPA Platten
 
 3 Exciter Positionen: Mitte, ein Drittel, zwei Fünftel der Seitenlänge
@@ -555,8 +519,8 @@ Ergebnisse Graphisch darstellen und Diskutieren
 			tick style={black},
 			axis line style=very thick,
 			tick style=very thick,
-			xtick={100,1000,10000},
-			xticklabels={100,1000,Hz},
+			xtick={100,500,1000,5000,10000},
+			xticklabels={100,500,1000,5000,10000 Hz},
 			ytick={40,50,60,70,80,90,100,110},
 			yticklabels={40,50,60,70,dB,90,100,110},
 			legend style={draw=none, at={(0.97,0.25)}, anchor=east, font=\small},
@@ -643,12 +607,12 @@ H(f) = \frac{Y(f)}{X(f)}
 \end{equation}
 
 
-Diese mathematische Eigenschaft bildet die Grundlage des Messverfahrens mittels parametrischem Sweep und mittels weißem Rauschen \cite{Weinzierl2025}. Damit bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers und nicht die des Messraums widerspiegelt werden, wird die Messung in einem Freifeldraum wie in DIN45500 vorgeschrieben durchgeführt \cite{DIN45500}.
+Diese mathematische Eigenschaft bildet die Grundlage des Messverfahrens mittels parametrischem Sweep und mittels weißem Rauschen \cite{Weinzierl2025}. Damit bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers und nicht die des Messraums widerspiegelt werden, wird die Messung in einem Freifeldraum wie in DIN45500 vorgeschrieben durchgeführt \cite{din}.
 Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden die Schallwellen nahezu vollständig absorbieren. Der Schalldruckpegel nimmt mit 6 dB pro Entfernungsverdopplung ab \cite{Goerne2011}. Da die Messung in herkömmlichen Räumen durch Reflexionen oder stehende Wellen im Raum, welche vor allem unter 300 Hz entstehen, verfälscht werden und zu Abweichungen führen können, ist die Messung in einem Freifeldraum aufgrund der Reproduzierbarkeit und Vergleichbarkeit der Messergebnisse sinnvoll (QUELLE:Dickreiter). 
 
 
 
-
+------------------------------
 
 
 WOZU DAS GANZE ? 
@@ -660,9 +624,15 @@ Um eine Schallleistungsmessung bei 1 W zu haben, muss der Verstärker bei einem 
 
 Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulation, was Größe und Exciter-Position angeht. Die Tests mit den verschiedenen Exciter-Positionen werden verglichen und die 3 vordefinierten Punkte durch den Versuch getestet. Die Plattengröße wird nicht im Versuchsaufbau getestet, hierbei wird sich auf die Simulation sowie eine Berechnung verlassen.  
 
+
+
+
+
 \subsection{Ablauf des Versuchaufbaus}
 
 hier kommt der genaue ablauf hin, was gemacht wird: Einmessen des verstärkers auf 1W Leistung mit 8 Ohm widerstand dannach die einmessung der Exciter mit Sweep und Rauschen. Erklärung was der unterschied ist zwischen Rauschen und Sweep sowie die Mathematische aussage. Welche erwartungen an den test gibt es.
+
+LavVIEW und die mathematik dahinter
 
 
 \subsection{Getestete Exciter-Positionen}
