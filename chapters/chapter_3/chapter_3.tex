@@ -39,8 +39,13 @@ Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulatio
 In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei an einem Gestell mittels Schnüren aufgehängt. Diese Darstellung ist beispielhaft, da die konkrete Lagerung beziehungsweise Aufhängung des Panels im Rahmen der Konzeptentwicklung noch diskutiert wird. Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der dem Verstärker zugewandten Seite des Panels befindet. Das Messmikrofon ist auf der Lautsprecherachse positioniert und befindet sich in einem Abstand von genau einem Meter mittig vor der Plattenoberfläche.
 
 
-\textbf{Blockschaltbild und Foto vom aufbau}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/Blockschaltbild.drawio.png}
+	\caption{Blockschaltbild der Exciter-Positionierung auf einem DML-Panel}
+	\label{fig:blockschaltbild_exciter}
+\end{figure}
 
 %\begin{figure}[H]
 	%\centering
@@ -181,7 +186,7 @@ Bass-Extension & 10\% & 6 & 6 & 10 & 10 \\
 
 \noindent\textit{Legende: FR = Fullrange, 2W = 2-Wege-System, Ex. = Exciter}
 
-Die in der Tabelle 3.2 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich Integrität so bewertet das Fullrange sowie 2-Wege-Systeme mit einem Tiefen Crossover von maximal 100Hz die volle punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzewrtanalyse ausgeschlossen.
+Die in der Tabelle 3.2 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
 
 Die Verstärker-Kompatibilität mit dem verwendeten WPA 600PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da bei dieser Impedanz die höchste Effizienz und der geringste Klirrfaktor aufweisen. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
 
@@ -197,13 +202,13 @@ Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen is
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
-Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer einbingund im späteren bereich möglich um die Defizite im Tieftonbereich auszugleichen. 
+Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Bereich möglich, um die Defizite im Tieftonbereich auszugleichen. 
 
 \clearpage
 
 \section{Simulation in COMSOL Multiphysics}
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu ideale Positionen der Exciter auf dem Panel sowie eine entscheiduzng über die gegebenen Materialien und dessen Geometrischen Dimensionen zu geben. Dabei wird anhand von erfahrungsberichten Systematisch untersucht an welcher stelle die Exciter angebracht werden sollen und welches der Gegebenen Materialien die Besseren akustischen eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur umsetzung des gewählten Konzepts. Dabei Orientiert sich die Simulation anhand des in 3.2 Definierten Versuchsaufbaus. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und Diskutiert.  
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf dem Panel sowie eine Entscheidung über die gegebenen Materialien und deren geometrische Dimensionen zu geben. Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
 
 
 
@@ -412,7 +417,7 @@ $Q_{ms}$, werden dem Datenblatt des verwendeten Exciters Anhang A entnommen. Auf
 
 
 Die Normalgeschwindigkeit, welche als Anregungsgröße dient und einer elektrischen Eingangsleistung von 1 W entsprechen soll, kann auf Grundlage der Leistungsbeziehung zwischen mechanischer Geschwindigkeit und abgestrahlter Schallleistung hergeleitet werden.
-Ausgangspunkt dafür ist die akustische leistung eiuner schwingenden Fläche. Die Schallintensität einer ebenen Welle gergibt sich dabei aus dem Produkt von schalldruck $p$ und der Schallschnelle $v$ \cite{Moeser2005}. Für eine Harmonische welle gilt p= $rho_0$$c_0$$v$, daraus ergibt sich der zeitlich gemittelte Intensitätswert: 
+Ausgangspunkt dafür ist die akustische Leistung einer schwingenden Fläche. Die Schallintensität einer ebenen Welle ergibt sich dabei aus dem Produkt von Schalldruck $p$ und der Schallschnelle $v$ \cite{Moeser2005}. Für eine harmonische Welle gilt p= $\rho_0$$c_0$$v$, daraus ergibt sich der zeitlich gemittelte Intensitätswert: 
 
 
 \begin{equation}
@@ -420,12 +425,12 @@ Ausgangspunkt dafür ist die akustische leistung eiuner schwingenden Fläche. Di
 \end{equation}
 
 
-Die Abgestrahlte Akustische Leistung $P_{\mathrm{ak}}$ ist die Intensität welche mit der Abstrahlfläche $S$ die der kontaktfläche des Exciters entspricht multipliziert. Zusätzlich wird der Abstrahlhgrad $\sigma$ mit Multipliziert. Daraus ergibt sich:  
+Die abgestrahlte akustische Leistung $P_{\mathrm{ak}}$ ist die Intensität, welche mit der Abstrahlfläche $S$, die der Kontaktfläche des Exciters entspricht, multipliziert wird. Zusätzlich wird der Abstrahlgrad $\sigma$ multipliziert. Daraus ergibt sich:  
 
 
 
 \begin{equation}
-    P_{\mathrm{ak}} = \frac{1}{2} \, \rho_0 \, c_0 \, S \, \sigma \, v_0^2
+    P_{\mathrm{ak}} = \frac{1}{2} \, \rho_0 \, c_0 \, A \, \, v_0^2
 \end{equation}
 
 
@@ -447,16 +452,16 @@ Einsetzen in die Leistungsbeziehung liefert:
 Aufgelöst nach der Normalgeschwindigkeit ergibt sich:
 
 \begin{equation}
- v_0 = \sqrt{\frac{2\eta \, P_\mathrm{el}}{\rho_0 c_0 \,S  \,\sigma\ }}
+ v_0 = \sqrt{\frac{2\eta \, P_\mathrm{el}}{\rho_0 c_0 \,A  \,\ }}
 \end{equation}
 
-Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die äquivalente Normalgeschwindigkeit bestimmt werden, welche als Randbedingung in der Simulation verwendet wird. Aufgrund dessen das der Abstrahlgrad er Platte Frequenzabhängig ist wird dieser hier als Ideal und somit =1 angenommen. 
+Damit kann für eine vorgegebene elektrische Eingangsleistung von 1~W die äquivalente Normalgeschwindigkeit bestimmt werden, welche als Randbedingung in der Simulation verwendet wird. Aufgrund dessen, dass der Abstrahlgrad der Platte frequenzabhängig ist, wird dieser hier als ideal und somit =1 angenommen. 
 
 
-Somit ergibt sich für die Normalgeschwindigkeit mit $\eta= 0,01$ folgender wert: 
+Somit ergibt sich für die Normalgeschwindigkeit mit $\eta= 0,01$ folgender Wert: 
 
 \begin{equation}
-    v_0 = \sqrt{\frac{2 \cdot \eta \cdot 1\;\mathrm{W}}{413{,}2 \cdot 1{,}385 \times 10^{-3}\;\mathrm{m}^2 \cdot \sigma}}
+    v_0 = \sqrt{\frac{2 \cdot \eta \cdot 1\;\mathrm{W}}{413{,}2 \cdot 1{,}385 \times 10^{-3}\;\mathrm{m}^2 }}
 \end{equation}
 
 
@@ -476,18 +481,18 @@ Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in
     \item Bestimmung der Panel Größe 
 \end{enumerate}
 
-Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch welcher als Exciter dient mittel Parametrischem Sweep von 70 Hz bis 12000 Hz in 50 Hz schritten angeregt. Dieser Frequenzbereich wurde ausgewählt da dieser den Vokalbereich komplett abbildet und ein kompromuss aus Rechenzeit und Rechenleitung ist.  
+Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch, welcher als Exciter dient, mittels parametrischem Sweep von 70 Hz bis 12000 Hz in 50-Hz-Schritten angeregt. Dieser Frequenzbereich wurde ausgewählt, da dieser den Vokalbereich komplett abbildet und ein Kompromiss aus Rechenzeit und Rechenleistung ist.  
 Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
 
-Die drei untersuchten Exciter Positionen werden Parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich die Panelgeometie anzupassen während die Positions verhältnisse der Exciter aich an die Größe anpassen. 
+Die drei untersuchten Exciter-Positionen werden parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich, die Panelgeometrie anzupassen, während die Positionsverhältnisse der Exciter sich an die Größe anpassen. 
 
- Die erste Position entspricht jeweils der Hälfte der Panelseitenlänge in beide Richtungen und führt somit zu einer mittigen Platzierung des Exciters. Diese Konfiguration dient als Referenzposition und soll die theoretischen Überlegungen zur unzureichenden Anregung ungeradzahliger Moden in der Plattenmitte numerisch überprüfen
+Die erste Position entspricht jeweils der Hälfte der Panelseitenlänge in beide Richtungen und führt somit zu einer mittigen Platzierung des Exciters. Diese Konfiguration dient als Referenzposition und soll die theoretischen Überlegungen zur unzureichenden Anregung ungeradzahliger Moden in der Plattenmitte numerisch überprüfen.
  
-Die zweite definierte Position orientiert sich an der vom Exciter-Hersteller empfohlenen Anordnung, bei der der Anreger proportional zur Panelseitenlänge asymmetrisch auf dem Panel positioniert wird. Hierzu werden die Seitenlängen gedanklich durch fünf geteilt. Der Exciter wird anschließend am Schnittpunkt der 2/5 marke beider Seitenlängen Positioniert. Die 2/5 Regel soll vermeiden das sich der Anreger in der nähe Dominater Modenknoten befindet und somit eine gleichmäßige anregung möglichst vieler Eigenmoden. In der Simulation wird diese Positon hinsichtlich auf den Resultierenden Frequenzgangs des Panels Untersucht. 
+Die zweite definierte Position orientiert sich an der vom Exciter-Hersteller empfohlenen Anordnung, bei der der Anreger proportional zur Panelseitenlänge asymmetrisch auf dem Panel positioniert wird. Hierzu werden die Seitenlängen gedanklich durch fünf geteilt. Der Exciter wird anschließend am Schnittpunkt der 2/5-Marke beider Seitenlängen positioniert. Die 2/5-Regel soll vermeiden, dass sich der Anreger in der Nähe dominanter Modenknoten befindet, und somit eine gleichmäßige Anregung möglichst vieler Eigenmoden ermöglichen. In der Simulation wird diese Position hinsichtlich des resultierenden Frequenzgangs des Panels untersucht. 
 
-Die dirtte Definierte Position entspricht einer häufig in DIY DML Aufbauten verwendeten Anordnungen. Dabei werden die Seitenlängen gedrittelt und der Exciter an dem Schnittpunkt der ein Drittel markierung befestigt. Diese Position versucht genau wie die vorherige, eine möglichst große anzhal von Eigenmoden des Panels anzuregen indem eine Symetrische anbringung des Exciters vermieden wird. 
+Die dritte definierte Position entspricht einer häufig in DIY-DML-Aufbauten verwendeten Anordnung. Dabei werden die Seitenlängen gedrittelt und der Exciter an dem Schnittpunkt der Ein-Drittel-Markierung befestigt. Diese Position versucht genau wie die vorherige, eine möglichst große Anzahl von Eigenmoden des Panels anzuregen, indem eine symmetrische Anbringung des Exciters vermieden wird. 
 
-Nach der Simulation dieser Drei Exciter Positionen wird die Position welche den Linearsten Frequenzverlauf aufweißt weiter verwendet um die Hartschaum Sandwichtplatten der Marke KAPA zu vergleichen. Dabei wird bei dem selben aufbau die Materialeigenschaften der jeweiligen Sandwichplatten in die Simulation eingebaut. Die Platten geometrie bleibt wie beim vorherigen Simulations versuch unverändert, bis auf die anpassung der Platten Stärke, da die KAPA Line 15mm und die KAPA Graph 5mm stark ist. Anschließend werden die beiden Platten zuerst mit einem Exciter angeregt und Anschließend mit einem Zweiten Exciter gleichzeitig angeregt. 
+Nach der Simulation dieser drei Exciter-Positionen wird die Position, welche den linearsten Frequenzverlauf aufweist, weiterverwendet, um die Hartschaum-Sandwichplatten der Marke KAPA zu vergleichen. Dabei werden bei demselben Aufbau die Materialeigenschaften der jeweiligen Sandwichplatten in die Simulation eingebaut. Die Plattengeometrie bleibt wie beim vorherigen Simulationsversuch unverändert, bis auf die Anpassung der Plattenstärke, da die KAPA Line 15 mm und die KAPA Graph 5 mm stark ist. Anschließend werden die beiden Platten zuerst mit einem Exciter angeregt und anschließend mit einem zweiten Exciter gleichzeitig angeregt. 
 
 \clearpage
 \subsection{Simulations-Ergebnisse}
