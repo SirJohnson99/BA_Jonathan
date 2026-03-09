@@ -9,10 +9,10 @@ Darauf aufbauend werden verschiedene Konzepte hinsichtlich ihrer Umsetzbarkeit u
 
 \section{Verwendete Hardware}
 
+Für den Aufbau des DML Flachlautsprechers und dem Vermessen im Versuchsaufbau werden folgende Hardware Komponenten verwendet. Dabei werden der Exciter und der Audioverstärker genauer betrachtet. 
 
-vorstellung der einzelnen Hardware elemente wie im text unten beschrieben. 
+Hadware Tabelle: 
 
-Bei der Entwicklung eines DML-Flachlautsprechers sind zunächst die grundlegenden Rahmenbedingungen festzulegen. Dazu zählen insbesondere die gegebenen Systemkomponenten, die verwendete Stereoanlage sowie die Abmessungen und die Materialauswahl des Panels. In diesem Kapitel werden die gegebenen Randbedingungen beschrieben, um auf dieser Grundlage ein geeignetes Konzept für die Entwicklung eines DML-Flachlautsprechers abzuleiten. 
 
 Zum Anregen der Panele werden Körperschallwandler der Firma Dayton Audio verwendet, Typ DAEX32EP-4. 
 Dieses Modell zählt mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse \cite{DaytonAudio2024}. Der Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Die zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
@@ -219,47 +219,21 @@ Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle 
 
 \subsection{Comsol}
 
-Das Program COMSOL Multiphysiks ist eine universell einsetzbare Simulationssoftware für alle bereiche des Ingenieurswesens. Die Software bietet vollständgig gekoppelte Multiphysik und einzel Physik Modellierungsfunktionen. Dabei ist das Programm strukturiert und benutzerfreundlich aufgebaut.
-Die numerische Simulation mechanischer und akustischer Systeme mittels COMSOL Multiphysics basiert auf der Finite-Elemente-Methode (FEM), welche seit Jahrzehnten Standard in der Ingenieurwissenschaft zur Lösung partieller Differentialgleichungen ist \textbf{[COMSOL Multiphysics - Website, 2024]}. Um Modelle von physikalischen Systemen mit Hilfe von Computern simulieren und lösen zu können, muss das Modell diskretisiert werden. Bei der Diskretisierung werden geometrische Modelle auf endlich viele und endlich kleine Elemente und einer daraus resultierenden Anzahl an räumlichen Abtastpunkten zerlegt, dabei wird die Lösung in jedem Element durch Formfunktionen approximiert \textbf{[Petritsch TU Graz S. 4]}. COMSOL Multiphysics bietet eine gekoppelte Multiphysik- oder Einzelphysik-Modellierungsfunktion, um auch die Möglichkeit breitgefächerter physikalischer Anwendungen zu modellieren und simulieren. Dabei sind im COMSOL Model Builder alle notwendigen Schritte zum Aufbau eines Simulationsmodells, von der Definition von Geometrien, der Erfassung von Materialeigenschaften, der Physikbeschreibung und der Durchführung und Berechnung im Modellierungs-Workflow gegeben \textbf{[COMSOL Multiphysics - Website, 2024]}.
+Das Program COMSOL Multiphysiks ist eine universell einsetzbare Simulationssoftware für alle bereiche des Ingenieurswesens. Die Software bietet vollständgig gekoppelte Multiphysik und einzel Physik Modellierungsfunktionen und ist dabei  strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produkpalette eine Große anzahl von Fachgebieten wie Elektromegnetik-Module, Stromungs\&Wärmetransport-Module, Strukturmechanik-\& Akustik-Module und wetiere Module. In dieser Arbeit wird das  Strukturmechanik-\& Akustik-Module verwendet welches die Struktruellen eigenschaften der DML Platte mit den Akustischen abstrahleigenschaften Simuliert. 
+Der Modelaufbau in COMSOL erfolgt über den Modelbuilder in dem zuerst die Globalen Definitionen fesgelegt werden, darunter zählen parameter und Variablen welch in der Simulation vernwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D oder 3D Geometrie welche im Grafikfenster dargestellt wird. Die geometrie stellt das Grundgerüst der Simulation dar. In den Folgenden Schritten werden Materialien welche entweder aus der COMSOL Materialbibliothek verwedent oder selbständig eingetragenw werden kann der Geometrie zugewiesen. Nach der zuweisund der Materialien wird die Physik in die Simulation Hinzugefügt. Bei COMSOL kann man beliebig das Simulations Modell anpassen und Physiken hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt welche die Wechselwirkungen der verschiedenen Physiken verbindet. Dies ist in diesemfall die verbindung der Festkörpermechanik der Platte mit der Drukakustik im Raum. Wenn das Model aufgebaut, Material und Physik zugewiesen ist wird ein Mesh welches das Model in Endlich viele kleine Teile zerlegt über das Model Gespannt. Das Mesh ist die Grundlage für die FEM berechnungen. Wennd as Mesh über die geometrei gespannt wurde kann die Studie berechnet werden, wie auch bei der Physik können hier beliebig studien hinzugefügt oder entfernt werden nach denen aufgelöst wird. 
+Bei dem in dieser Arbeit aufgebauten modell wird eine DML Platte und dessen Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung Frequenzbereich gelöst, das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hooksche gesetz beschreibt. 
+In \ref{fig:comsol_modellaufbau} Wird das Program mit dem in dieser Arbeit verwendeten Modellafubau dargestellt.
 
-
-Für die Simulation von DML-Lautsprechersystemen ist das Acoustics Module von zentraler Bedeutung, welches sowohl die Modellierung der Strukturschwingungen des Panels als auch der daraus resultierenden Schallabstrahlung ermöglicht \textbf{[COMSOL Acoustics Module, 2024]}. Dieses Interface löst die dynamischen Navier-Gleichungen im Frequenzbereich und ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 656-661]}.
-
-Die theoretische Grundlage für die Strukturanalyse bildet die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen $\boldsymbol{\sigma}$ und Dehnungen $\boldsymbol{\varepsilon}$ über das verallgemeinerte Hookesche Gesetz beschreibt \cite{Moeser2010}. Für isotrope Materialien vereinfacht sich dieses zu einer Beziehung, die durch den Elastizitätsmodul $E$ und die Poissonzahl $\nu$ vollständig charakterisiert ist. Die Bewegungsgleichung für elastische Festkörper lautet in ihrer allgemeinen Form:
-
-\begin{equation}
-\rho \frac{\partial^2 \mathbf{u}}{\partial t^2} = \nabla \cdot \boldsymbol{\sigma} + \mathbf{f}
-\end{equation}
-
-wobei $\rho$ die Materialdichte, $\mathbf{u}$ der Verschiebungsvektor, $\boldsymbol{\sigma}$ der Spannungstensor und $\mathbf{f}$ die Volumenkraftdichte darstellen. Für harmonische Schwingungen mit der Kreisfrequenz $\omega$ führt der Ansatz $\mathbf{u}(\mathbf{x}, t) = \hat{\mathbf{u}}(\mathbf{x}) e^{i\omega t}$ zum frequenzabhängigen Gleichungssystem, welches mittels FEM diskretisiert und gelöst wird \textbf{[Petritsch TU Graz, S. 15-18]}. Die akustische Wellenausbreitung wird durch die Helmholtz-Gleichung beschrieben \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 168-173]}:
-
-\begin{equation}
-\nabla^2 p + k^2 p = 0
-\end{equation}
-
-wobei $p$ der akustische Schalldruck und $k = \omega/c$ die Wellenzahl mit der Schallgeschwindigkeit $c$ darstellt. An der Grenzfläche zwischen Struktur und Fluid erfolgt die Kopplung über die kinematische Bedingung, dass die Normalkomponente der Fluidgeschwindigkeit der Strukturgeschwindigkeit entsprechen muss, sowie über die dynamische Bedingung, dass der akustische Druck als Randbedingung auf die Struktur wirkt \textbf{[COMSOL Acoustics Module, 2024]}.
-
-Für die Eigenfrequenzanalyse, welche die natürlichen Schwingungsfrequenzen und -formen des DML-Panels bestimmt, wird das verallgemeinerte Eigenwertproblem gelöst, welches aus der homogenen Form der Bewegungsgleichung ohne äußere Anregung resultiert \textbf{[COMSOL Blog - Eigenmoden, 2024]}. Die Eigenfrequenzen $f_n = \omega_n/(2\pi)$ und zugehörigen Eigenmoden $\boldsymbol{\phi}_n$ charakterisieren das modale Verhalten des Systems vollständig. Für DML-Systeme ist eine hohe modale Dichte im interessierenden Frequenzbereich wünschenswert, da dies zu einer statistisch gleichmäßigeren Schallabstrahlung führt \cite{Bai2001}. Die modale Dichte $n(f)$, definiert als die Anzahl der Moden pro Frequenzintervall, steigt für Plattenstrukturen proportional zur Frequenz an, was DML-Systeme besonders für mittlere und höhere Frequenzen geeignet macht.
-
-Die numerische Diskretisierung erfolgt durch Zerlegung der Geometrie in finite Elemente, wobei von COMSOL verschiedene Elementtypen angeboten werden, darunter für dreidimensionale Probleme Tetraeder, Hexaeder, Prismen und Pyramiden. Diese unterscheiden sich in ihrer Anzahl der Knotenpunkte. \textbf{[COMSOL Structural Mechanics Module, 2024]}. Die Elementgröße muss so gewählt werden, dass pro Wellenlänge mindestens fünf bis sechs Elemente zweiter Ordnung vorhanden sind, um numerische Dispersion zu vermeiden und die Eigenmoden korrekt aufzulösen \textbf{[COMSOL Blog - Eigenmoden, 2024]}. Für akustische Probleme gilt die analoge Anforderung, dass pro akustischer Wellenlänge $\lambda = c/f$ eine ausreichende Anzahl von Elementen vorhanden sein muss \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 168-170]}. 
-Die Formfunktionen der Elemente können linear erste Ordnung, quadratisch zweite Ordnung oder kubisch höhere Ordnung sein, wobei Elemente höherer Ordnung bei gleicher Elementanzahl eine deutlich höhere Genauigkeit bieten, jedoch auch einen erhöhten Rechenaufwand erfordern \textbf{[Petritsch TU Graz, S. 22-25]}.
-
-Die Randbedingungen definieren die physikalischen Freiheitsgrade des Systems und müssen sorgfältig entsprechend der realen Situation gewählt werden \textbf{[Jonuscheit TU Clausthal, S. 3]}.
-Für DML-Panels mit freier Aufhängung werden typischerweise spannungsfreie Randbedingungen verwendet, bei denen keine externen Kräfte oder Momente auf die Ränder wirken. Dies wird in COMSOL durch Weglassen jeglicher Randbedingung an den entsprechenden Rändern realisiert \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 656-661]}. Für die akustische Analyse werden typischerweise Perfectly Matched Layers (PML) verwendet, um nicht-reflektierende Randbedingungen zu implementieren und damit ein unendlich ausgedehntes akustisches Medium zu simulieren \textbf{[COMSOL Acoustics Module User's Guide, 2024, S. 177-180]}. PMLs sind künstliche absorbierende Schichten, welche die ausgehenden Wellen effektiv dämpfen, ohne Reflexionen an der Grenze des Rechengebiets zu erzeugen.
-
-Die Materialeigenschaften gehen direkt in die Systemmatrizen ein und müssen genau bekannt sein, um genaue Simulationsergebnisse zu erzielen \textbf{[Baratelli 2018]}. 
-Für die Strukturanalyse sind die Dichte $\rho$ [kg/m³], der Elastizitätsmodul $E$ [Pa] und die Poissonzahl $\nu$ [-] die fundamentalen Parameter \textbf{[Jonuscheit TU Clausthal, S. 3]}.
-Für Sandwichmaterialien wie die in diesem Fall verwendeten KAPA-Platten können entweder homogenisierte effektive Materialeigenschaften verwendet werden, oder die mehrschichtige Struktur wird explizit mit entsprechenden Kontaktbedingungen zwischen den Schichten modelliert \textbf{[COMSOL Blog - ASI, 2024]}. Die Dämpfung kann als strukturelle Dämpfung über einen Verlustfaktor $\eta$ oder als Rayleigh-Dämpfung über die Parameter $\alpha$ und $\beta$ berücksichtigt werden, wobei in den meisten Fällen die Auswirkungen der Dämpfung auf die Eigenfrequenzen gering sind und diese primär die Amplitude der Resonanzpeaks beeinflusst \textbf{[COMSOL Blog - Dämpfung, 2024]}.
-
-
- 
 
 \subsection{COMSOL-Modell-Aufbau}
 
-Der Simulationsaufbau in COMSOL Multiphysics erfolgt innerhalb der Acoustics Domain. Das Simulationsmodell ist so ausgelegt, dass es den Freifeldaufbau des Akustiklabors möglichst realitätsnah nachbildet. Diese Ähnlichkeit dient dazu, die Ergebnisse der Simulation mit dem folgenden Versuchsaufbau im Freifeldraum im Laufe dieser Arbeit direkt vergleichen zu können.
-Zu Beginn des Simulationsaufbaus werden die Modellparameter definiert, welche die geometrischen Abmessungen des Systems festlegen. Diese Größen werden parametrisiert, sodass sie in den nachfolgenden Einstellungen wiederverwendet und bei Bedarf einfach angepasst werden können. Dadurch ist es möglich, das Modell schnell und effizient variabel anzupassen. Zu den wesentlichen Parametern zählen die Seitenlängen des DML-Panels sowie die Position des Exciter Patches auf der Paneloberfläche. Nachdem die Parameter festgelegt wurden, wird innerhalb der Geometrieumgebung von COMSOL eine kugelförmige Domäne definiert, deren Mittelpunkt im Koordinatenursprung liegt. Zusätzlich wird mit der Quader-Funktion ein Panel erstellt und so positioniert, dass sich dessen Mittelpunkt im Ursprung des Koordinatensystems befindet. Dies wird durch die parametrische Definition der Geometrie sichergestellt. Die Wahl des Koordinatenursprungs in der Panelmitte hat den Hintergrund, dass sich ein Messpunkt zur Erfassung des Schalldruckpegels in einem Abstand von einem Meter in positiver Y-Richtung vom Ursprung befindet. Dadurch kann der Schalldruckpegel in einer definierten Messposition ausgewertet werden. Der Durchmesser der Kugel beträgt 1,5 m, wodurch sichergestellt wird, dass sich sowohl das Panel als auch der Messpunkt vollständig innerhalb des Simulationsraums befinden. Gleichzeitig wird ein ausreichender Abstand zwischen Messpunkt und Rand des Simulationsraums gewährleistet, um unerwünschte Reflexionen zu minimieren. Diese Kugel stellt den luftgefüllten Simulationsraum dar, da sich Schall nur in einem Medium ausbreiten kann. Um den luftgefüllten Simulationsraum herum befindet sich eine weitere Kugeldomäne, welche einen Durchmesser von 1,9 Meter hat. Diese zweite kugelförmige Schicht ist als Perfectly Matched Layer (PML) definiert. Eine PML stellt eine ideal absorbierende Randbedingung dar, welche darauftreffende Schallwellen nahezu vollständig absorbiert und somit die Bedingungen eines reflexionsarmen Freifeldes nachbildet.
-Der Körperschallwandler wird in der Simulation in vereinfachter Form durch ein Exciter Patch auf der Paneloberfläche modelliert. Dabei handelt es sich um eine zweidimensionale kreisförmige Fläche, die in der Ebene des Panels liegt.
 
+%In Comsol werden 2 verschiedene Modelle Simuliert. Zuerst wird die Platte allein Simuliert welch und dessen Eigenmoden Bestimmt. Mit hilfe der bestimmten eigenmoden soll eine Ideale Position für den Exciter gefunden werden. Dafür in der Geometrie eine Platte erzeugt und die Materialeigenschaften zugeordnet. Anschließend wird in der 
+
+
+Der Simulationsaufbau in COMSOL Multiphysics erfolgt innerhalb der Acoustics Domain. Das Simulationsmodell ist so ausgelegt, dass es den Freifeldaufbau des Akustiklabors möglichst realitätsnah nachbildet. Diese Ähnlichkeit dient dazu, die Ergebnisse der Simulation mit dem folgenden Versuchsaufbau im Freifeldraum im Laufe dieser Arbeit direkt vergleichen zu können.
+Zu Beginn des Simulationsaufbaus werden die Modellparameter definiert, welche die geometrischen Abmessungen des Systems festlegen. Diese Größen werden parametrisiert, sodass sie in den nachfolgenden Einstellungen wiederverwendet und bei Bedarf einfach angepasst werden können. Dadurch ist es möglich, das Modell schnell und effizient variabel anzupassen. Nachdem die Parameter festgelegt wurden, wird innerhalb der Geometrieumgebung von COMSOL eine kugelförmige Domäne definiert welche mit Luft bei 20 Grad Celsius gefüllt ist und deren Mittelpunkt im Koordinatenursprung liegt. Zusätzlich wird ein Panel erstellt und so positioniert, dass sich dessen Mittelpunkt im Ursprung des Koordinatensystems befindet. Dadurch kann der Schalldruckpegel in einer definierten Messposition ausgewertet werden.
+Die Körperschallwandler werden in der Simulation in vereinfachter Form auf der Paneloberfläche modelliert. Dabei handelt es sich um eine zweidimensionale kreisförmige Fläche, die in der Ebene des Panels liegt.
 
 
 \begin{figure}[H]
@@ -276,8 +250,6 @@ Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Frei
 
 
 \subsection{Vorbereitung der Simulation}
-
-\textbf{Vielleich zu Theoretische Grundlagen ?! }
 
 Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
 
@@ -597,9 +569,11 @@ Ergebnisse Graphisch darstellen und Diskutieren
 
 \clearpage
 
+
+
 \section{Realer Versuchsaufbau}
 
-Der Versuchsaufbau, welcher in 3.2 beschrieben wurde, wird nun im Freifeldraum aufgebaut und durchgeführt. Ziel des Aufbaus ist eine objektive Vermessung des Lautsprechers und Erfassung akustischer Kenngrößen wie des Frequenzgangs und Schalldruckpegels. Diese Parameter beschreiben das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bilden die Grundlage für Entwicklung und Vergleichbarkeit verschiedener Systeme \cite{Weinzierl2025}. In der Theorie wird ein Lautsprecher als LTI-System betrachtet, das ist ein lineares, zeitinvariantes System. Ein solches System wird durch seine Impulsantwort h(t) charakterisiert, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion H(f) berechnen lässt \cite{Goerne2011}. Der Betrag von H(f) entspricht dabei dem Amplitudenfrequenzgang. 
+Der Versuchsaufbau, welcher in 3.2 beschrieben wurde, wird nun im Freifeldraum aufgebaut und durchgeführt. Ziel des Aufbaus ist eine objektive Vermessung des Lautsprechers und Erfassung akustischer Kenngrößen wie des Frequenzgangs und Schalldruckpegels. Diese Parameter beschreiben das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bilden die Grundlage für Entwicklung und Vergleichbarkeit verschiedener Systeme. In der Theorie wird ein Lautsprecher als LTI-System betrachtet, das ist ein lineares, zeitinvariantes System. Ein solches System wird durch seine Impulsantwort h(t) charakterisiert, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion H(f) berechnen lässt. Der Betrag von H(f) entspricht dabei dem Amplitudenfrequenzgang. 
 
 Die zentrale Beziehung zwischen Eingangs- und Ausgangssignal lautet im Zeitbereich: 
 
@@ -633,17 +607,32 @@ Um eine Schallleistungsmessung bei 1 W zu haben, muss der Verstärker bei einem 
 Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulation, was Größe und Exciter-Position angeht. Die Tests mit den verschiedenen Exciter-Positionen werden verglichen und die 3 vordefinierten Punkte durch den Versuch getestet. Die Plattengröße wird nicht im Versuchsaufbau getestet, hierbei wird sich auf die Simulation sowie eine Berechnung verlassen.  
 
 
+\subsection{Software}
+
+Um einen DML-Lautsprecher einzumessen und dessen Akustischen eigenschaften zu beurteilen muss die Messsoftware die folgenden Funktionen umfassen: 
+
+Erzeugen eines Testsignals Sweep / Weißesrauschen (Output) 
+Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon (Input)
+Verarbeitung der Messwerte 
+Darstellen der Messwerte 
+Speichern der Messwerte 
+
+Die Genannten Funktionen werden in dem Programm LabVIEW von National Instruments umgesetzt. 
+
+\subsection{LabVIEW / Blockschaltbild}
+
+LabVIEW ist ein Programm der Firma National Instruments mit dem sich in einer Grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme Programieren lassen. Statt textbasiertem Code verwendet labVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW Programm besteht dabei aus zwei wesentlichen Bestandteilen, einer Benutzeroberfläche dem Frontpanel und einer Funktionslogik oder auch Blockdiagramm. Im Blockdiragramm werden Virtuelle Instrumente kurz VI, verwendet um Signale zu erzeugenoder zu bearbeiten, Daten zu erfassen Systeme zu Regeln oder zu Steuern. Die einzelnen VI´s lassen sich im Grafinschen Programmcode mit verschiedenen Dräten verbinden, diese sind Farbcodiert und konnen jeweils nur eine bestimte art von daten übermitteln. Mittels der Dräte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte Festlegen.  
+
+In dieser Arbeit wird LabVIEW Verwendet um den DML-Lautsprecher auf seine Akustischen Eigenschaften untersucht, dabei wird ein Audiosignal in LabVIEW erzeugt und über das DAQ und den Audioverstärker an den DML-Lautsprecher geleitet. Das Signal wird Akustisch wiedergegeben und von einem Messmikrofon Empfangen. Die dabei entstehende übertragungs gibt erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. 
 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/Blockschaltbild.drawio.png}
+	\caption{Blockschaltbild der Exciter-Positionierung auf einem DML-Panel}
+	\label{fig:blockschaltbild_exciter}
+\end{figure}
 
-\subsection{Ablauf des Versuchaufbaus}
-
-hier kommt der genaue ablauf hin, was gemacht wird: Einmessen des verstärkers auf 1W Leistung mit 8 Ohm widerstand dannach die einmessung der Exciter mit Sweep und Rauschen. Erklärung was der unterschied ist zwischen Rauschen und Sweep sowie die Mathematische aussage. Welche erwartungen an den test gibt es.
-
-LavVIEW und die mathematik dahinter
-
-
-\subsection{LabVIEW aufbau}
 
 
 
