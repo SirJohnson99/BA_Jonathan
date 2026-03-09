@@ -11,7 +11,7 @@ Darauf aufbauend werden verschiedene Konzepte hinsichtlich ihrer Umsetzbarkeit u
 
 Für den Aufbau des DML Flachlautsprechers und dem Vermessen im Versuchsaufbau werden folgende Hardware Komponenten verwendet. Dabei werden der Exciter und der Audioverstärker genauer betrachtet. 
 
-Hadware Tabelle: 
+Hardware Tabelle: 
 
 
 Zum Anregen der Panele werden Körperschallwandler der Firma Dayton Audio verwendet, Typ DAEX32EP-4. 
@@ -219,10 +219,10 @@ Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle 
 
 \subsection{Comsol}
 
-Das Program COMSOL Multiphysiks ist eine universell einsetzbare Simulationssoftware für alle bereiche des Ingenieurswesens. Die Software bietet vollständgig gekoppelte Multiphysik und einzel Physik Modellierungsfunktionen und ist dabei  strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produkpalette eine Große anzahl von Fachgebieten wie Elektromegnetik-Module, Stromungs\&Wärmetransport-Module, Strukturmechanik-\& Akustik-Module und wetiere Module. In dieser Arbeit wird das  Strukturmechanik-\& Akustik-Module verwendet welches die Struktruellen eigenschaften der DML Platte mit den Akustischen abstrahleigenschaften Simuliert. 
-Der Modelaufbau in COMSOL erfolgt über den Modelbuilder in dem zuerst die Globalen Definitionen fesgelegt werden, darunter zählen parameter und Variablen welch in der Simulation vernwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D oder 3D Geometrie welche im Grafikfenster dargestellt wird. Die geometrie stellt das Grundgerüst der Simulation dar. In den Folgenden Schritten werden Materialien welche entweder aus der COMSOL Materialbibliothek verwedent oder selbständig eingetragenw werden kann der Geometrie zugewiesen. Nach der zuweisund der Materialien wird die Physik in die Simulation Hinzugefügt. Bei COMSOL kann man beliebig das Simulations Modell anpassen und Physiken hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt welche die Wechselwirkungen der verschiedenen Physiken verbindet. Dies ist in diesemfall die verbindung der Festkörpermechanik der Platte mit der Drukakustik im Raum. Wenn das Model aufgebaut, Material und Physik zugewiesen ist wird ein Mesh welches das Model in Endlich viele kleine Teile zerlegt über das Model Gespannt. Das Mesh ist die Grundlage für die FEM berechnungen. Wennd as Mesh über die geometrei gespannt wurde kann die Studie berechnet werden, wie auch bei der Physik können hier beliebig studien hinzugefügt oder entfernt werden nach denen aufgelöst wird. 
-Bei dem in dieser Arbeit aufgebauten modell wird eine DML Platte und dessen Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung Frequenzbereich gelöst, das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hooksche gesetz beschreibt. 
-In \ref{fig:comsol_modellaufbau} Wird das Program mit dem in dieser Arbeit verwendeten Modellafubau dargestellt.
+Das Programm COMSOL Multiphysics ist eine universell einsetzbare Simulationssoftware für alle Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Multiphysik- und Einzelphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere Module. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert. 
+Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek verwendet oder selbstständig eingetragen werden können, der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physiken hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Dies ist in diesem Fall die Verbindung der Festkörpermechanik der Platte mit der Druckakustik im Raum. Wenn das Modell aufgebaut, Material und Physik zugewiesen ist, wird ein Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
+Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung im Frequenzbereich gelöst. Das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hookesche Gesetz beschreibt. 
+In Abbildung \ref{fig:comsol_modellaufbau} wird das Programm mit dem in dieser Arbeit verwendeten Modellaufbau dargestellt.
 
 
 \subsection{COMSOL-Modell-Aufbau}
@@ -609,7 +609,7 @@ Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulati
 
 \subsection{Software}
 
-Um einen DML-Lautsprecher einzumessen und dessen Akustischen eigenschaften zu beurteilen muss die Messsoftware die folgenden Funktionen umfassen: 
+Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beurteilen, muss die Messsoftware die folgenden Funktionen umfassen: 
 
 Erzeugen eines Testsignals Sweep / Weißesrauschen (Output) 
 Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon (Input)
@@ -617,13 +617,13 @@ Verarbeitung der Messwerte
 Darstellen der Messwerte 
 Speichern der Messwerte 
 
-Die Genannten Funktionen werden in dem Programm LabVIEW von National Instruments umgesetzt. 
+Die genannten Funktionen werden in dem Programm LabVIEW von National Instruments umgesetzt. 
 
 \subsection{LabVIEW / Blockschaltbild}
 
-LabVIEW ist ein Programm der Firma National Instruments mit dem sich in einer Grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme Programieren lassen. Statt textbasiertem Code verwendet labVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW Programm besteht dabei aus zwei wesentlichen Bestandteilen, einer Benutzeroberfläche dem Frontpanel und einer Funktionslogik oder auch Blockdiagramm. Im Blockdiragramm werden Virtuelle Instrumente kurz VI, verwendet um Signale zu erzeugenoder zu bearbeiten, Daten zu erfassen Systeme zu Regeln oder zu Steuern. Die einzelnen VI´s lassen sich im Grafinschen Programmcode mit verschiedenen Dräten verbinden, diese sind Farbcodiert und konnen jeweils nur eine bestimte art von daten übermitteln. Mittels der Dräte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte Festlegen.  
+LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen: einer Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
 
-In dieser Arbeit wird LabVIEW Verwendet um den DML-Lautsprecher auf seine Akustischen Eigenschaften untersucht, dabei wird ein Audiosignal in LabVIEW erzeugt und über das DAQ und den Audioverstärker an den DML-Lautsprecher geleitet. Das Signal wird Akustisch wiedergegeben und von einem Messmikrofon Empfangen. Die dabei entstehende übertragungs gibt erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. 
+In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akustischen Eigenschaften zu untersuchen. Dabei wird ein Audiosignal in LabVIEW erzeugt und über das DAQ und den Audioverstärker an den DML-Lautsprecher geleitet. Das Signal wird akustisch wiedergegeben und von einem Messmikrofon empfangen. Die dabei entstehende Übertragungsfunktion gibt Erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. 
 
 
 \begin{figure}[H]
