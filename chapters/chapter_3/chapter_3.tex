@@ -7,7 +7,10 @@ Im Anschluss wird der Versuchsaufbau, mit dem der DML-Flachlautsprecher vermesse
 Darauf aufbauend werden verschiedene Konzepte hinsichtlich ihrer Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben beschrieben, diskutiert und bewertet. Auf Grundlage dieser Bewertung wird ein geeignetes Konzept ausgewählt, das in den folgenden Kapiteln zunächst mittels Simulation untersucht und anschließend im realen Versuchsaufbau experimentell vermessen wird.
 
 
-\section{Darlegung der Rahmenbedingungen}
+\section{Verwendete Hardware}
+
+
+vorstellung der einzelnen Hardware elemente wie im text unten beschrieben. 
 
 Bei der Entwicklung eines DML-Flachlautsprechers sind zunächst die grundlegenden Rahmenbedingungen festzulegen. Dazu zählen insbesondere die gegebenen Systemkomponenten, die verwendete Stereoanlage sowie die Abmessungen und die Materialauswahl des Panels. In diesem Kapitel werden die gegebenen Randbedingungen beschrieben, um auf dieser Grundlage ein geeignetes Konzept für die Entwicklung eines DML-Flachlautsprechers abzuleiten. 
 
@@ -214,9 +217,9 @@ Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle 
 
 
 
-\subsection{Theoretische Grundlagen der Simulation}
+\subsection{Comsol}
 
-
+Das Program COMSOL Multiphysiks ist eine universell einsetzbare Simulationssoftware für alle bereiche des Ingenieurswesens. Die Software bietet vollständgig gekoppelte Multiphysik und einzel Physik Modellierungsfunktionen. Dabei ist das Programm strukturiert und benutzerfreundlich aufgebaut.
 Die numerische Simulation mechanischer und akustischer Systeme mittels COMSOL Multiphysics basiert auf der Finite-Elemente-Methode (FEM), welche seit Jahrzehnten Standard in der Ingenieurwissenschaft zur Lösung partieller Differentialgleichungen ist \textbf{[COMSOL Multiphysics - Website, 2024]}. Um Modelle von physikalischen Systemen mit Hilfe von Computern simulieren und lösen zu können, muss das Modell diskretisiert werden. Bei der Diskretisierung werden geometrische Modelle auf endlich viele und endlich kleine Elemente und einer daraus resultierenden Anzahl an räumlichen Abtastpunkten zerlegt, dabei wird die Lösung in jedem Element durch Formfunktionen approximiert \textbf{[Petritsch TU Graz S. 4]}. COMSOL Multiphysics bietet eine gekoppelte Multiphysik- oder Einzelphysik-Modellierungsfunktion, um auch die Möglichkeit breitgefächerter physikalischer Anwendungen zu modellieren und simulieren. Dabei sind im COMSOL Model Builder alle notwendigen Schritte zum Aufbau eines Simulationsmodells, von der Definition von Geometrien, der Erfassung von Materialeigenschaften, der Physikbeschreibung und der Durchführung und Berechnung im Modellierungs-Workflow gegeben \textbf{[COMSOL Multiphysics - Website, 2024]}.
 
 
@@ -249,7 +252,7 @@ Für die Strukturanalyse sind die Dichte $\rho$ [kg/m³], der Elastizitätsmodul
 Für Sandwichmaterialien wie die in diesem Fall verwendeten KAPA-Platten können entweder homogenisierte effektive Materialeigenschaften verwendet werden, oder die mehrschichtige Struktur wird explizit mit entsprechenden Kontaktbedingungen zwischen den Schichten modelliert \textbf{[COMSOL Blog - ASI, 2024]}. Die Dämpfung kann als strukturelle Dämpfung über einen Verlustfaktor $\eta$ oder als Rayleigh-Dämpfung über die Parameter $\alpha$ und $\beta$ berücksichtigt werden, wobei in den meisten Fällen die Auswirkungen der Dämpfung auf die Eigenfrequenzen gering sind und diese primär die Amplitude der Resonanzpeaks beeinflusst \textbf{[COMSOL Blog - Dämpfung, 2024]}.
 
 
-Noch überarbeiten und Quellen korrekt einfügen. 
+ 
 
 \subsection{COMSOL-Modell-Aufbau}
 
@@ -525,7 +528,7 @@ Ergebnisse Graphisch darstellen und Diskutieren
 			axis line style=very thick,
 			tick style=very thick,
 			xtick={100,500,1000,5000,10000},
-			xticklabels={100,500,1000,5000,10000 Hz},
+			xticklabels={100,500,1000,5000,Hz},
 			ytick={40,50,60,70,80,90,100,110},
 			yticklabels={40,50,60,70,dB,90,100,110},
 			legend style={draw=none, at={(0.97,0.25)}, anchor=east, font=\small},
@@ -640,15 +643,9 @@ hier kommt der genaue ablauf hin, was gemacht wird: Einmessen des verstärkers a
 LavVIEW und die mathematik dahinter
 
 
-\subsection{Getestete Exciter-Positionen}
+\subsection{LabVIEW aufbau}
 
-3 verschiedene Positionen, welche vorab bei der Simulation simuliert wurden. 
 
-\begin{enumerate}
-    \item 1. Vom Hersteller Dayton Audio (Abbildung) 2/5
-    \item 2. 1/3 außermittig von den Seitenlängen 
-    \item 3. Mittig 
-\end{enumerate}
 
 
 \subsection{Messergebnisse und Auswertung (Messunsicherheit)}
