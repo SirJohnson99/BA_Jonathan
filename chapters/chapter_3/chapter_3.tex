@@ -573,6 +573,8 @@ Ergebnisse Graphisch darstellen und Diskutieren
 
 \section{Realer Versuchsaufbau}
 
+Überarbeiten! 
+
 Der Versuchsaufbau, welcher in 3.2 beschrieben wurde, wird nun im Freifeldraum aufgebaut und durchgeführt. Ziel des Aufbaus ist eine objektive Vermessung des Lautsprechers und Erfassung akustischer Kenngrößen wie des Frequenzgangs und Schalldruckpegels. Diese Parameter beschreiben das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bilden die Grundlage für Entwicklung und Vergleichbarkeit verschiedener Systeme. In der Theorie wird ein Lautsprecher als LTI-System betrachtet, das ist ein lineares, zeitinvariantes System. Ein solches System wird durch seine Impulsantwort h(t) charakterisiert, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion H(f) berechnen lässt. Der Betrag von H(f) entspricht dabei dem Amplitudenfrequenzgang. 
 
 Die zentrale Beziehung zwischen Eingangs- und Ausgangssignal lautet im Zeitbereich: 
@@ -597,8 +599,8 @@ Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden di
 Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beurteilen, muss das in LabVIEW erstellte Programm die folgenden Funktionen umfassen: 
 
 \begin{itemize}
-    \item Erzeugen und Abspielen eines Testsignals Sweep 
-    \item Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon (Input)
+    \item Erzeugen und Abspielen eines Testsignals 
+    \item Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon
     \item Verarbeitung der Messwerte Bilden der Übertragungsfunktion
     \item Darstellen der Messwerte in einem Graphen
     \item Speichern der Messwerte als Verarbeitbare Datei
@@ -616,15 +618,15 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 	\label{fig:blockschaltbild_exciter}
 \end{figure}
 
-Abbildung \ref{fig:blockschaltbild_exciter} zeigt exemplarisch den Signalfluss des Versuchsaufbaus im Freifeldraum. Als Testsignal wird in LabVIEW ein parametrischer Sweep erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
+Abbildung \ref{fig:blockschaltbild_exciter} zeigt exemplarisch den Signalfluss des Versuchsaufbaus im Freifeldraum in form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein parametrischer Sweep erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
 Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
 Die erfassten Eingangssignale werden in LabVIEW weiterverarbeitet, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
 
+\subsection{LabVIEW Aufbau}
 
-
-
+Bilder was in LabVIEW gemacht wird!
 
 
 
