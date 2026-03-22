@@ -225,7 +225,7 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 In Abbildung \ref{fig:comsol_modellaufbau} wird das Programm mit dem in dieser Arbeit verwendeten Modellaufbau dargestellt.
 
 
-\subsection{COMSOL-Modell-Aufbau}
+\subsection{Modell-Aufbau}
 
 
 %In Comsol werden 2 verschiedene Modelle Simuliert. Zuerst wird die Platte allein Simuliert welch und dessen Eigenmoden Bestimmt. Mit hilfe der bestimmten eigenmoden soll eine Ideale Position für den Exciter gefunden werden. Dafür in der Geometrie eine Platte erzeugt und die Materialeigenschaften zugeordnet. Anschließend wird in der 
@@ -589,49 +589,42 @@ H(f) = \frac{Y(f)}{X(f)}
 \end{equation}
 
 
-Diese mathematische Eigenschaft bildet die Grundlage des Messverfahrens mittels parametrischem Sweep und mittels weißem Rauschen \cite{Weinzierl2025}. Damit bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers und nicht die des Messraums widerspiegelt werden, wird die Messung in einem Freifeldraum wie in DIN45500 vorgeschrieben durchgeführt \cite{din}.
-Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden die Schallwellen nahezu vollständig absorbieren. Der Schalldruckpegel nimmt mit 6 dB pro Entfernungsverdopplung ab \cite{Goerne2011}. Da die Messung in herkömmlichen Räumen durch Reflexionen oder stehende Wellen im Raum, welche vor allem unter 300 Hz entstehen, verfälscht werden und zu Abweichungen führen können, ist die Messung in einem Freifeldraum aufgrund der Reproduzierbarkeit und Vergleichbarkeit der Messergebnisse sinnvoll (QUELLE:Dickreiter). 
+Diese mathematische Eigenschaft bildet die Grundlage des Messverfahrens mittels parametrischem Sweep und mittels weißem Rauschen. Damit bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers und nicht die des Messraums widerspiegelt werden, wird die Messung in einem Freifeldraum durchgeführt.
+Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden die Schallwellen nahezu vollständig absorbieren.
 
-
-
-------------------------------
-
-
-WOZU DAS GANZE ? 
-
-Der Versuchsaufbau im Freifeldraum orientiert sich an dem in 3.2 definierten Versuchsaufbau. Dabei wird das DML-Panel an einem Gestell aufgehängt und das Messmikrofon einen Meter vor der Plattenmitte positioniert. Der Körperschallwandler wird an den definierten Punkten aus der Simulation befestigt. 
-
-Um eine Schallleistungsmessung bei 1 W zu haben, muss der Verstärker bei einem Exciter mit 4 Ohm auf 2 V und bei 2 Excitern in Reihe mit 8 Ohm auf 2,87 V eingestellt werden. Die Spannung wird vorab mit einem Multimeter gemessen, bevor der Exciter angeschlossen wird. 
-
-
-Der Versuchsaufbau ist eine Nachstellung aus den besten Ergebnissen der Simulation, was Größe und Exciter-Position angeht. Die Tests mit den verschiedenen Exciter-Positionen werden verglichen und die 3 vordefinierten Punkte durch den Versuch getestet. Die Plattengröße wird nicht im Versuchsaufbau getestet, hierbei wird sich auf die Simulation sowie eine Berechnung verlassen.  
-
-
-\subsection{Software}
-
-Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beurteilen, muss die Messsoftware die folgenden Funktionen umfassen: 
-
-Erzeugen eines Testsignals Sweep / Weißesrauschen (Output) 
-Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon (Input)
-Verarbeitung der Messwerte 
-Darstellen der Messwerte 
-Speichern der Messwerte 
-
-Die genannten Funktionen werden in dem Programm LabVIEW von National Instruments umgesetzt. 
-
+ 
 \subsection{LabVIEW / Blockschaltbild}
+Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beurteilen, muss das in LabVIEW erstellte Programm die folgenden Funktionen umfassen: 
+
+\begin{itemize}
+    \item Erzeugen und Abspielen eines Testsignals Sweep 
+    \item Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon (Input)
+    \item Verarbeitung der Messwerte Bilden der Übertragungsfunktion
+    \item Darstellen der Messwerte in einem Graphen
+    \item Speichern der Messwerte als Verarbeitbare Datei
+\end{itemize}
 
 LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen: einer Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
 
-In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akustischen Eigenschaften zu untersuchen. Dabei wird ein Audiosignal in LabVIEW erzeugt und über das DAQ und den Audioverstärker an den DML-Lautsprecher geleitet. Das Signal wird akustisch wiedergegeben und von einem Messmikrofon empfangen. Die dabei entstehende Übertragungsfunktion gibt Erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. 
+In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akustischen Eigenschaften zu untersuchen. Dabei wird ein Audiosignal in LabVIEW erzeugt und über den DAQ-OUTPUT an den Audioverstärker geleitet und über den DML-Lautsprecher abgespielt. Das Signal wird akustisch wiedergegeben und von einem Messmikrofon empfangen. Die dabei entstehende Übertragungsfunktion gibt Erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. Das Signal vom Messmikrofon wird wieder in den DAQ-INPUT geleitet und in LabVIEW ausgewertet. 
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Blockschaltbild.drawio.png}
-	\caption{Blockschaltbild der Exciter-Positionierung auf einem DML-Panel}
+	\includegraphics[width=0.6\textwidth]{pictures/Blockschaltbild LabVIEW.png}
+	\caption{Blockschaltbild Versuchsaufbau DML-Lautsprecher Vermessen}
 	\label{fig:blockschaltbild_exciter}
 \end{figure}
+
+Abbildung \ref{fig:blockschaltbild_exciter} zeigt exemplarisch den Signalfluss des Versuchsaufbaus im Freifeldraum. Als Testsignal wird in LabVIEW ein parametrischer Sweep erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
+Die erfassten Eingangssignale werden in LabVIEW weiterverarbeitet, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
+
+
+
+
+
 
 
 
