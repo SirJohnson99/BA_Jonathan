@@ -549,7 +549,7 @@ Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beu
 
 \begin{itemize}
     \item Erzeugen und Abspielen eines Testsignals 
-    \item Erfassen des Mikrfon und Referenzsignals
+    \item Erfassen des Mikrofon- und Referenzsignals
     \item Verarbeitung der Messwerte Bilden der Übertragungsfunktion
     \item Darstellen der Messwerte in einem Graphen
     \item Speichern der Messwerte als Verarbeitbare Datei
@@ -567,23 +567,23 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 	\label{fig:blockschaltbild_exciter}
 \end{figure}
 
-Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein Weißesrauschen erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
+Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
 Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird mit einem Step-Down Converter runter geregelt und auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
-Die erfassten Eingangssignale werden in LabVIEW Umgerechnet und Gemittelt, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
+Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
 
 \subsection{Blockschaltbild}
 
-Das Blockschaltbild in LabVIEW stellt die Daten erzeugung und verarbeit dar und kann als Ablaufplan angesehen werden. Das Blockschaltbild besteht dabei aus verschiedenen VIs welche nacheinader ausgeführt und dessen zustände ermittelt werden. In diesem Programm ist die "While-Schleife" der Keern des Programms, da in dieser eine Abfolge immer wieder wiederholt wird bis eine Bedingung erfüllt ist. Mit dieser Schleife können die Aufgenommenen werte Gemittelt werden. Das Programm für die Vermessung des DML-Lautsprechers hat folgenden aufbau:
+Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar und kann als Ablaufplan angesehen werden. Das Blockschaltbild besteht dabei aus verschiedenen VIs, welche nacheinander ausgeführt und deren Zustände ermittelt werden. In diesem Programm ist die „While-Schleife" der Kern des Programms, da in dieser eine Abfolge immer wieder wiederholt wird, bis eine Bedingung erfüllt ist. Mit dieser Schleife können die aufgenommenen Werte gemittelt werden. Das Programm für die Vermessung des DML-Lautsprechers hat folgenden Aufbau:
 
 \begin{enumerate}
     \item Initialisierung der Ein- und Ausgangskanäle
     \item Erzeugen eines Testsignals 
-    \item Verarbeiten der Eingangssingale
-    \Item Verarbeitung der Singale
-    \item Mittelung der Singale
-    \item Darstellung der Singale
+    \item Verarbeiten der Eingangssignale
+    \item Verarbeitung der Signale
+    \item Mittelung der Signale
+    \item Darstellung der Signale
 \end{enumerate}
 
 
