@@ -5,7 +5,6 @@ Das vorliegende Kapitel legt die wissenschaftlichen Grundlagen dar, auf denen di
 
 \section{DML-Technologie}
 
-
 Bei einem DML (Distributed Mode Loudspeaker) handelt es sich um einen Flach- oder Panel-Lautsprecher. Dieser ist eine Bauform des Biegewellenwandlers, bei der eine ebene Platte oder ein Panel mittels elektrodynamischen Körperschallwandlers, auch Exciter genannt, zu Biegeschwingungen angeregt wird. Im Gegensatz zum konventionellen Kolbenlautsprecher, dessen Membran in einem Frequenzbereich näherungsweise starr als Ganzes bewegt wird, werden bei einem DML gezielt die sich auf dem Panel ausbreitenden Biegewellen zur Schallabstrahlung genutzt \cite{Moeser2005}. 
 Diese Schwingungen werden von der Gesamtoberfläche abgestrahlt und erzeugen somit hörbaren Schall. Damit stellen DML-Flachlautsprecher eine fundamentale Alternative zur konventionellen Kolbenstrahler-Technologie dar. Denn im Gegensatz zu klassischen Lautsprechern, wo die Lautsprechermembran angeregt kolbenartige Bewegungen ausführt, basiert die DML-Technologie auf der gezielten Anregung von Biegewellen in einem Panel. 
 
@@ -27,7 +26,6 @@ strahlt die Platte diffus und omnidirektional ab, die Schallabstrahlung erfolgt 
 sondern durch die Überlagerung zahlreicher, zum Teil gegenphasiger Flächenelemente \cite{Cremer1996}. Oberhalb der
 Koinzidenzfrequenz hingegen wird die Abstrahlung deutlich effizienter, da die Biegewellen auf der Platte phasenkoherent mit
 der umgebenden Luftschallwelle koppeln können. Diese beiden Betriebsbereiche prägen das Gesamtverhalten von DML-Flachlautsprechern.
-
 
 
 \subsection{Material-Parameter und deren Einfluss}
@@ -120,7 +118,7 @@ In der ersten Spalte der Tabelle werden die jeweiligen Materialnamen aufgeführt
 
 
 
-\section{Exciter-Position und deren Einfluss}
+\subsection{Exciter-Position und deren Einfluss}
 
 Die Position des Körperschallwandlers auf dem DML-Panel hat einen entscheidenden Einfluss darauf, welche Eigenmoden im Panel angeregt werden und wie
 effizient diese zur Schallabstrahlung beitragen. Jede Mode in einem endlichen Panel besitzt charakteristische Eigenformen und Knotenpunkte, an
@@ -143,38 +141,101 @@ von der Panelgeometrie und deren Materialeigenschaften unabhängig ist, konnte i
 
 Bei der Planung eines DML-Lautsprechersystems ist eine FEM-basierte Simulation der Panele unerlässlich. Durch die Berechnung der Eigenfrequenzen und Eigenformen abhängig von der Panelgeometrie kann die ideale Exciter-Position, also der Punkt, an dem möglichst viele Moden angeregt werden, bestimmt werden. 
 
+\section{Vergleich DML zu Konvetionellen Lautsprechern}
 
+Distributed-Mode-Loudspeakers (DML) unterscheiden sich grundlegend von konventionellen Lautsprechern hinsichtlich ihres elektroakustischen Wirkprinzips. Während ein konventioneller Lautsprecher Schall überwiegend durch die annähernd kolbenförmige Bewegung einer Membran erzeugt, basiert der DML auf der Anregung zahlreicher Biegeschwingungsmoden einer dünnen Platte. Die Schallabstrahlung erfolgt beim konventionellen Lautsprecher somit primär über eine definierte, meist kreisförmige Membranfläche, während beim DML die gesamte Platte als abstrahlende Struktur wirkt. Dadurch entsteht beim DML kein einzelner dominanter Hubkörper, sondern ein komplexes räumliches Schwingungsbild mit verteilten Modenformen. Dieses Wirkprinzip führt zu deutlich unterschiedlichen akustischen, konstruktiven und wahrnehmungsbezogenen Eigenschaften beider Lautsprecherkonzepte.
 
+Konventionelle Lautsprecher sind in ihrer klassischen Ausführung als elektrodynamische Tauchspulenwandler aufgebaut. Eine Schwingspule bewegt sich im Magnetfeld und versetzt die Membran in axiale Schwingungen. Im idealisierten Arbeitsbereich verhält sich die Membran näherungsweise wie ein Kolbenstrahler, was insbesondere im Tiefton- und unteren Mitteltonbereich eine vergleichsweise gut kontrollierbare Schallabstrahlung ermöglicht. Dieses Prinzip ist seit Jahrzehnten etabliert und erlaubt eine gezielte Auslegung hinsichtlich Wirkungsgrad, Belastbarkeit, Verzerrungsverhalten und Richtcharakteristik. Durch den Einsatz getrennter Wege, etwa Woofer, Mitteltöner und Hochtöner, können konventionelle Lautsprechersysteme auf einen breiten Frequenzbereich optimiert werden.
 
+Demgegenüber wird bei einem DML ein flächiges Panel durch einen oder mehrere Aktoren angeregt, sodass sich Biegewellen auf der Platte ausbreiten. Die Schallabstrahlung resultiert nicht aus einer kolbenförmigen Gesamtbewegung, sondern aus der Überlagerung vieler Eigenmoden. Ein wesentliches Merkmal ist dabei, dass mit zunehmender Frequenz die Modendichte ansteigt. In höheren Frequenzbereichen kann dies zu einer spektral vergleichsweise glatten und räumlich breit verteilten Abstrahlung führen. Im tieffrequenten Bereich ist die Zahl angeregter Moden dagegen geringer, wodurch lokale Resonanzen, Einbrüche im Frequenzgang und eine weniger gleichmäßige Wiedergabe auftreten können. Gerade dieser Zusammenhang zwischen Modendichte und Abstrahlverhalten ist für DML-Systeme charakteristisch und stellt einen zentralen Unterschied zum konventionellen Lautsprecher dar.
 
+Ein bedeutender Vorteil von DML-Lautsprechern liegt in ihrer flachen, leichten und konstruktiv gut integrierbaren Bauweise. Da das abstrahlende Element selbst eine Platte ist, lassen sich DML-Systeme vergleichsweise unauffällig in Fahrzeuginnenräumen, Möbeln, Displays oder Wandstrukturen integrieren. Insbesondere in Anwendungen mit begrenztem Bauraum oder hohen Anforderungen an Design und Flächenintegration bieten sie daher konstruktive Vorteile gegenüber klassischen Lautsprechern mit Korb, Magnetantrieb und definierter Membrangeometrie.
 
+Akustisch zeigen beide Systeme jedoch unterschiedliche Stärken und Schwächen. Konventionelle Lautsprecher erreichen in der Regel eine bessere Kontrolle des Tieftonbereichs, einen höheren Wirkungsgrad in dafür optimierten Gehäusekonzepten sowie eine insgesamt besser vorhersagbare Abstimmung des Frequenzgangs. DML-Systeme weisen demgegenüber konstruktionsbedingt häufig Defizite im Bassbereich auf, da große Hubbewegungen und eine gezielte tieffrequente Luftverdrängung nur eingeschränkt möglich sind. Daher benötigen DML- und Multiactor-Panel-Systeme zur Verbesserung ihrer Tieftonwiedergabe häufig zusätzliche Entzerrung, spezielle Randbedingungen oder ergänzende konstruktive Maßnahmen.
 
-%Die Position des Körperschallerregers spielt eine entscheidende Rolle, da durch seine Position abhängig zur Panel-Geometrie die Moden des Panels
-%angeregt werden. Dabei wird auf eine möglichst hohe Zahl von angeregten Moden abgezielt. 
+Auch hinsichtlich der Richtcharakteristik bestehen deutliche Unterschiede. Konventionelle Lautsprecher zeigen typischerweise eine mit steigender Frequenz zunehmende Bündelung, sofern keine besonderen Maßnahmen zur Direktivitätskontrolle getroffen werden. DML-Lautsprecher werden dagegen häufig mit einer breiten und teilweise quasi-omnidirektionalen Abstrahlung im Mittel- und Hochtonbereich in Verbindung gebracht. Diese Eigenschaft kann vorteilhaft sein, wenn eine räumlich diffuse und umhüllende Wiedergabe erwünscht ist. Gleichzeitig kann gerade diese breite Abstrahlung aber auch nachteilig sein, da sie zu einer geringeren Lokalisationsschärfe, zu stärkerer raumabhängiger Wiedergabe und zu einer weniger konstanten Off-Axis-Charakteristik führen kann.
 
-%Multi-Exciter-Konfiguration mehr Exciter = Mehr SPL 
+Aus systemtechnischer Sicht ist außerdem zu berücksichtigen, dass DML-Lautsprecher häufig eine aufwendigere Abstimmung benötigen. Die vibroakustischen Eigenschaften hängen stark von Materialparametern, Plattengeometrie, Randlagerung, Position und Anzahl der Aktoren sowie von zusätzlichen Entzerrungsmaßnahmen ab. Daher ist die Entwicklung leistungsfähiger DML-Systeme in besonderem Maße von numerischer Simulation, experimenteller Modalanalyse und digitaler Signalverarbeitung geprägt. Für konventionelle Lautsprecher existieren hingegen seit langem etablierte Auslegungs- und Ersatzmodelle, mit denen sich das Verhalten deutlich standardisierter vorhersagen lässt. Zwar können moderne DML-Systeme durch geeignete Equalization und konstruktive Optimierung deutlich verbessert werden, jedoch ist der Entwicklungsaufwand im Allgemeinen höher.
 
-%Die Position des Exciters auf der DML-Platte hat einen entscheidenden Einfluss darauf, welche Schwingungsmoden angeregt
-%werden und wie effizienter diese zur Schallabstrahlung beitragen. Jeder Mode einer endlichen Platte besitzt eine
-%5charakteristische Eigenform mit zugehörigen Knotenpunkten – Stellen, an denen die Schwingungsamplitude verschwindet. Wird
-%der Exciter genau an einem solchen Knotenpunkt eines bestimmten Modes platziert, wird dieser Mode nicht angeregt \textbf{[Zenker et al., 2019]}. %Die Folge ist ein lückenhafter Frequenzgang mit deutlichen Fehlstellen bei den zugehörigen Eigenfrequenzen.
-%Eine symmetrische Platzierung des Exciters in der Panelmitte ist aus physikalischer Sicht unvorteilhaft. An der Mitte eines
-%rechteckigen Panels fallen die Knotenpunkte zahlreicher ungerade indizierter Moden zusammen; eine Anregung in diesem
-%%Heckl, 1996]}. Aus diesem Grund wird in der Literatur eine asymmetrische Platzierung empfohlen, bei der der Exciter im
-%Bereich von etwa einem Drittel bis zwei Fünftel der jeweiligen Paneldimension angebracht wird.
-%Zenker et al.2019 führten an der Technischen Universität Dresden eine systematische Untersuchung der Exciter-Positionierung
-%durch, bei der 25 unterschiedliche Positionen auf einem rechteckigen DML-Panel vermessen und simuliert wurden \textbf{[Zenker et al., 2019]}. Die Optimierung erfolgte auf Grundlage der abgestrahlten Schallleistung, berechnet mittels eines elektromechanisch-akustischen Simulationsmodells. Die Ergebnisse bestätigten, dass die optimale Exciter-Position stark vom
-%Panelformat, den Materialeigenschaften und dem gewünschten Frequenzbereich abhängt – eine universell gültige Position, die
-%für alle Geometrien gleichzeitig optimal wäre, existiert also nicht.
-%Bei der Planung eines DML-Systems ist daher eine FEM-basierte Modalanalyse unerlässlich. Durch die Berechnung der
-%Eigenfrequenzen und Eigenformen der jeweiligen Panelgeometrie kann der Ort des maximalen Modeneingangs – also der
-%Antiknoten möglichst viele Moden gleichzeitig – gezielt bestimmt werden \textbf{[Beer et al., 2017]}. Die anschließende Simulation 
-%in COMSOL Multiphysics, wie sie in Kapitel 3.2 dieser Arbeit beschrieben wird, ermöglicht es, die Exciter-Position
-%5quantitativ zu bewerten und für die konkrete Systemkonfiguration zu optimieren.
+Hinsichtlich der subjektiven Wahrnehmung ergibt sich kein eindeutiges Überlegenheitsverhältnis. Entzerrte DML-Systeme können in ihrer wahrgenommenen Klangqualität nahe an konventionelle Lautsprechersysteme heranreichen. Dabei werden DML-Lautsprechern insbesondere Vorteile bei räumlichen Attributen wie Envelopment und Bühnenbreite zugeschrieben, während konventionelle Systeme häufig weiterhin Vorteile bei Präzision, Lokalisationsschärfe und tonaler Souveränität besitzen. Daraus folgt, dass die Bewertung nicht allein anhand einzelner Messgrößen erfolgen sollte, sondern stets auch vom Anwendungsfall abhängt. Für integrierte, flache und designorientierte Anwendungen können DML-Systeme sehr attraktiv sein, während für eine möglichst lineare, pegelfeste und bassstarke Wiedergabe konventionelle Lautsprecher weiterhin meist im Vorteil sind.
 
+Zusammenfassend lässt sich festhalten, dass DML- und konventionelle Lautsprecher zwei unterschiedliche elektroakustische Lösungsansätze darstellen. Der konventionelle Lautsprecher nutzt primär die kolbenförmige Bewegung einer Membran und überzeugt durch hohe Reproduzierbarkeit, gute Tieftonfähigkeit und eine ausgereifte Entwicklungsmethodik. Der DML hingegen nutzt die überlagerte Abstrahlung vieler Biegeschwingungsmoden einer Platte und bietet Vorteile hinsichtlich Bauraumintegration, flacher Bauform und räumlich breiter Schallabstrahlung. Seine Schwächen liegen vor allem in der tieffrequenten Wiedergabe, der komplexen modalen Struktur und dem höheren Optimierungsaufwand. Welches Konzept vorzuziehen ist, hängt daher maßgeblich von den funktionalen, akustischen und konstruktiven Anforderungen der jeweiligen Anwendung ab.
 
 \section{Messtechnik}
 
+Bei der akustischen Vermessung von Lautsprechern ist das Ziel, das Übertragungsverhalten des Systems über einen möglichst breiten Frequenzbereich zu bestimmen. Von besonderem Interesse sind dabei insbesondere der Frequenzgang, die Übertragungsfunktion, das Phasenverhalten sowie gegebenenfalls nichtlineare Verzerrungen. Da ein Lautsprecher ein frequenzabhängiges dynamisches System darstellt, reicht die Anregung mit einem einzelnen Sinuston nicht aus, um sein vollständiges Verhalten zu charakterisieren. Stattdessen werden Signale verwendet, die entweder den gesamten relevanten Frequenzbereich gleichzeitig oder nacheinander anregen. In der elektroakustischen Messtechnik haben sich hierfür insbesondere der Sinus-Sweep sowie weißes Rauschen etabliert.
 
-Messmikrofon Datenblatt im Anhang, 
-Was ist Labview? Wie wird es aufgebaut ? Wieso wird labview so aufgebaut wie es ist ? 
+Ein Sweep-Signal ist ein deterministisches Anregungssignal, bei dem sich die Frequenz des Signals kontinuierlich mit der Zeit ändert. In der Praxis wird häufig ein linearer oder logarithmischer Sinus-Sweep eingesetzt. Das Signal kann allgemein als zeitabhängige Sinusfunktion beschrieben werden, deren momentane Frequenz nicht konstant ist, sondern innerhalb eines festgelegten Bereichs variiert. Bei einem Sweep von 20~Hz bis 20~kHz wird das System somit nicht mit allen Frequenzen gleichzeitig, sondern nacheinander angeregt. Der wesentliche Vorteil dieses Verfahrens besteht darin, dass zu jedem Zeitpunkt eine definierte Frequenz mit vergleichsweise hoher Energie in das System eingebracht wird. Dadurch lässt sich die Reaktion des Lautsprechers für jede Frequenz sehr gezielt erfassen. Insbesondere logarithmische Sweeps sind in der Lautsprechermesstechnik weit verbreitet, da sie tiefe Frequenzen zeitlich stärker gewichten und sich harmonische Verzerrungen in der Auswertung vergleichsweise gut separieren lassen.
+
+Demgegenüber ist weißes Rauschen ein stochastisches, also zufälliges Signal. Es zeichnet sich idealisiert dadurch aus, dass seine spektrale Leistungsdichte über den betrachteten Frequenzbereich konstant ist. Das bedeutet, dass im Signal alle Frequenzen gleichzeitig enthalten sind und mit gleicher spektraler Energie angeregt werden. Im Gegensatz zum Sweep, bei dem jede Frequenz nacheinander untersucht wird, erfolgt bei weißem Rauschen somit eine breitbandige Simultananregung des Lautsprechers. Das gemessene Ausgangssignal wird anschließend mit spektralen Verfahren, beispielsweise über die Fourier-Transformation und die Bestimmung von Leistungs- und Kreuzleistungsspektren, ausgewertet. Weißes Rauschen eignet sich insbesondere für schnelle breitbandige Untersuchungen sowie für Echtzeitanalysen, ist jedoch stärker von statistischen Schwankungen und Umgebungsstörungen beeinflusst als ein Sweep-Signal. Daher sind für belastbare Ergebnisse häufig Mittelungen über mehrere Messungen erforderlich.
+
+Obwohl Sweep und weißes Rauschen in ihrem zeitlichen Aufbau grundlegend verschieden sind, verfolgen beide Verfahren mathematisch dasselbe Ziel, nämlich die Bestimmung der frequenzabhängigen Übertragungsfunktion \(H(f)\) des Lautsprechers. Für ein lineares zeitinvariantes System gilt im Frequenzbereich der Zusammenhang
+
+\begin{equation}
+Y(f) = H(f) \cdot X(f)
+\end{equation}
+
+wobei \(X(f)\) das Spektrum des Eingangssignals und \(Y(f)\) das Spektrum des Ausgangssignals beschreibt. Daraus ergibt sich die Übertragungsfunktion zu
+
+\begin{equation}
+H(f) = \frac{Y(f)}{X(f)}.
+\end{equation}
+
+Dieser Zusammenhang ist unabhängig davon, ob als Eingangssignal ein Sweep oder weißes Rauschen verwendet wird. Entscheidend ist lediglich, dass das Eingangssignal den interessierenden Frequenzbereich ausreichend anregt und dass das Eingangsspektrum in diesem Bereich nicht verschwindet. Mathematisch betrachtet sind beide Verfahren daher äquivalent, da sie auf dieselbe Systembeschreibung führen. Der Unterschied liegt folglich nicht in der Zielgröße, sondern in der Art der Anregung und in der praktischen Durchführung der Messung.
+
+Beim Sweep erfolgt die Anregung frequenzselektiv und zeitlich geordnet. Dies führt in der Regel zu einem sehr guten Signal-Rausch-Verhältnis, da die Energie des Eingangssignals zu jedem Zeitpunkt auf einen schmalen Frequenzbereich konzentriert ist. Zusätzlich lassen sich Impulsantworten und Verzerrungsanteile häufig besonders präzise bestimmen. Bei weißem Rauschen ist die Energie dagegen gleichzeitig auf den gesamten Frequenzbereich verteilt, wodurch der Energieanteil pro Einzelfrequenz geringer ausfällt. Dies macht das Verfahren prinzipiell empfindlicher gegenüber Störgeräuschen und Messunsicherheiten. Gleichzeitig ermöglicht es jedoch eine sehr schnelle breitbandige Systemanregung und eignet sich daher gut für Übersichts- oder Echtzeitmessungen.
+
+Zusammenfassend lässt sich festhalten, dass Sweep und weißes Rauschen zwei unterschiedliche Anregungssignale zur Bestimmung derselben physikalischen Systemgröße darstellen. Während der Sweep ein deterministisches Signal mit zeitlich nacheinander durchlaufenen Frequenzen ist, handelt es sich bei weißem Rauschen um ein stochastisches Signal mit gleichzeitig enthaltenen Frequenzanteilen. Mathematisch führen beide Verfahren bei linearen Systemen zur gleichen Übertragungsfunktion. In der messtechnischen Praxis unterscheiden sie sich jedoch hinsichtlich Signalcharakter, Auswerteverfahren, Störanfälligkeit und Präzision. Aus diesem Grund wird der Sweep häufig für genaue akustische Vermessungen bevorzugt, während weißes Rauschen insbesondere bei schnellen breitbandigen Analysen und Echtzeitbeobachtungen vorteilhaft ist.
+
+\begin{table}[h]
+\centering
+\caption{Vor- und Nachteile von Sweep und weißem Rauschen}
+\begin{tabular}{|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Signalart} & \textbf{Vorteile} & \textbf{Nachteile} \\
+\hline
+\textbf{Sweep} & Hohe Messgenauigkeit; gutes Signal-Rausch-Verhältnis; gezielte frequenzweise Anregung; gut geeignet zur Bestimmung von Frequenzgang, Impulsantwort und Verzerrungen; besonders vorteilhaft bei logarithmischem Sweep & Messung erfolgt zeitlich nacheinander; etwas höherer Auswerteaufwand je nach Verfahren; für reine Echtzeitbeobachtung weniger geeignet \\
+\hline
+\textbf{Weißes Rauschen} & Gleichzeitige breitbandige Anregung; schnelle Messung; gut für Echtzeitanalyse und Übersichtsmessungen; einfache breitbandige Systemanregung & Höhere Störanfälligkeit; geringere Energie pro Einzelfrequenz; statistische Schwankungen; meist Mittelung erforderlich; Verzerrungen schwerer eindeutig zu trennen \\
+\hline
+\end{tabular}
+\label{tab:sweep_weissrauschen}
+\end{table}
+
+
+
+
+
+
+%Um die Reaktion des Lautsprechers auf die verschiedenen Frequenzen zu untersuchen werden Testsignale verwndete welche ein Breites Spektrum an Frequnezen abdeckt.
+
+%\begin{itemize}
+ %   \item Weißes Rauschen 
+  %  \item Parametrischer Sweep
+%\end{itemize}
+
+%Bei einem Parametrischen sweep wird die Frequenz von der Startfrequenz bis zur Endfrequenz langsam erhöht. Dabei wird zu jedem Zeitpunkt eine bestimmte Frequenz angeregt. Dadurch kjann man gut erkennen wie stark ein Lautsprecher auf diese Frequenz Reagiert. 
+
+%Beim weißen Rauschen wird im idealfall jede Frequenz zur selben zeit abgespielt. Somit wird er Lautsprecher zu jeder zeit mit einem breiten Frequenzband angeregt
+
+%Messmikrofon Datenblatt im Anhang, 
+%Was ist Labview? Wie wird es aufgebaut ? Wieso wird labview so aufgebaut wie es ist ? 
+
+
+%\section{Versuchsaufbaus nach DIN} 
+
+%Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse des Lautsprechers in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}. Die definierte Eingangsleistung entspricht 1 Watt elektrischer Leistung. 
+
+%Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
+
+%Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangssignal angeregt. In der Simulation erfolgt die Anregung über eine vorgegebene Normalgeschwindigkeit des Exciters, welche einer definierten elektrischen Leistung entspricht.
+
+%Der Versuchsaufbau befindet sich in einem reflexionsarmen Freifeldraum, um störende Reflexionen von Wänden, Boden und Decke zu minimieren. Dadurch wird sichergestellt, dass überwiegend der direkt abgestrahlte Schall des Panels erfasst wird.
+
+%In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorbierenden Randbedingungen beziehungsweise einer Perfectly Matched Layer (PML) nachgebildet. Dadurch können Freifeldbedingungen angenähert und die Simulationsergebnisse mit den realen Messungen verglichen werden.
+
+%Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
+
+%In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei an einem Gestell mittels Schnüren aufgehängt. Diese Darstellung ist beispielhaft, da die konkrete Lagerung beziehungsweise Aufhängung des Panels im Rahmen der Konzeptentwicklung noch diskutiert wird. Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der dem Verstärker zugewandten Seite des Panels befindet. Das Messmikrofon ist auf der Lautsprecherachse positioniert und befindet sich in einem Abstand von genau einem Meter mittig vor der Plattenoberfläche.
+
+\newpage

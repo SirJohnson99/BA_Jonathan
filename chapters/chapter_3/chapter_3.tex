@@ -24,43 +24,6 @@ Als Panelmaterial werden die in Tabelle 2.1.1 aufgeführten Sandwichplatten der 
 Mithilfe der FEM-Simulationssoftware COMSOL Multiphysics wird der definierte Versuchsaufbau, welcher im Folgekapitel erläutert wird, modelliert und simuliert. 
 
 
-
-\section{Definition des Versuchsaufbaus} 
-
-Der Versuchsaufbau, welcher zum Einmessen des DML-Flachlautsprechers dient, ist so definiert, dass dieser sowohl in der Simulation als auch als realer Aufbau im Freifeldraum umgesetzt werden kann. Dabei orientiert sich die Versuchsanordnung am Einmessen von Lautsprechern gemäß der Norm EN 61305, bei der der Frequenzgang auf der Hauptabstrahlachse des Lautsprechers in einem Abstand von einem Meter bei definierter Eingangsleistung bestimmt wird \cite{Goerne2011}. Die definierte Eingangsleistung entspricht 1 Watt elektrischer Leistung. 
-
-Im vorliegenden Aufbau wird das DML-Panel vertikal und im Raum positioniert. Der Mittelpunkt des Panels dient als akustisches Referenzzentrum. Auf der Hauptabstrahlachse des Panels befindet sich in einem Abstand von einem Meter ein Messmikrofon, das den Schalldruckpegel im relevanten Frequenzbereich von 20-20.000 Hz erfasst. Diese Anordnung ermöglicht eine standardisierte und reproduzierbare Messung des Frequenzgangs.
-
-Das Panel wird über die verwendete Stereoanlage mit einem definierten Eingangssignal angeregt. In der Simulation erfolgt die Anregung über eine vorgegebene Normalgeschwindigkeit des Exciters, welche einer definierten elektrischen Leistung entspricht.
-
-Der Versuchsaufbau befindet sich in einem reflexionsarmen Freifeldraum, um störende Reflexionen von Wänden, Boden und Decke zu minimieren. Dadurch wird sichergestellt, dass überwiegend der direkt abgestrahlte Schall des Panels erfasst wird.
-
-In der Simulation wird dieses Umfeld durch eine luftgefüllte Domäne mit absorbierenden Randbedingungen beziehungsweise einer Perfectly Matched Layer (PML) nachgebildet. Dadurch können Freifeldbedingungen angenähert und die Simulationsergebnisse mit den realen Messungen verglichen werden.
-
-Durch die identische geometrische Anordnung von Panel und Messpunkt in Simulation und Versuch wird eine direkte Vergleichbarkeit der Ergebnisse gewährleistet. Dies ermöglicht eine gezielte Optimierung der Panelgröße und der Exciter-Position auf Grundlage der Simulation, bevor der reale Versuchsaufbau durchgeführt wird.
-
-In Abbildung \ref{fig:versuchsaufbau} wird der Versuchsaufbau als Skizze schematisch dargestellt. Die gezackten Linien symbolisieren die absorbierenden Wände eines Freifeldraumes. In der Skizze ist das DML-Panel dämpfungsfrei an einem Gestell mittels Schnüren aufgehängt. Diese Darstellung ist beispielhaft, da die konkrete Lagerung beziehungsweise Aufhängung des Panels im Rahmen der Konzeptentwicklung noch diskutiert wird. Der Körperschallanreger ist in der Skizze nicht eingezeichnet, da er sich auf der dem Verstärker zugewandten Seite des Panels befindet. Das Messmikrofon ist auf der Lautsprecherachse positioniert und befindet sich in einem Abstand von genau einem Meter mittig vor der Plattenoberfläche.
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Blockschaltbild.drawio.png}
-	\caption{Blockschaltbild der Exciter-Positionierung auf einem DML-Panel}
-	\label{fig:blockschaltbild_exciter}
-\end{figure}
-
-
-
-
-%\begin{figure}[H]
-	%\centering
-	%\includegraphics[width=0.8\textwidth]{pictures/Versuchsaufbau.png}
-	%\caption{Schematische Darstellung des Versuchsaufbaus}
-	%\label{fig:versuchsaufbau}
-%\end{figure} 
-
-\newpage
-
 \section{Konzeptentwicklung}
 
 Die Konzeptentwicklung des DML-Flachlautsprechers unter Verwendung von Körperschallwandlertechnologie erfolgt systematisch. Dabei werden verschiedene Lösungsvarianten hinsichtlich ihrer technischen Realisierbarkeit, akustischen Performance sowie ihrer wirtschaftlichen Umsetzbarkeit untersucht, diskutiert und bewertet. Neben der grundsätzlichen Systemauslegung wird auch die spätere Lagerung beziehungsweise Aufhängung der Panels betrachtet, da diese das Schwingungsverhalten und somit die akustische Performance maßgeblich beeinflussen kann. \cite{Bai2001}
@@ -76,7 +39,7 @@ Die Entwicklung eines DML-Flachlautsprechers erfordert grundlegende Entscheidung
 
 Die Wahl der Frequenzweichenkonfiguration bestimmt, ob das System als Fullrange-, 2-Wege- oder 3-Wege-System ausgeführt wird. Die Anzahl der Exciter beeinflusst hingegen die Modenanregung, die erreichbare Schallleistung sowie die konstruktive Komplexität. Beide Parameter wirken sich maßgeblich auf die akustische Performance, die technische Komplexität und die wirtschaftliche Realisierbarkeit des Systems aus.
 
-\clearpage
+
 
 Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzungsvariante eines DML-Flachlautsprechers dar. In diesem Fall deckt das Panel den gesamten hörbaren Frequenzbereich ab, wobei das elektrische Audiosignal ungefiltert dem Lautsprecher zugeführt wird. Dadurch entfallen phasenbedingte Verzerrungen, wie sie durch Frequenzweichen entstehen können \cite{Moeser2005}. Diese Eigenschaft ist insbesondere bei DML-Systemen von Bedeutung, da Frequenztrennungen im kritischen Vokalbereich zwischen etwa 500 Hz und 4000 Hz die Sprachverständlichkeit beeinträchtigen können \cite{Fastl2007}.
 
@@ -155,10 +118,6 @@ Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequen
 \end{tabularx}
 \end{table}
 
-\clearpage
-
-
-
 
 
 \begin{table}[H]
@@ -231,46 +190,46 @@ In Abbildung \ref{fig:comsol_modellaufbau} wird das Programm mit dem in dieser A
 %In Comsol werden 2 verschiedene Modelle Simuliert. Zuerst wird die Platte allein Simuliert welch und dessen Eigenmoden Bestimmt. Mit hilfe der bestimmten eigenmoden soll eine Ideale Position für den Exciter gefunden werden. Dafür in der Geometrie eine Platte erzeugt und die Materialeigenschaften zugeordnet. Anschließend wird in der 
 
 
-Der Simulationsaufbau in COMSOL Multiphysics erfolgt innerhalb der Acoustics Domain. Das Simulationsmodell ist so ausgelegt, dass es den Freifeldaufbau des Akustiklabors möglichst realitätsnah nachbildet. Diese Ähnlichkeit dient dazu, die Ergebnisse der Simulation mit dem folgenden Versuchsaufbau im Freifeldraum im Laufe dieser Arbeit direkt vergleichen zu können.
-Zu Beginn des Simulationsaufbaus werden die Modellparameter definiert, welche die geometrischen Abmessungen des Systems festlegen. Diese Größen werden parametrisiert, sodass sie in den nachfolgenden Einstellungen wiederverwendet und bei Bedarf einfach angepasst werden können. Dadurch ist es möglich, das Modell schnell und effizient variabel anzupassen. Nachdem die Parameter festgelegt wurden, wird innerhalb der Geometrieumgebung von COMSOL eine kugelförmige Domäne definiert welche mit Luft bei 20 Grad Celsius gefüllt ist und deren Mittelpunkt im Koordinatenursprung liegt. Zusätzlich wird ein Panel erstellt und so positioniert, dass sich dessen Mittelpunkt im Ursprung des Koordinatensystems befindet. Dadurch kann der Schalldruckpegel in einer definierten Messposition ausgewertet werden.
+%Der Simulationsaufbau in COMSOL Multiphysics erfolgt innerhalb der Acoustics Domain. Das Simulationsmodell ist so ausgelegt, dass es den Freifeldaufbau des Akustiklabors möglichst realitätsnah nachbildet. Diese Ähnlichkeit dient dazu, die Ergebnisse der Simulation mit dem folgenden Versuchsaufbau im Freifeldraum im Laufe dieser Arbeit direkt vergleichen zu können.
+%Zu Beginn des Simulationsaufbaus werden die Modellparameter definiert, welche die geometrischen Abmessungen des Systems festlegen. Diese Größen werden parametrisiert, sodass sie in den nachfolgenden Einstellungen wiederverwendet und bei Bedarf einfach angepasst werden können. Dadurch ist es möglich, das Modell schnell und effizient variabel anzupassen. Nachdem die Parameter festgelegt wurden, wird innerhalb der Geometrieumgebung von COMSOL eine kugelförmige Domäne definiert welche mit Luft bei 20 Grad Celsius gefüllt ist und deren Mittelpunkt im Koordinatenursprung liegt. Zusätzlich wird ein Panel erstellt und so positioniert, dass sich dessen Mittelpunkt im Ursprung des Koordinatensystems befindet. Dadurch kann der Schalldruckpegel in einer definierten Messposition %ausgewertet werden.
 Die Körperschallwandler werden in der Simulation in vereinfachter Form auf der Paneloberfläche modelliert. Dabei handelt es sich um eine zweidimensionale kreisförmige Fläche, die in der Ebene des Panels liegt.
 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Comsol_Modellaufbau.png}
-	\caption{COMSOL-Modellaufbau des DML-Simulationsmodells}
-	\label{fig:comsol_modellaufbau}
-\end{figure}
+%\begin{figure}[H]
+	%\centering
+	%\includegraphics[width=0.8\textwidth]{pictures/Comsol_Modellaufbau.png}
+	%\caption{COMSOL-Modellaufbau des DML-Simulationsmodells}
+	%\label{fig:comsol_modellaufbau}
+%\end{figure}
 
-Die innere Kugel in Abbildung \ref{fig:comsol_modellaufbau} stellt die luftgefüllte Simulationsdomäne dar, in deren Zentrum sich das rechteckige DML-Panel mit dem kreisförmigen Exciter Patch befindet. Die äußere Kugelschicht bildet die PML-Schicht, welche als absorbierende Randbedingung fungiert. Der kleine Punkt oberhalb des Panels markiert den Messpunkt in einem Meter Abstand.
+%Die innere Kugel in Abbildung \ref{fig:comsol_modellaufbau} stellt die luftgefüllte Simulationsdomäne dar, in deren Zentrum sich das rechteckige DML-Panel mit dem kreisförmigen Exciter Patch befindet. Die äußere Kugelschicht bildet die PML-Schicht, welche als absorbierende Randbedingung fungiert. Der kleine Punkt oberhalb des Panels markiert den Messpunkt in einem Meter Abstand.
 
-Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Freifeldraum-Labor der Ostfalia an, da die in der Simulation berechneten Ergebnisse im Anschluss mittels Versuchsaufbau evaluiert werden sollen. Dabei wird das Panel freihängend im Raum und als homogenisierter Körper angenommen. Die Seitenlängen der Platte werden parametrisiert, da diese in Abhängigkeit zur Exciter-Position stehen und durch die Parametrisierung ein effizientes Arbeiten gegeben ist. Die Parametrisierung ermöglicht eine schnelle Anpassung der Simulationsumgebung an neue Bedingungen, ohne sämtliche Abstände neu zu definieren. 
+%Der Modellaufbau in COMSOL Multiphysics lehnt sich an den Versuchsaufbau im Freifeldraum-Labor der Ostfalia an, da die in der Simulation berechneten Ergebnisse im Anschluss mittels Versuchsaufbau evaluiert werden sollen. Dabei wird das Panel freihängend im Raum und als homogenisierter Körper angenommen. Die Seitenlängen der Platte werden parametrisiert, da diese in Abhängigkeit zur Exciter-Position stehen und durch die Parametrisierung ein effizientes Arbeiten gegeben ist. Die Parametrisierung ermöglicht eine schnelle Anpassung der Simulationsumgebung an neue Bedingungen, ohne sämtliche Abstände neu zu definieren. 
 
 
 
 \subsection{Vorbereitung der Simulation}
 
-Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
+%Die Simulationsstudie innerhalb der Acoustics-Schnittstelle von COMSOL Multiphysics wird so ausgelegt, dass sie dem realen Versuchsaufbau möglichst ähnlich ist. Dadurch können aufwendige Messreihen reduziert und die Anzahl realer Prototypen minimiert werden, da innerhalb der Simulationsumgebung die Panelgeometrie, die Materialparameter sowie die Exciter-Positionen flexibel angepasst und untersucht werden können.
 
-Nachdem das Simulationsmodell, wie in Abschnitt 3.4.2 beschrieben, erstellt wurde, werden den einzelnen Gebieten – Panel und umgebender Raum – die entsprechenden Materialparameter zugewiesen. Der Raum um das Panel wird mit Luft gefüllt, die dafür verwendeten Materialparamter sind in der Materialbibliothek von COMSOL enthalten. Dichte und Schallgeschwindigkeit sind temperaturabhängig und standardmäßig für eine Umgebungstemperatur von 20 °C definiert, was für die vorliegende Simulation einen realistischen Referenzwert darstellt.
+%Nachdem das Simulationsmodell, wie in Abschnitt 3.4.2 beschrieben, erstellt wurde, werden den einzelnen Gebieten – Panel und umgebender Raum – die entsprechenden Materialparameter zugewiesen. Der Raum um das Panel wird mit Luft gefüllt, die dafür verwendeten Materialparamter sind in der Materialbibliothek von COMSOL enthalten. Dichte und Schallgeschwindigkeit sind temperaturabhängig und standardmäßig für eine Umgebungstemperatur von 20 °C definiert, was für die vorliegende Simulation einen realistischen Referenzwert darstellt.
 
-Für das Panel werden die Materialeigenschaften der Sandwichplatten KAPA Graph und KAPA Line auf Grundlage der im Anhang enthaltenen Datenblätter verwendet. Dabei werden jeweils der Elastizitätsmodul, die Dichte sowie eine Poissonzahl festgelegt. Die Poissonzahl beschreibt das Verhältnis von Querdehnung zu Längsdehnung bei Zug- oder Druckbeanspruchung. Da in den Datenblättern der verwendeten Sandwichplatten keine Poissonzahl angegeben ist, wird diese auf Grundlage vergleichbarer Sandwichmaterialien mit einem Wert von $\nu$ =0,3 angenommen. 
+%Für das Panel werden die Materialeigenschaften der Sandwichplatten KAPA Graph und KAPA Line auf Grundlage der im Anhang enthaltenen Datenblätter verwendet. Dabei werden jeweils der Elastizitätsmodul, die Dichte sowie eine Poissonzahl festgelegt. Die Poissonzahl beschreibt das Verhältnis von Querdehnung zu Längsdehnung bei Zug- oder Druckbeanspruchung. Da in den Datenblättern der verwendeten Sandwichplatten keine Poissonzahl angegeben ist, wird diese auf Grundlage vergleichbarer Sandwichmaterialien mit einem Wert von $\nu$ =0,3 angenommen. 
 
-In der Simulation wird das Panel als homogenes Materialmodell abgebildet. Dabei werden die in den Datenblättern angegebenen Materialkennwerte der jeweiligen Sandwichplatten unverändert übernommen. Eine explizite Modellierung der Sandwichstruktur mit getrennten Deckschichten und Kern erfolgt nicht. Diese Vereinfachung dient der Reduzierung der Modellkomplexität und der Rechenzeit, da im Rahmen der vorliegenden Arbeit hauptsächlich der Einfluss von Panelgröße und Exciter-Position auf das akustische Verhalten untersucht wird. Für die vergleichende Konzeptbewertung ist das homogene Ersatzmodell ausreichend, auch wenn die reale Biegesteifigkeit der Sandwichstruktur damit nur näherungsweise abgebildet wird. Wesentlich für die Simulation ist zudem die korrekte Abbildung der jeweiligen Plattendicke, da die KAPA Graph Platte eine Dicke von 5 mm und die KAPA Line Platte eine Dicke von 15 mm aufweist. 
+%In der Simulation wird das Panel als homogenes Materialmodell abgebildet. Dabei werden die in den Datenblättern angegebenen Materialkennwerte der jeweiligen Sandwichplatten unverändert übernommen. Eine explizite Modellierung der Sandwichstruktur mit getrennten Deckschichten und Kern erfolgt nicht. Diese Vereinfachung dient der Reduzierung der Modellkomplexität und der Rechenzeit, da im Rahmen der vorliegenden Arbeit hauptsächlich der Einfluss von Panelgröße und Exciter-Position auf das akustische Verhalten untersucht wird. Für die vergleichende Konzeptbewertung ist das homogene Ersatzmodell ausreichend, auch wenn die reale Biegesteifigkeit der Sandwichstruktur damit nur näherungsweise abgebildet wird. Wesentlich für die Simulation ist zudem die korrekte Abbildung der jeweiligen Plattendicke, da die KAPA Graph Platte eine Dicke von 5 mm und die KAPA Line Platte eine Dicke von 15 mm aufweist. 
 
-Zur Anregung des DML-Panels wird der verwendete Körperschallwandler in der Simulation nicht als vollständiges elektromechanisches System modelliert, sondern durch ein vereinfachtes mechanisches Ersatzmodell beschrieben. Ziel dieser Modellierung ist es, das frequenzabhängige Verhalten des Exciters mit geringem Rechenaufwand, jedoch unter Berücksichtigung der wesentlichen physikalischen Zusammenhänge, abzubilden.
+%Zur Anregung des DML-Panels wird der verwendete Körperschallwandler in der Simulation nicht als vollständiges elektromechanisches System modelliert, sondern durch ein vereinfachtes mechanisches Ersatzmodell beschrieben. Ziel dieser Modellierung ist es, das frequenzabhängige Verhalten des Exciters mit geringem Rechenaufwand, jedoch unter Berücksichtigung der wesentlichen physikalischen Zusammenhänge, abzubilden.
 
-Ein elektrodynamischer Körperschallwandler besteht im Wesentlichen aus einer Spule, die sich in einem Magnetfeld bewegt. 
+%Ein elektrodynamischer Körperschallwandler besteht im Wesentlichen aus einer Spule, die sich in einem Magnetfeld bewegt. 
 Fließt ein Strom durch die Spule, wirkt auf diese gemäß dem Lorentzschen Kraftgesetz eine Kraft
 
-\begin{equation}
-F = B l \cdot I
-\end{equation}
+%\begin{equation}
+%F = B l \cdot I
+%\end{equation}
 
-wobei B die magnetische Flussdichte, l die effektive Leiterlänge im Magnetfeld und I der Spulenstrom ist. Das Produkt Bl wird als Kraftfaktor bezeichnet und stellt eine zentrale Kenngröße elektrodynamischer Wandler dar.
-Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden \cite{Mueller2004}. 
-Die Bewegungsgleichung lautet: 
+%wobei B die magnetische Flussdichte, l die effektive Leiterlänge im Magnetfeld und I der Spulenstrom ist. Das Produkt Bl wird als Kraftfaktor bezeichnet und stellt eine zentrale Kenngröße elektrodynamischer Wandler dar.
+%Die bewegte Masse der Spule und der mechanischen Ankopplung an das Panel bildet zusammen mit der elastischen Aufhängung ein gedämpftes Feder-Masse-System. Dieses kann durch ein lineares Einmassenschwingermodell beschrieben werden \cite{Mueller2004}. 
+%Die Bewegungsgleichung lautet: 
 
 \begin{equation}
 m \ddot{x}(t) + c \dot{x}(t) + k x(t) = F(t)
@@ -285,7 +244,7 @@ mit
 \item $x(t)$ – Auslenkung.
 \end{itemize}
 
-Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert
+%Diese Differentialgleichung stellt ein System zweiter Ordnung dar, da die höchste auftretende Ableitung die zweite Zeitableitung ist. Das dynamische Verhalten eines solchen Systems kann über die mechanische Impedanz beschrieben werden, die das Verhältnis von anregender Kraft zu resultierender Geschwindigkeit definiert
 
 
 \begin{equation}
@@ -450,7 +409,7 @@ Es ist zu beachten, dass sowohl der Wirkungsgrad $\eta$ als auch die effektive a
 
 \subsection{Durchgeführte Simulationsstudien}
 
-Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in COMSOL dient der systematischen Bestimmung der optimalen Exciter-Position, der geeigneten Panelgröße sowie des geeigneten Panelmaterials. Die Untersuchung erfolgt schrittweise und ist in drei aufeinander aufbauende Arbeitsschritte gegliedert:
+%Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in COMSOL dient der systematischen Bestimmung der optimalen Exciter-Position, der geeigneten Panelgröße sowie des geeigneten Panelmaterials. Die Untersuchung erfolgt schrittweise und ist in drei aufeinander aufbauende Arbeitsschritte gegliedert:
 
 \begin{enumerate}
     \item Bestimmung der Exciterposition 
@@ -458,18 +417,18 @@ Der in Abbildung \ref{fig:comsol_modellaufbau} dargestellte Simulationsaufbau in
     \item Bestimmung der Panelgröße 
 \end{enumerate}
 
-Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch, welcher als Exciter dient, mittels parametrischem Sweep von 70 Hz bis 12000 Hz in 50-Hz-Schritten angeregt. Dieser Frequenzbereich wurde ausgewählt, da dieser den Vokalbereich komplett abbildet und ein Kompromiss aus Rechenzeit und Rechenleistung ist.  
-Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
+%Zur Ermittlung der optimalen Exciter-Position wird zunächst eine Referenzgeometrie definiert. Hierfür wird eine quadratische Platte mit den Abmessungen 0,4 m × 0,4 m aus KAPA Line mit einer Dicke von 15 mm verwendet. Auf dieser Platte wird ein einzelner Exciter an drei definierten Positionen platziert. Die Anregung erfolgt mittels der zuvor hergeleiteten frequenzabhängigen Normalgeschwindigkeitsfunktion. Dabei wird der Patch, welcher als Exciter dient, mittels parametrischem Sweep von 70 Hz bis 12000 Hz in 50-Hz-Schritten angeregt. Dieser Frequenzbereich wurde ausgewählt, da dieser den Vokalbereich komplett abbildet und ein Kompromiss aus Rechenzeit und Rechenleistung ist.  
+%Als Bewertungsgröße dient der resultierende Schalldruckpegel an dem Messpunkt, der sich in einem Abstand von einem Meter auf der Lautsprecherachse vor der Plattenmitte befindet.
 
-Die drei untersuchten Exciter-Positionen werden parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich, die Panelgeometrie anzupassen, während die Positionsverhältnisse der Exciter sich an die Größe anpassen. 
+%Die drei untersuchten Exciter-Positionen werden parametrisch in Abhängigkeit von den Panelseitenlängen definiert. Dadurch ist es möglich, die Panelgeometrie anzupassen, während die Positionsverhältnisse der Exciter sich an die Größe anpassen. 
 
-Die erste Position entspricht jeweils der Hälfte der Panelseitenlänge in beide Richtungen und führt somit zu einer mittigen Platzierung des Exciters. Diese Konfiguration dient als Referenzposition und soll die theoretischen Überlegungen zur unzureichenden Anregung ungeradzahliger Moden in der Plattenmitte numerisch überprüfen.
+%Die erste Position entspricht jeweils der Hälfte der Panelseitenlänge in beide Richtungen und führt somit zu einer mittigen Platzierung des Exciters. Diese Konfiguration dient als Referenzposition und soll die theoretischen Überlegungen zur unzureichenden Anregung ungeradzahliger Moden in der Plattenmitte numerisch überprüfen.
  
-Die zweite definierte Position orientiert sich an der vom Exciter-Hersteller empfohlenen Anordnung, bei der der Anreger proportional zur Panelseitenlänge asymmetrisch auf dem Panel positioniert wird. Hierzu werden die Seitenlängen gedanklich durch fünf geteilt. Der Exciter wird anschließend am Schnittpunkt der 2/5-Marke beider Seitenlängen positioniert. Die 2/5-Regel soll vermeiden, dass sich der Anreger in der Nähe dominanter Modenknoten befindet, und somit eine gleichmäßige Anregung möglichst vieler Eigenmoden ermöglichen. In der Simulation wird diese Position hinsichtlich des resultierenden Frequenzgangs des Panels untersucht. 
+%Die zweite definierte Position orientiert sich an der vom Exciter-Hersteller empfohlenen Anordnung, bei der der Anreger proportional zur Panelseitenlänge asymmetrisch auf dem Panel positioniert wird. Hierzu werden die Seitenlängen gedanklich durch fünf geteilt. Der Exciter wird anschließend am Schnittpunkt der 2/5-Marke beider Seitenlängen positioniert. Die 2/5-Regel soll vermeiden, dass sich der Anreger in der Nähe dominanter Modenknoten befindet, und somit eine gleichmäßige Anregung möglichst vieler Eigenmoden ermöglichen. In der Simulation wird diese Position hinsichtlich des resultierenden Frequenzgangs des Panels untersucht. 
 
-Die dritte definierte Position entspricht einer häufig in DIY-DML-Aufbauten verwendeten Anordnung. Dabei werden die Seitenlängen gedrittelt und der Exciter an dem Schnittpunkt der Ein-Drittel-Markierung befestigt. Diese Position versucht genau wie die vorherige, eine möglichst große Anzahl von Eigenmoden des Panels anzuregen, indem eine symmetrische Anbringung des Exciters vermieden wird. 
+%Die dritte definierte Position entspricht einer häufig in DIY-DML-Aufbauten verwendeten Anordnung. Dabei werden die Seitenlängen gedrittelt und der Exciter an dem Schnittpunkt der Ein-Drittel-Markierung befestigt. Diese Position versucht genau wie die vorherige, eine möglichst große Anzahl von Eigenmoden des Panels anzuregen, indem eine symmetrische Anbringung des Exciters vermieden wird. 
 
-Nach der Simulation dieser drei Exciter-Positionen wird die Position, welche den linearsten Frequenzverlauf aufweist, weiterverwendet, um die Hartschaum-Sandwichplatten der Marke KAPA zu vergleichen. Dabei werden bei demselben Aufbau die Materialeigenschaften der jeweiligen Sandwichplatten in die Simulation eingebaut. Die Plattengeometrie bleibt wie beim vorherigen Simulationsversuch unverändert, bis auf die Anpassung der Plattenstärke, da die KAPA Line 15 mm und die KAPA Graph 5 mm stark ist. Anschließend werden die beiden Platten zuerst mit einem Exciter angeregt und anschließend mit einem zweiten Exciter gleichzeitig angeregt. 
+%Nach der Simulation dieser drei Exciter-Positionen wird die Position, welche den linearsten Frequenzverlauf aufweist, weiterverwendet, um die Hartschaum-Sandwichplatten der Marke KAPA zu vergleichen. Dabei werden bei demselben Aufbau die Materialeigenschaften der jeweiligen Sandwichplatten in die Simulation eingebaut. Die Plattengeometrie bleibt wie beim vorherigen Simulationsversuch unverändert, bis auf die Anpassung der Plattenstärke, da die KAPA Line 15 mm und die KAPA Graph 5 mm stark ist. Anschließend werden die beiden Platten zuerst mit einem Exciter angeregt und anschließend mit einem zweiten Exciter gleichzeitig angeregt. 
 
 \clearpage
 \subsection{Simulations-Ergebnisse}
@@ -573,40 +532,30 @@ Ergebnisse Graphisch darstellen und Diskutieren
 
 \section{Realer Versuchsaufbau}
 
-Überarbeiten! 
+In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. Dabei orientiert sich die Versuchsanordnung am normgerechten Aufbau gemäß DIN, wie er in Abschnitt 3.2 dargestellt ist. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
 
-Der Versuchsaufbau, welcher in 3.2 beschrieben wurde, wird nun im Freifeldraum aufgebaut und durchgeführt. Ziel des Aufbaus ist eine objektive Vermessung des Lautsprechers und Erfassung akustischer Kenngrößen wie des Frequenzgangs und Schalldruckpegels. Diese Parameter beschreiben das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bilden die Grundlage für Entwicklung und Vergleichbarkeit verschiedener Systeme. In der Theorie wird ein Lautsprecher als LTI-System betrachtet, das ist ein lineares, zeitinvariantes System. Ein solches System wird durch seine Impulsantwort h(t) charakterisiert, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion H(f) berechnen lässt. Der Betrag von H(f) entspricht dabei dem Amplitudenfrequenzgang. 
+Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Damit charakterisiert die Übertragungsfunktion das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bildet die Grundlage für die Entwicklung sowie die Vergleichbarkeit verschiedener Lautsprechersysteme.
 
-Die zentrale Beziehung zwischen Eingangs- und Ausgangssignal lautet im Zeitbereich: 
+In der theoretischen Betrachtung wird ein Lautsprecher im linearen Arbeitsbereich als lineares, zeitinvariantes System (LTI-System) modelliert. Ein solches System wird vollständig durch seine Impulsantwort beschrieben, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion bestimmen lässt. Der Betrag dieser Übertragungsfunktion entspricht dem Amplitudenfrequenzgang und gibt an, wie stark einzelne Frequenzen verstärkt oder abgeschwächt werden.
 
-\begin{equation}
-y(t) = x(t) * h(t) \qquad \Longleftrightarrow \qquad Y(f) = X(f) \cdot H(f)
-\end{equation}
+Der frequenzabhängige Schalldruckpegel liefert zusätzlich Informationen über die Abstrahleigenschaften des DML-Lautsprechers. Er beschreibt, mit welcher Intensität der Lautsprecher Schall in Abhängigkeit von der Frequenz abstrahlt, und ermöglicht somit eine Bewertung der akustischen Leistungsfähigkeit über den gesamten betrachteten Frequenzbereich.
 
-
-wobei y(t) das Mikrofonsignal, x(t) das Testsignal und der Operator * die Faltung darstellt. Im Frequenzbereich vereinfacht sich die Faltung zu einer Multiplikation, daraus lässt sich durch eine einfache Division die Übertragungsfunktion herleiten. 
-
-\begin{equation}
-H(f) = \frac{Y(f)}{X(f)}
-\end{equation}
+Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Mit dieser werden sowohl die Testsignale generiert als auch die aufgenommenen Messdaten erfasst und weiterverarbeitet, um die Übertragungsfunktion sowie den Schalldruckpegel frequenzabhängig auszuwerten.
 
 
-Diese mathematische Eigenschaft bildet die Grundlage des Messverfahrens mittels parametrischem Sweep und mittels weißem Rauschen. Damit bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers und nicht die des Messraums widerspiegelt werden, wird die Messung in einem Freifeldraum durchgeführt.
-Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden die Schallwellen nahezu vollständig absorbieren.
+\subsection{LabVIEW}
 
- 
-\subsection{LabVIEW / Blockschaltbild}
 Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beurteilen, muss das in LabVIEW erstellte Programm die folgenden Funktionen umfassen: 
 
 \begin{itemize}
     \item Erzeugen und Abspielen eines Testsignals 
-    \item Erfassen des über den Lautsprecher abgespielten Signals mit einem Mikrofon
+    \item Erfassen des Mikrfon und Referenzsignals
     \item Verarbeitung der Messwerte Bilden der Übertragungsfunktion
     \item Darstellen der Messwerte in einem Graphen
     \item Speichern der Messwerte als Verarbeitbare Datei
 \end{itemize}
 
-LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen: einer Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
+LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen. Der Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
 
 In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akustischen Eigenschaften zu untersuchen. Dabei wird ein Audiosignal in LabVIEW erzeugt und über den DAQ-OUTPUT an den Audioverstärker geleitet und über den DML-Lautsprecher abgespielt. Das Signal wird akustisch wiedergegeben und von einem Messmikrofon empfangen. Die dabei entstehende Übertragungsfunktion gibt Erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. Das Signal vom Messmikrofon wird wieder in den DAQ-INPUT geleitet und in LabVIEW ausgewertet. 
 
@@ -618,18 +567,27 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 	\label{fig:blockschaltbild_exciter}
 \end{figure}
 
-Abbildung \ref{fig:blockschaltbild_exciter} zeigt exemplarisch den Signalfluss des Versuchsaufbaus im Freifeldraum in form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein parametrischer Sweep erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
-Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein Weißesrauschen erzeugt, der über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird mit einem Step-Down Converter runter geregelt und auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
-Die erfassten Eingangssignale werden in LabVIEW weiterverarbeitet, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
+Die erfassten Eingangssignale werden in LabVIEW Umgerechnet und Gemittelt, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
 
-\subsection{LabVIEW Aufbau}
+\subsection{Blockschaltbild}
 
-Bilder was in LabVIEW gemacht wird!
+Das Blockschaltbild in LabVIEW stellt die Daten erzeugung und verarbeit dar und kann als Ablaufplan angesehen werden. Das Blockschaltbild besteht dabei aus verschiedenen VIs welche nacheinader ausgeführt und dessen zustände ermittelt werden. In diesem Programm ist die "While-Schleife" der Keern des Programms, da in dieser eine Abfolge immer wieder wiederholt wird bis eine Bedingung erfüllt ist. Mit dieser Schleife können die Aufgenommenen werte Gemittelt werden. Das Programm für die Vermessung des DML-Lautsprechers hat folgenden aufbau:
+
+\begin{enumerate}
+    \item Initialisierung der Ein- und Ausgangskanäle
+    \item Erzeugen eines Testsignals 
+    \item Verarbeiten der Eingangssingale
+    \Item Verarbeitung der Singale
+    \item Mittelung der Singale
+    \item Darstellung der Singale
+\end{enumerate}
 
 
-
+ 
 
 
 \subsection{Signalverarbeitung des Messaufbaus}
