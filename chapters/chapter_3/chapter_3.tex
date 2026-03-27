@@ -632,6 +632,131 @@ Bilder was in LabVIEW gemacht wird!
 
 
 
+\subsection{Signalverarbeitung des Messaufbaus}
+
+Zur akustischen Charakterisierung des DML-Lautsprechers wird in LabVIEW ein breitbandiges Anregungssignal in Form von weißem Rauschen erzeugt und über den analogen Ausgang des DAQ-Systems an den Verstärker ausgegeben. Der Verstärker speist einerseits den Exciter, welcher die DML-Platte mechanisch anregt, und andererseits über einen vorgeschalteten Step-Down-Wandler ein elektrisches Referenzsignal zurück in den analogen Eingang des DAQ-Systems. Parallel dazu wird das von der angeregten Platte abgestrahlte Schallfeld durch ein Messmikrofon aufgenommen und ebenfalls als Eingangssignal im DAQ erfasst. Damit stehen für die weitere Auswertung sowohl ein elektrisches Referenzsignal als auch die akustische Systemantwort zur Verfügung.
+
+Das in LabVIEW erzeugte diskrete Anregungssignal kann allgemein als Folge $x[n]$ beschrieben werden. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz $f_s$ und der Blocklänge $N$. Die zugehörige Frequenzauflösung der späteren Spektralanalyse ergibt sich zu
+
+\begin{equation}
+\Delta f = \frac{f_s}{N}
+\end{equation}
+
+wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfrequenz in Hz und $N$ die Anzahl der Abtastwerte pro Datenblock ist.
+
+Das Referenzsignal wird elektrisch am Verstärkerausgang abgegriffen, mittels Step-Down-Wandler auf einen zulässigen Messbereich reduziert und anschließend als Spannungssignal $x_{\mathrm{ref}}[n]$ in den DAQ eingelesen. Das Mikrofon liefert ebenfalls ein Spannungssignal $u_{\mathrm{mic}}[n]$, welches proportional zum auftretenden Schalldruck ist. Für das verwendete Messmikrofon beträgt die Empfindlichkeit laut Kalibrierblatt $S = 0{,}028\;\mathrm{V/Pa}$. Wird keine zusätzliche externe lineare Vorverstärkung berücksichtigt, so kann für den Verstärkungsfaktor $G = 1$ gesetzt werden. Die Umrechnung des gemessenen Mikrofonsignals von Volt in Pascal erfolgt damit gemäß
+
+\begin{equation}
+p[n] = \frac{u_{\mathrm{mic}}[n]}{S \cdot G}
+\end{equation}
+
+wobei $p[n]$ das Schalldrucksignal im Zeitbereich in Pa, $u_{\mathrm{mic}}[n]$ die gemessene Mikrofonspannung im Zeitbereich in V, $S$ die Mikrofonempfindlichkeit in V/Pa und $G$ der lineare Verstärkungsfaktor der Messkette ist.
+
+Für das verwendete Mikrofon und ohne zusätzliche externe Verstärkung vereinfacht sich die Gleichung zu
+
+\begin{equation}
+p[n] = \frac{u_{\mathrm{mic}}[n]}{0{,}028}
+\end{equation}
+
+Um bei der blockweisen Verarbeitung Spektralleckeffekte (Spectral Leakage) zu minimieren, wird vor der Fourier-Transformation auf jeden Datenblock eine Fensterfunktion angewendet. Im vorliegenden Messaufbau wird ein Hanning-Fenster verwendet. Das gefensterte Signal ergibt sich zu
+
+\begin{equation}
+p_w[n] = p[n] \cdot w[n]
+\end{equation}
+
+wobei $p_w[n]$ das gefensterte Schalldrucksignal, $p[n]$ das Schalldrucksignal im Zeitbereich und $w[n]$ die Fensterfunktion (hier: Hanning-Fenster) ist.
+
+Nach der Fensterung wird das Signal blockweise in den Frequenzbereich transformiert. Hierzu wird die diskrete Fourier-Transformation (DFT) verwendet:
+
+\begin{equation}
+P[k] = \sum_{n=0}^{N-1} p_w[n] \cdot e^{-j \cdot \frac{2\pi k n}{N}}
+\end{equation}
+
+wobei $P[k]$ das komplexe Schalldruckspektrum, $p_w[n]$ das gefensterte Schalldrucksignal im Zeitbereich, $N$ die Anzahl der Abtastwerte, $n$ der Zeitindex, $k$ der Frequenzindex und $j$ die imaginäre Einheit ist.
+
+Aus dem komplexen Spektrum wird anschließend das einseitige lineare Amplitudenspektrum berechnet. Da bei reellwertigen Signalen das Spektrum symmetrisch ist, wird nur der Bereich $0 \leq k \leq N/2$ ausgewertet. Die Normierung auf die Blocklänge und die Berücksichtigung der Energieverteilung auf beide Spektrumshälften ergibt:
+
+\begin{equation}
+A[k] = \frac{2 \cdot |P[k]|}{N} \quad \text{für } 1 \leq k \leq \frac{N}{2} - 1
+\end{equation}
+
+\begin{equation}
+A[0] = \frac{|P[0]|}{N} \quad \text{(Gleichanteil)}
+\end{equation}
+
+\begin{equation}
+A\left[\frac{N}{2}\right] = \frac{\left|P\left[\frac{N}{2}\right]\right|}{N} \quad \text{(Nyquist-Frequenz)}
+\end{equation}
+
+wobei $A[k]$ das einseitige lineare Amplitudenspektrum in Pa, $|P[k]|$ der Betrag des komplexen Spektrums und $N$ die Anzahl der Abtastwerte ist.
+
+Der Faktor 2 kompensiert, dass bei der einseitigen Darstellung die Energie der negativen Frequenzanteile den positiven zugeschlagen wird. Die Sonderfälle $k = 0$ (Gleichanteil) und $k = N/2$ (Nyquist-Frequenz) werden ohne den Faktor 2 normiert, da diese Frequenzanteile im zweiseitigen Spektrum nicht gespiegelt auftreten.
+
+Da bei der Messung eine Mittelung über mehrere Datenblöcke durchgeführt wird, werden zunächst die linearen Amplitudenspektren aufsummiert und anschließend gemittelt. Für $M$ Mittelungen ergibt sich:
+
+\begin{equation}
+\bar{A}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} A_i[k]
+\end{equation}
+
+wobei $\bar{A}[k]$ das gemittelte lineare Amplitudenspektrum, $M$ die Anzahl der Mittelungen und $A_i[k]$ das lineare Amplitudenspektrum des $i$-ten Datenblocks ist.
+
+Die Darstellung des Schalldruckpegels über der Frequenz erfolgt anschließend in dB SPL. Dazu wird das gemittelte lineare Spektrum auf den Bezugsdruck $p_0 = 20\;\mu\mathrm{Pa}$ normiert:
+
+\begin{equation}
+L_p[k] = 20 \cdot \log_{10}\left(\frac{\bar{A}[k]}{p_0}\right)
+\end{equation}
+
+wobei $L_p[k]$ der Schalldruckpegel in dB SPL, $\bar{A}[k]$ das gemittelte lineare Amplitudenspektrum in Pa und $p_0 = 20 \cdot 10^{-6}\;\mathrm{Pa}$ der Bezugsdruck ist.
+
+Setzt man den Bezugsdruck explizit ein, ergibt sich:
+
+\begin{equation}
+L_p[k] = 20 \cdot \log_{10}\left(\frac{\bar{A}[k]}{20 \cdot 10^{-6}}\right)
+\end{equation}
+
+Parallel zur SPL-Berechnung wird aus Referenzsignal und akustischer Antwort die Übertragungsfunktion des Systems bestimmt. Dazu werden das Referenzsignal $x_{\mathrm{ref}}[n]$ sowie das Schalldrucksignal $p[n]$ ebenfalls gefenstert und in den Frequenzbereich transformiert. Die zugehörigen komplexen Spektren werden als $X[k]$ (Referenz) und $Y[k]$ (Antwort) bezeichnet.
+
+Zur robusten Schätzung der Übertragungsfunktion wird der $H_1$-Schätzer verwendet. Dieser basiert auf dem Kreuzspektrum zwischen Eingangs- und Ausgangssignal sowie dem Autospektrum des Eingangssignals und minimiert den Einfluss von Störungen am Ausgangssignal:
+
+\begin{equation}
+H_1[k] = \frac{G_{xy}[k]}{G_{xx}[k]}
+\end{equation}
+
+wobei $H_1[k]$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}[k]$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}[k]$ das Autospektrum des Referenzsignals ist.
+
+Dabei berechnen sich die gemittelten Spektren über $M$ Blöcke zu:
+
+\begin{equation}
+G_{xy}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} X_i^*[k] \cdot Y_i[k]
+\end{equation}
+
+\begin{equation}
+G_{xx}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} |X_i[k]|^2
+\end{equation}
+
+wobei $X_i^*[k]$ das konjugiert komplexe Spektrum des Referenzsignals im $i$-ten Block, $Y_i[k]$ das komplexe Spektrum des Antwortsignals im $i$-ten Block und $M$ die Anzahl der gemittelten Blöcke ist.
+
+Zur Darstellung des Betrags der Übertragungsfunktion in Dezibel wird verwendet:
+
+\begin{equation}
+H_{\mathrm{dB}}[k] = 20 \cdot \log_{10}\left(|H_1[k]|\right)
+\end{equation}
+
+wobei $H_{\mathrm{dB}}[k]$ der Betrag der Übertragungsfunktion in dB und $|H_1[k]|$ der Betrag des $H_1$-Schätzers ist.
+
+Der FRF-Graph beschreibt somit die relative frequenzabhängige Systemantwort des gesamten Aufbaus aus Verstärker, Exciter, DML-Platte und Schallabstrahlung. Im Gegensatz dazu zeigt der SPL-Graph den absoluten Schalldruckpegel am Mikrofon über der Frequenz. Während der SPL-Graph vor allem zur Bewertung der tatsächlich erreichten Lautstärke und des nutzbaren Übertragungsbereichs geeignet ist, dient der FRF-Graph insbesondere der Beurteilung von Resonanzen, Einbrüchen und der relativen Linearität des Systems.
+
+Zur qualitativen Beurteilung der Messgüte wird zusätzlich die Kohärenz zwischen Referenz- und Antwortsignal berechnet. Die Kohärenzfunktion gibt an, in welchem Maß das Ausgangssignal linear mit dem Eingangssignal zusammenhängt. Sie ergibt sich aus den gemittelten Auto- und Kreuzspektren zu:
+
+\begin{equation}
+\gamma^2[k] = \frac{|G_{xy}[k]|^2}{G_{xx}[k] \cdot G_{yy}[k]}
+\end{equation}
+
+wobei $\gamma^2[k]$ die Kohärenzfunktion (Wertebereich 0 bis 1), $G_{xy}[k]$ das Kreuzspektrum zwischen Eingangs- und Ausgangssignal, $G_{xx}[k]$ das Autospektrum des Referenzsignals und $G_{yy}[k]$ das Autospektrum des Antwortsignals ist.
+
+Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird. Werte deutlich unter 1 deuten auf nichtlineare Effekte, Störgeräusche oder eine unzureichende Anregung bei der betreffenden Frequenz hin.
+
+
 \subsection{Messergebnisse und Auswertung (Messunsicherheit)}
 
 Messergebnisse auswerten und mögliche Fehlerquellen identifizieren und analysieren. 
