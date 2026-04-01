@@ -1,12 +1,12 @@
 \chapter{Lösung der Aufgabenstellung}
 
-In diesem Kapitel wird das vorgehen zur entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zu erste die verwedete Hard- und Software Tabelarisch aufgelistet um die in dieser arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardware komponenten, also der Exciter die DML Platte sowie die verwendete Stereoanlage mit Equalizer einzeln beschrieben da dessen eigenschaften auschlaggebend für die akustischen eigenschaften des DML sind. Anhand der Technischen eigenschafgen der Audio geräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei  wird aufegzeit welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessung sinnvoll sind. Anschließend wird sich für eine ümsetzung unter Berücksichtigung der Material Parameter entschieden. 
-Auf dem Konzept aufbauend wird eine Simulation aufgesetzt welche zu bestimmung der idealen Anreger position für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten ergebnisse werden diese Positionen im Realen versuchsaufbau vermessen. Die ergebnisse werden anschließend Validiert und verglichen.
+In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten, also der Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer, einzeln beschrieben, da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
+Auf dem Konzept aufbauend wird eine Simulation aufgesetzt, welche zur Bestimmung der idealen Anregerposition für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten Ergebnisse werden diese Positionen im realen Versuchsaufbau vermessen. Die Ergebnisse werden anschließend validiert und verglichen.
 
 
 \section{Verwendete Hardware}
 
-Die in dieser arbeit verwendete Software für die Simulation der Platten sowie den Versuchsaufbau wird mit der Verwendeten Hardware welche zum Bau der DML und zur vermessung der Lautsprecher verwendet werden in der folgenden tabelle 3.1 aufgelistet.
+Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie den Versuchsaufbau wird mit der verwendeten Hardware, welche zum Bau der DML und zur Vermessung der Lautsprecher verwendet werden, in der folgenden Tabelle 3.1 aufgelistet.
 
 \begin{table}[h]
 \centering
@@ -59,17 +59,17 @@ Die in dieser arbeit verwendete Software für die Simulation der Platten sowie d
 
 Bild vom Exciter 
 
-Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das modell isr der Typ DAEX32EP-4 welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt\cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt, damit wird eine Schlüssige Karaftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom hersteller vermessen, dabei wurde eine ungefähr 30cm x 30cm und 1,3cm starke Sandwichpklatte mit Schaumkern mit einem außermittig plaziertem Exciter in einem Freifeldraum angeregt. Der SPL verlauf über der Frequenz ist dabei relativ linear im bereich 70-5000 Hz bei einem druck von ca. 83dB, ab 5000-20.000 Hz fält der SPL auf ca. 68 dB ab.
+Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
 Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
 \subsection{Panel Material}
 
-bild vom Querschnitt der Platten LINE \& GRPAH
+Bild vom Querschnitt der Platten LINE \& GRAPH
 
-Als Panel Material wurden zwei Platten in Sandwich bauweise der Firma 3A Composits zur verfügung gestellt. Die beiden Platten haben eine Größe von 1m x 0,7m und unterscheiden sich im wesentlichen in ihrer stärke und dem Trägermaterial.
-Die Kapa Line Platte hat eine stärke von 15mm, dabei besteht die Trägerplatte aus einer Faltschachtelkarton schicht welche mit handelsüblichen Klebern und Farben bearbeitet werden können, demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. 
-Bei der Kapa Graph Platte besteht die Trägerschicht aus einem hochwertigem Zellstoffkarton und läst sich wie auch Kapa Line gut mit handelsüblcihen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern welcher gegen eine großzahl von Klebern und Lösungsmitteln beständig ist und beim schneiden mit einem Cuttermesser nicht bröselt.
-Im wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus Resultiereden Steifigkeit sowie der Dichte und dem daraus Resultierendem Gewicht. 
+Als Panelmaterial wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial.
+Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Trägerplatte aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können.
+Bei der KAPA Graph Platte besteht die Trägerschicht aus einem hochwertigen Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und beim Schneiden mit einem Cuttermesser nicht bröselt.
+Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
 
@@ -85,13 +85,13 @@ Im wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus R
 
 
 Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Die zugehörigen technischen Kenndaten sind dem Datenblatt in Anhang B zu entnehmen. 
-Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro  des selben Herstellers betrieben werden. Der WVQ-600 Pro kann das eingangsignal verstärken und verfügt über einen integrierten grafischen Equalizer welcher 10  Frequenzbändern pro Kanal um jeweils ±10 dB anpassen kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. Die Kombination aus Stereoanlage und Equalizer wird sowhol im Versuchsaufbau sowie im Späteren Gebrauch verwendet. 
+Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro desselben Herstellers betrieben werden. Der WVQ-600 Pro kann das Eingangssignal verstärken und verfügt über einen integrierten grafischen Equalizer, welcher 10 Frequenzbänder pro Kanal um jeweils ±10 dB anpassen kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. Die Kombination aus Stereoanlage und Equalizer wird sowohl im Versuchsaufbau als auch im späteren Gebrauch verwendet. 
 
 \clearpage
 
 \section{Konzeptentwicklung}
 
-Bei der Konzeptentwicklung des DML-Flachlautspreches werden verschiedene umsetzungsmöglichkeiten dargestellt und anhad ihrer technischen Realisierbarkeit, akustischen Performance sowie ihrer wirtschaftlichen Umsetzbarkeit untersucht, diskutiert und bewertet. Anschließend wird sich für ein Konzept entschieden welches Simuliert und Vermessen wird. Neben der grundsätzlichen Systemauslegung wird auch die spätere Lagerung beziehungsweise Aufhängung der Paneele betrachtet, da diese das Schwingungsverhalten und somit die akustische Performance maßgeblich beeinflussen kann. \cite{Bai2001}
+Bei der Konzeptentwicklung des DML-Flachlautsprechers werden verschiedene Umsetzungsmöglichkeiten dargestellt und anhand ihrer technischen Realisierbarkeit, akustischen Performance sowie ihrer wirtschaftlichen Umsetzbarkeit untersucht, diskutiert und bewertet. Anschließend wird sich für ein Konzept entschieden, welches simuliert und vermessen wird. Neben der grundsätzlichen Systemauslegung wird auch die spätere Lagerung beziehungsweise Aufhängung der Paneele betrachtet, da diese das Schwingungsverhalten und somit die akustische Performance maßgeblich beeinflussen kann \cite{Bai2001}.
 
 Die Entscheidungsfindung basiert auf einer gewichteten Nutzwertanalyse, die sowohl technische Kriterien als auch die spezifischen Rahmenbedingungen aus Kapitel 3.1 berücksichtigt. Dadurch wird eine transparente und nachvollziehbare Auswahl des geeigneten Systemkonzepts gewährleistet.
 
@@ -99,25 +99,25 @@ Die Entwicklung eines DML-Flachlautsprechers erfordert grundlegende Entscheidung
 
 \begin{enumerate}
     \item Frequenzweichenkonfiguration
-    \item Paneel Konfiguration
-    \item Paneel Lagerung
-    \item Allgemeine Systemauselgung
+    \item Panelkonfiguration
+    \item Panellagerung
+    \item Allgemeine Systemauslegung
 \end{enumerate}
 
 Diese werden in den folgenden Unterkapiteln erläutert und bestimmt.
 
 \subsection{Frequenzweichenkonfiguration}
 
-Die Frequenzweichen Konfiguration befasst sich mit der möglichen verwendung von frequenzweichen und dem Bau eines Zwei oder Drei Wege systems welches mehr Paneele oder eine mögliche Subwoofer einbindung im System in betracht zieht. 
+Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von Frequenzweichen und dem Bau eines Zwei- oder Drei-Wege-Systems, welches mehr Paneele oder eine mögliche Subwoofereinbindung im System in Betracht zieht.
 
-Das 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher welcher denn Mittel- und Hochton bereich abdeckt und einem Subwoofer welcher den Tiefton bereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa 100 Hz, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen ist eine Subwoofer einbindung denkbar. 
+Das 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa 100 Hz, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
 
-Ein 3-Wege-System, unterteil den Frequenzbereich in einen Tief-, Mittel und Hochton spektrum. Bei dieser Bauweise werden separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen kann, die selbst durch Digitale Signalverarbeitung nur schwer vollständig korrigierbar ist. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht in frage kommt.
+Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht infrage kommt.
 
 
 \subsection{Material Konfiguration}
 
-Mit der Material Konfiguration ist vorallem die Auswahl des zwischen den beiden gegebenen Sandwichplatten anhand ihrere Mechanischen eigenschaften als auch die spätere Größe der ausgewählten Platte gemeint. Dabei spielen vor allem die Steifigkeit eine Große Rolle. 
+Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen Sandwichplatten anhand ihrer mechanischen Eigenschaften als auch die spätere Größe der ausgewählten Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. 
 
 \subsection{Paneel Lagerung}
 
@@ -125,7 +125,7 @@ Mit der Material Konfiguration ist vorallem die Auswahl des zwischen den beiden 
 
 \subsection{Allgemeine Systemauslegung}
 
-Bei der Allgemeinen Systemauslegung werden die einezelenen Komponenten betrachtet und dessen zusammenspiel so abgestimmt das ein Technisch funktionstüchtiges und langlebiges system gegeben ist. 
+Bei der allgemeinen Systemauslegung werden die einzelnen Komponenten betrachtet und deren Zusammenspiel so abgestimmt, dass ein technisch funktionstüchtiges und langlebiges System gegeben ist. 
 
 
 
@@ -167,7 +167,7 @@ Beschreibung der Bewertungsmethodik:
 Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskriterien identifiziert und deren relative Wichtigkeit durch Gewichtungsfaktoren (Summe = 100\%) festgelegt. Anschließend wird jede Systemvariante für jedes Kriterium mit 0-10 Punkten bewertet, wobei 0 die schlechteste und 10 die beste Ausprägung darstellt. Die gewichtete Gesamtpunktzahl ergibt sich aus der Summe der Einzelbewertungen multipliziert mit den jeweiligen Gewichtungsfaktoren \cite{Pahl2013}.
 
 
-Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit, Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.1 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
+Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit: Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.2 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
 
 Erläuterung der Gewichtungsentscheidungen:
 
@@ -240,9 +240,9 @@ Bass-Extension & 10\% & 6 & 6 & 10 & 10 \\
 
 \noindent\textit{Legende: FR = Fullrange, 2W = 2-Wege-System, Ex. = Exciter}
 
-Die in der Tabelle 3.2 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
+Die in der Tabelle 3.3 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
 
-Die Verstärker-Kompatibilität mit dem verwendeten WPA 600PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da bei dieser Impedanz die höchste Effizienz und der geringste Klirrfaktor aufweisen. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
+Die Verstärker-Kompatibilität mit dem verwendeten WPA 600 PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da dieser bei dieser Impedanz die höchste Effizienz und den geringsten Klirrfaktor aufweist. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
 
 Die technische Komplexität wird so bewertet, dass je komplexer der Aufbau ist, desto weniger Punkte dieser bekommt. Dabei wird auf zusätzliche Komponenten wie eine passive Frequenzweiche oder eine DSP-Weiche Rücksicht genommen. Dementsprechend werden die Fullrange-Systeme mit mehr Punkten als die Frequenzweichen-Systeme bewertet. 
 
@@ -257,7 +257,7 @@ Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen is
 \subsection{Konzeptentscheidung für diese Arbeit}
 
 
-Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet den Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Bereich möglich, um die Defizite im Tieftonbereich auszugleichen. 
+Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet einen Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Verlauf möglich, um die Defizite im Tieftonbereich auszugleichen. 
 
 
 
@@ -268,7 +268,7 @@ Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mi
 
 \section{Simulation in COMSOL Multiphysics}
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf dem Panel sowie eine Entscheidung über die gegebenen Materialien und deren geometrische Dimensionen zu geben. Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf dem Panel sowie eine Entscheidung über die gegebenen Materialien und deren geometrische Dimensionen zu ermöglichen. Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in Abschnitt 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
 
 
 
