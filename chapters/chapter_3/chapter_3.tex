@@ -57,10 +57,10 @@ Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie d
 	\label{fig:Exciter}
 \end{figure}
 
-Bild vom Exciter 
 
-Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
+Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Bild \ref{fig:Exciter} zeigt die Vorder- und Rückseite des Exciters, an der Rückseite des Exciters ist die Kontaktfläche welche mit einer Doppelseitigem klebeband von 3M. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
 Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
+
 
 \subsection{Panel Material}
 
@@ -79,7 +79,7 @@ Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus r
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/Stereo_EQ.png}
-	\caption{WPA-600 Pro Leistungsendstufe und WVQ-600 Pro Equalizer}
+	\caption{WPA-600 Pro Leistungsendstufe und WVQ-600 Pro Equalizer \cite{Wangine2024}}
 	\label{fig:Stereo_EQ}
 \end{figure}
 
@@ -108,40 +108,88 @@ Diese werden in den folgenden Unterkapiteln erläutert und bestimmt.
 
 \subsection{Frequenzweichenkonfiguration}
 
-Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von Frequenzweichen und dem Bau eines Zwei- oder Drei-Wege-Systems, welches mehr Paneele oder eine mögliche Subwoofereinbindung im System in Betracht zieht.
+Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von Frequenzweichen und dem Bau eines Zwei- oder Drei-Wege-Systems, welches mehr Paneele oder eine mögliche Subwoofer einbindung im System in Betracht zieht. Dabei kann zwischen einer passiven Frequenzweichen welche aus Spulen, Kondensatoren und Widerständen besteht und einer digitalen Signalprozessoren kurz DSP Weiche unterschieden werden.
+Während passive Weichen das Signal nach dem Verstärker in die verschiedenen Frequenzbereiche trennt, ermöglicht ein DSP die digitale Signalverarbeitung in Echtzeit. Ein DSP kann neben der Frequenztrennung auch als Equalizer verwendet werden, was insbesondere bei DML-Systemen von Vorteil sein kann. 
+es ist zu beachten das im Übergangsbereich der Frequenzweichen komplexe Interferenzmuster entstehen können, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}.
 
-Das 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa 100 Hz, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
+Ein DML 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa 100 Hz, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
 
-Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht infrage kommt.
+Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 Hz bis 1000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4000 Hz und 5000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht berücksichtigt wird.
+
+Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines DML-Flachlautsprechers dar. In diesem Fall deckt das Panel den gesamten hörbaren Frequenzbereich ab, wobei das elektrische Audiosignal ungefiltert dem Lautsprecher zugeführt wird. Dadurch entfallen phasenbedingte Verzerrungen, wie sie durch Frequenzweichen entstehen können \cite{Moeser2005}. Anhand der Einfachheit dieses Aufbaus, welche zugleich eine unverzerrte wiederhgabe über die Lautsprecher verspricht, wird dieser aufbau favorisiert. 
 
 
 \subsection{Material Konfiguration}
 
-Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen Sandwichplatten anhand ihrer mechanischen Eigenschaften als auch die spätere Größe der ausgewählten Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. 
+Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften, als auch die Größe der Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten nicht angegeben, siehe Anhang C und D. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. Dabei wird beträgt die dicke der Deckschicht 0,5mm pro seite also 1mm insgesamt. Das E-Modul wird aus dem Datenblatt entnommen, da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber die selbe Schaum schicht und eine ähnliche stützstrucktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
+
+B_{graph} \approx 12,8 N·mm^2
+
+B_{line} \approx 156,8 N·mm^2
+
+Es ist zu erkennen das die ausgerechnete ungefähre Biegesteifigkeit der Sanwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vorallem daran das die KAPA Line platte drei mal so stark ist wie die KAPA Graph. Unter berücksichtigung der Biegesteifigkeit und den zugehörigen flächenmasse welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML Paneel an als aus KAPA Graph. Das liegt daran das KAPA Line im vergelich eine mehr als zehn mal so große Biegesteifigkeit aufweißt bei einem flächen gewicht welches gerade einemal 1,45 mal so groß ist.
+
+Nach auswahl eines Paneelmaterials, ist ein weiterer wichtiger Parameter die Abmaße der Paneel größe. Die Größe des Paneels ist auschlaggebend für die angeregten Moden und daraus entstehenden Frequenzen. Da das Panel in dieser arbeit als Fullrange system verwendet wird, muss die Größe so gewählt werdendas sowhol im Tiefton als auch im mitten und hochtonberech eine gute Wiedergabe gegeben ist. Zudem soll die Panel front als Informations und werbefläche verwendet werden. Dafür werden Plakate in DIN Größe mit einem Seitenverhältnis von 1:1,414 auf die vorderseite der Panele geklebt, darum ist von einer Quadratischen auslegung abzusehen. Aus diesen gründen, wird die plattengröße anhand eines Seitenverhältnisses 1:1,618, in der Mathematik bekannt als Goldener schnitt $\varphi$ verwendet. 
+
+Der Goldene schnitt wird vor allem in der DML DIY-Community empfohlen und ist für gute Akusitsche eingeschaften so bekannt das diese als eine Art Standardempfehlung verbreitet ist. Aus Mathematischer sicht betrachtet wird bietet sich der Goldene Schnitt als Seitenverhältniss an, da die Seitenlängen des DML einen erheblichen einfluss auf die entstehenden Biegewellen und Frequnezen hat. Da bei einem Quadrat die biegewellen sich oft überlappen und somit Resonazspitzen entstehen welche zu lücken im Frequenzgang führen können. Ist die Mathematische überlegung die Seitenverhältnisse so Irrational wie möglich zu gestalten, um die Modaleüberlappung möglichst gering zu halten. Da $\varphi$ im Mathematischem sinne als Irrationalste Zahl gilt, verspricht man sich daher eine Gleichmäßige Moden Verteilung. 
+
+
+Dementsprechend wird die Plattengröße anhand des Seitenlängeverhältnisses sowie der Grundfrequenz bestimmt. Die Grundfrequnezn Kann dabei mit folgender formel näherungsweise bestimmt werden: 
+
+\begin{equation}
+f_0 \approx \frac{\pi}{A}\sqrt{\frac{B}{m''}}
+\end{equation}
+
+Diese formel wird in abhängigkeit des Seitenlängen verhältnisses umgeformt:
+
+\begin{equation}
+a(f_0) = \sqrt{\frac{\pi}{r}\frac{C}{f_0}}
+\end{equation}
+
+\begin{equation}
+b = r \cdot a
+\end{equation}
+
+\begin{itemize}
+    \item $f_0$ : Grundfrequenz [Hz]
+    \item $A$ : Fläche [m$^2$]
+    \item $a$ / $b$ : Seitenlängen der Platte [m]
+    \item $r$ : Seitenverhältnis der Platte
+    \item $B$ : Biegesteifigkeit [Nmm^2]
+    \item $m''$ : Flächenmasse der Platte in [kg/m$^2$]
+    \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
+\end{itemize}
+
+Daraus ergibt sich die Kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folgenden Graphen:
+
+\textbf{Folgt noch...}
+
+\newpage
 
 \subsection{Paneel Lagerung}
 
+Bei der Aufhängung oder Lagerung von DML lautsprechern gibt es Verschiedene möglichkeiten wobei jede ihre vor und anchteile bezüglich komplexität und Akustischer auswirkung hat. Als Lagerungsmöglichkeit sind die Folgenden sechs jene welche am häufigsten beim DML verwendet werden.
 
+\begin{itemize}
+    \item Frei Schwebend
+    \item Gelenkgig Gelagert
+    \item Fest Eingespannt
+    \item Elastische Aufhängung
+    \item Punktuelle Auflage
+    \item Randdämpfung 
+\end{itemize}
+
+Im Rahmen dieser  arbeit werden lediglich Zwei mögliche der sechs aufgezählten Lagerungsmöglichekteien genauer betrachtet und Diskutiert. Dabei handelt es sich um die Frei Schwebende Aufhägnung bei der DML an 2 Ecken mittels Fäden an der Decke Aufgehangen wird. Diese lagerung hat den Vorteil darin das wenig äußere dämpfung den DML beeinflussen und durch die Freischwingede Platte eine Gleichmäßigste Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte Verursacht werden. Zudem ist durch die minimale Dissipationd er aufhhänung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die Relativ nidrige Abstrahleffizienz und das Mögliche pendeln der Panele.
+
+Dem entgegen steht die Fest eingepannte Lagerung, bei der die Platte in einem Rahmen welcher an der Wand befestigt ist, eingepannt ist. Die Vorteile dieser arbeit sind Hohe Abstrahleffizienz der Platte. Dem Entgegen spricht die Unterdrückung der Randmoden was eine Gleichmäßige modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte konstruktions aufwand des Rahmens und der Wandbefestigung gegen eine Fest eingepannte Lagerung. 
 
 \subsection{Allgemeine Systemauslegung}
 
+\textbf{HIER FOLGT NOCH ! }
+
+
 Bei der allgemeinen Systemauslegung werden die einzelnen Komponenten betrachtet und deren Zusammenspiel so abgestimmt, dass ein technisch funktionstüchtiges und langlebiges System gegeben ist. 
-
-
-
-
-
-
-
-Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzungsvariante eines DML-Flachlautsprechers dar. In diesem Fall deckt das Panel den gesamten hörbaren Frequenzbereich ab, wobei das elektrische Audiosignal ungefiltert dem Lautsprecher zugeführt wird. Dadurch entfallen phasenbedingte Verzerrungen, wie sie durch Frequenzweichen entstehen können \cite{Moeser2005}. Diese Eigenschaft ist insbesondere bei DML-Systemen von Bedeutung, da Frequenztrennungen im kritischen Vokalbereich zwischen etwa 500 Hz und 4000 Hz die Sprachverständlichkeit beeinträchtigen können \cite{Fastl2007}.
-
-Ein wesentlicher Parameter für die Eignung eines Fullrange-Systems ist jedoch die untere Grenzfrequenz, welche maßgeblich durch die Abmessungen und die Biegesteifigkeit des Panels bestimmt wird \cite{Bai2001}. Ist diese zu hoch, kann die Wiedergabe tiefer Frequenzen unzureichend sein, sodass die Anforderungen gemäß DIN 45500 nicht erfüllt werden.
-
-
-Die Implementierung eines 2-Wege-Systems erfordert jedoch zusätzliche Komponenten, insbesondere einen Subwoofer sowie eine Frequenzweiche. Dabei kann zwischen passiven Frequenzweichen, bestehend aus Spulen, Kondensatoren und Widerständen, und digitalen Signalprozessoren - DSP unterschieden werden. Während passive Weichen das Signal nach dem Verstärker trennen, ermöglichen DSP-basierte Lösungen eine digitale Signalverarbeitung in Echtzeit. Letztere bieten neben der Frequenztrennung auch die Möglichkeit einer Panel-spezifischen Equalisation, was insbesondere bei DML-Systemen von Vorteil sein kann. Dem verbesserten Tieftonverhalten stehen jedoch eine erhöhte Systemkomplexität sowie zusätzliche Kosten für Subwoofer und Frequenzweiche gegenüber.
-
-
-Im Übergangsbereich der Frequenzweichen entstehen komplexe Interferenzmuster, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}. Dadurch wird der zentrale Vorteil des DML-Systems – eine kohärente, breitbandige Schallabstrahlung – beeinträchtigt \cite{Harris2000}. Zudem fallen bei der Verwendung eines 3-Wege-Systems zusätzliche Kosten für Subwoofer sowie Frequenzweiche wie auch beim 2-Wege-System an. Aus diesen Gründen wird die Verwendung eines 3-Wege-Systems in Kombination mit einem DML-Flachlautsprecher im Rahmen dieser Arbeit als technisch ungünstig eingestuft und wird in der Nutzwertanalyse nicht mit berücksichtigt.
+Langlebigkeit 8 OHM 2 Exciter in Reihe. Verwendung eines EQ um den Frequenzverlauf anzupassen. 
 
 
 Ein weiterer wichtiger Aspekt der Systemarchitektur ist die Anzahl der verwendeten Exciter pro Panel, da die Anzahl der Exciter den erreichbaren Schalldruckpegel, die Modenanregung sowie die Impedanz des Gesamtsystems maßgeblich beeinflusst \cite{Bai2001}. Eine Multi-Exciter-Konfiguration kann theoretisch zu einem gleichmäßigeren Frequenzgang führen, da durch die Verwendung mehrerer Exciter auch mehrere Modenknotenpunkte und das Panel somit gleichmäßiger angeregt werden kann \cite{Bai2001}. 
@@ -152,105 +200,40 @@ Das 2-Exciter-System mit symmetrischer Platzierung bietet verschiedene Vorteile,
 
 Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anregung verschiedener Moden besser als bei einer symmetrischen Anordnung der Exciter \cite{Zenker2019}. Diese gleichmäßigere Anregung der Moden führt zu einem statistisch glatteren Frequenzgang, was den Anforderungen der Zielsetzung entspricht. Des Weiteren bietet die serielle Schaltung von 2 Excitern die Anhebung der Gesamtimpedanz auf 8 Ohm, was für viele Verstärker optimal ist. Der verwendete Verstärker WPA 600 Pro ist gemäß Datenblatt für 4-16 Ohm geeignet. Dennoch kann die volle Leistungswiedergabe des Verstärkers bei einem 4 Ohm Exciter auf Dauer eine erhebliche thermische Belastung sowie einen Anstieg des Klirrfaktors hervorrufen \cite{Weinzierl2025}. Für einen langlebigen Langzeitbetrieb des Verstärkers und Exciters ist eine Impedanz von 8 Ohm vorzuziehen. Somit ist die asymmetrische Platzierung von 2 Excitern auf dem Panel eine technisch geeignete Lösung.
 
-Ein System welches drei oder mehr Exciter pro Panel verwendet wird aufgrund der hohen Komplexität nicht mit in die Bewertung aufgenommen.  
 
 
+%\subsection{Vergleichstabelle und Bewertung}
 
-\textbf{Entscheidung der Lagerung/Aufhängung noch ergänzen, Plattengröße von Grundfrequenz Abhängigkeit, Graph einfügen}
-
-
-
-\subsection{Vergleichstabelle und Bewertung}
-
-Für die systematische Bewertung der Lösungskonzepte wird eine gewichtete Nutzwertanalyse durchgeführt. Pahl et al. \cite{Pahl2013} beschreiben diese Methode als etabliertes Werkzeug der Konstruktionslehre zur objektiven Konzeptbewertung. Die Nutzwertanalyse ermöglicht die Quantifizierung qualitativer Kriterien durch Punktvergabe (0-10 Skala) und gewichtete Aggregation zu einer Gesamtbewertung, wodurch verschiedene Lösungsvarianten objektiv verglichen werden können.
-Beschreibung der Bewertungsmethodik:
-Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskriterien identifiziert und deren relative Wichtigkeit durch Gewichtungsfaktoren (Summe = 100\%) festgelegt. Anschließend wird jede Systemvariante für jedes Kriterium mit 0-10 Punkten bewertet, wobei 0 die schlechteste und 10 die beste Ausprägung darstellt. Die gewichtete Gesamtpunktzahl ergibt sich aus der Summe der Einzelbewertungen multipliziert mit den jeweiligen Gewichtungsfaktoren \cite{Pahl2013}.
+%Für die systematische Bewertung der Lösungskonzepte wird eine gewichtete Nutzwertanalyse durchgeführt. Pahl et al. \cite{Pahl2013} beschreiben diese Methode als etabliertes Werkzeug der Konstruktionslehre zur objektiven Konzeptbewertung. Die Nutzwertanalyse ermöglicht die Quantifizierung qualitativer Kriterien durch Punktvergabe (0-10 Skala) und gewichtete Aggregation zu einer Gesamtbewertung, wodurch verschiedene Lösungsvarianten objektiv verglichen werden können.
+%Beschreibung der Bewertungsmethodik:
+%Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskriterien identifiziert und deren relative Wichtigkeit durch Gewichtungsfaktoren (Summe = 100\%) festgelegt. Anschließend wird jede Systemvariante für jedes Kriterium mit 0-10 Punkten bewertet, wobei 0 die schlechteste und 10 die beste Ausprägung darstellt. Die gewichtete Gesamtpunktzahl ergibt sich aus der Summe der Einzelbewertungen multipliziert mit den jeweiligen Gewichtungsfaktoren \cite{Pahl2013}.
 
 
-Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit: Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.2 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
+%Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit: Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.2 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
 
-Erläuterung der Gewichtungsentscheidungen:
+%Erläuterung der Gewichtungsentscheidungen:
 
-Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
+%Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
 
-Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
+%Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
 
-Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
+%Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
 
-Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
-SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
-
-
-\begin{table}[H]
-\centering
-\caption{Gewichtung der Bewertungskriterien}
-\label{tab:gewichtung}
-\footnotesize
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{|p{3.5cm}|c|X|}
-\hline
-\textbf{Kriterium} & \textbf{Gewichtung} & \textbf{Begründung} \\
-\hline
-Vokalbereich-Integrität & 25\% & Sprachverständlichkeit primäres Qualitätskriterium für Lautsprecher; Vokalbereich (500--4000 Hz) muss  abgedeckt werden \\
-\hline
-Verstärker-Kompatibilität & 20\% & Langzeitbetrieb und Lebensdauer des Verstärkers WPA 600 Pro in Bezug auf die Impedanz  \\
-\hline
-Technische Komplexität (niedrig = gut) & 20\% & Umsetzbarkeit im Zeitrahmen, Reproduzierbarkeit für Studierende; schrittweise Komplexitätssteigerung empfohlen \\
-\hline
-Kosten (niedrig = gut) & 15\% & Um die Wirtschaftlichkeit mit kommerziellen Produkten zu vergleichen  \\
-\hline
-Schalldruckpegel (SPL) & 10\% & Praktische Nutzbarkeit für Nahfeld; 85 dB @ 1 m, 1 W \\
-\hline
-Bass-Extension & 10\% & Erfüllung DIN 45500 Klasse 2 (80 Hz untere Grenzfrequenz) \\
-\hline
-\textbf{Gesamt} & \textbf{100\%} & \\
-\hline
-\end{tabularx}
-\end{table}
+%Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
+%SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
 
 
+%Die in der Tabelle 3.3 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
 
-\begin{table}[H]
-\centering
-\caption{Bewertungsmatrix Systemarchitekturen}
-\label{tab:bewertungsmatrix}
-\small
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|p{5cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-\hline
-\textbf{Kriterium} & \textbf{Gew.} & \textbf{FR 1 Ex. (4$\Omega$)} & \textbf{FR 2 Ex. (8$\Omega$)} & \textbf{2W 1 Ex. (4$\Omega$)} & \textbf{2W 2 Ex. (8$\Omega$)} \\
-\hline
-Vokalbereich-Integrität & 25\% & 10 & 10 & 10 & 10 \\
-\hline
-Verstärker-Kompatibilität & 20\% & 4 & 10 & 4 & 10 \\
-\hline
-Komplexität (niedrig = gut) & 20\% & 10 & 9 & 5 & 4 \\
-\hline
-Kosten (niedrig = gut) & 15\% & 10 & 8 & 4 & 3 \\
-\hline
-SPL @ 1 m, 1 W & 10\% & 6 & 9 & 6 & 9 \\
-\hline
-Bass-Extension & 10\% & 6 & 6 & 10 & 10 \\
-\hline
-\textbf{Gewichtete Summe} & \textbf{100\%} & \textbf{8} & \textbf{9,4} & \textbf{6,7} & \textbf{7,8} \\
-\hline
-\end{tabular}
-\end{table}
+%Die Verstärker-Kompatibilität mit dem verwendeten WPA 600 PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da dieser bei dieser Impedanz die höchste Effizienz und den geringsten Klirrfaktor aufweist. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
 
-\noindent\textit{Legende: FR = Fullrange, 2W = 2-Wege-System, Ex. = Exciter}
+%Die technische Komplexität wird so bewertet, dass je komplexer der Aufbau ist, desto weniger Punkte dieser bekommt. Dabei wird auf zusätzliche Komponenten wie eine passive Frequenzweiche oder eine DSP-Weiche Rücksicht genommen. Dementsprechend werden die Fullrange-Systeme mit mehr Punkten als die Frequenzweichen-Systeme bewertet. 
 
-Die in der Tabelle 3.3 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
+%Um die Wirtschaftlichkeit nicht außer Acht zu lassen, wird diese mit einbezogen, um im späteren Teil der Arbeit eine genauere wirtschaftliche Analyse zu betrachten. Dabei werden bei der Nutzenanalyse die Kosten für das Simulationsprogramm nicht berücksichtigt und sich nur auf die Kosten der Hardwarekomponenten bezogen. Hierbei wird die geringste Anzahl der verbauten Komponenten mit der Maximalpunktzahl bewertet, je mehr Komponenten verbaut sind, desto geringer die Punktzahl. 
 
-Die Verstärker-Kompatibilität mit dem verwendeten WPA 600 PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da dieser bei dieser Impedanz die höchste Effizienz und den geringsten Klirrfaktor aufweist. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
+%Bei den SPL-Werten handelt es sich um Schätzungen, da aus der Literatur hervorgeht, dass Systeme mit mehreren Excitern eine höhere Schallleistung aufweisen. Daher werden die Systeme mit zwei Excitern mit einer höheren Punktzahl bewertet als Systeme, bei denen nur ein Exciter verbaut ist. 
 
-Die technische Komplexität wird so bewertet, dass je komplexer der Aufbau ist, desto weniger Punkte dieser bekommt. Dabei wird auf zusätzliche Komponenten wie eine passive Frequenzweiche oder eine DSP-Weiche Rücksicht genommen. Dementsprechend werden die Fullrange-Systeme mit mehr Punkten als die Frequenzweichen-Systeme bewertet. 
-
-Um die Wirtschaftlichkeit nicht außer Acht zu lassen, wird diese mit einbezogen, um im späteren Teil der Arbeit eine genauere wirtschaftliche Analyse zu betrachten. Dabei werden bei der Nutzenanalyse die Kosten für das Simulationsprogramm nicht berücksichtigt und sich nur auf die Kosten der Hardwarekomponenten bezogen. Hierbei wird die geringste Anzahl der verbauten Komponenten mit der Maximalpunktzahl bewertet, je mehr Komponenten verbaut sind, desto geringer die Punktzahl. 
-
-Bei den SPL-Werten handelt es sich um Schätzungen, da aus der Literatur hervorgeht, dass Systeme mit mehreren Excitern eine höhere Schallleistung aufweisen. Daher werden die Systeme mit zwei Excitern mit einer höheren Punktzahl bewertet als Systeme, bei denen nur ein Exciter verbaut ist. 
-
-Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen ist bei den 2-Wege-Systemen möglich, weshalb diese mit der vollen Punktzahl bewertet werden. Bei Fullrange-Systemen ist eine Subwoofer-Erweiterung möglich, dennoch nicht vorgesehen, weshalb die Bewertung hier schlechter ausfällt. 
+%Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen ist bei den 2-Wege-Systemen möglich, weshalb diese mit der vollen Punktzahl bewertet werden. Bei Fullrange-Systemen ist eine Subwoofer-Erweiterung möglich, dennoch nicht vorgesehen, weshalb die Bewertung hier schlechter ausfällt. 
 
 
 

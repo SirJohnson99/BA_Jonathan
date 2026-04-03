@@ -22,14 +22,29 @@ f_{m,n} = \frac{\pi}{2} \sqrt{\frac{B}{m''}} \left[ \left(\frac{m}{a}\right)^2 +
 \label{eq:eigenfrequenz}
 \end{equation}
 
+\begin{itemize}
+    \item $f_{m,n}$ : Frequenz m-ter / n-ter Mode 
+    \item $B$ : Biegesteifigkeit [Nmm^2]
+    \item $m''$ : Flächenmasse [kg/m^2]
+    \item $a$ / $b$ : Seitenlängen der Platte [m]
+    \item $m$ / $n$ : Moden Zahl
+\end{itemize}
+
 Gleichung \ref{eq:eigenfrequenz} zeigt, dass eine höhere Biegesteifigkeit $B$ zu höheren Eigenfrequenzen führt, während eine größere Flächenmasse $m''$ diese herabsetzt \cite{Cremer1996}. Für eine optimale DML-Leistung ist ein gezieltes Verhältnis zwischen beiden Größen anzustreben. Eine zu hohe Biegesteifigkeit verschiebt die Eigenfrequenzen nach oben und verhindert eine wirksame Anregung im Tieffrequenzbereich, während eine zu geringe Biegesteifigkeit hingegen zu einer hohen modalen Dichte bei niedrigen Frequenzen führt, die zu einer langen Ausschwingzeit beiträgt.
 
  Materialien, welche eine hohe Biegesteifigkeit bei gleichzeitig geringer Masse aufweisen, sind Sandwichkonstruktionen. Diese haben sich in der Praxis als geeignete DML-Paneele gezeigt \cite{Bai2001}. Der Aufbau besteht aus zwei dünnen, biegesteifen Deckschichten, die durch einen leichten Stützkern auf Abstand gehalten werden. Die Deckschichten tragen dabei den weit überwiegenden Anteil der Biegebelastung, während der Kern vor allem die Schubsteifigkeit liefert und die Deckschichten gegen Beulen stützt \cite{Wiedemann2006}. Die effektive Biegesteifigkeit einer solchen Konstruktion lässt sich näherungsweise durch folgende Formel berechnen.
 
 \begin{equation}
-B \approx E \cdot t \cdot \left(\frac{d}{2}\right)^2
+B \approx E \cdot t \cdot \left(\frac{(d-t)}{2}\right)^2
 \label{eq:biegesteifigkeit}
 \end{equation}
+
+\begin{itemize}
+    \item $E$ : Elastizitätsmodul [N/mm^2]
+    \item $B$ : Biegesteifigkeit [Nmm^2]
+    \item $t$ : Stärke der Deckschicht[mm]
+    \item $d$ : Gesammtstärke der Platte [mm]
+\end{itemize}
 
 Wobei $E$ das Elastizitätsmodul, $t$ die Dicke der Deckschicht und $d$ der Abstand zwischen den beiden
 Deckschichten bezeichnen \cite{Wiedemann2006}. Der quadratische Zusammenhang des Deckschichtenabstands $d$ zeigt, dass bereits eine geringe Erhöhung der Kerndicke eine erhebliche Steigerung der Biegesteifigkeit zur Folge hat. Diese Eigenschaft macht Sandwich-Konstruktionen zu einer bewährten Wahl für DML-Panele \cite{Bai2001}. Im Vergleich zu monolithischen Platten bieten solche Aufbauten bei gleicher Biegesteifigkeit eine deutlich geringere Flächenmasse, was sich direkt auf die modale Dichte und somit auf den Frequenzgang auswirkt.
