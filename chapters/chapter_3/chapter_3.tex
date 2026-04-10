@@ -50,6 +50,12 @@ Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie d
 
 \subsection{Der Exciter}
 
+
+
+
+
+Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Bild \ref{fig:Exciter} zeigt die Vorder- und Rückseite des Exciters, an der Rückseite des Exciters ist die Kontaktfläche welche mit einem doppelseitigen Klebeband von 3M versehen ist. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/Exciter.png}
@@ -57,8 +63,7 @@ Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie d
 	\label{fig:Exciter}
 \end{figure}
 
-
-Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Bild \ref{fig:Exciter} zeigt die Vorder- und Rückseite des Exciters, an der Rückseite des Exciters ist die Kontaktfläche welche mit einem doppelseitigen Klebeband von 3M versehen ist. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
+Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
 Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
 \clearpage
@@ -68,11 +73,12 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
  Als DML Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial. 
  Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum (kurz PUR). 
  Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und  sich mit einem Cuttermesser gut bearbeiten lässt.
+ 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/KAPA_Vergleich.png}
-	\caption{Vergleich KAPA Graph & KAPA Line}
+	\caption{Vergleich KAPA Graph \& KAPA Line}
 	\label{fig:KAPA_Vergleich}
 \end{figure}
 
@@ -87,7 +93,7 @@ Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus r
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/Stereo_EQ.png}
-	\caption{WPA-600 Pro Leistungsendstufe und WVQ-600 Pro Equalizer \cite{Wangine2024}}
+	\caption{WPA-600 Pro Leistungsendstufe \& WVQ-600 Pro Equalizer \cite{Wangine2024}}
 	\label{fig:Stereo_EQ}
 \end{figure}
 
@@ -95,6 +101,7 @@ Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus r
 Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Die zugehörigen technischen Kenndaten sind dem Datenblatt im Anhang B zu entnehmen. 
 Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro desselben Herstellers betrieben werden. Der WVQ-600 Pro kann das Eingangssignal verstärken und verfügt über einen integrierten grafischen Equalizer, welcher 10 Frequenzbänder pro Kanal um jeweils ±10 dB anpassen kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. Die Kombination aus Stereoanlage und Equalizer wird sowohl im Versuchsaufbau als auch im späteren Gebrauch verwendet. 
 
+\clearpage
 
 \section{Konzeptentwicklung}
 
@@ -134,14 +141,14 @@ B_{graph} \approx 12,8 N·mm^2
 
 B_{line} \approx 156,8 N·mm^2
 
-Es ist zu erkennen, dass die ausgerechnete ungefähre Biegesteifigkeit der Sandwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vor allem daran, dass die KAPA Line Platte dreimal so stark ist wie die KAPA Graph. Unter Berücksichtigung der Biegesteifigkeit und den zugehörigen Flächenmasse, welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML-Paneel an als aus KAPA Graph. Das liegt daran, dass KAPA Line im Vergleich eine mehr als zehn mal so große Biegesteifigkeit aufweist bei einem Flächengewicht, welches gerade einmal 1,45 mal so groß ist.
+Es ist zu erkennen, dass die ausgerechnete Biegesteifigkeit der Sandwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vor allem an der dreimal höheren Plattenstärke der KAPA Line Platte im gegensatz zu der KAPA Graph Platte. Unter Berücksichtigung der Biegesteifigkeit und den zugehörigen Flächenmasse, welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML-Paneel an als aus KAPA Graph. Diese annahme ist alleinig auf die Materialparameter im vergleich zurückzuführen, da KAPA Line im Vergleich eine mehr als zehn mal so große Biegesteifigkeit aufweist bei einem Flächengewicht, welches gerade einmal 1,45 mal so groß ist wie KAPA Graph.
 
-Nach Auswahl eines Paneelmaterials ist ein weiterer wichtiger Parameter die Abmaße der Paneelgröße. Die Größe des Paneels ist ausschlaggebend für die angeregten Moden und daraus entstehenden Frequenzen. Da das Panel in dieser Arbeit als Fullrange-System verwendet wird, muss die Größe so gewählt werden, dass sowohl im Tiefton als auch im Mitten- und Hochtonbereich eine gute Wiedergabe gegeben ist. Zudem soll die Panelfront als Informations- und Werbefläche verwendet werden. Dafür werden Plakate in DIN-Größe mit einem Seitenverhältnis von 1:1,414 auf die Vorderseite der Paneele geklebt, darum ist von einer quadratischen Auslegung abzusehen. Aus diesen Gründen wird die Plattengröße anhand eines Seitenverhältnisses 1:1,618, in der Mathematik bekannt als Goldener Schnitt $\varphi$, verwendet. 
+Nach der bestimmung des Plattenmaterials müssen nun die Abmaße der Platte bestimmt werden. Die Größe des Paneels ist ausschlaggebend für die angeregten Moden und daraus entstehenden Frequenzen. Da das Panel in dieser Arbeit als Fullrange-System verwendet wird, muss die Größe so gewählt werden, dass sowohl im Tiefton als auch im Mitten- und Hochtonbereich eine gute Wiedergabe gegeben ist. Zudem soll die Panelfront als Informations- und Werbefläche verwendet werden. Dafür werden Plakate in DIN-Größe, welche ein Seitenverhältnis von 1:1,414 haben, auf die Vorderseite der Platte geklebt. Aufgrund dessen ist von einer Quadratischen Auslegung abzusehen. Aus diesen Gründen wird die Plattengröße anhand eines Seitenverhältnisses 1:1,618, in der Mathematik bekannt als Goldener Schnitt $\varphi$, verwendet. 
 
-Der Goldene Schnitt wird vor allem in der DML-DIY-Community empfohlen und ist für gute akustische Eigenschaften so bekannt, dass diese als eine Art Standardempfehlung verbreitet ist. Aus mathematischer Sicht betrachtet bietet sich der Goldene Schnitt als Seitenverhältnis an, da die Seitenlängen des DML einen erheblichen Einfluss auf die entstehenden Biegewellen und Frequenzen haben. Da bei einem Quadrat die Biegewellen sich oft überlappen und somit Resonanzspitzen entstehen, welche zu Lücken im Frequenzgang führen können, ist die mathematische Überlegung, die Seitenverhältnisse so irrational wie möglich zu gestalten, um die Modenüberlappung möglichst gering zu halten. Da $\varphi$ im mathematischen Sinne als irrationalste Zahl gilt, verspricht man sich daher eine gleichmäßige Modenverteilung. 
+Dieser Goldene Schnitt wird vor allem in der DML-DIY-Community empfohlen und ist für gute akustische Eigenschaften bekannt. Aus mathematischer Sicht betrachtet bietet sich der Goldene Schnitt als Seitenverhältnis an, da die Seitenlängen des DML einen erheblichen Einfluss auf die entstehenden Biegewellen und Frequenzen haben. Da bei einem Quadrat die Biegewellen sich oft überlappen und somit Resonanzspitzen entstehen, welche zu Lücken im Frequenzgang führen können, ist die mathematische Überlegung, die Seitenverhältnisse so irrational wie möglich zu gestalten, um die Modenüberlappung möglichst gering zu halten. Da $\varphi$ im mathematischen Sinne als irrationalste Zahl gilt, verspricht man sich daher eine gleichmäßige Modenverteilung. 
 
 
-Dementsprechend wird die Plattengröße anhand des Seitenlängenverhältnisses sowie der Grundfrequenz bestimmt. Die Grundfrequenz kann dabei mit folgender Formel näherungsweise bestimmt werden: 
+Dementsprechend wird die Plattengröße anhand des Seitenlängenverhältnisses 1:1,618 sowie der Grundfrequenz bestimmt. Die Grundfrequenz kann dabei mit folgender Formel für Rechteckige Platten näherungsweise bestimmt werden: 
 
 \begin{equation}
 f_0 \approx \frac{\pi}{A}\sqrt{\frac{B}{m''}}
@@ -169,13 +176,37 @@ b = r \cdot a
 
 Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folgenden Graphen:
 
-\textbf{Folgt noch...}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newpage
 
 \subsection{Plattenlagerung}
 
-Bei der Aufhängung oder Lagerung von DML-Lautsprechern gibt es verschiedene Möglichkeiten, wobei jede ihre Vor- und Nachteile bezüglich Komplexität und akustischer Auswirkung hat. Als Lagerungsmöglichkeit sind die folgenden sechs jene, welche am häufigsten beim DML verwendet werden.
+Bei der Lagerung oder Aufhängung von DML-Lautsprechern gibt es verschiedene Möglichkeiten, wobei jede ihre Vor- und Nachteile bezüglich Komplexität und akustischer Auswirkung hat. Als Lagerungsmöglichkeit sind die folgenden sechs jene, welche am häufigsten beim DML verwendet werden.
 
 \begin{itemize}
     \item Frei schwebend
@@ -257,9 +288,6 @@ In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpos
 
 
 \clearpage
-
-
-
 
 \section{Simulation in COMSOL Multiphysics}
 
