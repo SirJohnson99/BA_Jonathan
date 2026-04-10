@@ -174,33 +174,65 @@ b = r \cdot a
     \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
 \end{itemize}
 
-Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folgenden Graphen:
+Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[font=\sffamily]
+    \begin{axis}[
+        width=12cm, height=8cm,
+        xlabel={Grundfrequenz $f_0$~[Hz]~%
+            \tikz[baseline=-0.5ex]{\draw[->, line width=0.8pt, >=latex] (0,0)--(0.10,0);}
+        },
+        ylabel={Seitenlänge $a$~[m]~%
+            \tikz[baseline=-0.5ex]{\draw[<-, line width=0.8pt, >=latex] (0.10,0)--(0,0);}
+        },
+        grid=major,
+        grid style={solid, gray!50},
+        tick style={black},
+        axis line style=thick,
+        tick style=thick,
+        xmin=20, xmax=150,
+        ymin=0, ymax=0.22,
+        xtick={20,40,60,80,100,120,140},
+        ytick={0,0.05,0.10,0.15,0.20},
+        legend style={
+            draw=none,
+            at={(0.97,0.97)},
+            anchor=north east,
+            font=\small
+        },
+        xlabel near ticks,
+        ylabel near ticks,
+    ]
 
+    % KAPA Line
+    \addplot[color=blue, very thick] coordinates {
+        (20,0.1954)(25,0.1748)(30,0.1595)(35,0.1477)(40,0.1382)
+        (45,0.1303)(50,0.1236)(55,0.1178)(60,0.1128)(65,0.1084)
+        (70,0.1044)(75,0.1009)(80,0.0977)(85,0.0948)(90,0.0921)
+        (95,0.0896)(100,0.0874)(105,0.0853)(110,0.0833)(115,0.0815)
+        (120,0.0798)(125,0.0782)(130,0.0766)(135,0.0752)(140,0.0738)
+        (145,0.0726)(150,0.0713)
+    };
 
+    % KAPA Graph
+    \addplot[color=red, very thick, dashed] coordinates {
+        (20,0.1146)(25,0.1025)(30,0.0936)(35,0.0866)(40,0.0810)
+        (45,0.0764)(50,0.0725)(55,0.0691)(60,0.0662)(65,0.0636)
+        (70,0.0613)(75,0.0592)(80,0.0573)(85,0.0556)(90,0.0540)
+        (95,0.0526)(100,0.0513)(105,0.0500)(110,0.0489)(115,0.0478)
+        (120,0.0468)(125,0.0458)(130,0.0450)(135,0.0441)(140,0.0433)
+        (145,0.0426)(150,0.0418)
+    };
 
+    \legend{KAPA Line, KAPA Graph}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Kurze Seitenlänge $a$ in Abhängigkeit der Grundfrequenz $f_0$ für KAPA Line und KAPA Graph}
+    \label{fig:seitenlaenge_frequenz}
+\end{figure}
 
 \newpage
 
