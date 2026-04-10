@@ -1,6 +1,6 @@
 \chapter{Lösung der Aufgabenstellung}
 
-In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten, also der Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer, einzeln beschrieben, da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
+In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten welche den Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer umfasst einzeln beschrieben. Da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
 Auf dem Konzept aufbauend wird eine Simulation aufgesetzt, welche zur Bestimmung der idealen Anregerposition für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten Ergebnisse werden diese Positionen im realen Versuchsaufbau vermessen. Die Ergebnisse werden anschließend validiert und verglichen.
 
 
@@ -61,14 +61,22 @@ Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie d
 Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Das Bild \ref{fig:Exciter} zeigt die Vorder- und Rückseite des Exciters, an der Rückseite des Exciters ist die Kontaktfläche welche mit einem doppelseitigen Klebeband von 3M versehen ist. Das Modell ist der Typ DAEX32EP-4, welcher mit einer Leistung von 40 W RMS bei einer Impedanz von 4 $\Omega$ zu den leistungsstärkeren Modellen seiner Klasse zählt \cite{DaytonAudio2024}. Dieser Exciter wird mithilfe einer Klebefläche, welche einen Innendurchmesser von 21,75 mm und einen Außendurchmesser von 41,75 mm hat, an das vorgesehene Panel geklebt. Damit wird eine schlüssige Kraftübertragung von Exciter auf Panel gewährleistet. Der Frequenzverlauf des Exciters wurde vom Hersteller vermessen, dabei wurde eine ungefähr 30 cm x 30 cm und 1,3 cm starke Sandwichplatte mit Schaumkern mit einem außermittig platziertem Exciter in einem Freifeldraum angeregt. Der SPL-Verlauf über der Frequenz ist dabei relativ linear im Bereich 70-5000 Hz bei einem Druck von ca. 83 dB, ab 5000-20.000 Hz fällt der SPL auf ca. 68 dB ab.
 Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten sind dem Datenblatt in Anhang A zu entnehmen.
 
+\clearpage
 
-\subsection{Panel Material}
+\subsection{Platten Material}
 
-Bild vom Querschnitt der Platten LINE \& GRAPH
+ Als DML Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial. 
+ Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum kurz PUR. 
+ Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen Ph-neutralem Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und  sich mit einem Cuttermesser gut bearbeiten lässt.
 
-Als Panelmaterial wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial.
-Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Trägerplatte aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können.
-Bei der KAPA Graph Platte besteht die Trägerschicht aus einem hochwertigen Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und beim Schneiden mit einem Cuttermesser nicht bröselt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pictures/KAPA_Vergleich.png}
+	\caption{Vergleich KAPA Graph & KAPA Line}
+	\label{fig:KAPA_Vergleich}
+\end{figure}
+
+In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten graphisch dargestellt. Gut zu erkennen ist der Stärken unterschied welcher mittels Schublehre gut ablesbar gezeigt wird sowie den Sandwich-Kern welcher bei beiden platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht welche bei Beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
 Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
@@ -84,10 +92,9 @@ Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus r
 \end{figure}
 
 
-Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Die zugehörigen technischen Kenndaten sind dem Datenblatt in Anhang B zu entnehmen. 
+Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient. Dabei stellt sie eine ausreichende elektrische Leistung für unterschiedliche Lautsprecherimpedanzen im Bereich von 4 $\Omega$ bis 16 $\Omega$ bereit. Die Endstufe arbeitet im Stereobetrieb und zeichnet sich durch einen breiten Frequenzgang sowie einen geringen Klirrfaktor aus, wodurch eine weitgehend verfälschungsfreie Signalverstärkung gewährleistet wird. Die zugehörigen technischen Kenndaten sind dem Datenblatt im Anhang B zu entnehmen. 
 Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro desselben Herstellers betrieben werden. Der WVQ-600 Pro kann das Eingangssignal verstärken und verfügt über einen integrierten grafischen Equalizer, welcher 10 Frequenzbänder pro Kanal um jeweils ±10 dB anpassen kann. Dadurch lässt sich der Klang gezielt an die akustischen Eigenschaften des DML-Systems anpassen. Die Kombination aus Stereoanlage und Equalizer wird sowohl im Versuchsaufbau als auch im späteren Gebrauch verwendet. 
 
-\clearpage
 
 \section{Konzeptentwicklung}
 
@@ -166,7 +173,7 @@ Daraus ergibt sich die Kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folg
 
 \newpage
 
-\subsection{Paneel Lagerung}
+\subsection{Platten Lagerung}
 
 Bei der Aufhängung oder Lagerung von DML-Lautsprechern gibt es verschiedene Möglichkeiten, wobei jede ihre Vor- und Nachteile bezüglich Komplexität und akustischer Auswirkung hat. Als Lagerungsmöglichkeit sind die folgenden sechs jene, welche am häufigsten beim DML verwendet werden.
 
@@ -235,12 +242,17 @@ Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anreg
 
 %Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen ist bei den 2-Wege-Systemen möglich, weshalb diese mit der vollen Punktzahl bewertet werden. Bei Fullrange-Systemen ist eine Subwoofer-Erweiterung möglich, dennoch nicht vorgesehen, weshalb die Bewertung hier schlechter ausfällt. 
 
-
+\clearpage
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
+Unter berücksichtigung der verschiedenen Parameter welche in der Konzepentwicklung Betrachtet wurden, bei denen es sich um die verwendung einer Frequenzweiche bei DML systemen, der Matreial Kofiguration der angeregten Platten, die Lagerung der Platten und der Allgemeinen systemauslegung welche das zusammenspiel der einzelenen Elektrischen Bauteile handelt. Konnte gezeigt werden, welches konzept sich am besten für diesen DML aufbau eignet.
 
-Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet einen Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Verlauf möglich, um die Defizite im Tieftonbereich auszugleichen. 
+In dieser Arbeit wurde sich für ein DML Fullrangesystem ohne Frequenzweichen entschieden welches das Gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen welche ein Seitenverhältnis von 1:1,6 haben und Freihängend von der decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern Pro Platte entschieden welche mit dem WVQ- 600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
+
+In der Folgenden Simulation in COMSOL Multiphysiks werden die Idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im Realen Fersuchsaufbau vermessen und Diskutiert. Im Realen Aufbau werden noch Weitere Platten mit Verschiedenen Größen und Exciter Positionen Vermessen, dies dient der genauen analyse des Konzepts dieser Arbeit.
+
+%Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet einen Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Verlauf möglich, um die Defizite im Tieftonbereich auszugleichen. 
 
 
 
@@ -251,35 +263,37 @@ Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mi
 
 \section{Simulation in COMSOL Multiphysics}
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf dem Panel sowie eine Entscheidung über die gegebenen Materialien und deren geometrische Dimensionen zu ermöglichen. Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in Abschnitt 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen für die Ideale Exciter Position zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf der Platte anhand einer Modalanalyse zu bestimmen. 
+Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in Abschnitt 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
 
 
 
-\subsection{Comsol}
+\subsection{Comsol Multiphysiks}
 
-Das Programm COMSOL Multiphysics ist eine universell einsetzbare Simulationssoftware für alle Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Multiphysik- und Einzelphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere Module. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert. 
-Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek verwendet oder selbstständig eingetragen werden können, der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physiken hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Dies ist in diesem Fall die Verbindung der Festkörpermechanik der Platte mit der Druckakustik im Raum. Wenn das Modell aufgebaut, Material und Physik zugewiesen ist, wird ein Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
+Das Programm COMSOL Multiphysiks der Firmal COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die \textbf{strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert}. 
+Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
+
 Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung im Frequenzbereich gelöst. Das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hookesche Gesetz beschreibt. 
-In Abbildung \ref{fig:comsol_modellaufbau} wird das Programm mit dem in dieser Arbeit verwendeten Modellaufbau dargestellt.
 
 
-\subsection{Modell-Aufbau}
 
-\subsection{Vorbereitung der Simulation}
 
-\subsection{Durchgeführte Simulationsstudien}
+\subsection{Modell-Aufbau und Simulationen}
 
-\subsection{Simulations-Ergebnisse}
+
+
+\subsection{Durchgeführte Simulationsstudien und Ergebnisse}
+
 
 \clearpage
 
 \section{Realer Versuchsaufbau}
 
-In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. Dabei orientiert sich die Versuchsanordnung am normgerechten Aufbau gemäß DIN, wie er in Abschnitt 3.2 dargestellt ist. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
+In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. \textbf{Dabei orientiert sich die Versuchsanordnung am normgerechten Aufbau gemäß DIN, wie er in Abschnitt 3.2 dargestellt ist}. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
 
-Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Damit charakterisiert die Übertragungsfunktion das Übertragungsverhalten des Lautsprechers als elektromechanisch-akustischen Wandler und bildet die Grundlage für die Entwicklung sowie die Vergleichbarkeit verschiedener Lautsprechersysteme.
+Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels übertragungsfunktion welche in Kapitel 2.3 erklärt wurde wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
 
-In der theoretischen Betrachtung wird ein Lautsprecher im linearen Arbeitsbereich als lineares, zeitinvariantes System (LTI-System) modelliert. Ein solches System wird vollständig durch seine Impulsantwort beschrieben, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion bestimmen lässt. Der Betrag dieser Übertragungsfunktion entspricht dem Amplitudenfrequenzgang und gibt an, wie stark einzelne Frequenzen verstärkt oder abgeschwächt werden.
+In der theoretischen Betrachtung wird ein Lautsprecher im linearen Arbeitsbereich als lineares, zeitinvariantes System, LTI-System modelliert. Ein solches System wird vollständig durch seine Impulsantwort beschrieben, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion bestimmen lässt. Der Betrag dieser Übertragungsfunktion entspricht dem Amplitudenfrequenzgang und gibt an, wie stark einzelne Frequenzen verstärkt oder abgeschwächt werden.
 
 Der frequenzabhängige Schalldruckpegel liefert zusätzlich Informationen über die Abstrahleigenschaften des DML-Lautsprechers. Er beschreibt, mit welcher Intensität der Lautsprecher Schall in Abhängigkeit von der Frequenz abstrahlt, und ermöglicht somit eine Bewertung der akustischen Leistungsfähigkeit über den gesamten betrachteten Frequenzbereich.
 
@@ -311,7 +325,7 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 \end{figure}
 
 Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
-Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird mit einem Step-Down Converter runter geregelt und auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
 Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
@@ -330,9 +344,9 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \end{enumerate}
 
 
+In Abbildung ist das Blockschaltbild vor der Whileschleife zu erkennen. Vor der whileschleife werden die Parameter auf welche das Programm zugreift mittels Bedienelement erstellt. Dazu zählen die Input und Output Kanäle des DAQ und die Mikrofonempfindlichkeit des Verwendeten Mikrofons. Zusätzlich lassen sich die Abtastparameter Bestimmen, diese bestimmen die Blockgröße und anzahl der Mittelungen.
+
  
-
-
 \subsection{Signalverarbeitung des Messaufbaus}
 
 Zur akustischen Charakterisierung des DML-Lautsprechers wird in LabVIEW ein breitbandiges Anregungssignal in Form von weißem Rauschen erzeugt und über den analogen Ausgang des DAQ-Systems an den Verstärker ausgegeben. Der Verstärker speist einerseits den Exciter, welcher die DML-Platte mechanisch anregt, und andererseits über einen vorgeschalteten Step-Down-Wandler ein elektrisches Referenzsignal zurück in den analogen Eingang des DAQ-Systems. Parallel dazu wird das von der angeregten Platte abgestrahlte Schallfeld durch ein Messmikrofon aufgenommen und ebenfalls als Eingangssignal im DAQ erfasst. Damit stehen für die weitere Auswertung sowohl ein elektrisches Referenzsignal als auch die akustische Systemantwort zur Verfügung.
@@ -458,14 +472,16 @@ wobei $\gamma^2[k]$ die Kohärenzfunktion (Wertebereich 0 bis 1), $G_{xy}[k]$ da
 Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird. Werte deutlich unter 1 deuten auf nichtlineare Effekte, Störgeräusche oder eine unzureichende Anregung bei der betreffenden Frequenz hin.
 
 
-\subsection{Messergebnisse und Auswertung (Messunsicherheit)}
+\subsection{Messergebnisse und Auswertung}
 
 Messergebnisse auswerten und mögliche Fehlerquellen identifizieren und analysieren. 
+
 
 \section{Validierung und Vergleich der Ergebnisse}
 
 Vergleich der Simulations- und Versuchsaufbau-Ergebnisse, Validierung der Ergebnisse und mögliche Abweichungen erklären.
 
-%\subsection{Vergleich Simulation und Versuch}
+
+
 
 
