@@ -63,11 +63,11 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 
 \clearpage
 
-\subsection{Platten Material}
+\subsection{Plattenmaterial}
 
  Als DML Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial. 
- Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum kurz PUR. 
- Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen Ph-neutralem Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und  sich mit einem Cuttermesser gut bearbeiten lässt.
+ Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum (kurz PUR). 
+ Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Großzahl von Klebern und Lösungsmitteln beständig ist und  sich mit einem Cuttermesser gut bearbeiten lässt.
 
 \begin{figure}[H]
 	\centering
@@ -76,7 +76,7 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 	\label{fig:KAPA_Vergleich}
 \end{figure}
 
-In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten graphisch dargestellt. Gut zu erkennen ist der Stärken unterschied welcher mittels Schublehre gut ablesbar gezeigt wird sowie den Sandwich-Kern welcher bei beiden platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht welche bei Beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
+In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten graphisch dargestellt. Gut zu erkennen ist der Stärkenunterschied, welcher mittels Schublehre gut ablesbar gezeigt wird, sowie der Sandwich-Kern, welcher bei beiden Platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht, welche bei beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
 Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
@@ -115,7 +115,7 @@ Diese werden in den folgenden Unterkapiteln erläutert und bestimmt.
 
 \subsection{Frequenzweichenkonfiguration}
 
-Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von Frequenzweichen und dem Bau eines Zwei- oder Drei-Wege-Systems, welches mehr Paneele oder eine mögliche Subwoofereinbindung im System in Betracht zieht. Dabei kann zwischen einer passiven Frequenzweichen welche aus Spulen, Kondensatoren und Widerständen besteht und einer digitalen Signalprozessoren kurz DSP Weiche unterschieden werden.
+Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von Frequenzweichen und dem Bau eines Zwei- oder Drei-Wege-Systems, welches mehr Paneele oder eine mögliche Subwoofereinbindung im System in Betracht zieht. Dabei kann zwischen einer passiven Frequenzweiche, welche aus Spulen, Kondensatoren und Widerständen besteht, und einer digitalen Signalprozessor-Weiche (kurz DSP-Weiche) unterschieden werden.
 Während passive Weichen das Signal nach dem Verstärker in die verschiedenen Frequenzbereiche trennt, ermöglicht ein DSP die digitale Signalverarbeitung in Echtzeit. Ein DSP kann neben der Frequenztrennung auch als Equalizer verwendet werden, was insbesondere bei DML-Systemen von Vorteil sein kann. 
 Es ist zu beachten, dass im Übergangsbereich der Frequenzweichen komplexe Interferenzmuster entstehen können, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}.
 
@@ -126,15 +126,15 @@ Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hocht
 Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines DML-Flachlautsprechers dar. In diesem Fall deckt das Panel den gesamten hörbaren Frequenzbereich ab, wobei das elektrische Audiosignal ungefiltert dem Lautsprecher zugeführt wird. Dadurch entfallen phasenbedingte Verzerrungen, wie sie durch Frequenzweichen entstehen können \cite{Moeser2005}. Anhand der Einfachheit dieses Aufbaus, welche zugleich eine unverzerrte Wiedergabe über die Lautsprecher verspricht, wird dieser Aufbau favorisiert. 
 
 
-\subsection{Material Konfiguration}
+\subsection{Materialkonfiguration}
 
-Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften, als auch die Größe der Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten nicht angegeben, siehe Anhang C und D. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt entnommen. Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber die selbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
+Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften, als auch die Größe der Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten nicht angegeben, siehe Anhang C und D. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt entnommen. Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber dieselbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
 
 B_{graph} \approx 12,8 N·mm^2
 
 B_{line} \approx 156,8 N·mm^2
 
-Es ist zu erkennen, dass die ausgerechnete ungefähre Biegesteifigkeit der Sandwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vor allem daran, dass die KAPA Line Platte drei mal so stark ist wie die KAPA Graph. Unter Berücksichtigung der Biegesteifigkeit und den zugehörigen Flächenmasse, welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML-Paneel an als aus KAPA Graph. Das liegt daran, dass KAPA Line im Vergleich eine mehr als zehn mal so große Biegesteifigkeit aufweist bei einem Flächengewicht, welches gerade einmal 1,45 mal so groß ist.
+Es ist zu erkennen, dass die ausgerechnete ungefähre Biegesteifigkeit der Sandwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vor allem daran, dass die KAPA Line Platte dreimal so stark ist wie die KAPA Graph. Unter Berücksichtigung der Biegesteifigkeit und den zugehörigen Flächenmasse, welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML-Paneel an als aus KAPA Graph. Das liegt daran, dass KAPA Line im Vergleich eine mehr als zehn mal so große Biegesteifigkeit aufweist bei einem Flächengewicht, welches gerade einmal 1,45 mal so groß ist.
 
 Nach Auswahl eines Paneelmaterials ist ein weiterer wichtiger Parameter die Abmaße der Paneelgröße. Die Größe des Paneels ist ausschlaggebend für die angeregten Moden und daraus entstehenden Frequenzen. Da das Panel in dieser Arbeit als Fullrange-System verwendet wird, muss die Größe so gewählt werden, dass sowohl im Tiefton als auch im Mitten- und Hochtonbereich eine gute Wiedergabe gegeben ist. Zudem soll die Panelfront als Informations- und Werbefläche verwendet werden. Dafür werden Plakate in DIN-Größe mit einem Seitenverhältnis von 1:1,414 auf die Vorderseite der Paneele geklebt, darum ist von einer quadratischen Auslegung abzusehen. Aus diesen Gründen wird die Plattengröße anhand eines Seitenverhältnisses 1:1,618, in der Mathematik bekannt als Goldener Schnitt $\varphi$, verwendet. 
 
@@ -167,26 +167,26 @@ b = r \cdot a
     \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
 \end{itemize}
 
-Daraus ergibt sich die Kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folgenden Graphen:
+Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt im folgenden Graphen:
 
 \textbf{Folgt noch...}
 
 \newpage
 
-\subsection{Platten Lagerung}
+\subsection{Plattenlagerung}
 
 Bei der Aufhängung oder Lagerung von DML-Lautsprechern gibt es verschiedene Möglichkeiten, wobei jede ihre Vor- und Nachteile bezüglich Komplexität und akustischer Auswirkung hat. Als Lagerungsmöglichkeit sind die folgenden sechs jene, welche am häufigsten beim DML verwendet werden.
 
 \begin{itemize}
-    \item Frei Schwebend
-    \item Gelenkig Gelagert
-    \item Fest Eingespannt
+    \item Frei schwebend
+    \item Gelenkig gelagert
+    \item Fest eingespannt
     \item Elastische Aufhängung
     \item Punktuelle Auflage
-    \item Randdämpfung 
+    \item Randdämpfung
 \end{itemize}
 
-Im Rahmen dieser Arbeit werden lediglich zwei mögliche der sechs aufgezählten Lagerungsmöglichkeiten genauer betrachtet und diskutiert. Dabei handelt es sich um die frei schwebende Aufhängung, bei der der DML an zwei Ecken mittels Fäden an der Decke aufgehangen wird. Diese Lagerung hat den Vorteil darin, dass wenig äußere Dämpfung den DML beeinflusst und durch die frei schwebende Platte eine gleichmäßigste Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte verursacht werden. Zudem ist durch die minimale Dissipation der Aufhängung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die relativ niedrige Abstrahleffizienz und das mögliche Pendeln der Paneele.
+Im Rahmen dieser Arbeit werden lediglich zwei mögliche der sechs aufgezählten Lagerungsmöglichkeiten genauer betrachtet und diskutiert. Dabei handelt es sich um die frei schwebende Aufhängung, bei der der DML an zwei Ecken mittels Fäden an der Decke aufgehangen wird. Diese Lagerung hat den Vorteil, dass wenig äußere Dämpfung den DML beeinflusst und durch die frei schwebende Platte eine gleichmäßigste Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte verursacht werden. Zudem ist durch die minimale Dissipation der Aufhängung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die relativ niedrige Abstrahleffizienz und das mögliche Pendeln der Paneele.
 
 Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem Rahmen, welcher an der Wand befestigt ist, eingespannt ist. Die Vorteile dieser Lagerung sind eine hohe Abstrahleffizienz der Platte. Dem entgegen spricht die Unterdrückung der Randmoden, was eine gleichmäßige Modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte Konstruktionsaufwand des Rahmens und der Wandbefestigung gegen eine fest eingespannte Lagerung. 
 
@@ -246,11 +246,11 @@ Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anreg
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
-Unter berücksichtigung der verschiedenen Parameter welche in der Konzepentwicklung Betrachtet wurden, bei denen es sich um die verwendung einer Frequenzweiche bei DML systemen, der Matreial Kofiguration der angeregten Platten, die Lagerung der Platten und der Allgemeinen systemauslegung welche das zusammenspiel der einzelenen Elektrischen Bauteile handelt. Konnte gezeigt werden, welches konzept sich am besten für diesen DML aufbau eignet.
+Unter Berücksichtigung der verschiedenen Parameter, welche in der Konzeptentwicklung betrachtet wurden, bei denen es sich um die Verwendung einer Frequenzweiche bei DML-Systemen, der Materialkonfiguration der angeregten Platten, die Lagerung der Platten und der allgemeinen Systemauslegung, welche das Zusammenspiel der einzelnen elektrischen Bauteile behandelt, handelt, konnte gezeigt werden, welches Konzept sich am besten für diesen DML-Aufbau eignet.
 
-In dieser Arbeit wurde sich für ein DML Fullrangesystem ohne Frequenzweichen entschieden welches das Gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen welche ein Seitenverhältnis von 1:1,6 haben und Freihängend von der decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern Pro Platte entschieden welche mit dem WVQ- 600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
+In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,6 haben und freihängend von der Decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
 
-In der Folgenden Simulation in COMSOL Multiphysiks werden die Idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im Realen Fersuchsaufbau vermessen und Diskutiert. Im Realen Aufbau werden noch Weitere Platten mit Verschiedenen Größen und Exciter Positionen Vermessen, dies dient der genauen analyse des Konzepts dieser Arbeit.
+In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im realen Versuchsaufbau vermessen und diskutiert. Im realen Aufbau werden noch weitere Platten mit verschiedenen Größen und Exciter-Positionen vermessen, dies dient der genauen Analyse des Konzepts dieser Arbeit.
 
 %Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet einen Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Verlauf möglich, um die Defizite im Tieftonbereich auszugleichen. 
 
@@ -263,14 +263,14 @@ In der Folgenden Simulation in COMSOL Multiphysiks werden die Idealen Exciterpos
 
 \section{Simulation in COMSOL Multiphysics}
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen für die Ideale Exciter Position zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf der Platte anhand einer Modalanalyse zu bestimmen. 
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen für die ideale Exciter-Position zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf der Platte anhand einer Modalanalyse zu bestimmen. 
 Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in Abschnitt 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
 
 
 
-\subsection{Comsol Multiphysiks}
+\subsection{COMSOL Multiphysics}
 
-Das Programm COMSOL Multiphysiks der Firmal COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die \textbf{strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert}. 
+Das Programm COMSOL Multiphysics der Firma COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die \textbf{strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert}. 
 Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
 
 Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung im Frequenzbereich gelöst. Das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hookesche Gesetz beschreibt. 
@@ -291,7 +291,7 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. \textbf{Dabei orientiert sich die Versuchsanordnung am normgerechten Aufbau gemäß DIN, wie er in Abschnitt 3.2 dargestellt ist}. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
 
-Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels übertragungsfunktion welche in Kapitel 2.3 erklärt wurde wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
+Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels Übertragungsfunktion, welche in Kapitel 2.3 erklärt wurde, wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
 
 In der theoretischen Betrachtung wird ein Lautsprecher im linearen Arbeitsbereich als lineares, zeitinvariantes System, LTI-System modelliert. Ein solches System wird vollständig durch seine Impulsantwort beschrieben, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion bestimmen lässt. Der Betrag dieser Übertragungsfunktion entspricht dem Amplitudenfrequenzgang und gibt an, wie stark einzelne Frequenzen verstärkt oder abgeschwächt werden.
 
@@ -307,9 +307,9 @@ Um einen DML-Lautsprecher einzumessen und dessen akustische Eigenschaften zu beu
 \begin{itemize}
     \item Erzeugen und Abspielen eines Testsignals 
     \item Erfassen des Mikrofon- und Referenzsignals
-    \item Verarbeitung der Messwerte Bilden der Übertragungsfunktion
+    \item Verarbeitung der Messwerte und Bilden der Übertragungsfunktion
     \item Darstellen der Messwerte in einem Graphen
-    \item Speichern der Messwerte als Verarbeitbare Datei
+    \item Speichern der Messwerte als verarbeitbare Datei
 \end{itemize}
 
 LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen. Der Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
@@ -344,7 +344,7 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \end{enumerate}
 
 
-In Abbildung ist das Blockschaltbild vor der Whileschleife zu erkennen. Vor der whileschleife werden die Parameter auf welche das Programm zugreift mittels Bedienelement erstellt. Dazu zählen die Input und Output Kanäle des DAQ und die Mikrofonempfindlichkeit des Verwendeten Mikrofons. Zusätzlich lassen sich die Abtastparameter Bestimmen, diese bestimmen die Blockgröße und anzahl der Mittelungen.
+In Abbildung ist das Blockschaltbild vor der While-Schleife zu erkennen. Vor der While-Schleife werden die Parameter, auf welche das Programm zugreift, mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen.
 
  
 \subsection{Signalverarbeitung des Messaufbaus}
