@@ -296,8 +296,7 @@ Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher St
 
 \subsection{COMSOL Multiphysics}
 
-Das Programm COMSOL Multiphysics der Firma COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik- \& Akustik-Modul verwendet, welches die \textbf{strukturellen Eigenschaften der DML-Platte mit den akustischen Abstrahleigenschaften simuliert}. 
-Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
+Das Programm COMSOL Multiphysics der Firma COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik--Modul verwendet um die Modalen eigenschaften der PLatte zu untersuchen. Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
 
 Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung im Frequenzbereich gelöst. Das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hookesche Gesetz beschreibt. 
 
@@ -306,11 +305,27 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 \subsection{Modell-Aufbau und Simulationen}
 
+Bei der Simulation zur Entwicklung des DML wurde sich für eine Eigenfrequenz analyse der verwendeten Platten und gegen die Simulation eines Exciters als Federmasse system welches die Platte anregt und der Abgestrahlte schalldruck berechnet wird entschieden. Ausschlag gebend für diese entscheidung ist vorallem der Unterschied in der Komplexität der beiden Aufbauten da eine Eigenfrequenzanalys einfacher und Rechenleistungs ärmer ist.
+
+Bei der Eigenfrequenzanalyse  wurden zwei KAPA Line Platten mit den Größen 1 m x 0.7 m \& 0.7 m x 0.44 m auf deren Eigenfrequenzen untersucht. Dabei wurden die Größendaten und die Eigenschaften des Materials im Modelbuilder eingegeben. Die Platte wurde in der Simulation als eine Monolitische Platte angenommen und nicht als Sandwichbauweise. Für diesen aufbau wurde sich aufgrund von geringerer Komplexität des modells und fehlender Materialeigenschaften entschieden. Da im KAPA Line datenblatt Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzlnen Materialien, Deckschicht und Kern angegeben wurden. Anschließend wurde eine Eigenfrequnezstudie angelegt bei der die Platten angeregt werden von 0 Hz bis 400 Eigenmoden der Platten Berechnet wurden. Die anzahl der Eigenmoden wurde gewählt da diese für beide Platten die 1000Hz überschritten haben und die Moden dichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Die Platte ist dabei Frei gelagert da sich für eine Freihängende Lagerung im Konzeptentscheid entschieden wurde. 
+
+
+
+Hier bild des Simulations Modells einfügen 
+
+
+Die Abbildung zeigt den Modellaufbau der Platte, zu sehen ist die platte welche mit einem Netz wie es üböich bei FEM simulationen ist, bespannt ist. In der Studie ist die Gewünschte anzahl der eigenfrequenzen auf 400 eingestellt und die berechnung startet bei 0 Hz und endet wenn 400 Eigenmoden der Platte gefunden sind. 
 
 
 
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
+
+Die Berechneten eigenmoden der Platten weisen verschiedene Muster auf der Platte auf, diese zeigen die Bewegung der Platte bei der Eigenfrequenz an.  
+
+Bild der Eigenfrequenzen der Platte zeigen 
+
+
 
 
 
@@ -319,13 +334,13 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 \section{Realer Versuchsaufbau}
 
-In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. \textbf{Dabei orientiert sich die Versuchsanordnung am normgerechten Aufbau gemäß DIN, wie er in Abschnitt 3.2 dargestellt ist}. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
+In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
 
-Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels Übertragungsfunktion, welche in Kapitel 2.3 erklärt wurde, wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
+Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels Übertragungsfunktion, welche in Kapitel 2.3 beschrieben wurde, wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
 
-In der theoretischen Betrachtung wird ein Lautsprecher im linearen Arbeitsbereich als lineares, zeitinvariantes System, LTI-System modelliert. Ein solches System wird vollständig durch seine Impulsantwort beschrieben, aus der sich mittels Fourier-Transformation die komplexe Übertragungsfunktion bestimmen lässt. Der Betrag dieser Übertragungsfunktion entspricht dem Amplitudenfrequenzgang und gibt an, wie stark einzelne Frequenzen verstärkt oder abgeschwächt werden.
-
-Der frequenzabhängige Schalldruckpegel liefert zusätzlich Informationen über die Abstrahleigenschaften des DML-Lautsprechers. Er beschreibt, mit welcher Intensität der Lautsprecher Schall in Abhängigkeit von der Frequenz abstrahlt, und ermöglicht somit eine Bewertung der akustischen Leistungsfähigkeit über den gesamten betrachteten Frequenzbereich.
+Der Versuchsaufbau verfolgt dabei zwei Ziele, die Messung des Schalldruckpegels über der Frequenz, dafür wird  ein Messmikrofon einen Meter vor der Mitte der Platte aufgestellt, währen der Lautsprecher mit einem Weißen rauschen Angeregt wird.
+Das zweite ziel ist die erfassung des Abgestrahlten Schallfeldes, da DML Lautsprecher einen wesentlich größeren abstrahlwinkel als herkömmliche Lautsprecher haben. Für diesen aufbau wird das Messikrofon genau wie beim ersten versuch in einem abstand von 1m auf höhe der DML mitte positioniert, dann wird in 10 grad abständen an 36 Positionen eine Messung vorgenommen um die Abstrahlcharakteristik rund um den Lautsprecher zu messen.
+Jede Messung wird drei mal vorgenommen und anschließend werden die Messergebnisse gemittelt um mögliche Peaks oder Messunsicherheiten zu minimieren. 
 
 Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Mit dieser werden sowohl die Testsignale generiert als auch die aufgenommenen Messdaten erfasst und weiterverarbeitet, um die Übertragungsfunktion sowie den Schalldruckpegel frequenzabhängig auszuwerten.
 
@@ -505,6 +520,8 @@ Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Fr
 \subsection{Messergebnisse und Auswertung}
 
 Messergebnisse auswerten und mögliche Fehlerquellen identifizieren und analysieren. 
+
+
 
 
 \section{Validierung und Vergleich der Ergebnisse}
