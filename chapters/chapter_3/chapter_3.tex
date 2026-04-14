@@ -235,8 +235,7 @@ Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt in Abbi
 \end{figure}
 
 In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit hilfe der Berechneten Biegesteifigkeit der Sandwichplatten und den Formeln 3.1 bis 3.3 eine Grafig erstellt welche die Kurze seitenlänge über der Frequnez in einem Frequenzband von 20Hz bis 150Hz datstellt. zu erkennen ist das für eine grundfrequnez von 20Hz eine KAPA Line Platte mit der seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die Seitenlängen sind die Jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,61. 
-Dementsprechen ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig um eine Grundfrequenz von 20Hz gut wiedergeben zu können. 
-
+Dementsprechen ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig um eine Grundfrequenz von 20Hz gut wiedergeben zu können. Da die KAPA Platten in einer Größe von 1m x 0,7m gelifert werden wurde sich für fir größe der Platten mit den Seitenlängen 0,44 m x 0,7 m entschieden, da diese das Seitenverhältniss erfüllen und die anfertigung effektiv gestaltet. 
 
 
 \newpage
@@ -262,73 +261,28 @@ Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem R
 
 \subsection{Allgemeine Systemauslegung}
 
-Zusammenspiel Stereoanlage und auslegung der Exciter anzahl. 
+Mit der Allegmeinen Systemauslegung ist vorallem das Zusammenspiel der Elektrsichen Komponenten, also des Exciters und der Stereoanlage gemeint. Hierbei stellen sich zwei Fragen in den vordergrund, wie viele Exciter pro Platte verwendet werden und wie die verdrathung der Exciter am sinnvollsten ist?
+Da die Anzahl der Exciter sowhol auf die Gesamt Impedanz des systems als auch auf die Abstrahlleistung eionfluss hat \cite{Bai2001}.
 
+Die Verwendung einenes Einzelnen Exciters pro Platte ist die einfachste umsetzung. Die Impedanz des Systems entspricht der des Exciters von 4 $\Omega$ \cite{DaytonAudio2024}, was dem Anhang A zu entnehmen ist. Die Verwendete Stereoanlage kann Lautsprecher von 4-16 $\Omega$ versorgen, siehe Anhang B. Dennoch sollte berücksichtigt werden das die Exciter bei voller leistung auf dauer beschädigt werden können. Zudem kann die Platzierung des Exciters ungünstig für die Modenanregung sein. 
 
-\textbf{HIER FOLGT NOCH ! }
+Die verwendung von Zwei Excitern pro Platte mit Symetrische anordnung hat vor und nachteile. Ein vorteil der Symetrischen Positionierung ist die theoretische Verdoppelung des Schalldruckpegels bei kohärenter Anregung \cite{Moeser2005}. Des weiteren wird die Platte durch die Symetrsiche Anregung Gleichmäßíg belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Doch durch eine Symetrische Anregung können nicht alle Moden angeregt werden was zu starken Schwankungen im Frequnezband führen kann \cite{Pueo2009}. Da diese arbeit jedoch eine Gute Abstrahlung auf allen Frequenzen anstrebt ist eine Symetrische anordnung unvorteilhaft. 
 
+Bei einem zwei Exciter System mit Asymetrischer Positionierung können mehrere Eigenmoden der Platte anregen werden was zu einer Gelichmäßigen Abstrahlung im gesamten Frequnezband führt \cite{Zenker2019}. Daher bietet sich ein Zwei Exciter System mit Asymetrischer anordnung als vielversprechernd an.  
 
-Bei der allgemeinen Systemauslegung werden die einzelnen Komponenten betrachtet und deren Zusammenspiel so abgestimmt, dass ein technisch funktionstüchtiges und langlebiges System gegeben ist. 
-Langlebigkeit 8 OHM 2 Exciter in Reihe. Verwendung eines EQ um den Frequenzverlauf anzupassen. 
+Bei der Verkabelung des Systems gibt es die entsdheidung zwischen Reihen und Parallel schaltung. Bei der reichenschasltung der Exciter addiert sich die Impedanz was bei zwei Exitern zu einer verdoppelung der gesamtimpedanz fürht. Eine Verdoppelung der gesamtimpedanz auf 8 $\Omega$ kann die Langlebigkeit der Exciter erhöhen da diese Bei voller last weniger Thermischer belastung ausgelegt sind. 
+Bei einer prallel schaltung der Exciter verändert sich die gesamtimpedanz des Systems nicht, was bei Langer verwendung zu schäden durch hohe Thermsiche belastung fürhen kann. Zudem kann eine zu Geringe Impedanz zu schäden an der Seteoanlage führen.
 
-
-Ein weiterer wichtiger Aspekt der Systemarchitektur ist die Anzahl der verwendeten Exciter pro Panel, da die Anzahl der Exciter den erreichbaren Schalldruckpegel, die Modenanregung sowie die Impedanz des Gesamtsystems maßgeblich beeinflusst \cite{Bai2001}. Eine Multi-Exciter-Konfiguration kann theoretisch zu einem gleichmäßigeren Frequenzgang führen, da durch die Verwendung mehrerer Exciter auch mehrere Modenknotenpunkte und das Panel somit gleichmäßiger angeregt werden kann \cite{Bai2001}. 
-
-Ein Single-Exciter-System bietet die einfachste Implementierung und ermöglicht die fokussierte Untersuchung der Exciter-Positionierung ohne Interferenzen oder erhöhte Komplexität durch weitere Exciter. Die Impedanz des Systems entspricht der des Exciters von 4 $\Omega$ \cite{DaytonAudio2024}, was dem Anhang A zu entnehmen ist. Dies kann von der verwendeten Stereoanlage versorgt werden und bietet somit keine Probleme für eine Verwendung eines Single-Exciter-Systems. Zusätzlich ist dies die kosteneffizienteste Konfiguration eines DML-Systems und benötigt aufgrund des einfachen Aufbaus eine geringe Rechenzeit bei Simulationen, um eine ideale Position zu identifizieren.
-
-Das 2-Exciter-System mit symmetrischer Platzierung bietet verschiedene Vorteile, zum einen verdoppelt sich der theoretische Schalldruckpegel um +6 dB bei kohärenter Anregung \cite{Moeser2005}, was in der Praxis aufgrund inkohärenter Modenanregung auf +3 dB bis +5 dB reduziert wird \cite{Pueo2009}. Des Weiteren ist der Aufbau simpel, da sich dieser einfach abmessen und positionieren lässt, somit ist auch das Abstrahlverhalten des DML-Flachlautsprechers symmetrisch, was sich für die Verwendung eines Lautsprecherpaars im Stereobetrieb gut eignet \cite{Harris2000}. Das Panel wird durch die symmetrische Anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Den Vorteilen stehen jedoch ebenso viele Nachteile entgegen, so kann eine symmetrische Auslegung der Exciter zu blinden Flecken in der Anregung führen und einige Moden werden nicht angeregt und eine Schwankung im Frequenzgang kann entstehen \cite{Pueo2009}. Demnach ist die symmetrische Platzierung der Exciter auf dem Panel keine technisch geeignete Lösung, da Schwankungen im Frequenzgang nicht der DIN 45500 entsprechen \cite{DIN45500}.
-
-Bei einer asymmetrischen Positionierung bei einem 2-Exciter-System ist die Anregung verschiedener Moden besser als bei einer symmetrischen Anordnung der Exciter \cite{Zenker2019}. Diese gleichmäßigere Anregung der Moden führt zu einem statistisch glatteren Frequenzgang, was den Anforderungen der Zielsetzung entspricht. Des Weiteren bietet die serielle Schaltung von 2 Excitern die Anhebung der Gesamtimpedanz auf 8 Ohm, was für viele Verstärker optimal ist. Der verwendete Verstärker WPA 600 Pro ist gemäß Datenblatt für 4-16 Ohm geeignet. Dennoch kann die volle Leistungswiedergabe des Verstärkers bei einem 4 Ohm Exciter auf Dauer eine erhebliche thermische Belastung sowie einen Anstieg des Klirrfaktors hervorrufen \cite{Weinzierl2025}. Für einen langlebigen Langzeitbetrieb des Verstärkers und Exciters ist eine Impedanz von 8 Ohm vorzuziehen. Somit ist die asymmetrische Platzierung von 2 Excitern auf dem Panel eine technisch geeignete Lösung.
-
-
-
-%\subsection{Vergleichstabelle und Bewertung}
-
-%Für die systematische Bewertung der Lösungskonzepte wird eine gewichtete Nutzwertanalyse durchgeführt. Pahl et al. \cite{Pahl2013} beschreiben diese Methode als etabliertes Werkzeug der Konstruktionslehre zur objektiven Konzeptbewertung. Die Nutzwertanalyse ermöglicht die Quantifizierung qualitativer Kriterien durch Punktvergabe (0-10 Skala) und gewichtete Aggregation zu einer Gesamtbewertung, wodurch verschiedene Lösungsvarianten objektiv verglichen werden können.
-%Beschreibung der Bewertungsmethodik:
-%Die Bewertung erfolgt in drei Schritten: Zunächst werden relevante Bewertungskriterien identifiziert und deren relative Wichtigkeit durch Gewichtungsfaktoren (Summe = 100\%) festgelegt. Anschließend wird jede Systemvariante für jedes Kriterium mit 0-10 Punkten bewertet, wobei 0 die schlechteste und 10 die beste Ausprägung darstellt. Die gewichtete Gesamtpunktzahl ergibt sich aus der Summe der Einzelbewertungen multipliziert mit den jeweiligen Gewichtungsfaktoren \cite{Pahl2013}.
-
-
-%Die Gewichtung der Kriterien orientiert sich an den Anforderungen aus der Aufgabenstellung sowie den spezifischen Rahmenbedingungen dieser Arbeit: Lehrzweck, Wirtschaftlichkeit, verfügbare Hardware. Tabelle 3.2 zeigt die sechs definierten Bewertungskriterien mit ihrer Gewichtung und wissenschaftlicher Begründung.
-
-%Erläuterung der Gewichtungsentscheidungen:
-
-%Die Vokalbereich-Integrität erhält mit 25\% die höchste Gewichtung, da die Sprachverständlichkeit als primäres Qualitätskriterium für Lautsprechersysteme gilt \cite{Fastl2007}. Der fundamentale Vorteil von DML-Systemen liegt in der kohärenten Schallabstrahlung über einen breiten Frequenzbereich ohne phasendrehende Frequenzweichen \cite{Harris2000}. Ein Crossover im Vokalbereich würde diesen Vorteil kompromittieren.
-
-%Die Verstärker-Kompatibilität wird mit 20\% gewichtet, da die thermische Langlebigkeit der Hardware insbesondere für den geplanten Lehreinsatz an der Ostfalia mit häufigem Betrieb essentiell ist. \cite{Weinzierl2025} dokumentieren, dass pro 10°C Temperaturerhöhung die Lebensdauer von Halbleitern um Faktor 2 sinkt. Bei 4Ω-Last verdoppelt sich die thermische Belastung gegenüber 8Ω, was die Lebensdauer halbiert.
-
-%Die technische Komplexität wird ebenfalls mit 20\% gewichtet. \cite{Pahl2013} empfehlen die schrittweise Komplexitätssteigerung in der Produktentwicklung. Für diese Arbeit mit einem Zeitrahmen von 6 Wochen ist die Realisierbarkeit ein limitierender Faktor. Zudem soll das System für Studierende nachbaubar sein, was eine angemessene Komplexität erfordert.
-
-%Die Kosten erhalten 15\% Gewichtung. Das Budget-Limit von 100€ orientiert sich an der Nachbaubarkeit für Studierende und der Verbreitung in der Lehre. Systeme über 100€ würden die Schwelle zur Reproduzierbarkeit deutlich erhöhen.
-%SPL und Bass-Extension erhalten jeweils 10\%, da diese Kriterien die Performance charakterisieren, jedoch für den primären Lehrzweck (Demonstration des DML-Prinzips) sekundär sind gegenüber Vokalbereich-Integrität und praktischer Umsetzbarkeit.
-
-
-%Die in der Tabelle 3.3 vergebenen Punkte sind anhand der gegebenen Kriterien unter Berücksichtigung der Randbedingungen vergeben worden. Dabei wurde die Vokalbereich-Integrität so bewertet, dass Fullrange- sowie 2-Wege-Systeme mit einem tiefen Crossover von maximal 100 Hz die volle Punktzahl erhalten, da diese den Vokalbereich vollständig abdecken \cite{Fastl2007}. Das 3-Wege-System wurde aufgrund des Crossovers im Vokalbereich schon vorab von der Nutzwertanalyse ausgeschlossen.
-
-%Die Verstärker-Kompatibilität mit dem verwendeten WPA 600 PRO wird bei einer Impedanz von 8 $\Omega$ mit der vollen Punktzahl bewertet, da dieser bei dieser Impedanz die höchste Effizienz und den geringsten Klirrfaktor aufweist. 4 $\Omega$-Konfigurationen werden aufgrund der auftretenden thermischen Belastung im Langzeitbetrieb nur mit 4 Punkten bewertet \cite{Weinzierl2025}.
-
-%Die technische Komplexität wird so bewertet, dass je komplexer der Aufbau ist, desto weniger Punkte dieser bekommt. Dabei wird auf zusätzliche Komponenten wie eine passive Frequenzweiche oder eine DSP-Weiche Rücksicht genommen. Dementsprechend werden die Fullrange-Systeme mit mehr Punkten als die Frequenzweichen-Systeme bewertet. 
-
-%Um die Wirtschaftlichkeit nicht außer Acht zu lassen, wird diese mit einbezogen, um im späteren Teil der Arbeit eine genauere wirtschaftliche Analyse zu betrachten. Dabei werden bei der Nutzenanalyse die Kosten für das Simulationsprogramm nicht berücksichtigt und sich nur auf die Kosten der Hardwarekomponenten bezogen. Hierbei wird die geringste Anzahl der verbauten Komponenten mit der Maximalpunktzahl bewertet, je mehr Komponenten verbaut sind, desto geringer die Punktzahl. 
-
-%Bei den SPL-Werten handelt es sich um Schätzungen, da aus der Literatur hervorgeht, dass Systeme mit mehreren Excitern eine höhere Schallleistung aufweisen. Daher werden die Systeme mit zwei Excitern mit einer höheren Punktzahl bewertet als Systeme, bei denen nur ein Exciter verbaut ist. 
-
-%Die Bass-Extension mittels Subwoofer zur Wiedergabe sehr niedriger Frequenzen ist bei den 2-Wege-Systemen möglich, weshalb diese mit der vollen Punktzahl bewertet werden. Bei Fullrange-Systemen ist eine Subwoofer-Erweiterung möglich, dennoch nicht vorgesehen, weshalb die Bewertung hier schlechter ausfällt. 
-
-\clearpage
 
 \subsection{Konzeptentscheidung für diese Arbeit}
 
-Plattengröße größer als in dem Graphen damit die Exciter nicht zu nahe aneinander sind. zudem ist die Platte leichter herzustellen. 
+Unter Berücksichtigung der verschiedenen Parameter, welche in der Konzeptentwicklung betrachtet wurden, bei denen es sich um die Verwendung einer Frequenzweiche bei DML-Systemen, der Materialkonfiguration der angeregten Platten, die Lagerung der Platten und der allgemeinen Systemauslegung, welche das Zusammenspiel der einzelnen elektrischen Bauteile behandelt, konnte gezeigt werden, welches Konzept sich am besten für diesen DML-Aufbau eignet.
 
-Unter Berücksichtigung der verschiedenen Parameter, welche in der Konzeptentwicklung betrachtet wurden, bei denen es sich um die Verwendung einer Frequenzweiche bei DML-Systemen, der Materialkonfiguration der angeregten Platten, die Lagerung der Platten und der allgemeinen Systemauslegung, welche das Zusammenspiel der einzelnen elektrischen Bauteile behandelt, handelt, konnte gezeigt werden, welches Konzept sich am besten für diesen DML-Aufbau eignet.
+In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,61 haben und freihängend von der Decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
 
-In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,6 haben und freihängend von der Decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
+Die KAPA Line Sandwichplattenw erden eine Größe von 0,7 m x 0,44 m haben da diese Seitenlängen in das Verhältniss passt und einfach herzustellen sind. Damit sind diese Größer als im Graphen \ref{fig:seitenlaenge_frequenz} aufgezeit, diese größe wurde aus dem grund gewählt um eine gute Tiefton wiedergabe zu gewährleisten und die Exciter nicht zu nahe aneinader platziert werden. 
 
-In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im realen Versuchsaufbau vermessen und diskutiert. Im realen Aufbau werden noch weitere Platten mit verschiedenen Größen und Exciter-Positionen vermessen, dies dient der genauen Analyse des Konzepts dieser Arbeit.
-
-%Die gewichtete Nutzwertanalyse ergibt, dass das Fullrange-Zwei-Exciter-System mit einer Impedanz von 8 $\Omega$ als Vorzugslösung verwendet werden sollte. Diese Konfiguration bietet einen Kompromiss zwischen akustischer Performance durch eine gute Vokalbereich-Wiedergabe und moderater Komplexität, was eine technische Umsetzung vereinfacht. Zudem ist eine Subwoofer-Einbindung im späteren Verlauf möglich, um die Defizite im Tieftonbereich auszugleichen. 
-
+In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im realen Versuchsaufbau vermessen und diskutiert.
 
 
 \clearpage
@@ -354,7 +308,11 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 
 
+
+
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
+
+
 
 
 \clearpage
