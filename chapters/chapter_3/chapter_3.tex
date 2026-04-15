@@ -86,7 +86,6 @@ In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten g
 Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
-
 \subsection{Verstärker und Equalizer}
 
 
@@ -135,7 +134,8 @@ Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines D
 
 \subsection{Materialkonfiguration}
 
-Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften, als auch die Größe der Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten nicht angegeben, siehe Anhang C und D. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt entnommen. Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber dieselbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
+Mit der Materialkonfiguration ist vor allem die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften, als auch die Größe der Platte gemeint. Dabei spielt vor allem die Steifigkeit eine große Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten Anhang C und D, nicht angegeben. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. 
+Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt entnommen. Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber dieselbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Diese annahme ergibt eine Daraus ergibt sich für die beiden Materialien: 
 
 B_{graph} \approx 12,8 N·mm^2
 
@@ -326,7 +326,7 @@ Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
 
-Die berechneten Eigenmoden der Platten weisen verschiedene Muster auf der Platte auf, diese zeigen die Bewegung der Platte bei der Eigenfrequenz an. Die Bilder zeigen die Muster der simulierten Eigenmoden bei 50 Hz, 150 Hz, 300 Hz, 500 Hz, 800 Hz und 1000 Hz an.  
+Die berechneten Eigenmoden der Platten bilden Muster welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen 50 Hz, 150 Hz, 300 Hz, 500 Hz, 800 Hz und 1000 Hz an.  
 
 \begin{figure}[H]
 	\centering
@@ -342,8 +342,9 @@ Die berechneten Eigenmoden der Platten weisen verschiedene Muster auf der Platte
 	\label{fig:eigenmoden_1m}
 \end{figure}
 
+Die Legende welche in den Abbildungen \ref{fig:eigenmoden_07m} \ref{fig:eigenmoden_1m} auf der Rechten seite zu sehen ist zeigt an das die Dunklen Violetten bereiche eine Größere verschiebung aufweißen, je heller die Platte desto weniger verschiebung. 
 
-
+Die Verschiebung der Platte bei den Frequenzen wird in der auswertung genutzt um die Positionen der Exciter zu bestimmten. Hierfür wurden die Daten der Simulation in abhängigkeit zu einer durch die Mitte der Platte verlaufenden Ebene Exportiert. Dabei wurde ein Raster mit 11mm großen abständen über die Platte gelegt. Anschließend wurden die Daten in einem Phytonskrip anhand ihrer Verschiebung ausgewertet und die Punkte im Raster ausgewertet ahnand ihrer Verschiebung. Dabei wurden Punkte an denen eine Geringe verschiebung auftritt als Gut und dort wo eine Hohe verschiebung auftrit als schlecht bewertet. Anhand dieser Bewertung wurden die Idealen Exiterpositionen bestimmt.    
 
 
 
