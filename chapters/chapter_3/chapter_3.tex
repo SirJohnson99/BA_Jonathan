@@ -354,13 +354,32 @@ Die Verschiebung der Platte bei den Frequenzen wird in der Auswertung genutzt, u
 
 In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. Um sicherzustellen, dass bei der Messung ausschließlich die akustischen Eigenschaften des Lautsprechers erfasst werden und Einflüsse des Messraums minimiert werden, erfolgt die Durchführung im Freifeldraum. Ein Freifeldraum ist ein reflexionsarmer Raum, dessen Wände, Decke und Boden mit schallabsorbierenden Materialien ausgestattet sind, sodass auftreffende Schallwellen nahezu vollständig absorbiert werden.
 
-Ziel des Versuchs ist die objektive Vermessung des DML-Lautsprechers sowie die Erfassung zentraler akustischer Kenngrößen. Hierzu zählen insbesondere die Übertragungsfunktion sowie der frequenzabhängige Schalldruckpegel. Der Frequenzgang der Übertragungsfunktion beschreibt das Verhältnis zwischen dem vom Lautsprecher abgestrahlten Signal und dem zugeführten elektrischen Referenzsignal des Verstärkers. Mittels Übertragungsfunktion, welche in Kapitel 2.3 beschrieben wurde, wird das Übertragungsverhalten des Gesamtsystems charakterisiert.
+Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Mit dieser werden sowohl die Testsignale generiert als auch die aufgenommenen Messdaten erfasst und weiterverarbeitet, um die Übertragungsfunktion sowie den Schalldruckpegel frequenzabhängig auszuwerten. Das Weiße Rauschen wird über die Output Karte NI PIX-6733 an den Equalizer und den Audiovorverstärker ausgegeben. Die Einstellungen des Equalizers und des Audioverstärkers sind während jedes messung unverändert gewesen und können in der Abbildung X im Anhang Y entnommen werden, der Equalizer hat während der messungen keine Signalveränderung vorgenommen.
 
-Der Versuchsaufbau verfolgt dabei zwei Ziele, die Messung des Schalldruckpegels über der Frequenz, dafür wird ein Messmikrofon einen Meter vor der Mitte der Platte aufgestellt, während der Lautsprecher mit einem weißen Rauschen angeregt wird.
-Das zweite Ziel ist die Erfassung des abgestrahlten Schallfeldes, da DML-Lautsprecher einen wesentlich größeren Abstrahlwinkel als herkömmliche Lautsprecher haben. Für diesen Aufbau wird das Messmikrofon genau wie beim ersten Versuch in einem Abstand von 1 m auf Höhe der DML-Mitte positioniert, dann wird in 10-Grad-Abständen an 36 Positionen eine Messung vorgenommen, um die Abstrahlcharakteristik rund um den Lautsprecher zu messen.
-Jede Messung wird dreimal vorgenommen und anschließend werden die Messergebnisse gemittelt, um mögliche Peaks oder Messunsicherheiten zu minimieren. 
+Der Versuchsaufbau verfolgt zwei Ziele um die Akustischen eigenschaften des DML zu Bewerten. Das erste Ziel ist die Messung des Schalldruckpegels über der Frequenz, dafür wird ein Messmikrofon einen Meter vor der Mitte der Platte aufgestellt, während der Lautsprecher mit einem weißen Rauschen angeregt wird.
 
-Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Mit dieser werden sowohl die Testsignale generiert als auch die aufgenommenen Messdaten erfasst und weiterverarbeitet, um die Übertragungsfunktion sowie den Schalldruckpegel frequenzabhängig auszuwerten.
+
+Abbildung Messaufbau im Freifeldraum.
+
+Die Abbildung zeigt den Versuchsaufbau im Freifeldraum, der DML Lautsprecher wurde dabei Freihängend an zwei Aufgehängt und das Messmikrofon mit einem Arm auf einem Meter abstand fest montiert. 
+
+
+Das zweite Ziel ist die Erfassung des abgestrahlten Schallfeldes, da DML-Lautsprecher einen wesentlich größeren Abstrahlwinkel als herkömmliche Lautsprecher haben. Für diesen Aufbau wird das Messmikrofon genau wie beim ersten Versuch in einem Abstand von 1 m auf Höhe der DML-Mitte positioniert und an definierten stellen um den Lautsprecher Gemessen um die Abstrahlcharakteristik rund um den Lautsprecher zu erfassen. Der Lautsprecher ist in diesem Fall an einer Schnur welche in der Mitte der mit einer Öse welche in den PUR Hartschaum der Platte geklebt drehbar aufgehängt. an der Unerseite der Platte sind an beiden Ecken schnüre an einer Wasserwage befestigt, die Wasserwage dient als Gewicht um die Platte in der Gedrehten Position zu halten. Am boden sind mit Klebeband Markierungden der messpunkte. Das Drehen der Platte ist ein einfacher aufbau welcher gleichzeitig mögliche Messverfälschungen des Raums durch die Positionsänderung des Mikrofons minimiert. 
+
+
+
+Die Abbildung zeigt den DML Lautsprecher welcher an der oberseite Mittig hängt und an der unterseite Mit zwei schnüren zum boden mit der Wasserwage befestigt ist. 
+
+
+
+
+
+
+Jede Messung wird dreimal aufgenommen und anschließend werden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
+
+Abbildung Messaufbau im Freifeldraum mit Drehbarer Platte
+
+
 
 
 \subsection{LabVIEW}
@@ -410,7 +429,7 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 In Abbildung ist das Blockschaltbild vor der While-Schleife zu erkennen. Vor der While-Schleife werden die Parameter, auf welche das Programm zugreift, mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen.
 
  
-\subsection{Signalverarbeitung des Messaufbaus}
+\subsubsection{Signalverarbeitung des Messaufbaus}
 
 Zur akustischen Charakterisierung des DML-Lautsprechers wird in LabVIEW ein breitbandiges Anregungssignal in Form von weißem Rauschen erzeugt und über den analogen Ausgang des DAQ-Systems an den Verstärker ausgegeben. Der Verstärker speist einerseits den Exciter, welcher die DML-Platte mechanisch anregt, und andererseits über einen vorgeschalteten Step-Down-Wandler ein elektrisches Referenzsignal zurück in den analogen Eingang des DAQ-Systems. Parallel dazu wird das von der angeregten Platte abgestrahlte Schallfeld durch ein Messmikrofon aufgenommen und ebenfalls als Eingangssignal im DAQ erfasst. Damit stehen für die weitere Auswertung sowohl ein elektrisches Referenzsignal als auch die akustische Systemantwort zur Verfügung.
 
@@ -534,6 +553,8 @@ wobei $\gamma^2[k]$ die Kohärenzfunktion (Wertebereich 0 bis 1), $G_{xy}[k]$ da
 
 Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird. Werte deutlich unter 1 deuten auf nichtlineare Effekte, Störgeräusche oder eine unzureichende Anregung bei der betreffenden Frequenz hin.
 
+
+ \subsection{Durchführung der messungen}
 
 \subsection{Messergebnisse und Auswertung}
 
