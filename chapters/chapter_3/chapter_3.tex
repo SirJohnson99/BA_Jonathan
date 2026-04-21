@@ -1,6 +1,6 @@
 \chapter{Lösung der Aufgabenstellung}
 
-In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten welche den Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer umfasst einzeln beschrieben. Da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
+In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten welche den Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer umfassend einzeln beschrieben. Da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
 Auf dem Konzept aufbauend wird eine Simulation aufgesetzt, welche zur Bestimmung der idealen Anregerposition für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten Ergebnisse werden diese Positionen im realen Versuchsaufbau vermessen. Die Ergebnisse werden anschließend diskutiert und verglichen.
 
 
@@ -69,7 +69,7 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 
  Als DML Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial. 
  Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum (kurz PUR). 
- Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und lässt sich wie auch KAPA Line gut mit handelsüblichen Klebern und Farben bearbeiten. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Vielzahl von Klebern und Lösungsmitteln beständig ist und  sich mit einem Cuttermesser gut bearbeiten lässt.
+ Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und hat wie KAPA Line gute Bearbeitungs eigenschaften. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Vielzahl von Klebern und Lösungsmitteln beständig ist und sich mit einem Cuttermesser gut bearbeiten lässt.
  
 
 \begin{figure}[H]
@@ -79,7 +79,7 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 	\label{fig:KAPA_Vergleich}
 \end{figure}
 
-In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten graphisch dargestellt. Gut zu erkennen ist der Stärkenunterschied, welcher mittels Schublehre gut ablesbar gezeigt wird, sowie der Sandwich-Kern, welcher bei beiden Platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht, welche bei beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
+In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten dargestellt. Gut zu erkennen ist der Stärkenunterschied, welcher mittels Schublehre gut ablesbar gezeigt wird, sowie der Sandwich-Kern, welcher bei beiden Platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht, welche bei beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
 Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
@@ -109,9 +109,9 @@ Die Entwicklung eines DML-Flachlautsprechers erfordert grundlegende Entscheidung
 
 \begin{enumerate}
     \item Frequenzweichenkonfiguration
-    \item Panelkonfiguration
-    \item Panellagerung
-    \item allgemeine Systemauslegung 
+    \item Plattenkonfiguration
+    \item Plattenlagerung
+    \item allgemeine Systemauslegung. 
 \end{enumerate}
 
 Diese werden in den folgenden Unterkapiteln erläutert und bestimmt.
@@ -124,7 +124,7 @@ Es ist zu beachten, dass im Übergangsbereich der Frequenzweichen komplexe Inter
 
 Ein DML 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa 100 Hz, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
 
-Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Bass-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 bis 1.000 Hz für den Übergang zwischen Bass und Mittelton sowie zwischen 4.000 und 5.000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht berücksichtigt wird.
+Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Teif-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa 500 bis 1.000 Hz für den Übergang zwischen Tief- und Mittel-ton sowie zwischen 4.000 und 5.000 Hz für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht berücksichtigt wird.
 
 Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines DML-Flachlautsprechers dar. In diesem Fall deckt das Panel den gesamten hörbaren Frequenzbereich ab, wobei das elektrische Audiosignal ungefiltert dem Lautsprecher zugeführt wird. Dadurch entfallen phasenbedingte Verzerrungen, wie sie durch Frequenzweichen entstehen können \cite{Moeser2005}. Anhand der Einfachheit dieses Aufbaus, welche zugleich eine unverzerrte Wiedergabe über die Lautsprecher verspricht, wird dieser Aufbau favorisiert. 
 
@@ -174,12 +174,12 @@ b = r \cdot a
     \item $A$ : Fläche [m$^2$]
     \item $a$ / $b$ : Seitenlängen der Platte [m]
     \item $r$ : Seitenverhältnis der Platte
-    \item $B$ : Biegesteifigkeit [Nmm^2]
+    \item $B$ : Biegesteifigkeit [Nmm²]
     \item $m''$ : Flächenmasse der Platte in [kg/m$^2$]
     \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
 \end{itemize}
 
-Daraus ergibt sich die kurze Seitenlänge im Bereich 20 Hz -- 150 Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
+Daraus ergibt sich die kurze Seitenlänge im Bereich 20 -- 150 Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
 
 \begin{figure}[H]
     \centering
@@ -239,7 +239,7 @@ Daraus ergibt sich die kurze Seitenlänge im Bereich 20 Hz -- 150 Hz, gezeigt in
     \label{fig:seitenlaenge_frequenz}
 \end{figure}
 
-In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von 20 Hz bis 150 Hz darstellt. Zu erkennen ist, dass für eine Grundfrequenz von 20 Hz eine KAPA Line Platte mit der Seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
+In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von 20 bis 150 Hz darstellt. Zu erkennen ist, dass für eine Grundfrequenz von 20 Hz eine KAPA Line Platte mit der Seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
 Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig, um eine Grundfrequenz von 20 Hz gut wiedergeben zu können. Da die KAPA Platten in einer Größe von 1m x 0,7m geliefert werden, wurde sich für die Größe der Platten mit den Seitenlängen 0,44 m x 0,7 m entschieden, da diese das Seitenverhältnis erfüllen und die Anfertigung effektiv gestaltet. 
 
 
@@ -250,32 +250,31 @@ Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 
 Bei der Lagerung oder Aufhängung von DML-Lautsprechern gibt es verschiedene Möglichkeiten, wobei jede ihre Vor- und Nachteile bezüglich Komplexität und akustischer Auswirkung hat. Als Lagerungsmöglichkeit sind die folgenden sechs jene, welche am häufigsten beim DML verwendet werden.
 
 \begin{itemize}
-    \item Frei schwebend
-    \item Gelenkig gelagert
-    \item Fest eingespannt
-    \item Elastische Aufhängung
-    \item Punktuelle Auflage
+    \item frei schwebend
+    \item gelenkig gelagert
+    \item fest eingespannt
+    \item elastische Aufhängung
+    \item punktuelle Auflage
     \item Randdämpfung
 \end{itemize}
 
-Im Rahmen dieser Arbeit werden lediglich zwei mögliche der sechs aufgezählten Lagerungsmöglichkeiten genauer betrachtet und diskutiert. Dabei handelt es sich um die frei schwebende Aufhängung, bei der der DML an zwei Ecken mittels Fäden an der Decke aufgehangen wird. Diese Lagerung hat den Vorteil, dass wenig äußere Dämpfung den DML beeinflusst und durch die frei schwebende Platte eine gleichmäßigste Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte verursacht werden. Zudem ist durch die minimale Dissipation der Aufhängung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die relativ niedrige Abstrahleffizienz und das mögliche Pendeln der Paneele.
+Im Rahmen dieser Arbeit werden lediglich zwei der sechs aufgezählten Lagerungsmöglichkeiten genauer betrachtet und diskutiert. Dabei handelt es sich um die frei schwebende Aufhängung, bei der der DML an zwei Ecken mittels Fäden an der Decke aufgehangen wird. Diese Lagerung hat den Vorteil, dass wenig äußere Dämpfung den DML beeinflusst und durch die frei schwebende Platte eine gleichmäßigste Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte verursacht werden. Zudem ist durch die minimale Dissipation der Aufhängung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die relativ niedrige Abstrahleffizienz und ein mögliches Pendeln der Platte bei Tiefen Frequenzen.
 
-Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem Rahmen, welcher an der Wand befestigt ist, eingespannt ist. Die Vorteile dieser Lagerung sind eine hohe Abstrahleffizienz der Platte. Dem entgegen spricht die Unterdrückung der Randmoden, was eine gleichmäßige Modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte Konstruktionsaufwand des Rahmens und der Wandbefestigung gegen eine fest eingespannte Lagerung. 
-
+Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem Rahmen, welcher an der Wand befestigt ist, fest eingespannt ist. Der Vorteile dieser Lagerung ist eine hohe Abstrahleffizienz der Platte. Dem entgegen spricht die Unterdrückung der Randmoden, was eine gleichmäßige Modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte Konstruktionsaufwand des Rahmens und der Wandbefestigung gegen eine fest eingespannte Lagerung. 
 
 
 \subsection{Allgemeine Systemauslegung}
 
-Mit der allgemeinen Systemauslegung ist vor allem das Zusammenspiel der elektrischen Komponenten, also des Exciters und der Stereoanlage gemeint. Hierbei stellen sich zwei Fragen in den Vordergrund, wie viele Exciter pro Platte verwendet werden und wie die Verdrahtung der Exciter am sinnvollsten ist?
+Mit der allgemeinen Systemauslegung ist vor allem das Zusammenspiel der elektrischen Komponenten, also des Exciters und der Stereoanlage gemeint. Hierbei stellen sich zwei Fragen in den Vordergrund, wie viele Exciter pro Platte verwendet werden und wie die Verdrahtung der Exciter am sinnvollsten ist.
 Da die Anzahl der Exciter sowohl auf die Gesamtimpedanz des Systems als auch auf die Abstrahlleistung Einfluss hat \cite{Bai2001}.
 
 Die Verwendung eines einzelnen Exciters pro Platte ist die einfachste Umsetzung. Die Impedanz des Systems entspricht der des Exciters von 4 $\Omega$ \cite{DaytonAudio2024}, was dem Anhang A zu entnehmen ist. Die verwendete Stereoanlage kann Lautsprecher von 4-16 $\Omega$ versorgen, siehe Anhang B. Dennoch sollte berücksichtigt werden, dass die Exciter bei voller Leistung auf Dauer beschädigt werden können. Zudem kann die Platzierung des Exciters ungünstig für die Modenanregung sein. 
 
-Die Verwendung von zwei Excitern pro Platte mit symmetrischer Anordnung hat Vor- und Nachteile. Ein Vorteil der symmetrischen Positionierung ist die theoretische Verdoppelung des Schalldruckpegels bei kohärenter Anregung \cite{Moeser2005}. Des Weiteren wird die Platte durch die symmetrische Anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Doch durch eine symmetrische Anregung können nicht alle Moden angeregt werden, was zu starken Schwankungen im Frequenzband führen kann \cite{Pueo2009}. Da diese Arbeit jedoch eine gute Abstrahlung auf allen Frequenzen anstrebt, ist eine symmetrische Anordnung unvorteilhaft. 
+Die Verwendung von zwei Excitern pro Platte mit symmetrischer Anordnung hat folgende Vor- und Nachteile. Ein Vorteil der symmetrischen Positionierung ist die theoretische Verdoppelung des Schalldruckpegels bei kohärenter Anregung \cite{Moeser2005}. Des Weiteren wird die Platte durch die symmetrische Anregung gleichmäßig belastet und es entstehen keine Torsionskräfte \cite{Moeser2005}. Doch durch eine symmetrische Anregung können nicht alle Moden angeregt werden, was zu starken Schwankungen im Frequenzband führen kann \cite{Pueo2009}. Da diese Arbeit jedoch eine gute Abstrahlung auf allen Frequenzen anstrebt, ist eine symmetrische Anordnung unvorteilhaft. 
 
-Bei einem Zwei-Exciter-System mit asymmetrischer Positionierung können mehrere Eigenmoden der Platte angeregt werden, was zu einer gleichmäßigen Abstrahlung im gesamten Frequenzband führt \cite{Zenker2019}. Daher bietet sich ein Zwei-Exciter-System mit asymmetrischer Anordnung als vielversprechend an.  
+Bei einem Zwei-Exciter-System mit asymmetrischer Positionierung können mehrere Eigenmoden der Platte angeregt werden, was zu einer gleichmäßigen Abstrahlung im gesamten Frequenzband führt \cite{Zenker2019}. Daher wird ein Zwei-Exciter-System mit asymmetrischer Anordnung als vielversprechend eingestuft.  
 
-Bei der Verkabelung des Systems gibt es die Entscheidung zwischen Reihen- und Parallelschaltung. Bei der Reihenschaltung der Exciter addiert sich die Impedanz, was bei zwei Excitern zu einer Verdoppelung der Gesamtimpedanz führt. Eine Verdoppelung der Gesamtimpedanz auf 8 $\Omega$ kann die Langlebigkeit der Exciter erhöhen, da diese bei voller Last weniger thermischer Belastung ausgesetzt sind.
+Bei der Verkabelung des Systems gibt es die Entscheidung zwischen Reihen- und Parallelschaltung. Bei der Reihenschaltung der Exciter addiert sich die Impedanz, was bei zwei Excitern zu einer Verdoppelung der Gesamtimpedanz führt. Eine Verdoppelung der Gesamtimpedanz auf 8 $\Omega$ kann die Langlebigkeit der Exciter erhöhen, da diese bei voller Last einer geringeren thermischen Belastung ausgesetzt sind.
 Bei einer Parallelschaltung der Exciter verändert sich die Gesamtimpedanz des Systems nicht, was bei langer Verwendung zu Schäden durch hohe thermische Belastung führen kann. Zudem kann eine zu geringe Impedanz zu Schäden an der Stereoanlage führen.
 
 
@@ -283,7 +282,7 @@ Bei einer Parallelschaltung der Exciter verändert sich die Gesamtimpedanz des S
 
 Unter Berücksichtigung der verschiedenen Parameter, welche in der Konzeptentwicklung betrachtet wurden, bei denen es sich um die Verwendung einer Frequenzweiche bei DML-Systemen, der Materialkonfiguration der angeregten Platten, die Lagerung der Platten und der allgemeinen Systemauslegung, welche das Zusammenspiel der einzelnen elektrischen Bauteile behandelt, konnte gezeigt werden, welches Konzept sich am besten für diesen DML-Aufbau eignet.
 
-In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,61 haben und freihängend von der Decke gelagert werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
+In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,61 haben und von der Decke hängend befestigt werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
 
 Die KAPA Line Sandwichplatten werden eine Größe von 0,7 m x 0,44 m haben, da diese Seitenlängen in das Verhältnis passen und einfach herzustellen sind. Damit sind diese größer als im Graphen \ref{fig:seitenlaenge_frequenz} aufgezeigt. Diese Größe wurde aus dem Grund gewählt, um eine gute Tieftonwiedergabe zu gewährleisten und die Exciter nicht zu nahe aneinander platziert werden. 
 
@@ -301,7 +300,7 @@ Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher St
 
 \subsection{COMSOL Multiphysics}
 
-Das Programm COMSOL Multiphysics der Firma COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- \& Wärmetransport-Module, Strukturmechanik- \& Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik-Modul verwendet, um die modalen Eigenschaften der Platte zu untersuchen. Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
+Das Programm COMSOL Multiphysics der Firma COMSOL ist eine universell einsetzbare Simulationssoftware für einen Großteil der Bereiche des Ingenieurwesens. Die Software bietet vollständig gekoppelte Einzel- und Multiphysik-Modellierungsfunktionen und ist dabei strukturiert und benutzerfreundlich aufgebaut. Dabei umfasst COMSOL in seiner Produktpalette eine große Anzahl von Fachgebieten wie Elektromagnetik-Module, Strömungs- und Wärmetransport-Module, Strukturmechanik- und Akustik-Module und weitere. In dieser Arbeit wird das Strukturmechanik-Modul verwendet, um die modalen Eigenschaften der Platte zu untersuchen. Der Modellaufbau in COMSOL erfolgt über den Model Builder, in dem zuerst die globalen Definitionen festgelegt werden. Darunter zählen Parameter und Variablen, welche in der Simulation verwendet werden. Danach werden die Komponenten aufgebaut, dazu gehört 2D- oder 3D-Geometrie, welche im Grafikfenster dargestellt wird. Die Geometrie stellt das Grundgerüst der Simulation dar. In den folgenden Schritten werden Materialien, welche entweder aus der COMSOL-Materialbibliothek oder eigenständig eingetragene Materialien verwendet und der Geometrie zugewiesen. Nach der Zuweisung der Materialien wird die Physik in die Simulation hinzugefügt. Bei COMSOL kann man beliebig das Simulationsmodell anpassen und Physik hinzufügen oder entfernen. Sollten mehr als eine Physik auf das Modell angewendet werden, wird eine Multiphysik benötigt, welche die Wechselwirkungen der verschiedenen Physiken verbindet. Wenn das Modell aufgebaut, Material und Physik zugewiesen sind, wird ein Netz oder auch Mesh, welches das Modell in endlich viele kleine Teile zerlegt, über das Modell gespannt. Das Mesh ist die Grundlage für die FEM-Berechnungen. Wenn das Mesh über die Geometrie gespannt wurde, kann die Studie berechnet werden. Wie auch bei der Physik können hier beliebig Studien hinzugefügt oder entfernt werden, nach denen aufgelöst wird. 
 
 Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Strukturschwingung sowie die daraus resultierende Abstrahlung rechnerisch bestimmt. Dafür wird die dynamische Navier-Gleichung im Frequenzbereich gelöst. Das ermöglicht die Berechnung von Verschiebungsfeldern, Spannungen und Dehnungen in schwingenden Strukturen. Grundlage hierfür ist die linearisierte Elastizitätstheorie, welche das Verhältnis zwischen Spannungen und Dehnungen über das verallgemeinerte Hookesche Gesetz beschreibt. 
 
@@ -310,10 +309,9 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 \subsection{Modell-Aufbau und Simulationen}
 
-Bei der Simulation zur Entwicklung des DML wurde sich für eine Eigenfrequenzanalyse der verwendeten Platten und gegen die Simulation eines Exciters als Federmassesystem, welches die Platte anregt und der abgestrahlte Schalldruck berechnet wird, entschieden. Ausschlaggebend für diese Entscheidung ist vor allem der Unterschied in der Komplexität der beiden Aufbauten, da eine Eigenfrequenzanalyse einfacher und rechenleistungsärmer ist.
+Bei der Simulation zur Entwicklung des DML wurde sich für eine Eigenfrequenzanalyse der verwendeten Platten und gegen die Simulation eines Exciters als Federmassesystem, welches die Platte anregt und der abgestrahlte Schalldruck berechnet wird, entschieden. Ausschlaggebend für diese Entscheidung ist vor allem der Unterschied in der Komplexität der beiden Aufbauten, da eine Eigenfrequenzanalyse in der Komplexität und Rechenleitug effizienter ist.
 
-Bei der Eigenfrequenzanalyse wurden zwei KAPA Line Platten mit den Größen 1 m x 0,7 m \& 0,7 m x 0,44 m auf deren Eigenfrequenzen untersucht. Dabei wurden die Größendaten und die Eigenschaften des Materials im Modelbuilder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. Anschließend wurde eine Eigenfrequenzstudie angelegt, bei der die Platten angeregt werden von 0 Hz bis 400 Eigenmoden der Platten berechnet wurden. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Die Platte ist dabei frei gelagert, da sich für eine freihängende Lagerung im Konzeptentscheid entschieden wurde. 
-
+Bei der Eigenfrequenzanalyse wurden zwei KAPA Line Platten mit den Größen 1 m x 0,7 m und 0,7 m x 0,44 m auf deren Eigenfrequenzen untersucht. Dabei wurden die Größendaten und die Eigenschaften des Materials im Modelbuilder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. \textbf{Anschließend wurde eine Eigenfrequenzstudie angelegt, bei der die Platten angeregt werden von 0 Hz bis 400 Eigenmoden der Platten berechnet wurden. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Im Konzeptenwurf wurde sich für einefreihängende Lagerung entschieden, aus diesem Grund wurde diese in der Simulation ohne lagerung erstellt. }
 
 
 \begin{figure}[H]
@@ -324,14 +322,14 @@ Bei der Eigenfrequenzanalyse wurden zwei KAPA Line Platten mit den Größen 1 m 
 \end{figure}
 
 
-Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen ist die Platte, welche mit einem Netz, wie es üblich bei FEM-Simulationen ist, bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei 0 Hz und endet, wenn 400 Eigenmoden der Platte gefunden sind. 
+Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen ist die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei 0 Hz und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
 
 
 
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
 
-Die berechneten Eigenmoden der Platten bilden Muster welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen 50 Hz, 150 Hz, 300 Hz, 500 Hz, 800 Hz und 1000 Hz an.  
+Die berechneten Eigenmoden der Platten bilden Muster welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen bei 50 Hz, 150 Hz, 300 Hz, 500 Hz, 800 Hz und 1.000 Hz an.  
 
 \begin{figure}[H]
 	\centering
@@ -351,11 +349,6 @@ Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eig
 
 Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. 
 
-% TODO: Abbildung Platte 70x44 und 100x70 einfügen
-
-% TODO: Diskussion der Ergebnisse ergänzen
-
-
 
 \clearpage
 
@@ -366,18 +359,18 @@ Der Versuchsaufbau verfolgt hierbei zwei primäre Ziele, die Erfassung des Frequ
 
  
 \subsection{LabVIEW}
-
+LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung
 Für die Vermessung der akustischen Eigenschaften des DML-Lautsprechers und dessen Beurteilung muss das in LabVIEW geschriebene Programm die folgenden Funktionen umfassen: 
 
 \begin{itemize}
     \item Erzeugen und Abspielen eines Testsignals 
-    \item Erfassen des Mikrofon- und Referenzsignals
+    \item Erfassung des Mikrofon- und Referenzsignals
     \item Verarbeitung der Messwerte und Bilden der Übertragungsfunktion
-    \item Darstellen der Messwerte in einem Graphen
-    \item Speichern der Messwerte als verarbeitbare Datei
+    \item Darstellung der Messwerte in einem Graphen
+    \item Speichern der Messwerte als verarbeitbare Datei.
 \end{itemize}
 
-LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung. Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen. Der Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
+ Ein LabVIEW-Programm besteht dabei aus zwei wesentlichen Bestandteilen. Der Benutzeroberfläche, dem Frontpanel, und einer Funktionslogik, auch Blockdiagramm genannt. Im Blockdiagramm werden virtuelle Instrumente, kurz VI, verwendet, um Signale zu erzeugen oder zu bearbeiten, Daten zu erfassen, Systeme zu regeln oder zu steuern. Die einzelnen VIs lassen sich im grafischen Programmcode mit verschiedenen Drähten verbinden. Diese sind farbcodiert und können jeweils nur eine bestimmte Art von Daten übermitteln. Mittels der Drähte lässt sich der Datenfluss und damit der Ablauf der einzelnen Programmschritte festlegen.  
 
 In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akustischen Eigenschaften zu untersuchen. Dabei wird ein Audiosignal in LabVIEW erzeugt und über den DAQ-OUTPUT an den Audioverstärker geleitet und über den DML-Lautsprecher abgespielt. Das Signal wird akustisch wiedergegeben und von einem Messmikrofon empfangen. Die dabei entstehende Übertragungsfunktion gibt Erkenntnisse über die Effizienz und den Schalldruckpegel des Lautsprechers. Das Signal vom Messmikrofon wird wieder in den DAQ-INPUT geleitet und in LabVIEW ausgewertet. 
 
@@ -385,19 +378,19 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/Blockschaltbild LabVIEW.png}
-	\caption{Blockschaltbild Versuchsaufbau DML-Lautsprecher Vermessen}
+	\caption{Versuchsaufbau DML-Lautsprecher Vermessen}
 	\label{fig:blockschaltbild_exciter}
 \end{figure}
 
-Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
+Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
 Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
-Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
+Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus dem Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
 
-\subsection{Blockschaltbild}
+\subsection{Blockdiagramm und Signalverarbeitung}
 
-Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar und kann als Ablaufplan angesehen werden. Das Blockschaltbild besteht dabei aus verschiedenen VIs, welche nacheinander ausgeführt und deren Zustände ermittelt werden. In diesem Programm ist die „While-Schleife" der Kern des Programms, da in dieser eine Abfolge immer wieder wiederholt wird, bis eine Bedingung erfüllt ist. Mit dieser Schleife können die aufgenommenen Werte gemittelt werden. Das Programm für die Vermessung des DML-Lautsprechers hat folgenden Aufbau:
+Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar und kann als Ablaufplan angesehen werden. Das Blockschaltbild besteht dabei aus verschiedenen VIs, welche nacheinander ausgeführt und deren Zustände ermittelt werden. In diesem Programm ist die „While-Schleife" der Kern des Programms, da diese Abfolge Periodisch ist, bis eine Bedingung erfüllt ist. Mit dieser Schleife können die aufgenommenen Werte gemittelt werden. Das Programm für die Vermessung des DML-Lautsprechers hat folgenden Aufbau:
 
 \begin{enumerate}
     \item Initialisierung der Ein- und Ausgangskanäle
@@ -409,75 +402,100 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \end{enumerate}
 
 
-
-In Abbildung ist das Blockschaltbild vor der While-Schleife zu erkennen. Vor der While-Schleife werden die Parameter, auf welche das Programm zugreift, mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen.
-
-
-
-
-
+ Vor der While-Schleife werden Parameter mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons, welche aus dem Datenblatt im Anhang YX entnommen werden kann. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz fs und der Blocklänge N.
  
-\subsubsection{Signalverarbeitung des Messaufbaus}
-
-Zur akustischen Charakterisierung des DML-Lautsprechers wird in LabVIEW ein breitbandiges Anregungssignal in Form von weißem Rauschen erzeugt und über den analogen Ausgang des DAQ-Systems an den Verstärker ausgegeben. Der Verstärker speist einerseits den Exciter, welcher die DML-Platte mechanisch anregt, und andererseits über einen vorgeschalteten Step-Down-Wandler ein elektrisches Referenzsignal zurück in den analogen Eingang des DAQ-Systems. Parallel dazu wird das von der angeregten Platte abgestrahlte Schallfeld durch ein Messmikrofon aufgenommen und ebenfalls als Eingangssignal im DAQ erfasst. Damit stehen für die weitere Auswertung sowohl ein elektrisches Referenzsignal als auch die akustische Systemantwort zur Verfügung.
-
-Das in LabVIEW erzeugte diskrete Anregungssignal kann allgemein als Folge $x[n]$ beschrieben werden. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz $f_s$ und der Blocklänge $N$. Die zugehörige Frequenzauflösung der späteren Spektralanalyse ergibt sich zu
-
-\begin{equation}
+ \begin{equation}
 \Delta f = \frac{f_s}{N}
 \end{equation}
 
-wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfrequenz in Hz und $N$ die Anzahl der Abtastwerte pro Datenblock ist.
+Wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfrequenz in Hz und $N$ die Anzahl der Abtastwerte pro Datenblock ist. 
 
-Das Referenzsignal wird elektrisch am Verstärkerausgang abgegriffen, mittels Step-Down-Wandler auf einen zulässigen Messbereich reduziert und anschließend als Spannungssignal $x_{\mathrm{ref}}[n]$ in den DAQ eingelesen. Das Mikrofon liefert ebenfalls ein Spannungssignal $u_{\mathrm{mic}}[n]$, welches proportional zum auftretenden Schalldruck ist. Für das verwendete Messmikrofon beträgt die Empfindlichkeit laut Kalibrierblatt $S = 0{,}028\;\mathrm{V/Pa}$. Wird keine zusätzliche externe lineare Vorverstärkung berücksichtigt, so kann für den Verstärkungsfaktor $G = 1$ gesetzt werden. Die Umrechnung des gemessenen Mikrofonsignals von Volt in Pascal erfolgt damit gemäß
 
-\begin{equation}
-p[n] = \frac{u_{\mathrm{mic}}[n]}{S \cdot G}
-\end{equation}
 
-wobei $p[n]$ das Schalldrucksignal im Zeitbereich in Pa, $u_{\mathrm{mic}}[n]$ die gemessene Mikrofonspannung im Zeitbereich in V, $S$ die Mikrofonempfindlichkeit in V/Pa und $G$ der lineare Verstärkungsfaktor der Messkette ist.
+Abbildung Whileschleife.PNG
 
-Für das verwendete Mikrofon und ohne zusätzliche externe Verstärkung vereinfacht sich die Gleichung zu
 
-\begin{equation}
-p[n] = \frac{u_{\mathrm{mic}}[n]}{0{,}028}
-\end{equation}
+In der Whileschleife wird das weiße Rauschen erzeugt, die eingangs Signale erfasst und verarbeitet sowie Graphisch dargestellt. 
 
-Um bei der blockweisen Verarbeitung Spektralleckeffekte (Spectral Leakage) zu minimieren, wird vor der Fourier-Transformation auf jeden Datenblock eine Fensterfunktion angewendet. Im vorliegenden Messaufbau wird ein Hanning-Fenster verwendet. Das gefensterte Signal ergibt sich zu
+Das Weiße Rauschen wird über die Outputkarte NI PIX-6733 welche im Steckplatz 2 des DAQ NI PXI.1033 steck, ausgegeben. Dafür wird die OutputBox NI SSC-68 verwendet welche einen Chinch anschluss am output  22 und 54 angeschloeen hat. Das Weiße rauschen wird mit hilfe des Uniform White Noise Waveform Vi generiert.
+
+Das Eingangssingal von der NI PXI-4472B welche im Steckplatz 1 des DAQ NI PXI-1033 steckt, ist anfangs gebündelt und wird mittels Index Array VI in das Referenzsingal und das Mikrofonsignal seperiert. 
+Aus den beiden Signalen lässt sich mittels Frequency Response Vi die Übertragungsfunktion, sowie die zugeöhrige Kohärenz berechnet. 
+Die zugehörigen komplexen Spektren werden als $X[k]$, Referenzsignal und $Y[k]$, Mikrofonsignal bezeichnet.
+Für die Übertragungsfunktion wird der $H_1$-Schätzer verwendet. Dieser basiert auf dem Kreuzspektrum zwischen Eingangs- und Ausgangssignal sowie dem Autospektrum des Eingangssignals und minimiert den Einfluss von Störungen am Ausgangssignal:
 
 \begin{equation}
-p_w[n] = p[n] \cdot w[n]
+H_1[k] = \frac{G_{xy}[k]}{G_{xx}[k]}
 \end{equation}
 
-wobei $p_w[n]$ das gefensterte Schalldrucksignal, $p[n]$ das Schalldrucksignal im Zeitbereich und $w[n]$ die Fensterfunktion (hier: Hanning-Fenster) ist.
+wobei $H_1[k]$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}[k]$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}[k]$ das Autospektrum des Referenzsignals ist.
+Der FRF-Graph beschreibt die relative frequenzabhängige Systemantwort des gesamten Aufbaus aus Verstärker, Exciter, DML-Platte und Schallabstrahlung. Der FRF-Graph dient insbesondere der Beurteilung von Resonanzen, Einbrüchen und der relativen Linearität des Systems, dabei ist dieser immer unter Berücksichtigung der Kohärenz zu Betrachten. Die Kohärenz gibt an wie gut das Eingangsingal das Ausgangsignal wiederspiegelt. Die kohärenz wird in einem Wertebereich von 0 bis 1 angezeigt. Werte nahe 1 zeigen das das Ausgangsingal der Jeweiligen Frequenz vollständig duchr das Einganssingal erklärt wird.
 
-Nach der Fensterung wird das Signal blockweise in den Frequenzbereich transformiert. Hierzu wird die diskrete Fourier-Transformation (DFT) verwendet:
 
-\begin{equation}
-P[k] = \sum_{n=0}^{N-1} p_w[n] \cdot e^{-j \cdot \frac{2\pi k n}{N}}
-\end{equation}
+Paralell zur Berechnung der Übertragungsfunktion wird der SChalldruckpegel des Lautsprechers Berechnet. Der SPL-Graph den absoluten Schalldruckpegel am Mikrofon über der Frequenz und dient vor allem zur Bewertung der tatsächlich erreichten Lautstärke und wie sich die Übertragungsfunktion verhällt. 
+Dafür wird das signal mittels Fast Fourier Transfomation kurz FFT Vi in den Frequenzbereich Transformiert. Nach der Transformation wird aus dem komplexen Schalldruckspecktrum das lineare Amplitudenspektrum berechnet.   
 
-wobei $P[k]$ das komplexe Schalldruckspektrum, $p_w[n]$ das gefensterte Schalldrucksignal im Zeitbereich, $N$ die Anzahl der Abtastwerte, $n$ der Zeitindex, $k$ der Frequenzindex und $j$ die imaginäre Einheit ist.
 
-Aus dem komplexen Spektrum wird anschließend das einseitige lineare Amplitudenspektrum berechnet. Da bei reellwertigen Signalen das Spektrum symmetrisch ist, wird nur der Bereich $0 \leq k \leq N/2$ ausgewertet. Die Normierung auf die Blocklänge und die Berücksichtigung der Energieverteilung auf beide Spektrumshälften ergibt:
 
-\begin{equation}
-A[k] = \frac{2 \cdot |P[k]|}{N} \quad \text{für } 1 \leq k \leq \frac{N}{2} - 1
-\end{equation}
 
-\begin{equation}
-A[0] = \frac{|P[0]|}{N} \quad \text{(Gleichanteil)}
-\end{equation}
 
-\begin{equation}
-A\left[\frac{N}{2}\right] = \frac{\left|P\left[\frac{N}{2}\right]\right|}{N} \quad \text{(Nyquist-Frequenz)}
-\end{equation}
+%Das in LabVIEW erzeugte diskrete Anregungssignal kann allgemein als Folge $x[n]$ beschrieben werden. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz $f_s$ und der Blocklänge $N$. Die zugehörige Frequenzauflösung der späteren Spektralanalyse ergibt sich zu
 
-wobei $A[k]$ das einseitige lineare Amplitudenspektrum in Pa, $|P[k]|$ der Betrag des komplexen Spektrums und $N$ die Anzahl der Abtastwerte ist.
+%\begin{equation}
+%\Delta f = \frac{f_s}{N}
+%\end{equation}
 
-Der Faktor 2 kompensiert, dass bei der einseitigen Darstellung die Energie der negativen Frequenzanteile den positiven zugeschlagen wird. Die Sonderfälle $k = 0$ (Gleichanteil) und $k = N/2$ (Nyquist-Frequenz) werden ohne den Faktor 2 normiert, da diese Frequenzanteile im zweiseitigen Spektrum nicht gespiegelt auftreten.
+%wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfrequenz in Hz und $N$ die Anzahl der Abtastwerte pro Datenblock ist.
 
-Da bei der Messung eine Mittelung über mehrere Datenblöcke durchgeführt wird, werden zunächst die linearen Amplitudenspektren aufsummiert und anschließend gemittelt. Für $M$ Mittelungen ergibt sich:
+%Das Referenzsignal wird elektrisch am Verstärkerausgang abgegriffen, mittels Step-Down-Wandler auf einen zulässigen Messbereich reduziert und anschließend als Spannungssignal $x_{\mathrm{ref}}[n]$ in den DAQ eingelesen. Das Mikrofon liefert ebenfalls ein Spannungssignal $u_{\mathrm{mic}}[n]$, welches proportional zum auftretenden Schalldruck ist. Für das verwendete Messmikrofon beträgt die Empfindlichkeit laut Kalibrierblatt $S = 0{,}028\;\mathrm{V/Pa}$. Wird keine zusätzliche externe lineare Vorverstärkung berücksichtigt, so kann für den Verstärkungsfaktor $G = 1$ gesetzt werden. Die Umrechnung des gemessenen Mikrofonsignals von Volt in Pascal erfolgt damit gemäß
+
+%\begin{equation}
+%p[n] = \frac{u_{\mathrm{mic}}[n]}{S \cdot G}
+%\end{equation}
+
+%wobei $p[n]$ das Schalldrucksignal im Zeitbereich in Pa, $u_{\mathrm{mic}}[n]$ die gemessene Mikrofonspannung im Zeitbereich in V, $S$ die Mikrofonempfindlichkeit in V/Pa und $G$ der lineare Verstärkungsfaktor der Messkette ist.
+
+%Für das verwendete Mikrofon und ohne zusätzliche externe Verstärkung vereinfacht sich die Gleichung zu
+
+%\begin{equation}
+%p[n] = \frac{u_{\mathrm{mic}}[n]}{0{,}028}
+%\end{equation}
+
+%Um bei der blockweisen Verarbeitung Spektralleckeffekte (Spectral Leakage) zu minimieren, wird vor der Fourier-Transformation auf jeden Datenblock eine Fensterfunktion angewendet. Im vorliegenden Messaufbau wird ein Hanning-Fenster verwendet. Das gefensterte Signal ergibt sich zu
+
+%\begin{equation}
+%p_w[n] = p[n] \cdot w[n]
+%\end{equation}
+
+%wobei $p_w[n]$ das gefensterte Schalldrucksignal, $p[n]$ das Schalldrucksignal im Zeitbereich und $w[n]$ die Fensterfunktion (hier: Hanning-Fenster) ist.
+
+%Nach der Fensterung wird das Signal blockweise in den Frequenzbereich transformiert. Hierzu wird die diskrete Fourier-Transformation (DFT) verwendet:
+
+%\begin{equation}
+%P[k] = \sum_{n=0}^{N-1} p_w[n] \cdot e^{-j \cdot \frac{2\pi k n}{N}}
+%\end{equation}
+
+%wobei $P[k]$ das komplexe Schalldruckspektrum, $p_w[n]$ das gefensterte Schalldrucksignal im Zeitbereich, $N$ die Anzahl der Abtastwerte, $n$ der Zeitindex, $k$ der Frequenzindex und $j$ die imaginäre Einheit ist.
+
+%Aus dem komplexen Spektrum wird anschließend das einseitige lineare Amplitudenspektrum berechnet. Da bei reellwertigen Signalen das Spektrum symmetrisch ist, wird nur der Bereich $0 \leq k \leq N/2$ ausgewertet. Die Normierung auf die Blocklänge und die Berücksichtigung der Energieverteilung auf beide Spektrumshälften ergibt:
+
+%\begin{equation}
+%A[k] = \frac{2 \cdot |P[k]|}{N} \quad \text{für } 1 \leq k \leq \frac{N}{2} - 1
+%\end{equation}
+
+%\begin{equation}
+%A[0] = \frac{|P[0]|}{N} \quad \text{(Gleichanteil)}
+%\end{equation}
+
+%\begin{equation}
+%A\left[\frac{N}{2}\right] = \frac{\left|P\left[\frac{N}{2}\right]\right|}{N} \quad \text{(Nyquist-Frequenz)}
+%\end{equation}
+
+%wobei $A[k]$ das einseitige lineare Amplitudenspektrum in Pa, $|P[k]|$ der Betrag des komplexen Spektrums und $N$ die Anzahl der Abtastwerte ist.
+
+%Der Faktor 2 kompensiert, dass bei der einseitigen Darstellung die Energie der negativen Frequenzanteile den positiven zugeschlagen wird. Die Sonderfälle $k = 0$ (Gleichanteil) und $k = N/2$ (Nyquist-Frequenz) werden ohne den Faktor 2 normiert, da diese Frequenzanteile im zweiseitigen Spektrum nicht gespiegelt auftreten.
+
+%Da bei der Messung eine Mittelung über mehrere Datenblöcke durchgeführt wird, werden zunächst die linearen Amplitudenspektren aufsummiert und anschließend gemittelt. Für $M$ Mittelungen ergibt sich:
 
 \begin{equation}
 \bar{A}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} A_i[k]
@@ -541,10 +559,11 @@ wobei $\gamma^2[k]$ die Kohärenzfunktion (Wertebereich 0 bis 1), $G_{xy}[k]$ da
 
 Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird. Werte deutlich unter 1 deuten auf nichtlineare Effekte, Störgeräusche oder eine unzureichende Anregung bei der betreffenden Frequenz hin.
 
+\clearpage
 
  \subsection{Durchführung der Messungen}
  
- Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Die genauen Einstellungen können dem Anhang entnommen werden, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen.
+ Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Die genauen Einstellungen können dem Anhang XY entnommen werden, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen.
 
 Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter, Anhang A.
 Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert.
@@ -556,10 +575,10 @@ Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das 
 	\label{fig:messaufbau_freifeldraum}
 \end{figure}
 
-Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm auf einem Meter Abstand fest montiert. 
+Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm auf einem Meter Abstand fest montiert.
 
 
-Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers, da DML-Lautsprecher einen wesentlich größeren Abstrahlwinkel als herkömmliche Lautsprecher haben. Für diesen Aufbau wird das Messmikrofon genau wie beim ersten Versuch in einem Abstand von 1 m auf Höhe der DML-Mitte positioniert. Die Platte wird hierfür mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre befestigt, welche am Boden an einer Wasserwaage befestigt sind, diese dienen dazu, die Platte gerade zu ziehen und den Lautsprecher in der Position zu halten. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
+Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre befestigt, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
 
 \begin{figure}[H]
 	\centering
@@ -568,13 +587,13 @@ Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallf
 	\label{fig:schallfeld_messung}
 \end{figure}
 
-Die Abbildung \ref{fig:schallfeld_messung} zeigt den DML-Lautsprecher, welcher an der Oberseite mittig hängt und an der Unterseite mit zwei Schnüren zum Boden mit der Wasserwaage befestigt ist. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist auf der Platte und am Messmikrofon zu erkennen. 
+Die Abbildung \ref{fig:schallfeld_messung} zeigt den besdhriebenen Aufbau. Die Wasserwage dient als gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist Mittig auf der Platte und an der unterseite des Messmikrofons zu erkennen. Der Laser verlief durch einen Punkt welcher an der Unteren seite mittig auf der Platte markiert ist sowie der obrigen mittigen aufhängung. 
 
-
-Jede Messung wird dreimal aufgenommen und anschließend werden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
+Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
 
 
 \subsection{Messergebnisse und Auswertung}
+
 
 Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers (\SI{70 x 44}{\centi\metre}) dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von \SI{1}{\metre}. Die Richtcharakteristik wird zunächst als absoluter Schalldruckpegel und anschließend normiert auf die Hauptabstrahlrichtung (\SI{0}{\degree}) betrachtet, um sowohl das frequenzabhängige Abstrahlverhalten als auch die Richtwirkung des Lautsprechers zu beurteilen.
 
@@ -940,17 +959,17 @@ Der Bose startet im Tiefton stark (ca. 95 dB bei 30 Hz), zeigt aber einen deutli
 
 
 Für die vorliegende Arbeit wird das DML-System mit den Abmessungen 70×44 cm gewählt. Diese Entscheidung stützt sich auf mehrere Faktoren, die sowohl die praktische Handhabbarkeit als auch die wissenschaftliche Aussagekraft der Untersuchung betreffen.
-Ein wesentlicher Vorteil des kleineren Formats liegt in seiner Kompaktheit und Integrierbarkeit. Mit 70×44 cm lässt sich das Panel deutlich einfacher in reale Anwendungsszenarien einbinden als die größere 100×70-cm-Variante – sei es als Wandelement, Deckenpaneel oder als in Möbel integrierte Schallquelle. Insbesondere in Kontexten wie Smart-Home-Umgebungen, Büroräumen oder Fahrzeuginnenräumen erweist sich die kompaktere Bauform als entscheidender Praxisvorteil, während eine Platte von 100×70 cm in vielen dieser Szenarien schlicht zu groß wäre.
+Ein wesentlicher Vorteil des kleineren Formats liegt in seiner Kompaktheit und Integrierbarkeit. Mit 70×44 cm lässt sich das Panel deutlich einfacher in reale Anwendungsszenarien einbinden als die größere 100×70 cm Variante – sei es als Wandelement, Deckenpaneel oder als in Möbel integrierte Schallquelle. Insbesondere in Kontexten wie Smart-Home-Umgebungen, Büroräumen oder Fahrzeuginnenräumen erweist sich die kompaktere Bauform als entscheidender Praxisvorteil, während eine Platte von 100×70 cm in vielen dieser Szenarien schlicht zu groß wäre.
 
 
-Darüber hinaus zeigt die skriptbasierte Exciter-Positionierung gerade bei der 70×44-cm-Platte ihre Stärken besonders überzeugend. Der Frequenzgang verläuft über den gesamten Übertragungsbereich deutlich glatter als bei der Herstellerposition, und im Gegensatz zur 100×70-cm-Platte, bei der die Skript-Position im Tiefton eine Schwäche aufweist, funktioniert die rechnerisch optimierte Positionierung bei der kleineren Platte konsistent gut. Dieser Umstand bestätigt die Anwendbarkeit der zugrunde liegenden Simulationsmethodik und liefert damit einen wissenschaftlich verwertbaren Beitrag.
-Auch messtechnisch bietet die kleinere Platte Vorteile. Die Messergebnisse zeigen einen klar erkennbaren Unterschied zwischen Hersteller- und Skript-Position: Während die Herstellerposition einen markanten Einbruch von rund 25 dB bei etwa 80 Hz aufweist, vermeidet die Skript-Position dieses Problem vollständig. Bei der 100×70-cm-Platte fallen die Unterschiede zwischen beiden Positionen deutlich geringer aus. Die stärkere Differenzierbarkeit bei der kleineren Platte ermöglicht somit eine aussagekräftigere Bewertung der Positionierungsstrategien und stärkt die Argumentation der Arbeit.
+Darüber hinaus zeigt die skriptbasierte Exciter-Positionierung gerade bei der 70×44 cm Platte ihre Stärken besonders überzeugend. Der Frequenzgang verläuft über den gesamten Übertragungsbereich deutlich glatter als bei der Herstellerposition, und im Gegensatz zur 100×70 cm Platte, bei der die Skript-Position im Tiefton eine Schwäche aufweist, funktioniert die rechnerisch optimierte Positionierung bei der kleineren Platte konsistent gut. Dieser Umstand bestätigt die Anwendbarkeit der zugrunde liegenden Simulationsmethodik und liefert damit einen wissenschaftlich verwertbaren Beitrag.
+Auch messtechnisch bietet die kleinere Platte Vorteile. Die Messergebnisse zeigen einen klar erkennbaren Unterschied zwischen Hersteller- und Skript-Position: Während die Herstellerposition einen markanten Einbruch von rund 25 dB bei etwa 80 Hz aufweist, vermeidet die Skript-Position dieses Problem vollständig. Bei der 100×70 cm Platte fallen die Unterschiede zwischen beiden Positionen deutlich geringer aus. Die stärkere Differenzierbarkeit bei der kleineren Platte ermöglicht somit eine aussagekräftigere Bewertung der Positionierungsstrategien und stärkt die Argumentation der Arbeit.
 
 
 Hinzu kommt, dass die kleinere Platte im Versuchsaufbau leichter zu handhaben ist. Ihr geringeres Gewicht erleichtert sowohl das Aufhängen im Freifeldraum als auch den Wechsel der Exciter-Positionen zwischen den einzelnen Messreihen. Dies reduziert systematische Fehlerquellen und erhöht die Reproduzierbarkeit der Ergebnisse – ein nicht zu unterschätzender Faktor, wenn mehrere Konfigurationen miteinander verglichen werden sollen.
 
 
-Bezüglich der Fullrange-Tauglichkeit ist die 70×44-cm-Platte mit der Skript-Position in Kombination mit einem Equalizer durchaus als breitbandiges Wiedergabesystem einsetzbar. Der gleichmäßige Frequenzgangverlauf ab ca. 60 Hz mit Pegeln von 87–92 dB stellt eine solide Ausgangsbasis dar, die sich mit moderatem EQ-Eingriff zu einem ausgewogenen System formen lässt. Der im Vergleich zur größeren Platte naturgemäß geringere Tieftonpegel unterhalb von 80 Hz wird in vielen praktischen Anwendungen ohnehin durch raumakustische Verstärkungseffekte oder einen ergänzenden Subwoofer kompensiert.
+Bezüglich der Fullrange-Tauglichkeit ist die 70×44 cm Platte mit der Skript-Position in Kombination mit einem Equalizer durchaus als breitbandiges Wiedergabesystem einsetzbar. Der gleichmäßige Frequenzgangverlauf ab ca. 60 Hz mit Pegeln von 87–92 dB stellt eine solide Ausgangsbasis dar, die sich mit moderatem EQ-Eingriff zu einem ausgewogenen System formen lässt. Der im Vergleich zur größeren Platte naturgemäß geringere Tieftonpegel unterhalb von 80 Hz wird in vielen praktischen Anwendungen ohnehin durch raumakustische Verstärkungseffekte oder einen ergänzenden Subwoofer kompensiert.
 
 \section{Validierung und Vergleich der Ergebnisse}
 
