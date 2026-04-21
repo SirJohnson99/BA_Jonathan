@@ -1,7 +1,7 @@
 \chapter{Lösung der Aufgabenstellung}
 
 In diesem Kapitel wird das Vorgehen zur Entwicklung eines DML-Flachlautsprechers beschrieben. Dabei wird zuerst die verwendete Hard- und Software tabellarisch aufgelistet, um die in dieser Arbeit gegebenen Rahmenbedingungen zu erläutern. Anschließend werden die wichtigsten Hardwarekomponenten welche den Exciter, die DML-Platte sowie die verwendete Stereoanlage mit Equalizer umfasst einzeln beschrieben. Da deren Eigenschaften ausschlaggebend für die akustischen Eigenschaften des DML sind. Anhand der technischen Eigenschaften der Audiogeräte wird ein Konzeptentwurf hinsichtlich der Umsetzbarkeit und Eignung für das vorliegende Entwicklungsvorhaben diskutiert. Dabei wird aufgezeigt, welches der gegebenen Plattenmaterialien für den Bau der DML-Flachlautsprecher verwendet wird und welche Panelabmessungen sinnvoll sind. Anschließend wird sich für eine Umsetzung unter Berücksichtigung der Materialparameter entschieden.
-Auf dem Konzept aufbauend wird eine Simulation aufgesetzt, welche zur Bestimmung der idealen Anregerposition für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten Ergebnisse werden diese Positionen im realen Versuchsaufbau vermessen. Die Ergebnisse werden anschließend Diskutiert und verglichen.
+Auf dem Konzept aufbauend wird eine Simulation aufgesetzt, welche zur Bestimmung der idealen Anregerposition für die gegebenen Parameter führen soll. Anhand der in der Simulation berechneten Ergebnisse werden diese Positionen im realen Versuchsaufbau vermessen. Die Ergebnisse werden anschließend diskutiert und verglichen.
 
 
 \section{Verwendete Hardware}
@@ -131,15 +131,19 @@ Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines D
 
 \subsection{Materialkonfiguration}
 
-Mit der Materialkonfiguration ist die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften sowie die bestimmung der Größe der gemeint. Dabei spielt die Steifigkeit eine tragende Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten Anhang C und D, nicht angegeben. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. 
+Mit der Materialkonfiguration ist die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften sowie die Bestimmung der Größe gemeint. Dabei spielt die Steifigkeit eine tragende Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten Anhang C und D, nicht angegeben. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. 
 Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt von KAPA Graph entnommen. 
 Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber dieselbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
 
-\textbf{Anpassen}
+Daraus ergeben sich die folgenden Biegesteifigkeiten:
 
-B_{graph} \approx 12,8 N·mm^2
+\begin{equation}
+B_{\text{graph}} \approx 12{,}8 \, \text{N} \cdot \text{mm}^2
+\end{equation}
 
-B_{line} \approx 156,8 N·mm^2
+\begin{equation}
+B_{\text{line}} \approx 156{,}8 \, \text{N} \cdot \text{mm}^2
+\end{equation}
 
 Es ist zu erkennen, dass die ausgerechnete Biegesteifigkeit der Sandwichplatten von KAPA Line wesentlich größer ist als von KAPA Graph. Das liegt vor allem an der dreimal höheren Plattenstärke der KAPA Line Platte im Gegensatz zu der KAPA Graph Platte. Unter Berücksichtigung der Biegesteifigkeit und den zugehörigen Flächenmasse, welche aus den Datenblättern entnommen wurden, bietet sich die Sandwichplatte aus KAPA Line besser als DML-Panel an als aus KAPA Graph. Diese Annahme ist alleinig auf die Materialparameter im Vergleich zurückzuführen, da KAPA Line im Vergleich eine mehr als zehn mal so große Biegesteifigkeit aufweist bei einem Flächengewicht, welches gerade einmal 1,45 mal so groß ist wie KAPA Graph.
 
@@ -175,7 +179,7 @@ b = r \cdot a
     \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
 \end{itemize}
 
-Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
+Daraus ergibt sich die kurze Seitenlänge im Bereich 20 Hz -- 150 Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
 
 \begin{figure}[H]
     \centering
@@ -235,10 +239,8 @@ Daraus ergibt sich die kurze Seitenlänge im Bereich 20Hz-150Hz, gezeigt in Abbi
     \label{fig:seitenlaenge_frequenz}
 \end{figure}
 
-\textbf{An die E Module anpassen}
-
-In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von 20Hz bis 150Hz darstellt. Zu erkennen ist, dass für eine Grundfrequenz von 20Hz eine KAPA Line Platte mit der Seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
-Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig, um eine Grundfrequenz von 20Hz gut wiedergeben zu können. Da die KAPA Platten in einer Größe von 1m x 0,7m geliefert werden, wurde sich für die Größe der Platten mit den Seitenlängen 0,44 m x 0,7 m entschieden, da diese das Seitenverhältnis erfüllen und die Anfertigung effektiv gestaltet. 
+In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von 20 Hz bis 150 Hz darstellt. Zu erkennen ist, dass für eine Grundfrequenz von 20 Hz eine KAPA Line Platte mit der Seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
+Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig, um eine Grundfrequenz von 20 Hz gut wiedergeben zu können. Da die KAPA Platten in einer Größe von 1m x 0,7m geliefert werden, wurde sich für die Größe der Platten mit den Seitenlängen 0,44 m x 0,7 m entschieden, da diese das Seitenverhältnis erfüllen und die Anfertigung effektiv gestaltet. 
 
 
 \newpage
@@ -349,10 +351,9 @@ Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eig
 
 Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. 
 
-Abbildung Platte 70x44 und 100x70
+% TODO: Abbildung Platte 70x44 und 100x70 einfügen
 
-
-Diskussion der Ergebnisse.
+% TODO: Diskussion der Ergebnisse ergänzen
 
 
 
@@ -543,9 +544,9 @@ Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Fr
 
  \subsection{Durchführung der Messungen}
  
- Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Die genauen Einstellungen können der \textbf{Abbildung X im Anhang Y} entnommen werden, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen.
+ Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Die genauen Einstellungen können dem Anhang entnommen werden, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen.
 
-Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter, \textbf{Anhang X}.
+Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter, Anhang A.
 Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert.
 
 \begin{figure}[H]
