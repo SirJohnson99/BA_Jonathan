@@ -575,7 +575,7 @@ Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das 
 	\label{fig:messaufbau_freifeldraum}
 \end{figure}
 
-Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm auf einem Meter Abstand fest montiert.
+Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm von der Decke auf einem Meter Abstand fest montiert.
 
 
 Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre angebracht, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
@@ -587,15 +587,23 @@ Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallf
 	\label{fig:schallfeld_messung}
 \end{figure}
 
-Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung. 
+Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons in Abbildung \ref{fig:schallfeld_messung}  zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung, womit eine Senkrechte ausrichtung gegeben wurde. 
 
 Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
 
 
+\clearpage
+
 \subsection{Messergebnisse und Auswertung}
 
 
-Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70x44 cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m. Die Richtcharakteristik wird zunächst als absoluter Schalldruckpegel und anschließend normiert auf die Hauptabstrahlrichtung (\SI{0}{\degree}) betrachtet, um sowohl das frequenzabhängige Abstrahlverhalten als auch die Richtwirkung des Lautsprechers zu beurteilen.
+Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70x44 cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m. Zur vermessung des Gesammtschalldruck pegels wurde die LabVIEW Vi Sound Level Meter verwendet, die Mikrofonempflindlichkeit wurde eingestellt und über den Lautsprecher ein Weißes Rauschen abgespielt welches aufgenommen und über zehn Sekunden Gemittelt wurde.
+
+\textbf{Abbildung SOund Level Meter}
+
+
+Die Abbildung zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und die Mittelung auf Zehn Sekunden. 
+
 
 \begin{figure}[H]
     \centering
@@ -627,7 +635,11 @@ Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 7
     \label{fig:schallfeld_spl_messung}
 \end{figure}
 
-Abbildung~\ref{fig:schallfeld_spl_messung} zeigt die gemessene horizontale Richtcharakteristik des DML-Lautsprechers als Gesamtschalldruckpegel. Die Messwerte liegen im Bereich von \SI{68,4}{\decibel} bis \SI{80,5}{\decibel}, was einer Pegelschwankung von etwa \SI{12}{\decibel} entspricht. Das Abstrahlverhalten zeigt die für DML-Lautsprecher typische Dipolcharakteristik mit maximaler Abstrahlung in Richtung \SI{0}{\degree} (Vorderseite) und \SI{180}{\degree} (Rückseite). Die minimalen Schalldruckpegel treten bei \SI{90}{\degree} (\SI{69,9}{\decibel}) und \SI{270}{\degree} (\SI{68,4}{\decibel}) auf, was auf die seitliche Auslöschung durch die gegenphasige Abstrahlung der Plattenvorder- und -rückseite zurückzuführen ist.
+Abbildung~\ref{fig:schallfeld_spl_messung} zeigt die gemessene horizontale Richtcharakteristik des DML-Lautsprechers als Gesamtschalldruckpegel. Die Messwerte liegen im Bereich von \SI{68,4}{\decibel} bis \SI{80,5}{\decibel}, was einer Pegelschwankung von etwa \SI{12}{\decibel} entspricht. Das Abstrahlverhalten zeigt die für DML-Lautsprecher typische Dipolcharakteristik mit maximaler Abstrahlung in Richtung \SI{0}{\degree} zur Vorderseite und \SI{180}{\degree} an der Rückseite. Die minimalen Schalldruckpegel treten bei \SI{90}{\degree}, \SI{69,9}{\decibel} und \SI{270}{\degree}, \SI{68,4}{\decibel} auf, was auf die seitliche Auslöschung durch die gegenphasige Abstrahlung der Plattenvorder- und -rückseite zurückzuführen ist.
+
+
+
+Die Richtcharakteristik wird zunächst als absoluter Schalldruckpegel und anschließend normiert auf die Hauptabstrahlrichtung (\SI{0}{\degree}) betrachtet, um sowohl das frequenzabhängige Abstrahlverhalten als auch die Richtwirkung des Lautsprechers zu beurteilen.
 
 
 \begin{figure}[H]
@@ -692,11 +704,11 @@ Abbildung~\ref{fig:schallfeld_spl_messung} zeigt die gemessene horizontale Richt
     \label{fig:schallfeld_absolut}
 \end{figure}
 
-Abbildung~\ref{fig:schallfeld_absolut} zeigt die horizontale Richtcharakteristik des DML-Lautsprechers als absolute Schalldruckpegel. Im Tieftonbereich (\SIrange{63}{125}{\hertz}) sind die Pegel erwartungsgemäß niedrig und die Abstrahlung nahezu omnidirektional, da die Plattenabmessungen weit unterhalb der akustischen Wellenlänge liegen ($\lambda \approx \SI{2{,}7}{\metre}$ bei \SI{125}{\hertz} gegenüber einer Plattendiagonale von ca.\ \SI{0{,}83}{\metre}).
+Abbildung~\ref{fig:schallfeld_absolut} zeigt die horizontale Richtcharakteristik des DML-Lautsprechers als absolute Schalldruckpegel. Im Tieftonbereich \SIrange{63}{125}{\hertz} sind die Pegel erwartungsgemäß niedrig und die Abstrahlung nahezu omnidirektional, da die Plattenabmessungen mit einer Plattendiagonale von ca.\ \SI{0{,}83}{\metre} von weit unterhalb der akustischen Wellenlänge bei \SI{125}{\hertz} $\lambda \approx \SI{2{,}7}{\metre}$ liegen.
  
 Zwischen \SI{500}{\hertz} und \SI{2}{\kilo\hertz} steigen die abgestrahlten Pegel deutlich an und es formt sich die für DML-Lautsprecher typische Dipolcharakteristik mit Abstrahlung nach vorne und hinten. Die höchsten Absolutpegel treten bei ca.\ \SIrange{1}{2}{\kilo\hertz} auf, was auf den Bereich der Koinzidenzfrequenz hindeutet. Leichte Asymmetrien im Richtmuster sind auf die bewusst exzentrische Exciter-Positionierung zurückzuführen.
  
-Im Hochtonbereich (\SIrange{4}{16}{\kilo\hertz}) fragmentiert das Abstrahlmuster zunehmend. Die Interferenz vieler gleichzeitig schwingender, phasenverschobener Plattenbereiche erzeugt zahlreiche Nebenkeulen und Einbrüche. Die bei diesen Frequenzen sichtbare Links-Rechts-Asymmetrie spiegelt die Exciter-Position wider, kann aber teilweise auch durch die manuelle Winkelpositionierung der Platte bedingt sein.
+Im Hochtonbereich \SIrange{4}{16}{\kilo\hertz} fragmentiert das Abstrahlmuster zunehmend. Die Interferenz vieler gleichzeitig schwingender, phasenverschobener Plattenbereiche erzeugt zahlreiche Nebenkeulen und Einbrüche. Die bei diesen Frequenzen sichtbare Links-Rechts-Asymmetrie spiegelt die Exciter-Position wider, kann aber teilweise auch durch die manuelle Winkelpositionierung der Platte bedingt sein.
 
 
 
@@ -769,15 +781,24 @@ Zwischen \SI{250}{\hertz} und \SI{1}{\kilo\hertz} bildet sich eine ausgeprägte 
  
 Ab \SI{2}{\kilo\hertz} verengt sich die Hauptkeule und es entstehen zunehmend Nebenkeulen. Bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} ist das Richtmuster stark fragmentiert. Die Winkelauflösung von \SI{15}{\degree} reicht in diesem Frequenzbereich möglicherweise nicht aus, um alle schmalen Keulen und Nullstellen vollständig aufzulösen.
 
-Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per Augenmaß und Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
- 
-Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
- 
-Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden (vgl.\ Abbildung~\ref{fig:messaufbau_freifeldraum}). Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. Ebenso stellen die Befestigungsschnüre und die Wasserwaage am Plattenfuß potenzielle Sekundärquellen dar, die durch die Plattenvibrationen angeregt werden können.
- 
-Die untere Grenzfrequenz des Freifeldraums begrenzt zudem die Gültigkeit der Messungen im Tieftonbereich. Bei \SI{63}{\hertz} ist davon auszugehen, dass die Absorberkeile nicht mehr vollständig wirksam sind und Raumreflexionen das Messergebnis beeinflussen.
- 
 
+
+
+Bei der Frequenzgang messung wurde zur vergleichbarkeit ein Kolbenstrahllautsprecher der Firma Bose als Referenz genommen.
+
+
+\textbf{Abbildung Bose Lausprecher}
+
+Abbildung zeigt den Boselautsprecher welcher als Fullrangesystem mit Hoch-, Mitten- und Tieftöner ausgestattet ist. 
+
+
+Zum Vermessen der Lautsprecher wurde das in Kapitel 3.4.2 beschriebene LabVIEW VI verwendet. 
+
+
+\textbf{Abbildung Frontpanel LabVIEW} 
+
+
+In Abbildung wir das Frontpanel währen einer messung gezeigt, zu erkennen ist die Anregeung mittels Weißem Rauschen im Graphen Oben Links. Das Mikrofon und referenzsignal werden Obenrechts angezeigt. In der Mitte des Frontpanels wird die FRF Übertragungsfunktion und die zugehörige Kohärenz Graphisch dargestellt. Unten wird der Schalldruckpegel über der Frequenz dargestellt. 
 
 \begin{figure}[H]
     \centering
@@ -820,7 +841,7 @@ Die untere Grenzfrequenz des Freifeldraums begrenzt zudem die Gültigkeit der Me
 
 Im Tieftonbereich (30--100\,Hz) startet die Hersteller-Position (dunkelblau) mit einem auffälligen Peak bei ca.\,30\,Hz ($\approx$\,100\,dB), fällt dann aber deutlich auf ca.\,75\,dB bei $\approx$\,80\,Hz ab -- eine Senke von rund 25\,dB. Im Mittenbereich (100--600\,Hz) erholt sie sich und erreicht zwischen 400--600\,Hz ein Maximum von ca.\,98\,dB, zeigt dabei aber deutliche Welligkeit. Oberhalb von 1\,kHz nimmt die Varianz stark zu, mit Schwankungen von $\pm$\,10\,dB, wobei das Gesamtniveau bei ca.\,75--85\,dB liegt. Im Hochton (ab $\approx$\,5\,kHz) bleibt sie im Mittel etwas über der Bose-Referenz, ist aber sehr unruhig.
 
-Die Skript-Position (orange) ist im gesamten Verlauf deutlich \textbf{glatter}. Im Tiefton (30--100\,Hz) liegt sie stabil bei ca.\,87--92\,dB ohne den starken Einbruch der Hersteller-Position. Im Mittenbereich (100--600\,Hz) verläuft sie gleichmäßig um 85--90\,dB -- ohne ausgeprägte Peaks. Oberhalb von 1\,kHz zeigt auch sie zunehmende Schwankungen, diese sind aber tendenziell weniger extrem als bei der Hersteller-Position. Im Hochton oberhalb von 5\,kHz liegt sie auf vergleichbarem Niveau.
+Die Skript-Position (orange) ist im gesamten Verlauf deutlich glatter. Im Tiefton (30--100\,Hz) liegt sie stabil bei ca.\,87--92\,dB ohne den starken Einbruch der Hersteller-Position. Im Mittenbereich (100--600\,Hz) verläuft sie gleichmäßig um 85--90\,dB -- ohne ausgeprägte Peaks. Oberhalb von 1\,kHz zeigt auch sie zunehmende Schwankungen, diese sind aber tendenziell weniger extrem als bei der Hersteller-Position. Im Hochton oberhalb von 5\,kHz liegt sie auf vergleichbarem Niveau.
 
 Die Bose-Referenz (grau, gestrichelt) zeigt einen relativ gleichmäßigen Verlauf von ca.\,88--92\,dB bis etwa 500\,Hz. Ab ca.\,1--2\,kHz fällt die Kurve allerdings merklich ab und zeigt ab 3\,kHz starke Einbrüche bis unter 50\,dB. Oberhalb von 5\,kHz ist der Bose den beiden DML-Positionen deutlich unterlegen. Dies deutet auf ein begrenztes Hochtonvermögen oder eine ungünstige Abstrahlcharakteristik in der Messposition hin.
 
@@ -871,6 +892,8 @@ Die Skript-Position zeigt im Tiefton einen niedrigeren Start (ca. 80 dB bei 30 H
 
 Bose-Referenz (grau, gestrichelt):
 Der Bose startet im Tiefton stark (ca. 95 dB bei 30 Hz), zeigt aber einen deutlichen Einbruch auf ca. 73 dB bei ca. 100 Hz. Nach einer Erholung im Mittenbereich (85--92 dB) fällt er ab 2--3 kHz drastisch ab, mit Einbrüchen unter 50 dB. Im Hochton ist er den DML-Varianten klar unterlegen.
+
+
 
 
 
@@ -937,6 +960,18 @@ Bezüglich der Fullrange-Tauglichkeit ist die 70×44 cm Platte mit der Skript-Po
 
 \section{Validierung und Vergleich der Ergebnisse}
 
+
+Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per Augenmaß und Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
+ 
+Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
+ 
+Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden (vgl.\ Abbildung~\ref{fig:messaufbau_freifeldraum}). Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. Ebenso stellen die Befestigungsschnüre und die Wasserwaage am Plattenfuß potenzielle Sekundärquellen dar, die durch die Plattenvibrationen angeregt werden können.
+ 
+Die untere Grenzfrequenz des Freifeldraums begrenzt zudem die Gültigkeit der Messungen im Tieftonbereich. Bei \SI{63}{\hertz} ist davon auszugehen, dass die Absorberkeile nicht mehr vollständig wirksam sind und Raumreflexionen das Messergebnis beeinflussen.
+
+
+
+ 
 Vergleich der Simulations- und Versuchsaufbau-Ergebnisse, Validierung der Ergebnisse und mögliche Abweichungen erklären.
 
 
