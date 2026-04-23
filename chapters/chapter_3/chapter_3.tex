@@ -597,12 +597,16 @@ Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse 
 \subsection{Messergebnisse und Auswertung}
 
 
-Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70x44 cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m. Zur vermessung des Gesammtschalldruck pegels wurde die LabVIEW Vi Sound Level Meter verwendet, die Mikrofonempflindlichkeit wurde eingestellt und über den Lautsprecher ein Weißes Rauschen abgespielt welches aufgenommen und über zehn Sekunden Gemittelt wurde.
+Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70x44 cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m. Zur Vermessung des Gesamtschalldruckpegels wurde die LabVIEW VI Sound Level Meter verwendet, die Mikrofonempfindlichkeit wurde eingestellt und über den Lautsprecher ein weißes Rauschen abgespielt, welches aufgenommen und über zehn Sekunden gemittelt wurde.
 
-\textbf{Abbildung SOund Level Meter}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pictures/Sound_level_meter.png}
+	\caption{Frontpanel der Sound Level Meter VI}
+	\label{fig:sound_level_meter}
+\end{figure}
 
-
-Die Abbildung zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und die Mittelung auf Zehn Sekunden. 
+Die Abbildung zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und die Mittelung auf zehn Sekunden. 
 
 
 \begin{figure}[H]
@@ -787,18 +791,27 @@ Ab \SI{2}{\kilo\hertz} verengt sich die Hauptkeule und es entstehen zunehmend Ne
 Bei der Frequenzgang messung wurde zur vergleichbarkeit ein Kolbenstrahllautsprecher der Firma Bose als Referenz genommen.
 
 
-\textbf{Abbildung Bose Lausprecher}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pictures/Bose_Referenz.png}
+	\caption{Bose Referenzlautsprecher}
+	\label{fig:bose_referenz}
+\end{figure}
 
-Abbildung zeigt den Boselautsprecher welcher als Fullrangesystem mit Hoch-, Mitten- und Tieftöner ausgestattet ist. 
+Abbildung \ref{fig:bose_referenz} zeigt den Bose-Lautsprecher, welcher als Fullrange-System mit Hoch-, Mittel- und Tieftöner ausgestattet ist. 
 
 
 Zum Vermessen der Lautsprecher wurde das in Kapitel 3.4.2 beschriebene LabVIEW VI verwendet. 
 
 
-\textbf{Abbildung Frontpanel LabVIEW} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/Frontpanel.png}
+	\caption{Frontpanel des LabVIEW VI während einer Messung}
+	\label{fig:frontpanel_labview}
+\end{figure}
 
-
-In Abbildung wir das Frontpanel währen einer messung gezeigt, zu erkennen ist die Anregeung mittels Weißem Rauschen im Graphen Oben Links. Das Mikrofon und referenzsignal werden Obenrechts angezeigt. In der Mitte des Frontpanels wird die FRF Übertragungsfunktion und die zugehörige Kohärenz Graphisch dargestellt. Unten wird der Schalldruckpegel über der Frequenz dargestellt. 
+In Abbildung \ref{fig:frontpanel_labview} wird das Frontpanel während einer Messung gezeigt, zu erkennen ist die Anregung mittels weißem Rauschen im Graphen oben links. Das Mikrofon- und Referenzsignal werden oben rechts angezeigt. In der Mitte des Frontpanels wird die FRF-Übertragungsfunktion und die zugehörige Kohärenz graphisch dargestellt. Unten wird der Schalldruckpegel über der Frequenz dargestellt. 
 
 \begin{figure}[H]
     \centering
