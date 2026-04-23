@@ -612,6 +612,37 @@ Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 7
         width=11cm, height=11cm,
         xtick={0,30,60,90,120,150,180,210,240,270,300,330},
         xticklabels={$0°$,$30°$,$60°$,$90°$,$120°$,$150°$,$180°$,$210°$,$240°$,$270°$,$300°$,$330°$},
+        ytick={65,70,75,80,85,90,95,100},
+        ymin=65, ymax=100,
+        y coord trafo/.code={\pgfmathparse{#1}\pgfmathresult},
+        y coord inv trafo/.code={\pgfmathparse{#1}\pgfmathresult},
+        ylabel={$L_p$ [dB]},
+        ylabel style={at={(0.5,1.08)}, font=\small},
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!40},
+        major grid style={line width=0.2pt, draw=gray!60},
+        legend style={at={(1.3,1.0)}, anchor=north west, font=\scriptsize, fill=white, draw=gray},
+        tick label style={font=\scriptsize},
+    ]
+    % SPL Messung 360
+    \addplot[color=OBlue, thick] coordinates {
+        (0,76.2)(15,77.9)(30,79.0)(45,78.4)(60,79.7)(75,74.8)(90,69.9)(105,77.7)(120,79.7)(135,78.5)(150,79.7)(165,77.2)(180,80.5)(195,79.9)(210,79.3)(225,78.6)(240,78.7)(255,75.5)(270,68.4)(285,78.3)(300,78.8)(315,78.1)(330,78.9)(345,78.6)(360,76.2)
+    };
+    \legend{SPL}
+    \end{polaraxis}
+    \end{tikzpicture}
+    \caption{Horizontale Richtcharakteristik des DML-Lautsprechers -- SPL Messung}
+    \label{fig:schallfeld_spl_messung}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{polaraxis}[
+        width=11cm, height=11cm,
+        xtick={0,30,60,90,120,150,180,210,240,270,300,330},
+        xticklabels={$0°$,$30°$,$60°$,$90°$,$120°$,$150°$,$180°$,$210°$,$240°$,$270°$,$300°$,$330°$},
         ytick={20,30,40,50,60},
         ymin=20, ymax=65,
         y coord trafo/.code={\pgfmathparse{#1}\pgfmathresult},
