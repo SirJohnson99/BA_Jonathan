@@ -67,9 +67,9 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 
 \subsection{Plattenmaterial}
 
- Als DML Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von 1 m x 0,7 m und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial. 
- Die KAPA Line Platte hat eine Stärke von 15 mm, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum (kurz PUR). 
- Die KAPA Graph Platte hat eine Stärke von 5 mm mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und hat wie KAPA Line gute Bearbeitungseigenschaften. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Vielzahl von Klebern und Lösungsmitteln beständig ist und sich mit einem Cuttermesser gut bearbeiten lässt.
+Als DML-Material wurden zwei Platten in Sandwichbauweise der Firma 3A Composites zur Verfügung gestellt. Die beiden Platten haben eine Größe von \SI{1}{\meter} x \SI{0,7}{\meter} und unterscheiden sich im Wesentlichen in ihrer Stärke und dem Trägermaterial.
+Die KAPA Line Platte hat eine Stärke von \SI{15}{\milli\meter}, dabei besteht die Deckschicht aus einer Faltschachtelkartonschicht, welche mit handelsüblichen Klebern und Farben bearbeitet werden kann. Demzufolge sollten die Exciter problemlos an der Deckschicht verklebt werden können. Der Kern der Sandwichplatte besteht aus Polyurethan-Hartschaum (kurz PUR).
+Die KAPA Graph Platte hat eine Stärke von \SI{5}{\milli\meter} mit einer Deckschicht aus einem hochwertigen pH-neutralen Zellstoffkarton und hat wie KAPA Line gute Bearbeitungseigenschaften. Beide Sandwichplatten haben einen PUR-Hartschaumkern, welcher gegen eine Vielzahl von Klebern und Lösungsmitteln beständig ist und sich mit einem Cuttermesser gut bearbeiten lässt.
  
 
 \begin{figure}[H]
@@ -79,7 +79,7 @@ Der SPL über Frequenz Graph und alle weiteren zugehörigen technischen Daten si
 	\label{fig:KAPA_Vergleich}
 \end{figure}
 
-In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten dargestellt. Gut zu erkennen ist der Stärkenunterschied, welcher mittels Schublehre gut ablesbar gezeigt wird, sowie der Sandwich-Kern, welcher bei beiden Platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht, welche bei beiden Platten 0,5 mm stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
+In der Abbildung \ref{fig:KAPA_Vergleich} sind die beiden KAPA Sandwichplatten dargestellt. Gut zu erkennen ist der Stärkenunterschied, welcher mittels Schublehre gut ablesbar gezeigt wird, sowie der Sandwich-Kern, welcher bei beiden Platten aus PUR-Hartschaum besteht. Nicht gut zu erkennen ist die Deckschicht, welche bei beiden Platten \SI{0,5}{\milli\meter} stark ist und den Schaumkern auf der oberen und unteren Seite vollständig bedeckt.
 Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus resultierenden Steifigkeit sowie der Dichte und dem daraus resultierenden Gewicht. 
 
 
@@ -132,7 +132,7 @@ Das Fullrange-System ohne Frequenzweiche stellt die einfachste Umsetzung eines D
 \subsection{Materialkonfiguration}
 
 Mit der Materialkonfiguration ist die Auswahl zwischen den beiden gegebenen KAPA Sandwichplatten anhand ihrer mechanischen Eigenschaften sowie die Bestimmung der Größe gemeint. Dabei spielt die Steifigkeit eine tragende Rolle. Die Biegesteifigkeit wird in den Datenblättern der Sandwichplatten Anhang C und D, nicht angegeben. Daher wird die Biegesteifigkeit näherungsweise mit der Gleichung \ref{eq:biegesteifigkeit} bestimmt. 
-Dabei beträgt die Dicke der Deckschicht 0,5 mm pro Seite, also 1 mm insgesamt. Das E-Modul wird aus dem Datenblatt von KAPA Graph entnommen. 
+Dabei beträgt die Dicke der Deckschicht \SI{0,5}{\milli\meter} pro Seite, also \SI{1}{\milli\meter} insgesamt. Das E-Modul wird aus dem Datenblatt von KAPA Graph entnommen. 
 Da das E-Modul für KAPA Line nicht im Datenblatt vorhanden ist, beide Platten aber dieselbe Schaumschicht und eine ähnliche Stützstruktur haben, wird für beide das E-Modul von KAPA Graph verwendet. Daraus ergibt sich für die beiden Materialien: 
 
 Daraus ergeben sich die folgenden Biegesteifigkeiten:
@@ -179,7 +179,7 @@ b = r \cdot a
     \item $C$ : Hilfsgröße $C = \sqrt{B/\mu}$
 \end{itemize}
 
-Daraus ergibt sich die kurze Seitenlänge im Bereich 20 -- 150 Hz, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
+Daraus ergibt sich die kurze Seitenlänge im Bereich \SI{20}{\hertz} -- \SI{150}{\hertz}, gezeigt in Abbildung \ref{fig:seitenlaenge_frequenz}:
 
 \begin{figure}[H]
     \centering
@@ -239,8 +239,8 @@ Daraus ergibt sich die kurze Seitenlänge im Bereich 20 -- 150 Hz, gezeigt in Ab
     \label{fig:seitenlaenge_frequenz}
 \end{figure}
 
-In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von 20 bis 150 Hz darstellt. Zu erkennen ist, dass für eine Grundfrequenz von 20 Hz eine KAPA Line Platte mit der Seitenlänge von ca. 20 cm ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. 11 cm. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
-Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens 20 cm nötig, um eine Grundfrequenz von 20 Hz gut wiedergeben zu können. Da die KAPA Platten in einer Größe von 1m x 0,7m geliefert werden, wurde sich für die Größe der Platten mit den Seitenlängen 0,44 m x 0,7 m entschieden, da diese das Seitenverhältnis erfüllen und die Anfertigung effektiv gestaltet. 
+In Abbildung \ref{fig:seitenlaenge_frequenz} wurde mit Hilfe der berechneten Biegesteifigkeit der Sandwichplatten eine Grafik erstellt, welche die kurze Seitenlänge über der Frequenz in einem Frequenzband von \SI{20}{\hertz} bis \SI{150}{\hertz} darstellt. Zu erkennen ist, dass für eine Grundfrequenz von \SI{20}{\hertz} eine KAPA Line Platte mit der Seitenlänge von ca. \SI{20}{\centi\meter} ausreicht. Eine KAPA Graph Platte benötigt nur eine Seitenlänge von ca. \SI{11}{\centi\meter}. Die gezeigten Seitenlängen sind die jeweils kurzen des Rechtecks mit dem Seitenverhältnis 1:1,618.
+Dementsprechend ist eine Seitenlänge eines DML aus KAPA Line von mindestens \SI{20}{\centi\meter} nötig, um eine Grundfrequenz von \SI{20}{\hertz} gut wiedergeben zu können. Da die KAPA Platten in einer Größe von \SI{1}{\meter} x \SI{0,7}{\meter} geliefert werden, wurde sich für die Größe der Platten mit den Seitenlängen \SI{0,44}{\meter} x \SI{0,7}{\meter} entschieden, da diese das Seitenverhältnis erfüllen und die Anfertigung effektiv gestaltet. 
 
 
 \newpage
@@ -284,7 +284,7 @@ Unter Berücksichtigung der verschiedenen Parameter, welche in der Konzeptentwic
 
 In dieser Arbeit wurde sich für ein DML-Fullrange-System ohne Frequenzweiche entschieden, welches das gesamte Frequenzspektrum wiedergeben soll. Die DML werden dabei aus den KAPA Line Sandwichplatten bestehen, welche ein Seitenverhältnis von 1:1,61 haben und von der Decke hängend befestigt werden. Bei der Systemarchitektur wurde sich für eine Reihenschaltung von zwei Excitern pro Platte entschieden, welche mit dem WVQ-600 Pro Equalizer und dem WPA-600 Pro Verstärker betrieben werden. 
 
-Die KAPA Line Sandwichplatten werden eine Größe von 0,7 m x 0,44 m haben, da diese Seitenlängen in das Verhältnis passen und einfach herzustellen sind. Damit sind diese größer als im Graphen \ref{fig:seitenlaenge_frequenz} aufgezeigt. Diese Größe wurde aus dem Grund gewählt, um eine gute Tieftonwiedergabe zu gewährleisten und damit die Exciter nicht zu nahe aneinander platziert werden. 
+Die KAPA Line Sandwichplatten werden eine Größe von \SI{0,7}{\meter} x \SI{0,44}{\meter} haben, da diese Seitenlängen in das Verhältnis passen und einfach herzustellen sind. Damit sind diese größer als im Graphen \ref{fig:seitenlaenge_frequenz} aufgezeigt. Diese Größe wurde aus dem Grund gewählt, um eine gute Tieftonwiedergabe zu gewährleisten und damit die Exciter nicht zu nahe aneinander platziert werden. 
 
 In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpositionen auf der Platte anhand einer Modalanalyse bestimmt. Anschließend werden diese Positionen im realen Versuchsaufbau vermessen und diskutiert.
 
@@ -329,19 +329,19 @@ Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
 
-Die berechneten Eigenmoden der Platten bilden Muster welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen bei 50 Hz, 150 Hz, 300 Hz, 500 Hz, 800 Hz und 1.000 Hz an.  
+Die berechneten Eigenmoden der Platten bilden Muster, welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen bei \SI{50}{\hertz}, \SI{150}{\hertz}, \SI{300}{\hertz}, \SI{500}{\hertz}, \SI{800}{\hertz} und \SI{1000}{\hertz} an.  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{pictures/Eigenmoden_0.7m.png}
-	\caption{Eigenmoden der KAPA Line Platte (0,7 m x 0,44 m)}
+	\caption{Eigenmoden der KAPA Line Platte (\SI{0,7}{\meter} x \SI{0,44}{\meter})}
 	\label{fig:eigenmoden_07m}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{pictures/Eigenmoden_1m.png}
-	\caption{Eigenmoden der KAPA Line Platte (1 m x 0,7 m)}
+	\caption{Eigenmoden der KAPA Line Platte (\SI{1}{\meter} x \SI{0,7}{\meter})}
 	\label{fig:eigenmoden_1m}
 \end{figure}
 
@@ -606,7 +606,7 @@ Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 7
 	\label{fig:sound_level_meter}
 \end{figure}
 
-Die Abbildung \ref{fig:sound_level_meter} zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und das die zeit der Mittelung auf Zehn sekunden gestellt ist, Rechts wird der Gemittelte wert angezeigt welcher in diesem Test Fall 91,3 dB ist. 
+Die Abbildung \ref{fig:sound_level_meter} zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und dass die Zeit der Mittelung auf \SI{10}{\second} gestellt ist. Rechts wird der gemittelte Wert angezeigt, welcher in diesem Testfall \SI{91,3}{\decibel} beträgt. 
 
 
 \begin{figure}[H]
@@ -615,7 +615,7 @@ Die Abbildung \ref{fig:sound_level_meter} zeigt das Frontpanel der Sound Level M
     \begin{polaraxis}[
         width=11cm, height=11cm,
         xtick={0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345},
-        xticklabels={$0°$,,$30°$,,$60°$,,$90°$,,$120°$,,$150°$,,$180°$,,$210°$,,$240°$,,$270°$,,$300°$,,$330°$,},
+        xticklabels={$0^\circ$,,$30^\circ$,,$60^\circ$,,$90^\circ$,,$120^\circ$,,$150^\circ$,,$180^\circ$,,$210^\circ$,,$240^\circ$,,$270^\circ$,,$300^\circ$,,$330^\circ$,},
         ytick={50,60,70,80},
         ymin=50, ymax=85,
         y coord trafo/.code={\pgfmathparse{#1}\pgfmathresult},
@@ -652,7 +652,7 @@ Die Richtcharakteristik wird zunächst als absoluter Schalldruckpegel und anschl
     \begin{polaraxis}[
         width=11cm, height=11cm,
         xtick={0,30,60,90,120,150,180,210,240,270,300,330},
-        xticklabels={$0°$,$30°$,$60°$,$90°$,$120°$,$150°$,$180°$,$210°$,$240°$,$270°$,$300°$,$330°$},
+        xticklabels={$0^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$,$180^\circ$,$210^\circ$,$240^\circ$,$270^\circ$,$300^\circ$,$330^\circ$},
         ytick={20,30,40,50,60},
         ymin=20, ymax=65,
         y coord trafo/.code={\pgfmathparse{#1}\pgfmathresult},
@@ -722,7 +722,7 @@ Im Hochtonbereich \SIrange{4}{16}{\kilo\hertz} fragmentiert das Abstrahlmuster z
     \begin{polaraxis}[
         width=11cm, height=11cm,
         xtick={0,30,60,90,120,150,180,210,240,270,300,330},
-        xticklabels={$0°$,$30°$,$60°$,$90°$,$120°$,$150°$,$180°$,$210°$,$240°$,$270°$,$300°$,$330°$},
+        xticklabels={$0^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$,$180^\circ$,$210^\circ$,$240^\circ$,$270^\circ$,$300^\circ$,$330^\circ$},
         ytick={-25,-20,-15,-10,-5,0,5,10},
         ymin=-25, ymax=15,
         y coord trafo/.code={\pgfmathparse{#1+25}\pgfmathresult},
@@ -774,7 +774,7 @@ Im Hochtonbereich \SIrange{4}{16}{\kilo\hertz} fragmentiert das Abstrahlmuster z
     \legend{63 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz}
     \end{polaraxis}
     \end{tikzpicture}
-    \caption{Horizontale Richtcharakteristik des DML-Lautsprechers -- auf $0°$ normierter Schalldruckpegel $\Delta L_p$ [dB]}
+    \caption{Horizontale Richtcharakteristik des DML-Lautsprechers -- auf $0^\circ$ normierter Schalldruckpegel $\Delta L_p$ [dB]}
     \label{fig:schallfeld_normiert}
 \end{figure}
 
@@ -788,17 +788,16 @@ Ab \SI{2}{\kilo\hertz} verengt sich die Hauptkeule und es entstehen zunehmend Ne
 
 \clearpage
 
-Bei der Frequenzgang messung wurde zur vergleichbarkeit ein Kolbenstrahllautsprecher der Firma Bose als Referenz genommen.
-
+Bei der Frequenzgangmessung wurde zur Vergleichbarkeit ein konventioneller Kolbenstrahllautsprecher der Firma Bose als Referenz herangezogen. Dabei handelt es sich um das Modell Bose ML3 BLK (Artikelnummer 125727), einen kompakten Fullrange-Lautsprecher.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pictures/Bose_Referenz.png}
-	\caption{Bose Referenzlautsprecher}
+	\caption{Bose ML3 BLK Referenzlautsprecher}
 	\label{fig:bose_referenz}
 \end{figure}
 
-Abbildung \ref{fig:bose_referenz} zeigt den Bose-Lautsprecher, welcher als Fullrange-System mit Hoch-, Mittel- und Tieftöner ausgestattet ist. 
+Abbildung \ref{fig:bose_referenz} zeigt den Bose ML3 BLK Lautsprecher, welcher als Fullrange-System mit Hoch-, Mittel- und Tieftöner ausgestattet ist. Der Vergleich mit einem konventionellen Kolbenstrahler ermöglicht eine Einordnung der DML-Lautsprecher hinsichtlich Frequenzgang und Abstrahlverhalten. 
 
 
 Zum Vermessen der Lautsprecher wurde das in Kapitel 3.4.2 beschriebene LabVIEW VI verwendet. 
